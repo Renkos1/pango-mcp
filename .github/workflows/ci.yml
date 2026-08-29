@@ -11,16 +11,17 @@ jobs:
     # Ubuntu is in the matrix on purpose — it is the only thing that catches new
     # Windows-only assumptions creeping into otherwise portable code, and the
     # only place the CRLF-shebang class of bug is visible.
+    #
+    # Node floor is 22.13 here, not the package's own >=18.17: `packageManager`
+    # pins pnpm 11, which refuses to start below 22.13. The engines floor is what
+    # the `engines` job below covers, with npm.
     name: unit (${{ matrix.os }} · node ${{ matrix.node }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        node: ['20', '22']
-        include:
-          - os: ubuntu-latest
-            node: '18'
+        node: ['22', '24']
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -35,6 +36,31 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: pnpm test:unit
+
+  engines:
+    # package.json claims engines >=18.17, and that claim is about the PUBLISHED
+    # server — a consumer runs `npx pango-mcp`, so npm resolves the three runtime
+    # deps and pnpm never enters the picture. The dev toolchain's own floor
+    # (pnpm 11 needs Node 22.13) must not silently become the users' floor, so
+    # this job installs with npm and runs the same gates on the oldest supported
+    # Node. There are no devDependencies, so npm gets exactly what ships.
+    name: engines floor (node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['18', '20']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: npm install --no-audit --no-fund
+      - run: node scripts/check-syntax.mjs
+      - run: node scripts/run-unit-tests.mjs
 
   package:
     # Guards the two things that only show up at pack time.
