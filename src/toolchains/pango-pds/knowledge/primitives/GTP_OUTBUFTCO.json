@@ -1,0 +1,34 @@
+{
+  "name": "GTP_OUTBUFTCO",
+  "category": "io_buffer",
+  "params": [
+    {
+      "name": "IOSTANDARD",
+      "type": "string/int",
+      "default": "\"DEFAULT\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "OB",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "T",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_OUTBUFTCO\n#(\n    .IOSTANDARD(\"DEFAULT\")\n) u_gtp_outbuftco (\n    .O(O),\n    .OB(OB),\n    .I(I),\n    .T(T)\n);"
+}

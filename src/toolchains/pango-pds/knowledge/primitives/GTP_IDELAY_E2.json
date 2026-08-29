@@ -1,0 +1,50 @@
+{
+  "name": "GTP_IDELAY_E2",
+  "category": "serdes_ddr",
+  "params": [
+    {
+      "name": "DI_SRC",
+      "type": "string/int",
+      "default": "\"IO\""
+    },
+    {
+      "name": "DELAY_STEP_VALUE",
+      "type": "bitvec[7:0]",
+      "default": "8'h00"
+    },
+    {
+      "name": "DELAY_STEP_SEL",
+      "type": "string/int",
+      "default": "\"PARAMETER\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DO_BYPASS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DELAY_SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DELAY_STEP",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    }
+  ],
+  "instTemplate": "GTP_IDELAY_E2\n#(\n    .DI_SRC(\"IO\"),\n    .DELAY_STEP_VALUE(8'h00),\n    .DELAY_STEP_SEL(\"PARAMETER\")\n) u_gtp_idelay_e2 (\n    .DO(DO),\n    .DO_BYPASS(DO_BYPASS),\n    .DI(DI),\n    .DELAY_SEL(DELAY_SEL),\n    .DELAY_STEP(DELAY_STEP)\n);"
+}

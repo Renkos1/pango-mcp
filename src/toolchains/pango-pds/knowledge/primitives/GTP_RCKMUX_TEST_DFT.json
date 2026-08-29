@@ -1,0 +1,26 @@
+{
+  "name": "GTP_RCKMUX_TEST_DFT",
+  "category": "other",
+  "params": [],
+  "ports": [
+    {
+      "name": "CLKIN",
+      "dir": "input",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CFG_MUX",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    }
+  ],
+  "instTemplate": "GTP_RCKMUX_TEST_DFT u_gtp_rckmux_test_dft (\n    .CLKIN(CLKIN),\n    .CLKOUT(CLKOUT),\n    .CFG_MUX(CFG_MUX)\n);"
+}

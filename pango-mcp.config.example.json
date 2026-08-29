@@ -1,0 +1,62 @@
+{
+  "cdtPort": 65420,
+  "cdtPort2025": 65425,
+  "scanMaxDevices": 1,
+  "cdtStartupTimeoutMs": 10000,
+  "flashScanRetries": 1,
+  "flashScanRetryDelayMs": 1500,
+  "knowledgeVaultPath": "D:\\fpga\\knowledge-vault",
+  "pdsLicenseFile": "D:\\licenses\\pango.lic",
+  "modelsimHome": "D:\\modeltech64_2020.4",
+  "modelsimLicenseFile": "D:\\licenses\\modelsim.lic",
+  "pdsInstalls": [
+    {
+      "id": "2022.2",
+      "label": "PDS_2022.2 (GW/Logos2)",
+      "shell": "D:\\pango\\PDS_2022.2-SP4.2-ads\\bin\\pds_shell.exe"
+    },
+    {
+      "id": "2025.2",
+      "label": "PDS_2025.2 (TG/FBB484)",
+      "shell": "D:\\pango\\PDS_2025.2-SP1-ads\\bin\\pds_shell.exe"
+    }
+  ],
+  "idcodeAliases": {
+    "PG2L100H": "0x00602899",
+    "PG2L200H": "0x00603899"
+  },
+  "_defaultHostNote": "Where toolchains run by default (local-first). Omit or \"local\" = this machine. Set to a hosts[] id to route every tool to that device declaratively — the agent never passes `host` per call; any tool's explicit host: still overrides.",
+  "defaultHost": "local",
+  "hosts": {
+    "fpga_lab": {
+      "transport": "ssh",
+      "host": "192.0.2.10",
+      "port": 22,
+      "user": "<YOUR_SSH_USER>",
+      "os": "windows",
+      "privateKeyPath": "C:\\Users\\<YOUR_USER>\\.ssh\\id_ed25519",
+      "_authNote": "用密钥则填 privateKeyPath；用密码则留空并在 pango-mcp.env 设 PANGO_MCP_SSH_fpga_lab_PASSWORD=...",
+      "pds": {
+        "2025.2": "D:\\pango\\PDS_2025.2-SP1-ads\\bin\\pds_shell.exe",
+        "2022.2": "D:\\pango\\PDS_2022.2-SP4.2-ads\\bin\\pds_shell.exe"
+      },
+      "_modelsimNote": "fpga_msim_sim host:<id> 用此远程 ModelSim 安装根目录(含 win64/)；license 走该设备系统环境变量(或 modelsim.license 显式注入)。",
+      "modelsim": { "home": "C:\\modeltech64_2020.4" }
+    }
+  },
+  "_boardsNote": "Target Profiles (ARCHITECTURE §10): the physical target per board — device/package/speedgrade/pins/clock/flash/host. A task picks one via board:<name>; the tools pull a complete target from it and NEVER default/guess a device. fpga_env lists configured boards. Replace the placeholders with YOUR board(s). The clock LINE's frequency is board physical info too: put `freqMhz` on the clock pin (NOT defaulted/guessed) so create_project emits a real create_clock and timing analysis targets the true frequency.",
+  "boards": {
+    "myboard": {
+      "family": "Logos2",
+      "device": "<YOUR_DEVICE>",
+      "package": "<YOUR_PACKAGE>",
+      "speedgrade": "-6",
+      "flashPart": "<YOUR_SPI_FLASH_PART>",
+      "host": "fpga_lab",
+      "pins": {
+        "clk": { "loc": "<PIN>", "dir": "INPUT", "iostd": "LVCMOS33", "freqMhz": "<CLOCK_MHZ>" },
+        "led[0]": { "loc": "<PIN>", "dir": "OUTPUT", "iostd": "LVCMOS33" }
+      }
+    }
+  }
+}

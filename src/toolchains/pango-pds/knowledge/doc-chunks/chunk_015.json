@@ -1,0 +1,6 @@
+{
+  "id": "chunk_015",
+  "source": "cdt-tcl-commands.md",
+  "title": "SPI flash via the FPGA JTAG→SPI bridge (persistent)",
+  "text": "## SPI flash via the FPGA JTAG→SPI bridge (persistent)\n- `cfg_gen_sfc -sbit <design.sbit> -sfc <design.sfc> -device_name <PART>` — generate the SPI-flash\n  image (`.sfc`) from the bitstream. `<PART>` e.g. `W25Q128Q`.\n- `cfg_jtag_flash_scan_device -device_index <n>` — detect the flash through the FPGA bridge.\n- `cfg_jtag_flash_assign_file -file <design.sfc> -device_index <n>`\n- `cfg_jtag_flash_erase  -device_index <n>`\n- `cfg_jtag_flash_program -device_index <n>`\n- `cfg_jtag_flash_verify -device_index <n>` — must report success.\n- NOTE: the cable's **direct**-SPI path `cfg_flash_*` (scan/erase/program/verify) often returns\n  `0xffffff` (flash not reachable from the cable) on boards where the flash hangs off the FPGA — use\n  the `cfg_jtag_flash_*` bridge path instead."
+}

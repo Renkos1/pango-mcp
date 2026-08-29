@@ -1,0 +1,6 @@
+{
+  "id": "chunk_012",
+  "source": "cdt-tcl-commands.md",
+  "title": "Session",
+  "text": "## Session\n| command | purpose |\n|---|---|\n| `cfg_set_tcl_break -flag true` | stop the script on a command error (recommended) |\n| `cfg_connect -ip 127.0.0.1 -port 65420` | connect to the `cdt_js` server |\n| `cfg_scan_chain` | detect devices on the JTAG chain; prints \"done bit\" status |\n| `cfg_disconnect` / `cfg_close` | end the session |\n| `cfg_set_cable_property -index 0 -freq 5Mhz` | set cable TCK freq (lower for flash reliability) |"
+}

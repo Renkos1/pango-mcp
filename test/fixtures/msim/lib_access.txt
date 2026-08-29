@@ -1,0 +1,12 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -do "quit -f" nolib.tb
+# Start time: 12:15:30 on Jun 21,2026
+# ** Error (suppressible): (vsim-19) Failed to access library 'nolib' at "nolib".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+Error loading design
+# End time: 12:15:31 on Jun 21,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

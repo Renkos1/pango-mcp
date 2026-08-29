@@ -1,0 +1,152 @@
+{
+  "slug": "DRM_Based_Single_Port_RAM_41",
+  "name": "Titan3 Plus/Kosmo3 DRM Based Single Port RAM",
+  "displayName": "DRM Based Single Port RAM",
+  "topModule": "ipmxf_spram_wrapper_v1_4",
+  "version": "1.5",
+  "vendor": "Pango",
+  "category": "Module,Memory,DRM",
+  "id": "07100203",
+  "dir": "module_ip/ipmxf_flex_ram/ipmxf_flex_ram_eval/ipmxf_spram",
+  "datasheet": "ip/module_ip/ipmxf_flex_ram/ipmxf_flex_ram_eval/ipmxf_spram/UG071002_DRM_Based_RAM_IP.pdf",
+  "families": [
+    "Titan3",
+    "Kosmo3"
+  ],
+  "devices": [
+    "PG3T600P"
+  ],
+  "params": [
+    {
+      "name": "CAS_MODE_SEL",
+      "type": "enum",
+      "default": "AUTO",
+      "items": [
+        "AUTO",
+        "DRM18K",
+        "DRM36K"
+      ]
+    },
+    {
+      "name": "CAS_MODE",
+      "type": "enum",
+      "default": "18K",
+      "items": [
+        "18K",
+        "36K"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "WRITE_MODE",
+      "type": "enum",
+      "default": "NORMAL_WRITE",
+      "items": [
+        "NORMAL_WRITE",
+        "TRANSPARENT_WRITE",
+        "READ_BEFORE_WRITE"
+      ]
+    },
+    {
+      "name": "WR_BYTE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "BYTE_SIZE",
+      "type": "enum",
+      "default": "8",
+      "items": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "name": "ADDR_WIDTH",
+      "type": "int",
+      "default": "9"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "BE_WIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "CLK_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "FAB_REG",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC"
+      ]
+    },
+    {
+      "name": "INIT_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "INIT_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    },
+    {
+      "name": "RST_VAL_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RST_VAL",
+      "type": "string",
+      "default": "0"
+    }
+  ]
+}

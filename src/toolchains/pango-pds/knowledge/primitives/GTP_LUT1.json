@@ -1,0 +1,24 @@
+{
+  "name": "GTP_LUT1",
+  "category": "lut",
+  "params": [
+    {
+      "name": "INIT",
+      "type": "bitvec[1:0]",
+      "default": "2'h0"
+    }
+  ],
+  "ports": [
+    {
+      "name": "Z",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "I0",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_LUT1\n#(\n    .INIT(2'h0)\n) u_gtp_lut1 (\n    .Z(Z),\n    .I0(I0)\n);"
+}

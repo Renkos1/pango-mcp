@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="General" project_version="2.1.0" status="initial">
+  <members category="settings">
+    <item type="PART">
+      <part family="TestFamily" device="TEST_DEVICE" speedgrade="-1" package="TEST_PACKAGE"/>
+    </item>
+  </members>
+  <members category="design_set">
+    <option name="top_module" type="string" value="top"/>
+    <item type="FILE" file="rtl/top.v" format="verilog" library="work"/>
+    <item type="IP" file="ip/core.idf" library="core"/>
+  </members>
+  <members category="constraint_set">
+    <item type="FILE" file="constraints/top.fdc" format="fdc" library="work"/>
+  </members>
+</project>

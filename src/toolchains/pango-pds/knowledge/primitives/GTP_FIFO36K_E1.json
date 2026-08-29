@@ -1,0 +1,146 @@
+{
+  "name": "GTP_FIFO36K_E1",
+  "category": "mem",
+  "params": [
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "integer",
+      "default": "18"
+    },
+    {
+      "name": "DO_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "ECC_READ_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ECC_WRITE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ALMOST_FULL_OFFSET",
+      "type": "bitvec[14:0]",
+      "default": "15'h0080"
+    },
+    {
+      "name": "ALMOST_EMPTY_OFFSET",
+      "type": "bitvec[14:0]",
+      "default": "15'h0080"
+    },
+    {
+      "name": "RST_VAL",
+      "type": "bitvec[71:0]",
+      "default": "72'h000000000000000000"
+    },
+    {
+      "name": "USE_EMPTY",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "USE_FULL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "SYNC_FIFO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "ALMOST_EMPTY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "ALMOST_FULL",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "EMPTY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "FULL",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 72,
+      "range": "[71:0]"
+    },
+    {
+      "name": "ECC_SBITERR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "ECC_DBITERR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 72,
+      "range": "[71:0]"
+    },
+    {
+      "name": "WCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "WCE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RCE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ORCE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "INJECT_SBITERR",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "INJECT_DBITERR",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_FIFO36K_E1\n#(\n    .GRS_EN(\"TRUE\"),\n    .DATA_WIDTH(18),\n    .DO_REG(0),\n    .ECC_READ_EN(\"FALSE\"),\n    .ECC_WRITE_EN(\"FALSE\"),\n    .ALMOST_FULL_OFFSET(15'h0080),\n    .ALMOST_EMPTY_OFFSET(15'h0080),\n    .RST_VAL(72'h000000000000000000),\n    .USE_EMPTY(0),\n    .USE_FULL(0),\n    .SYNC_FIFO(\"FALSE\")\n) u_gtp_fifo36k_e1 (\n    .ALMOST_EMPTY(ALMOST_EMPTY),\n    .ALMOST_FULL(ALMOST_FULL),\n    .EMPTY(EMPTY),\n    .FULL(FULL),\n    .DO(DO),\n    .ECC_SBITERR(ECC_SBITERR),\n    .ECC_DBITERR(ECC_DBITERR),\n    .DI(DI),\n    .WCLK(WCLK),\n    .RCLK(RCLK),\n    .WCE(WCE),\n    .RCE(RCE),\n    .ORCE(ORCE),\n    .RST(RST),\n    .INJECT_SBITERR(INJECT_SBITERR),\n    .INJECT_DBITERR(INJECT_DBITERR)\n);"
+}

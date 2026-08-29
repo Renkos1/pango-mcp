@@ -1,0 +1,34 @@
+{
+  "name": "GTP_IOCLKDIV_E2",
+  "category": "clock_pll",
+  "params": [
+    {
+      "name": "DIV_FACTOR",
+      "type": "string/int",
+      "default": "\"BYPASS\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "CLKDIVOUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RST_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CE",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_IOCLKDIV_E2\n#(\n    .DIV_FACTOR(\"BYPASS\")\n) u_gtp_ioclkdiv_e2 (\n    .CLKDIVOUT(CLKDIVOUT),\n    .CLKIN(CLKIN),\n    .RST_N(RST_N),\n    .CE(CE)\n);"
+}

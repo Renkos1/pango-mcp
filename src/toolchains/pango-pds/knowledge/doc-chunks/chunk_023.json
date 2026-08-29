@@ -1,0 +1,6 @@
+{
+  "id": "chunk_023",
+  "source": "pds-project-and-flow.md",
+  "title": "Python helper to bulk-add sources (pattern)",
+  "text": "### Python helper to bulk-add sources (pattern)\n```python\nimport glob, os, re\nPDS = \"design.pds\"; HERE = os.path.dirname(os.path.abspath(PDS)); TS = \"2026-06-05T12:00:00\"\nfiles = sorted({os.path.relpath(p, HERE).replace(\"\\\\\",\"/\")\n                for pat in (\"rtl/**/*.v\",\"ipcore/**/*.v\")\n                for p in glob.glob(os.path.join(HERE,pat), recursive=True)\n                if not p.endswith((\"_tb.v\",\"_tmpl.v\"))})\ntxt = open(PDS, encoding=\"utf-8\").read()\nnew = [p for p in files if f'\"{p}\"' not in txt]\nblock = \"\".join(f'                (_file \"{p}\"\\n                    (_format verilog)\\n'\n                f'                    (_timespec \"{TS}\")\\n                )\\n' for p in new)\nm = re.search(r'(\\(_file \"rtl/anchor\\.v\".*?\\n\\s*\\)\\n)', txt, re.S)  # insert after an anchor _file\ntxt = txt[:m.end()] + block + txt[m.end():]\nopen(PDS,\"w\",encoding=\"utf-8\").write(txt)\nassert txt.count(\"(\") == txt.count(\")\"), \"paren mismatch!\"\n```\n(If the machine's Python `site` module is broken, run with `python -S`.)"
+}

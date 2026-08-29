@@ -1,0 +1,54 @@
+{
+  "name": "GTP_IOBUFE",
+  "category": "io_buffer",
+  "params": [
+    {
+      "name": "IOSTANDARD",
+      "type": "string/int",
+      "default": "\"DEFAULT\""
+    },
+    {
+      "name": "SLEW_RATE",
+      "type": "string/int",
+      "default": "\"SLOW\""
+    },
+    {
+      "name": "DRIVE_STRENGTH",
+      "type": "string/int",
+      "default": "\"8\""
+    },
+    {
+      "name": "TERM_DDR",
+      "type": "string/int",
+      "default": "\"ON\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "IO",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "T",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_IOBUFE\n#(\n    .IOSTANDARD(\"DEFAULT\"),\n    .SLEW_RATE(\"SLOW\"),\n    .DRIVE_STRENGTH(\"8\"),\n    .TERM_DDR(\"ON\")\n) u_gtp_iobufe (\n    .O(O),\n    .IO(IO),\n    .I(I),\n    .EN(EN),\n    .T(T)\n);"
+}

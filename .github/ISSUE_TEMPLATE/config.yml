@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/Renkos1/pango-mcp/security/advisories/new
+    about: Report privately. Do not open a public issue for gate bypasses or injection.
+  - name: Question / discussion
+    url: https://github.com/Renkos1/pango-mcp/discussions
+    about: Usage questions, "does this work with device X", agent-wiring help.

@@ -1,0 +1,78 @@
+{
+  "name": "GTP_OSERDES_FIFO",
+  "category": "mem",
+  "params": [
+    {
+      "name": "FIFO_BYPASS",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "WCLK_INV",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "RCLK_INV",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "EMPTY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "FULL",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DOUT",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "TOUT",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DIN",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "TIN",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "WCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RCLK",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_OSERDES_FIFO\n#(\n    .FIFO_BYPASS(\"FALSE\"),\n    .WCLK_INV(\"FALSE\"),\n    .RCLK_INV(\"FALSE\")\n) u_gtp_oserdes_fifo (\n    .EMPTY(EMPTY),\n    .FULL(FULL),\n    .DOUT(DOUT),\n    .TOUT(TOUT),\n    .DIN(DIN),\n    .TIN(TIN),\n    .RST(RST),\n    .EN(EN),\n    .WCLK(WCLK),\n    .RCLK(RCLK)\n);"
+}

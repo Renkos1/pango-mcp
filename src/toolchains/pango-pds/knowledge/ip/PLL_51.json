@@ -1,0 +1,1122 @@
+{
+  "slug": "PLL_51",
+  "name": "Titan PLL",
+  "displayName": "PLL",
+  "topModule": "ipm_pll_wrapper_v1_3",
+  "version": "1.4",
+  "vendor": null,
+  "category": "Module,PLL",
+  "id": "011001",
+  "dir": "module_ip/ipm_flex_pll/ipm_flex_pll_eval/ipm_pll",
+  "datasheet": "ip/module_ip/ipm_flex_pll/ipm_flex_pll_eval/ipm_pll/UG011001_PLL_IP.pdf",
+  "families": [
+    "Titan"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "PLL_PWD_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PLL_RST_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_CLKIN_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "INTERNAL_FB_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_IDIV_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_FDIV_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_ODIV_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_O2DIV_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_O3DIV_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_O4DIV_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUPS1_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUPS2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUPS3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUPS4_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE0_EN",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "GATE1_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE4_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PHASE_PARAMETER",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLOCK0_EN",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "CLOCK1_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLOCK2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLOCK3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLOCK4_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "EN_INNER_RST",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "EN_RESET_ODIV",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "EN_RESET_IDIV",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "CLKIN_FREQ",
+      "type": "float",
+      "default": "50.0"
+    },
+    {
+      "name": "STATIC_IDIV",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_FDIV",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_ODIV",
+      "type": "int",
+      "default": "20"
+    },
+    {
+      "name": "CLKO2_SEL",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "STATIC_O2DIV",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "CLKO3_SEL",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "STATIC_O3DIV",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "CLKO4_SEL",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "STATIC_O4DIV",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "INTERNAL_FB1",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "EXTERNAL_FB1",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "BANDWIDTH",
+      "type": "enum",
+      "default": "OPTIMIZED",
+      "items": [
+        "OPTIMIZED",
+        "LOW",
+        "HIGH"
+      ]
+    },
+    {
+      "name": "STATIC_DU1",
+      "type": "enum",
+      "default": "0000",
+      "items": [
+        "0000",
+        "0001",
+        "0010",
+        "0011",
+        "0100",
+        "0101",
+        "0110",
+        "0111",
+        "1000",
+        "1001",
+        "1010",
+        "1011",
+        "1100",
+        "1101",
+        "1110",
+        "1111"
+      ]
+    },
+    {
+      "name": "STATIC_PS1",
+      "type": "enum",
+      "default": "0000",
+      "items": [
+        "0000",
+        "0001",
+        "0010",
+        "0011",
+        "0100",
+        "0101",
+        "0110",
+        "0111",
+        "1000",
+        "1001",
+        "1010",
+        "1011",
+        "1100",
+        "1101",
+        "1110",
+        "1111"
+      ]
+    },
+    {
+      "name": "STATIC_DU2",
+      "type": "enum",
+      "default": "0000",
+      "items": [
+        "0000",
+        "0001",
+        "0010",
+        "0011",
+        "0100",
+        "0101",
+        "0110",
+        "0111",
+        "1000",
+        "1001",
+        "1010",
+        "1011",
+        "1100",
+        "1101",
+        "1110",
+        "1111"
+      ]
+    },
+    {
+      "name": "STATIC_PS2",
+      "type": "enum",
+      "default": "0000",
+      "items": [
+        "0000",
+        "0001",
+        "0010",
+        "0011",
+        "0100",
+        "0101",
+        "0110",
+        "0111",
+        "1000",
+        "1001",
+        "1010",
+        "1011",
+        "1100",
+        "1101",
+        "1110",
+        "1111"
+      ]
+    },
+    {
+      "name": "STATIC_DU3",
+      "type": "enum",
+      "default": "0000",
+      "items": [
+        "0000",
+        "0001",
+        "0010",
+        "0011",
+        "0100",
+        "0101",
+        "0110",
+        "0111",
+        "1000",
+        "1001",
+        "1010",
+        "1011",
+        "1100",
+        "1101",
+        "1110",
+        "1111"
+      ]
+    },
+    {
+      "name": "STATIC_PS3",
+      "type": "enum",
+      "default": "0000",
+      "items": [
+        "0000",
+        "0001",
+        "0010",
+        "0011",
+        "0100",
+        "0101",
+        "0110",
+        "0111",
+        "1000",
+        "1001",
+        "1010",
+        "1011",
+        "1100",
+        "1101",
+        "1110",
+        "1111"
+      ]
+    },
+    {
+      "name": "STATIC_DU4",
+      "type": "enum",
+      "default": "0000",
+      "items": [
+        "0000",
+        "0001",
+        "0010",
+        "0011",
+        "0100",
+        "0101",
+        "0110",
+        "0111",
+        "1000",
+        "1001",
+        "1010",
+        "1011",
+        "1100",
+        "1101",
+        "1110",
+        "1111"
+      ]
+    },
+    {
+      "name": "STATIC_PS4",
+      "type": "enum",
+      "default": "0000",
+      "items": [
+        "0000",
+        "0001",
+        "0010",
+        "0011",
+        "0100",
+        "0101",
+        "0110",
+        "0111",
+        "1000",
+        "1001",
+        "1010",
+        "1011",
+        "1100",
+        "1101",
+        "1110",
+        "1111"
+      ]
+    },
+    {
+      "name": "DIV125_M",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "DIV125_N",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "DIV32BIT_K",
+      "type": "string",
+      "default": "1024"
+    },
+    {
+      "name": "STATIC_DU1_PS1",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "STATIC_DU2_PS2",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "STATIC_DU3_PS3",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "STATIC_DU4_PS4",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "PAGE_SETTING",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "EN_PHASE_SHIFT",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_EXPECTED",
+      "type": "float",
+      "default": "100.0"
+    },
+    {
+      "name": "FB_MODE",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "INTERNAL_FB",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "EXTERNAL_FB",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "CLOCK1_EN_PAGE1",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE1_EN_PAGE1",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUPS1_EN_PAGE1",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_DU1_PS1_PAGE1",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "CLOCK2_EN_PAGE1",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE2_EN_PAGE1",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKO2_SEL_PAGE1",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "STATIC_O2DIV_PAGE1",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "DYNAMIC_DUPS2_EN_PAGE1",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_DU2_PS2_PAGE1",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "CLOCK3_EN_PAGE1",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE3_EN_PAGE1",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKO3_SEL_PAGE1",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "STATIC_O3DIV_PAGE1",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "DYNAMIC_DUPS3_EN_PAGE1",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_DU3_PS3_PAGE1",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "DIV125_M_PAGE1",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "DIV125_N_PAGE1",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CLOCK4_EN_PAGE1",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE4_EN_PAGE1",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKO4_SEL_PAGE1",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "STATIC_O4DIV_PAGE1",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "DYNAMIC_DUPS4_EN_PAGE1",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_DU4_PS4_PAGE1",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "DIV32BIT_K_PAGE1",
+      "type": "string",
+      "default": "1024"
+    },
+    {
+      "name": "CLOCK0_EN_PAGE2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE0_EN_PAGE2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLOCK1_EN_PAGE2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUPS1_EN_PAGE2",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_DU1_PS1_PAGE2",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "GATE1_EN_PAGE2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLOCK2_EN_PAGE2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE2_EN_PAGE2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKO2_SEL_PAGE2",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "DYNAMIC_O2DIV_EN_PAGE2",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_O2DIV_PAGE2",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "DYNAMIC_DUPS2_EN_PAGE2",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_DU2_PS2_PAGE2",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "CLOCK3_EN_PAGE2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE3_EN_PAGE2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKO3_SEL_PAGE2",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "DYNAMIC_O3DIV_EN_PAGE2",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_O3DIV_PAGE2",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "DYNAMIC_DUPS3_EN_PAGE2",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_DU3_PS3_PAGE2",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "DIV125_M_PAGE2",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "DIV125_N_PAGE2",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CLOCK4_EN_PAGE2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "GATE4_EN_PAGE2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKO4_SEL_PAGE2",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "DYNAMIC_O4DIV_EN_PAGE2",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_O4DIV_PAGE2",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "DYNAMIC_DUPS4_EN_PAGE2",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "STATIC_DU4_PS4_PAGE2",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "DIV32BIT_K_PAGE2",
+      "type": "string",
+      "default": "1024"
+    },
+    {
+      "name": "CLKOUT0_FREQ",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "CLKOUT1_FREQ",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "CLKOUT2_FREQ",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "CLKOUT3_FREQ",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "CLKOUT4_FREQ",
+      "type": "string",
+      "default": ""
+    }
+  ]
+}

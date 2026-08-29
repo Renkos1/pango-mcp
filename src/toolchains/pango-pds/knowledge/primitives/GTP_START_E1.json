@@ -1,0 +1,33 @@
+{
+  "name": "GTP_START_E1",
+  "category": "config_misc",
+  "params": [],
+  "ports": [
+    {
+      "name": "WAKEUP_OVER",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "GOE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "GRS_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "GWE",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_START_E1 u_gtp_start_e1 (\n    .WAKEUP_OVER(WAKEUP_OVER),\n    .CLK(CLK),\n    .GOE(GOE),\n    .GRS_N(GRS_N),\n    .GWE(GWE)\n);"
+}

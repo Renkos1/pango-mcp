@@ -1,0 +1,39 @@
+{
+  "name": "GTP_CLKBUFGMUX",
+  "category": "clock_pll",
+  "params": [
+    {
+      "name": "TRIGGER_MODE",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "SIM_DEVICE",
+      "type": "string/int",
+      "default": "\"TITAN\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKIN0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKIN1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SEL",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_CLKBUFGMUX\n#(\n    .TRIGGER_MODE(\"NORMAL\"),\n    .SIM_DEVICE(\"TITAN\")\n) u_gtp_clkbufgmux (\n    .CLKOUT(CLKOUT),\n    .CLKIN0(CLKIN0),\n    .CLKIN1(CLKIN1),\n    .SEL(SEL)\n);"
+}

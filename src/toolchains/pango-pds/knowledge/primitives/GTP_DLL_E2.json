@@ -1,0 +1,96 @@
+{
+  "name": "GTP_DLL_E2",
+  "category": "clock_pll",
+  "params": [
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "CAL_INIT",
+      "type": "bitvec[7:0]",
+      "default": "8'b00011111"
+    },
+    {
+      "name": "DELAY_STEP_OFFSET",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "DELAY_SEL",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "FAST_LOCK",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "FDIV",
+      "type": "bitvec[1:0]",
+      "default": "2'b10"
+    },
+    {
+      "name": "INT_CLK",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "UPD_DLY",
+      "type": "bitvec[1:0]",
+      "default": "2'b01"
+    },
+    {
+      "name": "HPIO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "DELAY_STEP",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DELAY_STEP1",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "LOCK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SYS_CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PWD",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "UPDATE_N",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_DLL_E2\n#(\n    .GRS_EN(\"TRUE\"),\n    .CAL_INIT(8'b00011111),\n    .DELAY_STEP_OFFSET(0),\n    .DELAY_SEL(1'b0),\n    .FAST_LOCK(\"FALSE\"),\n    .FDIV(2'b10),\n    .INT_CLK(1'b0),\n    .UPD_DLY(2'b01),\n    .HPIO(\"FALSE\")\n) u_gtp_dll_e2 (\n    .DELAY_STEP(DELAY_STEP),\n    .DELAY_STEP1(DELAY_STEP1),\n    .LOCK(LOCK),\n    .CLKIN(CLKIN),\n    .SYS_CLK(SYS_CLK),\n    .PWD(PWD),\n    .RST(RST),\n    .UPDATE_N(UPDATE_N)\n);"
+}

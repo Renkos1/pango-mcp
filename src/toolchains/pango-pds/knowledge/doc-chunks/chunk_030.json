@@ -1,0 +1,7 @@
+{
+  "id": "chunk_030",
+  "source": "debug-ila.md",
+  "title": "Pango on-chip debug (ILA + virtual-IO), fully scriptable — Fabric Inserter + Fabric Debugger",
+  "text": "[MCP-DEPRECATED] MCP 内 ILA 流程使用 fpga_ila_generate_fic + fpga_pds_register_fic 两件套(纯代码生成 .fic + 注册到 .pds),不通过 cdt_ins 驱动。以下 cdt_ins 内容仅作排查/教学参考。\n\n# Pango on-chip debug (ILA + virtual-IO), fully scriptable — Fabric Inserter + Fabric Debugger\n\nPango's on-chip logic analyzer (\"debug core\" / ILA) and virtual-IO are driven by two console tools the\nGUI hides but that are **fully Tcl-scriptable headless**, exactly like `cdt_cfg`:\n- **`cdt_ins.exe`** — Fabric **Inserter**: taps post-synthesis nets, builds a debug core, writes a `.fic`.\n- **`cdt_dbg.exe`** — Fabric **Debugger**: at runtime programs the instrumented bitstream, arms/triggers,\n  and dumps captured samples (VCD/ASCII/WDF). Also virtual-IO (`dbg_dvio_*`) and SerDes (`dbg_hsst_*`).\n\nBoth connect to the same resident `cdt_js.exe -port N` JTAG server used for flashing. Authoritative\nmanuals: `doc/Fabric_Inserter_User_Guide.pdf`, `doc/Fabric_Debugger_User_Guide.pdf` (+ `ips_debug_core`,\n`ips_jtag_hub` system IPs). This is device-agnostic — works for any PC-connected Pango FPGA.",
+  "deprecated": true
+}

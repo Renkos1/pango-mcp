@@ -1,0 +1,110 @@
+{
+  "name": "GTP_HCKMUX_TEST_DFT",
+  "category": "other",
+  "params": [],
+  "ports": [
+    {
+      "name": "CLKIN0",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "CLKIN1",
+      "dir": "input",
+      "width": 14,
+      "range": "[13:0]"
+    },
+    {
+      "name": "CLKIN2",
+      "dir": "input",
+      "width": 14,
+      "range": "[13:0]"
+    },
+    {
+      "name": "CLKIN3",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "CFG_MUX0",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX1",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX2",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX3",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX4",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX5",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX6",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX7",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX8",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX9",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX10",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CFG_MUX11",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    }
+  ],
+  "instTemplate": "GTP_HCKMUX_TEST_DFT u_gtp_hckmux_test_dft (\n    .CLKIN0(CLKIN0),\n    .CLKIN1(CLKIN1),\n    .CLKIN2(CLKIN2),\n    .CLKIN3(CLKIN3),\n    .CLKOUT(CLKOUT),\n    .CFG_MUX0(CFG_MUX0),\n    .CFG_MUX1(CFG_MUX1),\n    .CFG_MUX2(CFG_MUX2),\n    .CFG_MUX3(CFG_MUX3),\n    .CFG_MUX4(CFG_MUX4),\n    .CFG_MUX5(CFG_MUX5),\n    .CFG_MUX6(CFG_MUX6),\n    .CFG_MUX7(CFG_MUX7),\n    .CFG_MUX8(CFG_MUX8),\n    .CFG_MUX9(CFG_MUX9),\n    .CFG_MUX10(CFG_MUX10),\n    .CFG_MUX11(CFG_MUX11)\n);"
+}

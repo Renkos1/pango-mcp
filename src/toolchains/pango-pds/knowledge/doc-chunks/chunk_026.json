@@ -1,0 +1,6 @@
+{
+  "id": "chunk_026",
+  "source": "pds-project-and-flow.md",
+  "title": "Reading the reports (resources + timing)",
+  "text": "## Reading the reports (resources + timing)\n- **Utilization**: `place_route/<top>.prr` (and `device_map/<top>_dmr.prt`) has a \"Device Utilization\n  Summary\" table (FF / LUT / DRM / GPLL / IO ...). `-run dev_map` is enough to get mapped resources\n  without a full P&R.\n- **Timing**: `place_route/<top>_timing_summary_after_hold_fix.txt` lists Setup/Hold per clock pair\n  with WNS/TNS. `TNS=0` on every row = met. A negative WNS row names the launch→capture clock pair of\n  the violation (commonly an unconstrained async clock-domain crossing — fix with synchronizers + a\n  false-path/max-delay constraint, not by chasing the path)."
+}

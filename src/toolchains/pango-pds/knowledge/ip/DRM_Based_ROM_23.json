@@ -1,0 +1,107 @@
+{
+  "slug": "DRM_Based_ROM_23",
+  "name": "Logos DRM Based ROM",
+  "displayName": "DRM Based ROM",
+  "topModule": "ipml_rom_wrapper_v1_7",
+  "version": "1.7",
+  "vendor": "Pango",
+  "category": "Module,Memory,DRM",
+  "id": "02100204",
+  "dir": "module_ip/ipml_flex_ram/ipml_flex_ram_eval/ipml_rom",
+  "datasheet": "ip/module_ip/ipml_flex_ram/ipml_flex_ram_eval/ipml_rom/UG021002_DRM_Based_RAM_IP.pdf",
+  "families": [
+    "Logos"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "ADDR_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "INIT_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC",
+        "INTERNAL_SYNC"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "INIT_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    },
+    {
+      "name": "CLK_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "DRM_MODE_SEL",
+      "type": "enum",
+      "default": "AUTO",
+      "items": [
+        "AUTO",
+        "DRM9K",
+        "DRM18K"
+      ]
+    },
+    {
+      "name": "MODE_9K",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "MODE_18K",
+      "type": "bool",
+      "default": "1"
+    }
+  ]
+}

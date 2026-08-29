@@ -1,0 +1,203 @@
+{
+  "slug": "DRM_Based_FIFO_7",
+  "name": "28nm DRM Based FIFO",
+  "displayName": "DRM Based FIFO",
+  "topModule": "ipm2l_fifo_wrapper_v1_15",
+  "version": "1.15",
+  "vendor": "Pango",
+  "category": "Module,Memory,DRM",
+  "id": "04100205",
+  "dir": "module_ip/ipm2l_flex_ram/ipm2l_flex_ram_eval/ipm2l_fifo",
+  "datasheet": "ip/module_ip/ipm2l_flex_ram/ipm2l_flex_ram_eval/ipm2l_fifo/UG041002_DRM_Based_RAM_IP.pdf",
+  "families": [
+    "Logos2",
+    "Titan2",
+    "Kosmo2"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "CAS_MODE_SEL",
+      "type": "enum",
+      "default": "AUTO",
+      "items": [
+        "AUTO",
+        "DRM18K",
+        "DRM36K",
+        "DRM64K"
+      ]
+    },
+    {
+      "name": "CAS_MODE",
+      "type": "enum",
+      "default": "18K",
+      "items": [
+        "18K",
+        "36K",
+        "64K"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC"
+      ]
+    },
+    {
+      "name": "FIFO_TYPE",
+      "type": "enum",
+      "default": "SYN_FIFO",
+      "items": [
+        "SYN_FIFO",
+        "ASYN_FIFO"
+      ]
+    },
+    {
+      "name": "ASYN_FIFO_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "SAMEWIDTH_EN",
+      "type": "bool",
+      "default": "true"
+    },
+    {
+      "name": "WR_BYTE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "BYTE_SIZE",
+      "type": "enum",
+      "default": "8",
+      "items": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "name": "WR_DEPTH_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "WR_DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "BE_WIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "RD_DEPTH_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "RD_DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "RD_BE_WIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "FAB_REG",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "FULL_WL_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "EMPTY_WL_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "ALMOST_FULL_NUM",
+      "type": "int",
+      "default": "1020"
+    },
+    {
+      "name": "ALMOST_EMPTY_NUM",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "RST_VAL_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RST_VAL",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "ECC_RDEN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ECC_WREN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "S_BIT_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "D_BIT_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RST_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "DATA_VALID_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "PREFETCH_EN",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

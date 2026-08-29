@@ -1,0 +1,7 @@
+{
+  "id": "chunk_035",
+  "source": "debug-ila.md",
+  "title": "Gotchas (shared by cdt_ins / cdt_dbg)",
+  "text": "[MCP-DEPRECATED] MCP 内 ILA 流程使用 fpga_ila_generate_fic + fpga_pds_register_fic 两件套(纯代码生成 .fic + 注册到 .pds),不通过 cdt_ins 驱动。以下 cdt_ins 内容仅作排查/教学参考。\n\n## Gotchas (shared by cdt_ins / cdt_dbg)\n- **Paths: use `/` (or `\\\\`), never a single `\\`** — the Tcl layer strips lone backslashes\n  (\"couldn't read file ...D:Admin...\"), and `dbg_program` says so explicitly.\n- GUI-subsystem exes but run **headless** with `-file`; launch hidden + a `WaitForExit(ms)`+`Kill` guard.\n  `puts` goes to stdout (capture via `-RedirectStandardOutput`). They may not exit cleanly after the\n  script — end the tcl with `catch {exit}` and keep the timeout backstop.\n- **Every command supports `-help`**, and `<tool>_help` lists all commands — probe a fresh install's exact\n  syntax by running each `<cmd> -help` in a `-file` script (zero hardware needed).\n- After ANY command error, cdt_ins **latches** (\"please run command clean before running again\") and\n  ignores the rest of the script. There is no working `clean` command — fix the offending line and relaunch.\n- Brace net names in Tcl so `[..]` isn't command-substituted: `{u_sub/.../sig[0]}`.\n- Budget: an ILA adds a debug core + JTAG hub + capture RAM (`dataDepth × width` bits of DRM). Check\n  utilization headroom first (`device_map/<top>_dmr.prt` / `place_route/<top>.prr` \"Device Utilization Summary\").",
+  "deprecated": true
+}

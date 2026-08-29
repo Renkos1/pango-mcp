@@ -1,0 +1,7 @@
+{
+  "id": "chunk_007",
+  "source": "SKILL.md",
+  "title": "4) On-chip debug — ILA capture + virtual-IO (scripted, no GUI)",
+  "text": "[MCP-DEPRECATED] MCP 内 ILA 流程使用 fpga_ila_generate_fic + fpga_pds_register_fic 两件套(纯代码生成 .fic + 注册到 .pds),不通过 cdt_ins 驱动。以下 cdt_ins 内容仅作排查/教学参考。\n\n## 4) On-chip debug — ILA capture + virtual-IO (scripted, no GUI)\nEverything the GUI's Fabric Inserter/Debugger do is Tcl-scriptable headless via **`cdt_ins.exe`**\n(insert a debug core tapping named nets → writes a `.fic`) and **`cdt_dbg.exe`** (program + trigger +\ndump a VCD over JTAG; plus runtime virtual-IO `dbg_dvio_*` and SerDes `dbg_hsst_*`). Flow: synth →\nauthor a `.fic` → register it in the `tsk_synthesis` `wgt_my_fic_src` widget of the `.pds` →\n`pds_shell -run gen_bit_stream` builds an **instrumented** bitstream → flash → `cdt_dbg` captures.\nFull command surface, the hand-writable `.fic` format, and gotchas (paths need `/` not `\\`;\n`ins_set_net` connect-by-index is unstable so hand-write the `.fic` by net name and validate with\n`ins_open`) are in **`reference/debug-ila.md`**.\n\nNB: if a stale `.fic` is registered in `wgt_my_fic_src` and you change the design, the inserter can\nfail (`E: Inserter-0005: Net '...' cannot be found after flattened net list`) and **halt dev_map**\n(pds_shell still exits 0 → grep the log). Fix: update the net name or empty the `wgt_my_fic_src` widget.",
+  "deprecated": true
+}

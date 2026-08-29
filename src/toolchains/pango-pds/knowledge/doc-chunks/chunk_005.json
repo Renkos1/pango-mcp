@@ -1,0 +1,6 @@
+{
+  "id": "chunk_005",
+  "source": "SKILL.md",
+  "title": "3a) Flash FPGA SRAM (volatile, fast — dev default)",
+  "text": "## 3a) Flash FPGA SRAM (volatile, fast — dev default)\n```tcl\ncfg_connect -ip 127.0.0.1 -port 65420\ncfg_scan_chain\ncfg_assign_file -file <design.sbit> -device_index 0\ncfg_program -device_index 0          ;# -> \"The done bit is 1\" on success\ncfg_disconnect\ncfg_close\n```\nLoads the bitstream into the FPGA's config SRAM. **Volatile** (cleared on FPGA power-cycle), seconds,\nreversible — ideal for iteration. (A PCIe endpoint re-trains its link on reprogram → the host may\nneed to re-enumerate the device before using it.)"
+}

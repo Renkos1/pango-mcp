@@ -1,0 +1,6 @@
+{
+  "id": "chunk_002",
+  "source": "SKILL.md",
+  "title": "The control tools (+ the GUI to avoid)",
+  "text": "## The control tools (+ the GUI to avoid)\n| tool | role | invocation |\n|---|---|---|\n| **`pds_shell.exe`** | headless flow engine (synth→map→pnr→bitstream) | `pds_shell.exe -project <x.pds> -run <action>` |\n| `pds.exe` | Qt **GUI** — **do NOT** use for headless: `-project -run` opens the GUI and idles | (interactive only) |\n| **`cdt_js.exe`** | JTAG **download server** (cable daemon) | `cdt_js.exe -port <N>` (default 65420) |\n| **`cdt_cfg.exe`** | Fabric **Configuration** tool (the programmer; runs `cfg_*` Tcl) | `cdt_cfg.exe -file <script.tcl>` |\n| **`cdt_ins.exe`** | Fabric **Inserter** (build a debug/ILA core → `.fic`) | `cdt_ins.exe -netlist <adf> ... -file <tcl>` |\n| **`cdt_dbg.exe`** | Fabric **Debugger** (program + trigger + dump waveform; virtual-IO) | `cdt_dbg.exe -file <tcl>` |\n\n`cdt_cfg`/`cdt_ins`/`cdt_dbg` are Tcl interpreters; `cdt_cfg`/`cdt_dbg` connect to a running `cdt_js`\nover TCP. Start `cdt_js` once (it stays resident), then run any number of script invocations."
+}

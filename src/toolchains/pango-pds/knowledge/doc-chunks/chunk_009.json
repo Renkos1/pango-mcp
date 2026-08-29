@@ -1,0 +1,6 @@
+{
+  "id": "chunk_009",
+  "source": "SKILL.md",
+  "title": "Gotchas",
+  "text": "## Gotchas\n- `pds.exe -project ... -run ...` hangs (GUI). Use `pds_shell.exe`.\n- pds_shell exits 0 on stage errors → ALWAYS grep the log for `^E:` (and the bitstream success line).\n- A benign `IPSpecCheck ... fifo ... WR_ADDR_WIDTH` warning is non-fatal.\n- `cdt_js` must be running before `cdt_cfg`/`cdt_dbg`; it's resident (start once).\n- Scan and confirm IDCODE/device_index before any `cfg_program`/`cfg_jtag_flash_*`.\n- In Tcl `-file` paths use `/` (or `\\\\`), never a single `\\` (the Tcl layer strips lone backslashes).\n- A clock entering on a non-clock-capable IO pad fails P&R (`E: Place-0084`) and produces NO bitstream —\n  route it through a PLL (see `reference/pds-project-and-flow.md`)."
+}

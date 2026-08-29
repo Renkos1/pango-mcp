@@ -1,0 +1,10 @@
+Constraint check start.
+W: ConstraintEditor-4042: Port 'p:led' lacks attribute 'PAP_IO_DRIVE', it's better to set the attribute for port.
+W: ConstraintEditor-4042: Port 'p:led' lacks attribute 'PAP_IO_SLEW', it's better to set the attribute for port.
+C: Timing-4002: [C:/work/pango-mcp/test/.actual/diag002/fdc/constraints/top.fdc(line number: 2)] Port 'no_such_clk' is not found in current design.
+E: CommandTiming-0057: [C:/work/pango-mcp/test/.actual/diag002/fdc/constraints/top.fdc(line number: 2)] Nothing matched for 'source_list', command 'create_clock' is aborted.
+E: ConstraintEditor-0046: [C:/work/pango-mcp/test/.actual/diag002/fdc/constraints/top.fdc(line number: 2)] Parse file error: Failed to import constraint "create_clock -name sysclk -period 20.0 [get_ports no_such_clk]".
+E: ConstraintEditor-0040: IO 'p:led' lacks attribute PAP_IO_VCCIO, please specify both { LOC VCCIO IOSTANDARD } constraints for IO.
+E: ConstraintEditor-0040: IO 'p:led' lacks attribute PAP_IO_STANDARD, please specify both { LOC VCCIO IOSTANDARD } constraints for IO.
+Found 4 error(s), 1 critical warning(s), 3 warning(s), out of 2 constraint(s), you can contact with constraint_check.ccr for more detail information.
+Constraint check end.

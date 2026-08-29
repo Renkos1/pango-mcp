@@ -1,0 +1,54 @@
+{
+  "name": "GTP_LUT6D",
+  "category": "lut",
+  "params": [
+    {
+      "name": "INIT",
+      "type": "bitvec[63:0]",
+      "default": "64'h0000000000000000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "Z",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "Z5",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "I0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I3",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I4",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I5",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_LUT6D\n#(\n    .INIT(64'h0000000000000000)\n) u_gtp_lut6d (\n    .Z(Z),\n    .Z5(Z5),\n    .I0(I0),\n    .I1(I1),\n    .I2(I2),\n    .I3(I3),\n    .I4(I4),\n    .I5(I5)\n);"
+}

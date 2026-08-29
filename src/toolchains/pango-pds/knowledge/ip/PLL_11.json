@@ -1,0 +1,978 @@
+{
+  "slug": "PLL_11",
+  "name": "Compact PLL",
+  "displayName": "PLL",
+  "topModule": "ipmc_pll_wrapper_v1_0",
+  "version": "1.3",
+  "vendor": "Pango",
+  "category": "Module,PLL",
+  "id": "031001",
+  "dir": "module_ip/ipmc_flex_pll/ipmc_flex_pll_eval/ipmc_pll",
+  "datasheet": "ip/module_ip/ipmc_flex_pll/ipmc_flex_pll_eval/ipmc_pll/UG031001_PLL_IP.pdf",
+  "families": [
+    "Compact"
+  ],
+  "devices": [
+    "PGC1300G",
+    "PGC2400G",
+    "PGC4700D",
+    "PGC7100D",
+    "PGC9500D",
+    "PGC1KG",
+    "PGC2KG",
+    "PGC4KD",
+    "PGC7KD",
+    "PGC10KD",
+    "PGC1300L",
+    "PGC2400L",
+    "PGC4700L",
+    "PGC7100L",
+    "PGC9500L",
+    "PGC1KL",
+    "PGC2KL",
+    "PGC4KL",
+    "PGC4KLS"
+  ],
+  "params": [
+    {
+      "name": "MODE_CFG",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "FB_MODE_basicPage",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "FB_basicPage",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "RST_INNER_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RSTODIV_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RSTODIV2_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RSTODIV3_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STDBY_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_CLKIN_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_PHASE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "APB_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PLL_PWD_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "LOW_POWER_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_EN_basicPage",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "CLKOUT1_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_GATE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT1_GATE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_GATE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_GATE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_BYPASS_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT1_BYPASS_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_BYPASS_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_BYPASS_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "ODIV0_CASCADE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "ODIV1_CASCADE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "ODIV2_CASCADE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "ODIV3_CASCADE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "SOURCE_ODIV0_basicPage",
+      "type": "enum",
+      "default": "ODIV1",
+      "items": [
+        "ODIV1",
+        "ODIV2",
+        "ODIV3"
+      ]
+    },
+    {
+      "name": "SOURCE_ODIV1_basicPage",
+      "type": "enum",
+      "default": "ODIV2",
+      "items": [
+        "ODIV0",
+        "ODIV2",
+        "ODIV3"
+      ]
+    },
+    {
+      "name": "SOURCE_ODIV2_basicPage",
+      "type": "enum",
+      "default": "ODIV3",
+      "items": [
+        "ODIV0",
+        "ODIV1",
+        "ODIV3"
+      ]
+    },
+    {
+      "name": "SOURCE_ODIV3_basicPage",
+      "type": "enum",
+      "default": "ODIV0",
+      "items": [
+        "ODIV0",
+        "ODIV1",
+        "ODIV2"
+      ]
+    },
+    {
+      "name": "STATIC_RATIO0_basicPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO1_basicPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO2_basicPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO3_basicPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "CLKOUT0_REQ_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT1_REQ_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT2_REQ_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT3_REQ_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT0_REQ_PHASE_basicPage",
+      "type": "float",
+      "default": "0.0000"
+    },
+    {
+      "name": "CLKOUT1_REQ_PHASE_basicPage",
+      "type": "float",
+      "default": "0.0000"
+    },
+    {
+      "name": "CLKOUT2_REQ_PHASE_basicPage",
+      "type": "float",
+      "default": "0.0000"
+    },
+    {
+      "name": "CLKOUT3_REQ_PHASE_basicPage",
+      "type": "float",
+      "default": "0.0000"
+    },
+    {
+      "name": "FB_MODE_advancedPage",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "FB_advancedPage",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "RST_INNER_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RSTODIV_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RSTODIV2_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RSTODIV3_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PFDEN_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STDBY_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_CLKIN_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_PHASE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "APB_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PLL_PWD_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_FREQ_advancedPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "PFDEN_APB_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PHASE_APB_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "LOCK_MODE_advancedPage",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "FRACN_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FRACN_DIV_advancedPage",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_RATIOI_advancedPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIOF_advancedPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "BANDWIDTH_advancedPage",
+      "type": "enum",
+      "default": "OPTIMIZED",
+      "items": [
+        "LOW",
+        "OPTIMIZED",
+        "HIGH"
+      ]
+    },
+    {
+      "name": "CLKOUT0_EN_advancedPage",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "CLKOUT1_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT1_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "SOURCE_ODIV0_advancedPage",
+      "type": "enum",
+      "default": "VCO",
+      "items": [
+        "VCO",
+        "ODIV1",
+        "ODIV2",
+        "ODIV3",
+        "CLKIN"
+      ]
+    },
+    {
+      "name": "SOURCE_ODIV1_advancedPage",
+      "type": "enum",
+      "default": "VCO",
+      "items": [
+        "VCO",
+        "ODIV0",
+        "ODIV2",
+        "ODIV3",
+        "CLKIN"
+      ]
+    },
+    {
+      "name": "SOURCE_ODIV2_advancedPage",
+      "type": "enum",
+      "default": "VCO",
+      "items": [
+        "VCO",
+        "ODIV0",
+        "ODIV1",
+        "ODIV3",
+        "CLKIN"
+      ]
+    },
+    {
+      "name": "SOURCE_ODIV3_advancedPage",
+      "type": "enum",
+      "default": "VCO",
+      "items": [
+        "VCO",
+        "ODIV0",
+        "ODIV1",
+        "ODIV2",
+        "CLKIN"
+      ]
+    },
+    {
+      "name": "STATIC_RATIO0_advancedPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO1_advancedPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO2_advancedPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO3_advancedPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "SOURCE_CLKOUT0_advancedPage",
+      "type": "enum",
+      "default": "ODIV0",
+      "items": [
+        "ODIV0",
+        "ODIV1",
+        "ODIV2",
+        "ODIV3",
+        "CLKIN"
+      ]
+    },
+    {
+      "name": "SOURCE_CLKOUT1_advancedPage",
+      "type": "enum",
+      "default": "ODIV1",
+      "items": [
+        "ODIV0",
+        "ODIV1",
+        "ODIV2",
+        "ODIV3",
+        "CLKIN"
+      ]
+    },
+    {
+      "name": "SOURCE_CLKOUT2_advancedPage",
+      "type": "enum",
+      "default": "ODIV2",
+      "items": [
+        "ODIV0",
+        "ODIV1",
+        "ODIV2",
+        "ODIV3",
+        "CLKIN"
+      ]
+    },
+    {
+      "name": "SOURCE_CLKOUT3_advancedPage",
+      "type": "enum",
+      "default": "ODIV3",
+      "items": [
+        "ODIV0",
+        "ODIV1",
+        "ODIV2",
+        "ODIV3",
+        "CLKIN"
+      ]
+    },
+    {
+      "name": "STATIC_PHASE0_advancedPage",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASE1_advancedPage",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASE2_advancedPage",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASE3_advancedPage",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CLKIN_FREQ",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "PFDEN_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PFDEN_APB_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "LOCK_MODE",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "STATIC_RATIOI",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO0",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO1",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO2",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO3",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIOF",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "FRACN_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FRACN_DIV",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "PHASE_APB_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_PHASE0",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASE1",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASE2",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASE3",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASE0",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASE1",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASE2",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASE3",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "VCOCLK_BYPASS0",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "VCOCLK_BYPASS1",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "VCOCLK_BYPASS2",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "VCOCLK_BYPASS3",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "ODIV0_CLKIN_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "ODIV1_CLKIN_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "ODIV2_CLKIN_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "ODIV3_CLKIN_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "CLKOUT0_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "CLKOUT1_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "CLKOUT2_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "CLKOUT3_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "CLKOUT0_SYN_EN",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "CLKOUT1_SYN_EN",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "CLKOUT2_SYN_EN",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "CLKOUT3_SYN_EN",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "INTERNAL_FB",
+      "type": "enum",
+      "default": "CLKOUT0",
+      "items": [
+        "CLKOUT0",
+        "CLKOUT1",
+        "CLKOUT2",
+        "CLKOUT3",
+        "DISABLE"
+      ]
+    },
+    {
+      "name": "EXTERNAL_FB",
+      "type": "enum",
+      "default": "DISABLE",
+      "items": [
+        "CLKOUT0",
+        "CLKOUT1",
+        "CLKOUT2",
+        "CLKOUT3",
+        "DISABLE"
+      ]
+    },
+    {
+      "name": "BANDWIDTH",
+      "type": "enum",
+      "default": "OPTIMIZED",
+      "items": [
+        "LOW",
+        "OPTIMIZED",
+        "HIGH"
+      ]
+    },
+    {
+      "name": "STDBY_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RST_INNER_EN",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "RSTODIV_EN",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "RSTODIV2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RSTODIV3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_CLKIN_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_PHASE_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "APB_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PLL_PWD_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_EN",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "CLKOUT1_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FB_MODE",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_FREQ",
+      "type": "string",
+      "default": "50.0"
+    },
+    {
+      "name": "CLKOUT1_FREQ",
+      "type": "string",
+      "default": "50.0"
+    },
+    {
+      "name": "CLKOUT2_FREQ",
+      "type": "string",
+      "default": "50.0"
+    },
+    {
+      "name": "CLKOUT3_FREQ",
+      "type": "string",
+      "default": "50.0"
+    }
+  ]
+}

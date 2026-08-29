@@ -1,0 +1,6 @@
+{
+  "id": "chunk_025",
+  "source": "pds-project-and-flow.md",
+  "title": "Build flow stages (what `pds_shell -run gen_bit_stream` does)",
+  "text": "## Build flow stages (what `pds_shell -run gen_bit_stream` does)\n`compile` → `synthesize` (ADS synth) → `device_map` → `place_route` (incl. auto hold-violation fix) →\n`report_timing` / `report_power` → `generate_bitstream`. Each leaves a same-named dir. Watch the log:\n- `Analyzing module X` / `Elaborating module X` — front end; an `E: Verilog-...: X referenced to\n  undefined module` here means a source/IP is missing from the `.pds` list.\n- `Placement done` / `Routing done` / `The bitstream file is \"...gen.../<top>.sbit\"` — success.\n- Errors are prefixed `E:`; grep the log for `^E:`. **pds_shell exits 0 even when a stage errors**, so\n  the log grep is mandatory — don't trust the exit code.\n- `-run` target names: `compile`, `synthesize`, `dev_map`, `pnr`, `report_timing`, `gen_bit_stream`,\n  `report_power`, `gen_netlist` (note `dev_map`/`pnr`, not `device_map`/`place_route`)."
+}

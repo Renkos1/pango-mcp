@@ -1,0 +1,776 @@
+{
+  "name": "GTP_IOLHR_DFT",
+  "category": "other",
+  "params": [
+    {
+      "name": "DYN_CLKDIVPOL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "OVERSAMPLE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DYN_CLKPOL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "IHSMEM_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "OCLKBPOL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "OCLKPOL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLK_POL0",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLK_POL1",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLK_POL2",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLK_POL3",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "LSMEM_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "OPPOSITE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLK_POL4",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLK_POL5",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLK_POL6",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "IDLY_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "IDLY_SET",
+      "type": "bitvec[7:0]",
+      "default": "8'h00"
+    },
+    {
+      "name": "IDYN_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ZHOLD_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ZHOLD_SET",
+      "type": "bitvec[3:0]",
+      "default": "4'h0"
+    },
+    {
+      "name": "ODLY_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ODLY_SET",
+      "type": "bitvec[7:0]",
+      "default": "8'h00"
+    },
+    {
+      "name": "ODYN_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "GRS_DIS",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "D_POL0",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "D_POL1",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "D_SEL0",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "D_SEL1",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "D_SEL2",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "D_SEL3",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "D_SEL4",
+      "type": "bitvec[1:0]",
+      "default": "2'h0"
+    },
+    {
+      "name": "D_SEL5",
+      "type": "bitvec[1:0]",
+      "default": "2'h0"
+    },
+    {
+      "name": "D_SEL6",
+      "type": "bitvec[1:0]",
+      "default": "2'h0"
+    },
+    {
+      "name": "TEST_EN0",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TEST_EN1",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "MIPI_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DDRI_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DES_DDREN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DES_SDREN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ISERDES_MODE",
+      "type": "string/int",
+      "default": "\"SDR1TO2\""
+    },
+    {
+      "name": "SAMEPIPELINE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ISAME_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "IOPPOSITE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "IDFFEN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ILTHEN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "MASTER",
+      "type": "string/int",
+      "default": "\"MASTER\""
+    },
+    {
+      "name": "NETWORKING_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "BITSLIP_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ISR_POL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ISR_SYNC",
+      "type": "string/int",
+      "default": "\"ASYNC\""
+    },
+    {
+      "name": "ISR_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "NUM_ICE",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "IFIFO_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "INIT_Q0",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "INIT_Q1",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "INIT_Q2",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "INIT_Q3",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "SRVAL_Q0",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "SRVAL_Q1",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "SRVAL_Q2",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "SRVAL_Q3",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "OSR_POL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "O_SYNC",
+      "type": "string/int",
+      "default": "\"ASYNC\""
+    },
+    {
+      "name": "SRO_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "INIT_DQ",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "SRVAL_DQ0",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "SRVAL_DQ1",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "SRVAL_DQ2",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "SRVAL_DQ3",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "PDIFF",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "OSERDES_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "OSERDES_MODE",
+      "type": "string/int",
+      "default": "\"SDR2TO1\""
+    },
+    {
+      "name": "SER_SDREN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "SER_DDREN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "OHSMEM_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ODFFEN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "OLTHEN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "OCASCADE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DO_SEL",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "UPD0_SHIFTEN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "UPD1_SHIFTEN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DQMODE",
+      "type": "bitvec[1:0]",
+      "default": "2'h0"
+    },
+    {
+      "name": "INIT_SET",
+      "type": "bitvec[1:0]",
+      "default": "2'h0"
+    },
+    {
+      "name": "T_SYNC",
+      "type": "string/int",
+      "default": "\"ASYNC\""
+    },
+    {
+      "name": "SRT_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "INIT_TQ",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "SRVAL_TQ0",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "SRVAL_TQ1",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "SRVAL_TQ2",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "SRVAL_TQ3",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "TBYTE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TRI_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TQMODE",
+      "type": "bitvec[1:0]",
+      "default": "2'h0"
+    }
+  ],
+  "ports": [
+    {
+      "name": "IFIFO_WADDR",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "IFIFO_RADDR",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "TX_DATA",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "TS_CTRL",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "IDLY_DYN_SET",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "ODLY_DYN_SET",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DI_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DI_MIPI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DI_FROM_SRB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ISHIFTIN0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ISHIFTIN1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "BITSLIP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ISR_IOLHR",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ICE0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ICE1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ICLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ICLKB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DESCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SERCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SERCLKB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCLKB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ICLKDIV",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCLKDIV",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCLKDIVB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OSHIFTIN0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OSHIFTIN1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OSR_IOLHR",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "UPD0_SHIFT",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "UPD1_SHIFT",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DO_CAS_IN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "INBUF_DYN_DIS_N_I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "MIPI_SW_DYN_I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TCE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TERM_BYTEIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "T_BYTEIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TO_CAS_IN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TERM_CAS_IN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "IDLY_SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ODLY_SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RX_DATA",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "ISHIFTOUT0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "ISHIFTOUT1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DI_TO_CLK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DI_TO_CLKB",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RSTN_OUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "MIPI_SW_DYN_O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "INBUF_DYN_DIS_N_O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DO_P",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DO_N",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "OSHIFTOUT0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "OSHIFTOUT1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "OFB",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DO_CAS_OUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TERM",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TERM_CAS_OUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TO_CAS_OUT",
+      "dir": "output",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_IOLHR_DFT\n#(\n    .DYN_CLKDIVPOL(\"FALSE\"),\n    .OVERSAMPLE_EN(\"FALSE\"),\n    .DYN_CLKPOL(\"FALSE\"),\n    .IHSMEM_EN(\"FALSE\"),\n    .OCLKBPOL(\"FALSE\"),\n    .OCLKPOL(\"FALSE\"),\n    .CLK_POL0(\"FALSE\"),\n    .CLK_POL1(\"FALSE\"),\n    .CLK_POL2(\"FALSE\"),\n    .CLK_POL3(\"FALSE\"),\n    .LSMEM_EN(\"FALSE\"),\n    .OPPOSITE_EN(\"FALSE\"),\n    .CLK_POL4(\"FALSE\"),\n    .CLK_POL5(\"FALSE\"),\n    .CLK_POL6(\"FALSE\"),\n    .IDLY_EN(\"FALSE\"),\n    .IDLY_SET(8'h00),\n    .IDYN_EN(\"FALSE\"),\n    .ZHOLD_EN(\"FALSE\"),\n    .ZHOLD_SET(4'h0),\n    .ODLY_EN(\"FALSE\"),\n    .ODLY_SET(8'h00),\n    .ODYN_EN(\"FALSE\"),\n    .GRS_DIS(1'b0),\n    .D_POL0(\"FALSE\"),\n    .D_POL1(\"FALSE\"),\n    .D_SEL0(1'b0),\n    .D_SEL1(1'b0),\n    .D_SEL2(1'b0),\n    .D_SEL3(1'b0),\n    .D_SEL4(2'h0),\n    .D_SEL5(2'h0),\n    .D_SEL6(2'h0),\n    .TEST_EN0(\"FALSE\"),\n    .TEST_EN1(\"FALSE\"),\n    .MIPI_EN(\"FALSE\"),\n    .DDRI_EN(\"FALSE\"),\n    .DES_DDREN(\"FALSE\"),\n    .DES_SDREN(\"FALSE\"),\n    .ISERDES_MODE(\"SDR1TO2\"),\n    .SAMEPIPELINE_EN(\"FALSE\"),\n    .ISAME_EN(\"FALSE\"),\n    .IOPPOSITE_EN(\"FALSE\"),\n    .IDFFEN(\"FALSE\"),\n    .ILTHEN(\"FALSE\"),\n    .MASTER(\"MASTER\"),\n    .NETWORKING_EN(\"FALSE\"),\n    .BITSLIP_EN(\"FALSE\"),\n    .ISR_POL(\"FALSE\"),\n    .ISR_SYNC(\"ASYNC\"),\n    .ISR_EN(\"FALSE\"),\n    .NUM_ICE(1'b0),\n    .IFIFO_EN(\"FALSE\"),\n    .INIT_Q0(1'b0),\n    .INIT_Q1(1'b0),\n    .INIT_Q2(1'b0),\n    .INIT_Q3(1'b0),\n    .SRVAL_Q0(\"RESET\"),\n    .SRVAL_Q1(\"RESET\"),\n    .SRVAL_Q2(\"RESET\"),\n    .SRVAL_Q3(\"RESET\"),\n    .OSR_POL(\"FALSE\"),\n    .O_SYNC(\"ASYNC\"),\n    .SRO_EN(\"FALSE\"),\n    .INIT_DQ(1'b0),\n    .SRVAL_DQ0(\"RESET\"),\n    .SRVAL_DQ1(\"RESET\"),\n    .SRVAL_DQ2(\"RESET\"),\n    .SRVAL_DQ3(\"RESET\"),\n    .PDIFF(\"FALSE\"),\n    .OSERDES_EN(\"FALSE\"),\n    .OSERDES_MODE(\"SDR2TO1\"),\n    .SER_SDREN(\"FALSE\"),\n    .SER_DDREN(\"FALSE\"),\n    .OHSMEM_EN(\"FALSE\"),\n    .ODFFEN(\"FALSE\"),\n    .OLTHEN(\"FALSE\"),\n    .OCASCADE_EN(\"FALSE\"),\n    .DO_SEL(1'b0),\n    .UPD0_SHIFTEN(\"FALSE\"),\n    .UPD1_SHIFTEN(\"FALSE\"),\n    .DQMODE(2'h0),\n    .INIT_SET(2'h0),\n    .T_SYNC(\"ASYNC\"),\n    .SRT_EN(\"FALSE\"),\n    .INIT_TQ(1'b0),\n    .SRVAL_TQ0(\"RESET\"),\n    .SRVAL_TQ1(\"RESET\"),\n    .SRVAL_TQ2(\"RESET\"),\n    .SRVAL_TQ3(\"RESET\"),\n    .TBYTE_EN(\"FALSE\"),\n    .TRI_EN(\"FALSE\"),\n    .TQMODE(2'h0)\n) u_gtp_iolhr_dft (\n    .IFIFO_WADDR(IFIFO_WADDR),\n    .IFIFO_RADDR(IFIFO_RADDR),\n    .TX_DATA(TX_DATA),\n    .TS_CTRL(TS_CTRL),\n    .IDLY_DYN_SET(IDLY_DYN_SET),\n    .ODLY_DYN_SET(ODLY_DYN_SET),\n    .DI(DI),\n    .DI_N(DI_N),\n    .DI_MIPI(DI_MIPI),\n    .DI_FROM_SRB(DI_FROM_SRB),\n    .ISHIFTIN0(ISHIFTIN0),\n    .ISHIFTIN1(ISHIFTIN1),\n    .BITSLIP(BITSLIP),\n    .ISR_IOLHR(ISR_IOLHR),\n    .ICE0(ICE0),\n    .ICE1(ICE1),\n    .ICLK(ICLK),\n    .ICLKB(ICLKB),\n    .DESCLK(DESCLK),\n    .SERCLK(SERCLK),\n    .SERCLKB(SERCLKB),\n    .OCLK(OCLK),\n    .OCLKB(OCLKB),\n    .ICLKDIV(ICLKDIV),\n    .OCLKDIV(OCLKDIV),\n    .OCLKDIVB(OCLKDIVB),\n    .OSHIFTIN0(OSHIFTIN0),\n    .OSHIFTIN1(OSHIFTIN1),\n    .OSR_IOLHR(OSR_IOLHR),\n    .OCE(OCE),\n    .UPD0_SHIFT(UPD0_SHIFT),\n    .UPD1_SHIFT(UPD1_SHIFT),\n    .DO_CAS_IN(DO_CAS_IN),\n    .INBUF_DYN_DIS_N_I(INBUF_DYN_DIS_N_I),\n    .MIPI_SW_DYN_I(MIPI_SW_DYN_I),\n    .TCE(TCE),\n    .TERM_BYTEIN(TERM_BYTEIN),\n    .T_BYTEIN(T_BYTEIN),\n    .TO_CAS_IN(TO_CAS_IN),\n    .TERM_CAS_IN(TERM_CAS_IN),\n    .IDLY_SEL(IDLY_SEL),\n    .ODLY_SEL(ODLY_SEL),\n    .RX_DATA(RX_DATA),\n    .ISHIFTOUT0(ISHIFTOUT0),\n    .ISHIFTOUT1(ISHIFTOUT1),\n    .DI_TO_CLK(DI_TO_CLK),\n    .DI_TO_CLKB(DI_TO_CLKB),\n    .RSTN_OUT(RSTN_OUT),\n    .MIPI_SW_DYN_O(MIPI_SW_DYN_O),\n    .INBUF_DYN_DIS_N_O(INBUF_DYN_DIS_N_O),\n    .DO_P(DO_P),\n    .DO_N(DO_N),\n    .OSHIFTOUT0(OSHIFTOUT0),\n    .OSHIFTOUT1(OSHIFTOUT1),\n    .OFB(OFB),\n    .DO_CAS_OUT(DO_CAS_OUT),\n    .TERM(TERM),\n    .TERM_CAS_OUT(TERM_CAS_OUT),\n    .TO_CAS_OUT(TO_CAS_OUT)\n);"
+}

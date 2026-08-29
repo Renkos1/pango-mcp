@@ -1,0 +1,59 @@
+{
+  "slug": "Distributed_Simple_Dual_Port_RAM_48",
+  "name": "Distributed Simple Dual Port RAM",
+  "displayName": "Distributed Simple Dual Port RAM",
+  "topModule": "ipm_distributed_sdpram_wrapper_v1_3",
+  "version": "1.3",
+  "vendor": "Pango",
+  "category": "Module,Memory,Distributed RAM",
+  "id": "06100101",
+  "dir": "module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_sdpram",
+  "datasheet": "ip/module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_sdpram/UG061001_Distributed_RAM_IP.pdf",
+  "families": [],
+  "devices": [],
+  "params": [
+    {
+      "name": "OUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "ADDR_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "RST_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "ASYNC",
+        "SYNC"
+      ]
+    },
+    {
+      "name": "INIT_ENABLE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "FILE_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    }
+  ]
+}

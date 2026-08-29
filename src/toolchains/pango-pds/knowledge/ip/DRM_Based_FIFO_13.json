@@ -1,0 +1,159 @@
+{
+  "slug": "DRM_Based_FIFO_13",
+  "name": "Compact DRM Based FIFO",
+  "displayName": "DRM Based FIFO",
+  "topModule": "_fifo_wrapper_v1_10",
+  "version": "1.10",
+  "vendor": "Pango",
+  "category": "Module,Memory,DRM",
+  "id": "03100205",
+  "dir": "module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_fifo",
+  "datasheet": "ip/module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_fifo/UG031002_DRM_Based_RAM_IP.pdf",
+  "families": [
+    "Compact"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "GTP_DRM_TYPE",
+      "type": "enum",
+      "default": "E1",
+      "items": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "name": "SAMEWIDTH_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "WR_BYTE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "FULL_WL_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "EMPTY_WL_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "WR_DEPTH_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "WR_DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "RD_DEPTH_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "RD_DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "RD_CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "BE_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "RD_BE_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "RST_VAL",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "FIFO_TYPE",
+      "type": "enum",
+      "default": "SYN_FIFO",
+      "items": [
+        "SYN_FIFO",
+        "ASYN_FIFO"
+      ]
+    },
+    {
+      "name": "ASYN_FIFO_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ALMOST_FULL_NUM",
+      "type": "int",
+      "default": "1020"
+    },
+    {
+      "name": "ALMOST_EMPTY_NUM",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "BYTE_SIZE",
+      "type": "enum",
+      "default": "8",
+      "items": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "name": "CAS_ENABLE",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "CAS_STATUS",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RST_VAL_EN",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

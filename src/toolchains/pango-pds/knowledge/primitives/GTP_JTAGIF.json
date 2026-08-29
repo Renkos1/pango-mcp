@@ -1,0 +1,39 @@
+{
+  "name": "GTP_JTAGIF",
+  "category": "config_misc",
+  "params": [
+    {
+      "name": "USERCODE",
+      "type": "bitvec[31:0]",
+      "default": "32'hFFFFFFFF"
+    },
+    {
+      "name": "IDCODE",
+      "type": "bitvec[31:0]",
+      "default": "32'h5555AAAA"
+    }
+  ],
+  "ports": [
+    {
+      "name": "TDO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TCK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TMS",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TDI",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_JTAGIF\n#(\n    .USERCODE(32'hFFFFFFFF),\n    .IDCODE(32'h5555AAAA)\n) u_gtp_jtagif (\n    .TDO(TDO),\n    .TCK(TCK),\n    .TMS(TMS),\n    .TDI(TDI)\n);"
+}

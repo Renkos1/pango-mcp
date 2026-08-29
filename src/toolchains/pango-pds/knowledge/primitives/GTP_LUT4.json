@@ -1,0 +1,39 @@
+{
+  "name": "GTP_LUT4",
+  "category": "lut",
+  "params": [
+    {
+      "name": "INIT",
+      "type": "bitvec[15:0]",
+      "default": "16'h0000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "Z",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "I0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I3",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_LUT4\n#(\n    .INIT(16'h0000)\n) u_gtp_lut4 (\n    .Z(Z),\n    .I0(I0),\n    .I1(I1),\n    .I2(I2),\n    .I3(I3)\n);"
+}

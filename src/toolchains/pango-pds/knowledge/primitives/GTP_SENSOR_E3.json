@@ -1,0 +1,215 @@
+{
+  "name": "GTP_SENSOR_E3",
+  "category": "analog",
+  "params": [
+    {
+      "name": "CONTI_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "BYPASS_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "NUM_SEL",
+      "type": "string/int",
+      "default": "\"D16\""
+    },
+    {
+      "name": "BLEED_SEL0",
+      "type": "string/int",
+      "default": "\"NODIV\""
+    },
+    {
+      "name": "BLEED_SEL1",
+      "type": "string/int",
+      "default": "\"NODIV\""
+    },
+    {
+      "name": "BLEED_SEL2",
+      "type": "string/int",
+      "default": "\"NODIV\""
+    },
+    {
+      "name": "BLEED_SEL3",
+      "type": "string/int",
+      "default": "\"NODIV\""
+    },
+    {
+      "name": "BLEED_SEL4",
+      "type": "string/int",
+      "default": "\"NODIV\""
+    },
+    {
+      "name": "BLEED_SEL5",
+      "type": "string/int",
+      "default": "\"NODIV\""
+    },
+    {
+      "name": "BLEED_SEL6",
+      "type": "string/int",
+      "default": "\"NODIV\""
+    },
+    {
+      "name": "BLEED_SEL7",
+      "type": "string/int",
+      "default": "\"NODIV\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "PRDATA",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PREADY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "OVER_TEMP",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "ALM",
+      "dir": "output",
+      "width": 17,
+      "range": "[16:0]"
+    },
+    {
+      "name": "USER_TSADC_DATA_VALID",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "USER_TSADC_DOUT",
+      "dir": "output",
+      "width": 10,
+      "range": "[9:0]"
+    },
+    {
+      "name": "USER_BIST_VALID",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "USER_BIST_ERROR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "VAUX",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PRESETN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PADDR",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "PSEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PENABLE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PWRITE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PWDATA",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "USER_TSADC_RSTN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "USER_TSADC_CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "USER_TSADC_SAMPLE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "USER_TSADC_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "USER_TSADC_SEL",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "USER_TSADC_TSEN_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "USER_TSADC_DATA_COUNT",
+      "dir": "input",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "USER_TSADC_ANA_REG",
+      "dir": "input",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "USER_BIST_MODE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "USER_BIST_START",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "USER_BIST_REF_MAX",
+      "dir": "input",
+      "width": 10,
+      "range": "[9:0]"
+    },
+    {
+      "name": "USER_BIST_REF_MIN",
+      "dir": "input",
+      "width": 10,
+      "range": "[9:0]"
+    }
+  ],
+  "instTemplate": "GTP_SENSOR_E3\n#(\n    .CONTI_EN(\"TRUE\"),\n    .BYPASS_EN(\"FALSE\"),\n    .NUM_SEL(\"D16\"),\n    .BLEED_SEL0(\"NODIV\"),\n    .BLEED_SEL1(\"NODIV\"),\n    .BLEED_SEL2(\"NODIV\"),\n    .BLEED_SEL3(\"NODIV\"),\n    .BLEED_SEL4(\"NODIV\"),\n    .BLEED_SEL5(\"NODIV\"),\n    .BLEED_SEL6(\"NODIV\"),\n    .BLEED_SEL7(\"NODIV\")\n) u_gtp_sensor_e3 (\n    .PRDATA(PRDATA),\n    .PREADY(PREADY),\n    .OVER_TEMP(OVER_TEMP),\n    .ALM(ALM),\n    .USER_TSADC_DATA_VALID(USER_TSADC_DATA_VALID),\n    .USER_TSADC_DOUT(USER_TSADC_DOUT),\n    .USER_BIST_VALID(USER_BIST_VALID),\n    .USER_BIST_ERROR(USER_BIST_ERROR),\n    .VAUX(VAUX),\n    .PCLK(PCLK),\n    .PRESETN(PRESETN),\n    .PADDR(PADDR),\n    .PSEL(PSEL),\n    .PENABLE(PENABLE),\n    .PWRITE(PWRITE),\n    .PWDATA(PWDATA),\n    .USER_TSADC_RSTN(USER_TSADC_RSTN),\n    .USER_TSADC_CLK(USER_TSADC_CLK),\n    .USER_TSADC_SAMPLE(USER_TSADC_SAMPLE),\n    .USER_TSADC_EN(USER_TSADC_EN),\n    .USER_TSADC_SEL(USER_TSADC_SEL),\n    .USER_TSADC_TSEN_EN(USER_TSADC_TSEN_EN),\n    .USER_TSADC_DATA_COUNT(USER_TSADC_DATA_COUNT),\n    .USER_TSADC_ANA_REG(USER_TSADC_ANA_REG),\n    .USER_BIST_MODE(USER_BIST_MODE),\n    .USER_BIST_START(USER_BIST_START),\n    .USER_BIST_REF_MAX(USER_BIST_REF_MAX),\n    .USER_BIST_REF_MIN(USER_BIST_REF_MIN)\n);"
+}

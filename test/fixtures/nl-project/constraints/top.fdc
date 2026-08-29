@@ -1,0 +1,2 @@
+# Minimal constraints — synthesis (pre-PNR) needs no pin LOCs; a clock keeps timing real.
+create_clock -name clk -period 20.000 [get_ports clk]

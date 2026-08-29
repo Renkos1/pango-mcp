@@ -1,0 +1,6 @@
+{
+  "id": "chunk_008",
+  "source": "SKILL.md",
+  "title": ".pds / .fdc / .sbit / .sfc (the files)",
+  "text": "## .pds / .fdc / .sbit / .sfc (the files)\n- **`.pds`** — project file, an **S-expression** tree: `(_flow ... (_task tsk_setup\n  (_widget wgt_select_arch (_input (_part (_family ..)(_device ..)(_speedgrade ..)(_package ..))))\n  (_widget wgt_my_design_src (_input (_file \"rtl/x.v\" (_format verilog) (_timespec \"..\")) ...))))`.\n  To **add a source**: insert a `(_file \"<relpath>\" (_format verilog) (_timespec \"<ISO>\"))` block in\n  the `wgt_my_design_src` `_input`. Paren-balance must stay equal. The first source can carry the top:\n  `(_file \"rtl/top.v\" + \"top\" (_format verilog) ...)`. `pds_shell` rewrites the `.pds` each run\n  (normal) — your source-list edits are preserved. You can also **hand-write a minimal `.pds` from\n  scratch** (see `reference/pds-project-and-flow.md`).\n- **`.fdc`** — Fabric Design Constraints: pin LOC, IO standard, timing. Referenced by the project.\n- **`.sbit`** — the bitstream (SRAM/JTAG config).  **`.sfc`** — SPI-flash image (from `cfg_gen_sfc`).\n- Keep an independent plaintext control copy (`design.plain.pds` → `top.plain.fdc`) if a GUI / sync\n  agent might re-encrypt the originals; point `pds_shell` at the control copy."
+}

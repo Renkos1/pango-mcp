@@ -1,0 +1,59 @@
+name: Hardware report
+description: Report success or failure on a device other than PG2L200H
+labels: [hardware-report]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The maintainer owns exactly one board. Every report here — working or
+        not — grows the validated-configuration table in `docs/hardware-notes.md`
+        and is genuinely useful. Negative results are just as welcome.
+
+  - type: input
+    id: device
+    attributes:
+      label: Device, package, speedgrade
+      placeholder: "PG2L100H, FBG484, speedgrade 6"
+    validations: { required: true }
+
+  - type: input
+    id: board
+    attributes:
+      label: Board / cable
+      placeholder: "vendor eval board; FT2232H mini-module"
+    validations: { required: true }
+
+  - type: checkboxes
+    id: exercised
+    attributes:
+      label: What you exercised
+      options:
+        - label: "JTAG scan (IDCODE read)"
+        - label: "SRAM configuration (volatile)"
+        - label: "SPI flash program (persistent)"
+        - label: "ILA capture"
+        - label: "Full build to .sbit"
+
+  - type: input
+    id: idcode
+    attributes:
+      label: IDCODE read
+      placeholder: "0x00602899"
+
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Outcome
+      options:
+        - "Worked with no changes"
+        - "Worked after configuration changes (describe below)"
+        - "Partially worked"
+        - "Did not work"
+    validations: { required: true }
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: Detail
+      description: Config you had to change, anything that surprised you, and the PDS version used.
+    validations: { required: true }

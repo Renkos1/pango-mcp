@@ -1,0 +1,6 @@
+{
+  "id": "chunk_036",
+  "source": "debug-ila.md",
+  "title": "Worked example",
+  "text": "## Worked example\nA 16-channel core tapping a DMA datapath (data buses + a few control strobes), sample clock = the PCIe\n`pclk_div2` net, depth 1024, registered in the `.pds` `wgt_my_fic_src` and built by the normal headless\nflow (log shows `>Generating core DebugCore0...` and `u_CORES/u_debug_core_0/...` instances; the ILA\nadded ~FF +446 / LUT +316 / +1 USCM for the JTAG hub). Flashed, exercised the design, then captured with\n`dbg_connect → dbg_scan_chain → dbg_import_fic` (**\"Import Core: 0 OK\"**) `→ dbg_list`\n(**\"CORE:MyFLA0\"**) `→ dbg_fla_set_capture -fla 0 -type n -samples 1024 → dbg_fla_run -device 0 -fla 0` → wrote `data.wf` = 1024 samples ×\n17 bits (16 channels + 1). **Liveness proof:** two captures seconds apart while the design ran differ in\nall bytes — the ILA reads live internal state over JTAG. The native `.wf` is bit-packed (W+1 bits/sample,\nMSB-first); for legible values decode by channel order or export a VCD. If your capture window\n(`depth / clk`) is shorter than the event you watch, the signal looks static within one window — deepen\nthe capture or trigger on a strobe and re-capture."
+}

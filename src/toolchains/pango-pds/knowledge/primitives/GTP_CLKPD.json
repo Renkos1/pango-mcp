@@ -1,0 +1,54 @@
+{
+  "name": "GTP_CLKPD",
+  "category": "clock_pll",
+  "params": [
+    {
+      "name": "CPD_EDGE",
+      "type": "string/int",
+      "default": "\"POSEDGE\""
+    },
+    {
+      "name": "HPIO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "FLAG_PD",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "LOCK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK_SAMPLE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK_CTRL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK_PHY",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DONE",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_CLKPD\n#(\n    .CPD_EDGE(\"POSEDGE\"),\n    .HPIO(\"FALSE\")\n) u_gtp_clkpd (\n    .FLAG_PD(FLAG_PD),\n    .LOCK(LOCK),\n    .RST(RST),\n    .CLK_SAMPLE(CLK_SAMPLE),\n    .CLK_CTRL(CLK_CTRL),\n    .CLK_PHY(CLK_PHY),\n    .DONE(DONE)\n);"
+}

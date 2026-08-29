@@ -1,0 +1,1294 @@
+{
+  "slug": "PLL_20",
+  "name": "Logos PLL",
+  "displayName": "PLL",
+  "topModule": "ipml_pll_wrapper_v1_5",
+  "version": "1.8",
+  "vendor": "Pango",
+  "category": "Module,PLL",
+  "id": "021001",
+  "dir": "module_ip/ipml_flex_pll/ipml_flex_pll_eval/ipml_pll",
+  "datasheet": "ip/module_ip/ipml_flex_pll/ipml_flex_pll_eval/ipml_pll/UG021001_PLL_IP.pdf",
+  "families": [
+    "Logos"
+  ],
+  "devices": [
+    "PGL22G",
+    "PGL22GS",
+    "PGL35ES",
+    "PGL200ES",
+    "PGL12G",
+    "PGL25G",
+    "PGL20H",
+    "PGL50H",
+    "PGL50G",
+    "PGL100H",
+    "PGL18G"
+  ],
+  "params": [
+    {
+      "name": "DEVICE_PGL12",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "DEVICE_PGL22",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DEVICE_PGL35",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DEVICE_PGL18",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "MODE_CFG",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "MODE",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FB_MODE_basicPage",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "FBMODE_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FEEDBACK_DELAY_ENABLE_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FEEDBACK_DELAY_VALUE_basicPage",
+      "type": "float",
+      "default": "0.0"
+    },
+    {
+      "name": "DYNAMIC_CLKIN_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_SEL_ENABLE_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_SEL_EN_ENABLE_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKSWITCH_FLAG_ENABLE_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FBDIV_SEL_basicPage",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "PLL_PWD_ENABLE_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "RST_ENABLE_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "BANDWIDTH_basicPage",
+      "type": "enum",
+      "default": "OPTIMIZED",
+      "items": [
+        "LOW",
+        "OPTIMIZED",
+        "HIGH"
+      ]
+    },
+    {
+      "name": "SHOW_SETTING_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_RATIOI_basicPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIOF_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_RATIOM_basicPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_DUTYF_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "SSC_EN_basicPage",
+      "type": "enum",
+      "default": "DISABLE",
+      "items": [
+        "DISABLE",
+        "DOWN_LOW",
+        "DOWN_HIGH",
+        "CENTER_LOW",
+        "CENTER_HIGH"
+      ]
+    },
+    {
+      "name": "SSC_FREQ_basicPage",
+      "type": "float",
+      "default": "50.000"
+    },
+    {
+      "name": "SSC_ACT_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "STATIC_PHASEF_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT0_EN_basicPage",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "CLKOUT0_GATE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_REQ_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT0_REQ_PHASE_basicPage",
+      "type": "float",
+      "default": "0.0000"
+    },
+    {
+      "name": "CLKOUT0_REQ_DUTY_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "STATIC_RATIO0_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTY0_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASE0_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT0_EXT_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_EXT_GATE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT1_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT1_GATE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS1_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT1_REQ_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT1_REQ_PHASE_basicPage",
+      "type": "float",
+      "default": "0.0000"
+    },
+    {
+      "name": "CLKOUT1_REQ_DUTY_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "STATIC_RATIO1_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTY1_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASE1_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT2_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_GATE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS2_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_REQ_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT2_REQ_PHASE_basicPage",
+      "type": "float",
+      "default": "0.0000"
+    },
+    {
+      "name": "CLKOUT2_REQ_DUTY_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "STATIC_RATIO2_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTY2_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASE2_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT3_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_GATE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS3_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_REQ_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT3_REQ_PHASE_basicPage",
+      "type": "float",
+      "default": "0.0000"
+    },
+    {
+      "name": "CLKOUT3_REQ_DUTY_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "STATIC_RATIO3_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTY3_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASE3_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT4_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT4_GATE_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS4_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_BYPASS_EN_basicPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT4_REQ_FREQ_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT4_REQ_PHASE_basicPage",
+      "type": "float",
+      "default": "0.0000"
+    },
+    {
+      "name": "CLKOUT4_REQ_DUTY_basicPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "STATIC_RATIO4_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTY4_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASE4_basicPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "FB_MODE_advancedPage",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "FBMODE_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FEEDBACK_DELAY_ENABLE_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FEEDBACK_DELAY_VALUE_advancedPage",
+      "type": "float",
+      "default": "0.0"
+    },
+    {
+      "name": "VCODIV2_ENABLE_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_CLKIN_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_SEL_ENABLE_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_SEL_EN_ENABLE_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKSWITCH_FLAG_ENABLE_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FBDIV_SEL_advancedPage",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "PLL_PWD_ENABLE_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_FREQ_advancedPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "RST_ENABLE_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PFDEN_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RSTODIV_ENABLE_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIOI_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_RATIOI_advancedPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "DYNAMIC_RATIOM_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_RATIOM_advancedPage",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "DYNAMIC_RATIOF_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_RATIOF_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_PHASE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "BANDWIDTH_advancedPage",
+      "type": "enum",
+      "default": "OPTIMIZED",
+      "items": [
+        "LOW",
+        "OPTIMIZED",
+        "HIGH"
+      ]
+    },
+    {
+      "name": "DYNAMIC_LOOP_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "LOOP_MAPPING_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "SSC_EN_advancedPage",
+      "type": "enum",
+      "default": "DISABLE",
+      "items": [
+        "DISABLE",
+        "DOWN_LOW",
+        "DOWN_HIGH",
+        "CENTER_LOW",
+        "CENTER_HIGH"
+      ]
+    },
+    {
+      "name": "SSC_FREQ_advancedPage",
+      "type": "float",
+      "default": "50.000"
+    },
+    {
+      "name": "SSC_ACT_FREQ_advancedPage",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT0_EN_advancedPage",
+      "type": "bool",
+      "default": "TRUE"
+    },
+    {
+      "name": "CLKOUT0_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIO0_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_RATIO0_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_PHASE0_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_PHASE0_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_DUTY0_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_DUTY0_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT0_EXT_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_EXT_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT1_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT1_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS1_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIO1_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_RATIO1_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_PHASE1_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_PHASE1_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_DUTY1_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_DUTY1_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT2_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS2_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIO2_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_RATIO2_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_PHASE2_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_PHASE2_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_DUTY2_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_DUTY2_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT3_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS3_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIO3_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_RATIO3_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_PHASE3_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_PHASE3_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_DUTY3_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_DUTY3_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT4_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT4_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS4_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_BYPASS_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIO4_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_RATIO4_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_PHASE4_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_PHASE4_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "DYNAMIC_DUTY4_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "STATIC_DUTY4_advancedPage",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT5_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT5_GATE_EN_advancedPage",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT5_SEL_advancedPage",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "CLKIN_FREQ",
+      "type": "string",
+      "default": "50.0000"
+    },
+    {
+      "name": "CLKOUT0_FREQ",
+      "type": "string",
+      "default": "50.0"
+    },
+    {
+      "name": "CLKOUT1_FREQ",
+      "type": "string",
+      "default": "50.0"
+    },
+    {
+      "name": "CLKOUT2_FREQ",
+      "type": "string",
+      "default": "50.0"
+    },
+    {
+      "name": "CLKOUT3_FREQ",
+      "type": "string",
+      "default": "50.0"
+    },
+    {
+      "name": "CLKOUT4_FREQ",
+      "type": "string",
+      "default": "50.0"
+    },
+    {
+      "name": "CLKOUT5_FREQ",
+      "type": "string",
+      "default": "50.0"
+    },
+    {
+      "name": "DYNAMIC_CLKIN_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "EXT_CLKFB_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FEEDBACK_DELAY_ENABLE",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "FEEDBACK_DELAY_VALUE",
+      "type": "float",
+      "default": "0.0"
+    },
+    {
+      "name": "PFDEN_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "VCOCLK_DIV2",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "DYNAMIC_RATIOI_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIOF_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIO0_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIO1_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIO2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIO3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_RATIO4_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUTY0_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUTY1_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUTY2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUTY3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_DUTY4_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_PHASE0_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_PHASE1_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_PHASE2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_PHASE3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "DYNAMIC_PHASE4_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_GATE_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_EXT_GATE_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT1_GATE_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_GATE_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_GATE_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT4_GATE_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT5_GATE_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PLL_PWD_ENABLE",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RST_ENABLE",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "RSTODIV_ENABLE",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT0_EXT_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT1_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT4_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKOUT5_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKSWITCH_FLAG_ENABLE",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PHASE_ADJUST0_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PHASE_ADJUST1_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PHASE_ADJUST2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PHASE_ADJUST3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "PHASE_ADJUST4_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS1_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS2_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS3_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLK_CAS4_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_BYPASS_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "CLKIN_FREQ",
+      "type": "float",
+      "default": "50.0000"
+    },
+    {
+      "name": "STATIC_RATIOI",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIOF",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO0",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_RATIO1",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_RATIO2",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_RATIO3",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_RATIO4",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTY0",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTY1",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTY2",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTY3",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTY4",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_DUTYF",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASE0",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASE1",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASE2",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASE3",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASE4",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_PHASEF",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "CLKOUT5_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "FBDIV_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "BANDWIDTH",
+      "type": "enum",
+      "default": "OPTIMIZED",
+      "items": [
+        "LOW",
+        "OPTIMIZED",
+        "HIGH"
+      ]
+    },
+    {
+      "name": "SSC_EN",
+      "type": "enum",
+      "default": "DISABLE",
+      "items": [
+        "DISABLE",
+        "DOWN_LOW",
+        "DOWN_HIGH",
+        "CENTER_LOW",
+        "CENTER_HIGH"
+      ]
+    },
+    {
+      "name": "SSC_FREQ",
+      "type": "int",
+      "default": "50"
+    }
+  ]
+}

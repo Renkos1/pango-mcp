@@ -1,0 +1,34 @@
+{
+  "name": "GTP_INBUFE",
+  "category": "io_buffer",
+  "params": [
+    {
+      "name": "IOSTANDARD",
+      "type": "string/int",
+      "default": "\"DEFAULT\""
+    },
+    {
+      "name": "TERM_DDR",
+      "type": "string/int",
+      "default": "\"ON\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_INBUFE\n#(\n    .IOSTANDARD(\"DEFAULT\"),\n    .TERM_DDR(\"ON\")\n) u_gtp_inbufe (\n    .O(O),\n    .EN(EN),\n    .I(I)\n);"
+}

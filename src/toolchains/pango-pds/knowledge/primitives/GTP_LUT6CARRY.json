@@ -1,0 +1,69 @@
+{
+  "name": "GTP_LUT6CARRY",
+  "category": "lut",
+  "params": [
+    {
+      "name": "INIT",
+      "type": "bitvec[63:0]",
+      "default": "64'h0000000000000000"
+    },
+    {
+      "name": "I5_TO_CARRY",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "I5_TO_LUT",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "COUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "Z",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I3",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I4",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I5",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_LUT6CARRY\n#(\n    .INIT(64'h0000000000000000),\n    .I5_TO_CARRY(\"TRUE\"),\n    .I5_TO_LUT(\"FALSE\")\n) u_gtp_lut6carry (\n    .COUT(COUT),\n    .Z(Z),\n    .CIN(CIN),\n    .I0(I0),\n    .I1(I1),\n    .I2(I2),\n    .I3(I3),\n    .I4(I4),\n    .I5(I5)\n);"
+}

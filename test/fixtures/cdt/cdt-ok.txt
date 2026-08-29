@@ -1,0 +1,5 @@
+cfg_connect -ip 127.0.0.1 -port 65425
+IDCODE(0): 0x12345678
+Import Core: 0 OK
+CORE:MyFLA0
+The done bit is 1

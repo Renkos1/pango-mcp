@@ -1,0 +1,68 @@
+{
+  "name": "GTP_PLLREFMUX_TEST_DFT",
+  "category": "other",
+  "params": [],
+  "ports": [
+    {
+      "name": "CLK_P",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CLK_SRB",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CLKOUT_P",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CFG_MUX0",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CFG_MUX1",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CFG_MUX2",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CFG_MUX3",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CFG_ENABLE",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "SEL_U",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "SEL_D",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    }
+  ],
+  "instTemplate": "GTP_PLLREFMUX_TEST_DFT u_gtp_pllrefmux_test_dft (\n    .CLK_P(CLK_P),\n    .CLK_SRB(CLK_SRB),\n    .CLKOUT_P(CLKOUT_P),\n    .CFG_MUX0(CFG_MUX0),\n    .CFG_MUX1(CFG_MUX1),\n    .CFG_MUX2(CFG_MUX2),\n    .CFG_MUX3(CFG_MUX3),\n    .CFG_ENABLE(CFG_ENABLE),\n    .SEL_U(SEL_U),\n    .SEL_D(SEL_D)\n);"
+}

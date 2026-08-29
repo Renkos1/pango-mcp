@@ -1,0 +1,18 @@
+{
+  "name": "GTP_OSC_E4",
+  "category": "clock_pll",
+  "params": [],
+  "ports": [
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "EN_N",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_OSC_E4 u_gtp_osc_e4 (\n    .CLKOUT(CLKOUT),\n    .EN_N(EN_N)\n);"
+}

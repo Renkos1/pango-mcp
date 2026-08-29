@@ -1,0 +1,79 @@
+{
+  "slug": "Distributed_FIFO_46",
+  "name": "Distributed FIFO",
+  "displayName": "Distributed FIFO",
+  "topModule": "ipm_distributed_fifo_wrapper_v1_4",
+  "version": "1.6",
+  "vendor": "Pango",
+  "category": "Module,Memory,Distributed RAM",
+  "id": "06100104",
+  "dir": "module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_fifo",
+  "datasheet": "ip/module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_fifo/UG061001_Distributed_RAM_IP.pdf",
+  "families": [],
+  "devices": [],
+  "params": [
+    {
+      "name": "WR_WATER_LEVEL_ENABLE",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "OUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_WATER_LEVEL_ENABLE",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "ASYNC_EN",
+      "type": "bool",
+      "default": "true"
+    },
+    {
+      "name": "SYNC_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "ADDR_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "RST_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "ASYNC",
+        "SYNC"
+      ]
+    },
+    {
+      "name": "FIFO_TYPE",
+      "type": "enum",
+      "default": "ASYNC_FIFO",
+      "items": [
+        "ASYNC_FIFO",
+        "SYNC_FIFO"
+      ]
+    },
+    {
+      "name": "ALMOST_FULL_NUM",
+      "type": "int",
+      "default": "11"
+    },
+    {
+      "name": "ALMOST_EMPTY_NUM",
+      "type": "int",
+      "default": "4"
+    }
+  ]
+}

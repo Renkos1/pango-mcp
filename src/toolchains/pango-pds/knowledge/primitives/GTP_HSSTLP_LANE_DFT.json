@@ -1,0 +1,2926 @@
+{
+  "name": "GTP_HSSTLP_LANE_DFT",
+  "category": "serdes_ddr",
+  "params": [
+    {
+      "name": "MUX_BIAS",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "PD_CLK",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "REG_SYNC",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "REG_SYNC_OW",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PLL_LOCK_OW",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PLL_LOCK_OW_EN",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_SLAVE",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_BYPASS_WORD_ALIGN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_BYPASS_DENC",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_BYPASS_BONDING",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_BYPASS_CTC",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_BYPASS_GEAR",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_BYPASS_BRIDGE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_BYPASS_BRIDGE_FIFO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_DATA_MODE",
+      "type": "string/int",
+      "default": "\"X8\""
+    },
+    {
+      "name": "PCS_RX_POLARITY_INV",
+      "type": "string/int",
+      "default": "\"DELAY\""
+    },
+    {
+      "name": "PCS_ALIGN_MODE",
+      "type": "string/int",
+      "default": "\"1GB\""
+    },
+    {
+      "name": "PCS_SAMP_16B",
+      "type": "string/int",
+      "default": "\"X20\""
+    },
+    {
+      "name": "PCS_FARLP_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_COMMA_REG0",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_COMMA_MASK",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_CEB_MODE",
+      "type": "string/int",
+      "default": "\"10GB\""
+    },
+    {
+      "name": "PCS_CTC_MODE",
+      "type": "string/int",
+      "default": "\"1SKIP\""
+    },
+    {
+      "name": "PCS_A_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_GE_AUTO_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_SKIP_REG0",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_SKIP_REG1",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_SKIP_REG2",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_SKIP_REG3",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_DEC_DUAL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_SPLIT",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_FIFOFLAG_CTC",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_COMMA_DET_MODE",
+      "type": "string/int",
+      "default": "\"COMMA_PATTERN\""
+    },
+    {
+      "name": "PCS_ERRDETECT_SILENCE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_PMA_RCLK_POLINV",
+      "type": "string/int",
+      "default": "\"PMA_RCLK\""
+    },
+    {
+      "name": "PCS_PCS_RCLK_SEL",
+      "type": "string/int",
+      "default": "\"PMA_RCLK\""
+    },
+    {
+      "name": "PCS_CB_RCLK_SEL",
+      "type": "string/int",
+      "default": "\"PMA_RCLK\""
+    },
+    {
+      "name": "PCS_AFTER_CTC_RCLK_SEL",
+      "type": "string/int",
+      "default": "\"PMA_RCLK\""
+    },
+    {
+      "name": "PCS_RCLK_POLINV",
+      "type": "string/int",
+      "default": "\"RCLK\""
+    },
+    {
+      "name": "PCS_BRIDGE_RCLK_SEL",
+      "type": "string/int",
+      "default": "\"PMA_RCLK\""
+    },
+    {
+      "name": "PCS_PCS_RCLK_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_CB_RCLK_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_AFTER_CTC_RCLK_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_AFTER_CTC_RCLK_EN_GB",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_PCS_RX_RSTN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_PCIE_SLAVE",
+      "type": "string/int",
+      "default": "\"MASTER\""
+    },
+    {
+      "name": "PCS_RX_64B66B_67B",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_RX_BRIDGE_CLK_POLINV",
+      "type": "string/int",
+      "default": "\"RX_BRIDGE_CLK\""
+    },
+    {
+      "name": "PCS_PCS_CB_RSTN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_BRIDGE_GEAR_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_BYPASS_BRIDGE_UINT",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_BYPASS_BRIDGE_FIFO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_BYPASS_GEAR",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_BYPASS_ENC",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_BYPASS_BIT_SLIP",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_GEAR_SPLIT",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_DRIVE_REG_MODE",
+      "type": "string/int",
+      "default": "\"NO_CHANGE\""
+    },
+    {
+      "name": "PCS_TX_BIT_SLIP_CYCLES",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_INT_TX_MASK_0",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_TX_MASK_1",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_TX_MASK_2",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_TX_CLR_0",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_TX_CLR_1",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_TX_CLR_2",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_PMA_TCLK_POLINV",
+      "type": "string/int",
+      "default": "\"PMA_TCLK\""
+    },
+    {
+      "name": "PCS_TX_PCS_CLK_EN_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_BRIDGE_TCLK_SEL",
+      "type": "string/int",
+      "default": "\"TCLK\""
+    },
+    {
+      "name": "PCS_TX_TCLK_POLINV",
+      "type": "string/int",
+      "default": "\"TCLK\""
+    },
+    {
+      "name": "PCS_PCS_TCLK_SEL",
+      "type": "string/int",
+      "default": "\"PMA_TCLK\""
+    },
+    {
+      "name": "PCS_TX_PCS_TX_RSTN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_SLAVE",
+      "type": "string/int",
+      "default": "\"MASTER\""
+    },
+    {
+      "name": "PCS_TX_GEAR_CLK_EN_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_DATA_WIDTH_MODE",
+      "type": "string/int",
+      "default": "\"X20\""
+    },
+    {
+      "name": "PCS_TX_64B66B_67B",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_GEAR_TCLK_SEL",
+      "type": "string/int",
+      "default": "\"PMA_TCLK\""
+    },
+    {
+      "name": "PCS_TX_TCLK2FABRIC_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_OUTZZ",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_ENC_DUAL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_BITSLIP_DATA_MODE",
+      "type": "string/int",
+      "default": "\"X10\""
+    },
+    {
+      "name": "PCS_TX_BRIDGE_CLK_POLINV",
+      "type": "string/int",
+      "default": "\"TX_BRIDGE_CLK\""
+    },
+    {
+      "name": "PCS_COMMA_REG1",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_RAPID_IMAX",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_RAPID_VMIN_1",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_RAPID_VMIN_2",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_RX_PRBS_MODE",
+      "type": "string/int",
+      "default": "\"DISABLE\""
+    },
+    {
+      "name": "PCS_RX_ERRCNT_CLR",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_PRBS_ERR_LPBK",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_TX_PRBS_MODE",
+      "type": "string/int",
+      "default": "\"DISABLE\""
+    },
+    {
+      "name": "PCS_TX_INSERT_ER",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_ENABLE_PRBS_GEN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_DEFAULT_RADDR",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_MASTER_CHECK_OFFSET",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_DELAY_SET",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_SEACH_OFFSET",
+      "type": "string/int",
+      "default": "\"20BIT\""
+    },
+    {
+      "name": "PCS_CEB_RAPIDLS_MMAX",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_CTC_AFULL",
+      "type": "integer",
+      "default": "20"
+    },
+    {
+      "name": "PCS_CTC_AEMPTY",
+      "type": "integer",
+      "default": "12"
+    },
+    {
+      "name": "PCS_CTC_CONTI_SKP_SET",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_FAR_LOOP",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_NEAR_LOOP",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_PMA_TX2RX_PLOOP_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_PMA_TX2RX_SLOOP_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_PMA_RX2TX_PLOOP_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_MASK_0",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_MASK_1",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_MASK_2",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_MASK_3",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_MASK_4",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_MASK_5",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_MASK_6",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_MASK_7",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_CLR_0",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_CLR_1",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_CLR_2",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_CLR_3",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_CLR_4",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_CLR_5",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_CLR_6",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_INT_RX_CLR_7",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_CA_RSTN_RX",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_CA_DYN_DLY_EN_RX",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_CA_DYN_DLY_SEL_RX",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_CA_RX",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_CA_RSTN_TX",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_CA_DYN_DLY_EN_TX",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_CA_DYN_DLY_SEL_TX",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PCS_CA_TX",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PCS_RXPRBS_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_WDALIGN_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_RXDEC_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_RXCB_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_RXCTC_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_RXGEAR_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_RXBRG_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_RXTEST_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_TXBRG_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_TXGEAR_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_TXENC_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_TXBSLP_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PCS_TXPRBS_PWR_REDUCTION",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PMA_REG_RX_PD",
+      "type": "string/int",
+      "default": "\"ON\""
+    },
+    {
+      "name": "PMA_REG_RX_PD_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_2",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_3",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_DATAPATH_PD",
+      "type": "string/int",
+      "default": "\"ON\""
+    },
+    {
+      "name": "PMA_REG_RX_DATAPATH_PD_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_PD",
+      "type": "string/int",
+      "default": "\"ON\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_PD_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_DCC_RST_N",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_RX_DCC_RST_N_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_CDR_RST_N",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_RX_CDR_RST_N_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_RST_N",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_RST_N_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RXPCLK_SLIP",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RXPCLK_SLIP_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_PCLKSWITCH_RST_N",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_RX_PCLKSWITCH_RST_N_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_PCLKSWITCH",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_PCLKSWITCH_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_HIGHZ",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_HIGHZ_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_CLK_WINDOW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_CLK_WINDOW_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_PD_BIAS_RX",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_PD_BIAS_RX_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESET_N",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESET_N_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_29_28",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_BUSWIDTH",
+      "type": "string/int",
+      "default": "\"20BIT\""
+    },
+    {
+      "name": "PMA_REG_RX_BUSWIDTH_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RATE",
+      "type": "string/int",
+      "default": "\"DIV1\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_36",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RATE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RES_TRIM",
+      "type": "integer",
+      "default": "46"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_44",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_45",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_STATUS_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_48_47",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_ICTRL_SIGDET",
+      "type": "integer",
+      "default": "5"
+    },
+    {
+      "name": "PMA_REG_CDR_READY_THD",
+      "type": "integer",
+      "default": "2734"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_65",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_PCLK_EDGE_SEL",
+      "type": "string/int",
+      "default": "\"POS_EDGE\""
+    },
+    {
+      "name": "PMA_REG_RX_PIBUF_IC",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_69",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_DCC_IC_RX",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "PMA_REG_CDR_READY_CHECK_CTRL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_ICTRL_TRX",
+      "type": "string/int",
+      "default": "\"100PCT\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_77_76",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_79_78",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_81_80",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "PMA_REG_RX_ICTRL_PIBUF",
+      "type": "string/int",
+      "default": "\"100PCT\""
+    },
+    {
+      "name": "PMA_REG_RX_ICTRL_PI",
+      "type": "string/int",
+      "default": "\"100PCT\""
+    },
+    {
+      "name": "PMA_REG_RX_ICTRL_DCC",
+      "type": "string/int",
+      "default": "\"100PCT\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_89_88",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "PMA_REG_TX_RATE",
+      "type": "string/int",
+      "default": "\"DIV1\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_92",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RATE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_TX2RX_PLPBK_RST_N",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_RX_TX2RX_PLPBK_RST_N_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_TX2RX_PLPBK_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TXCLK_SEL",
+      "type": "string/int",
+      "default": "\"PLL\""
+    },
+    {
+      "name": "PMA_REG_RX_DATA_POLARITY",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PMA_REG_RX_ERR_INSERT",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_UDP_CHK_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_PRBS_SEL",
+      "type": "string/int",
+      "default": "\"PRBS7\""
+    },
+    {
+      "name": "PMA_REG_PRBS_CHK_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_PRBS_CHK_WIDTH_SEL",
+      "type": "string/int",
+      "default": "\"20BIT\""
+    },
+    {
+      "name": "PMA_REG_BIST_CHK_PAT_SEL",
+      "type": "string/int",
+      "default": "\"PRBS\""
+    },
+    {
+      "name": "PMA_REG_LOAD_ERR_CNT",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CHK_COUNTER_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_PROP_GAIN",
+      "type": "integer",
+      "default": "7"
+    },
+    {
+      "name": "PMA_REG_CDR_PROP_TURBO_GAIN",
+      "type": "integer",
+      "default": "5"
+    },
+    {
+      "name": "PMA_REG_CDR_INT_GAIN",
+      "type": "integer",
+      "default": "7"
+    },
+    {
+      "name": "PMA_REG_CDR_INT_TURBO_GAIN",
+      "type": "integer",
+      "default": "5"
+    },
+    {
+      "name": "PMA_REG_CDR_INT_SAT_MAX",
+      "type": "integer",
+      "default": "768"
+    },
+    {
+      "name": "PMA_REG_CDR_INT_SAT_MIN",
+      "type": "integer",
+      "default": "255"
+    },
+    {
+      "name": "PMA_REG_CDR_INT_RST",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_INT_RST_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_PROP_RST",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_PROP_RST_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_LOCK_RST",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_LOCK_RST_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_RX_PI_FORCE_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_CDR_RX_PI_FORCE_D",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_CDR_LOCK_TIMER",
+      "type": "string/int",
+      "default": "\"1_2U\""
+    },
+    {
+      "name": "PMA_REG_CDR_TURBO_MODE_TIMER",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "PMA_REG_CDR_LOCK_VAL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_LOCK_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_INT_SAT_DET_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_CDR_SAT_AUTO_DIS",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_CDR_GAIN_AUTO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_TURBO_GAIN_AUTO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_171_167",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_175_172",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_CDR_SAT_DET_STATUS_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_SAT_DET_STATUS_RESET_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_PI_CTRL_RST",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_PI_CTRL_RST_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_SAT_DET_RST",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_SAT_DET_RST_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_SAT_DET_STICKY_RST",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_SAT_DET_STICKY_RST_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_SIGDET_STATUS_DIS",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_SAT_DET_TIMER",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "PMA_REG_CDR_SAT_DET_STATUS_VAL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_SAT_DET_STATUS_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CDR_TURBO_MODE_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_190",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_193_191",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_CDR_STATUS_FIFO_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_PMA_TEST_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_OOB_COMWAKE_GAP_MIN",
+      "type": "integer",
+      "default": "3"
+    },
+    {
+      "name": "PMA_REG_OOB_COMWAKE_GAP_MAX",
+      "type": "integer",
+      "default": "11"
+    },
+    {
+      "name": "PMA_REG_OOB_COMINIT_GAP_MIN",
+      "type": "integer",
+      "default": "15"
+    },
+    {
+      "name": "PMA_REG_OOB_COMINIT_GAP_MAX",
+      "type": "integer",
+      "default": "35"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_227_226",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "PMA_REG_COMWAKE_STATUS_CLEAR",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_COMINIT_STATUS_CLEAR",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_SYNC_RST_N_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SYNC_RST_N",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_233_232",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_235_234",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_SATA_COMINIT_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SATA_COMINIT",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SATA_COMWAKE_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SATA_COMWAKE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_241_240",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_DCC_DISABLE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_243",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SLIP_SEL_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SLIP_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_SLIP_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_STATUS_SEL",
+      "type": "integer",
+      "default": "5"
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_FSM_RST_N",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_254",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_STATUS",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_VTH",
+      "type": "string/int",
+      "default": "\"27MV\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_GRM",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_PULSE_EXT",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_CH2_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_CH2_CHK_WINDOW",
+      "type": "integer",
+      "default": "3"
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_CHK_WINDOW_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_NOSIG_COUNT_SETTING",
+      "type": "integer",
+      "default": "4"
+    },
+    {
+      "name": "PMA_REG_SLIP_FIFO_INV_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_SLIP_FIFO_INV",
+      "type": "string/int",
+      "default": "\"POS_EDGE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_OOB_DET_COUNT_VAL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_4OOB_DET_SEL",
+      "type": "integer",
+      "default": "7"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_285_283",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_286",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_SIGDET_IC_I",
+      "type": "integer",
+      "default": "10"
+    },
+    {
+      "name": "PMA_REG_RX_OOB_DETECTOR_RESET_N_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_OOB_DETECTOR_RESET_N",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_OOB_DETECTOR_PD_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_OOB_DETECTOR_PD",
+      "type": "string/int",
+      "default": "\"ON\""
+    },
+    {
+      "name": "PMA_REG_RX_LS_MODE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_ANA_RX_EQ1_R_SET_FB_O_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_ANA_RX_EQ2_R_SET_FB_O_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_EQ1_R_SET_TOP",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_EQ1_R_SET_FB",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_EQ1_C_SET_FB",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_EQ1_OFF",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_EQ2_R_SET_TOP",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_EQ2_R_SET_FB",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_EQ2_C_SET_FB",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_EQ2_OFF",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_EQ_DAC",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_ICTRL_EQ",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "PMA_REG_EQ_DC_CALIB_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_EQ_DC_CALIB_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_337_330",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_345_338",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_353_346",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_361_354",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_CTLE_CTRL_REG_I",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_CTLE_REG_FORCE_SEL_I",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_CTLE_REG_HOLD_I",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_CTLE_REG_INIT_DAC_I",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_CTLE_REG_POLARITY_I",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_CTLE_REG_SHIFTER_GAIN_I",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_CTLE_REG_THRESHOLD_I",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RX_RES_TRIM_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_RESERVED_393_389",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_CFG_RX_LANE_POWERUP",
+      "type": "string/int",
+      "default": "\"OFF\""
+    },
+    {
+      "name": "PMA_CFG_RX_PMA_RSTN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_INT_PMA_RX_MASK_0",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_INT_PMA_RX_CLR_0",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_CFG_CTLE_ADP_RSTN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_TX_PD",
+      "type": "string/int",
+      "default": "\"ON\""
+    },
+    {
+      "name": "PMA_REG_TX_PD_OW",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_TX_MAIN_PRE_Z",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_MAIN_PRE_Z_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_BEACON_TIMER_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RXDET_REQ_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RXDET_REQ",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_BEACON_EN_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_BEACON_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_EI_EN_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_EI_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_BIT_CONV",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RES_CAL",
+      "type": "integer",
+      "default": "50"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_19",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_25_20",
+      "type": "integer",
+      "default": "32"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_33_26",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_41_34",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_49_42",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_57_50",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_SYNC_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_SYNC",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_PD_POST",
+      "type": "string/int",
+      "default": "\"OFF\""
+    },
+    {
+      "name": "PMA_REG_TX_PD_POST_OW",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESET_N_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESET_N",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_64",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_65",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_TX_BUSWIDTH_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_BUSWIDTH",
+      "type": "string/int",
+      "default": "\"20BIT\""
+    },
+    {
+      "name": "PMA_REG_PLL_READY_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_PLL_READY",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_72",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_73",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_74",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_EI_PCLK_DELAY_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_77",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_83_78",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_89_84",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_95_90",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_101_96",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_107_102",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_113_108",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_AMP_DAC0",
+      "type": "integer",
+      "default": "25"
+    },
+    {
+      "name": "PMA_REG_TX_AMP_DAC1",
+      "type": "integer",
+      "default": "19"
+    },
+    {
+      "name": "PMA_REG_TX_AMP_DAC2",
+      "type": "integer",
+      "default": "14"
+    },
+    {
+      "name": "PMA_REG_TX_AMP_DAC3",
+      "type": "integer",
+      "default": "9"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_143_138",
+      "type": "integer",
+      "default": "5"
+    },
+    {
+      "name": "PMA_REG_TX_MARGIN",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_MARGIN_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_149_148",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_150",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_SWING",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_SWING_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_153",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RXDET_THRESHOLD",
+      "type": "string/int",
+      "default": "\"84MV\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_157_156",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_BEACON_OSC_CTRL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_160_159",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_162_161",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_TX2RX_SLPBACK_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_PCLK_EDGE_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RXDET_STATUS_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RXDET_STATUS",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_TX_PRBS_GEN_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_PRBS_GEN_WIDTH_SEL",
+      "type": "string/int",
+      "default": "\"20BIT\""
+    },
+    {
+      "name": "PMA_REG_TX_PRBS_SEL",
+      "type": "string/int",
+      "default": "\"PRBS7\""
+    },
+    {
+      "name": "PMA_REG_TX_UDP_DATA_7_TO_0",
+      "type": "integer",
+      "default": "5"
+    },
+    {
+      "name": "PMA_REG_TX_UDP_DATA_15_TO_8",
+      "type": "integer",
+      "default": "235"
+    },
+    {
+      "name": "PMA_REG_TX_UDP_DATA_19_TO_16",
+      "type": "integer",
+      "default": "3"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_192",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_FIFO_WP_CTRL",
+      "type": "integer",
+      "default": "4"
+    },
+    {
+      "name": "PMA_REG_TX_FIFO_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_DATA_MUX_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_ERR_INSERT",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_203_200",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_204",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_SATA_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_207_206",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_RATE_CHANGE_TXPCLK_ON_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RATE_CHANGE_TXPCLK_ON",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_TX_CFG_POST1",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_CFG_POST2",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_DEEMP",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_DEEMP_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_224_223",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_225",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_229_226",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_OOB_DELAY_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_POLARITY",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "PMA_REG_ANA_TX_JTAG_DATA_O_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_236",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_LS_MODE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_JTAG_MODE_EN_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_JTAG_MODE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_JTAG_MODE_EN_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_JTAG_MODE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_JTAG_OE",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_RX_ACJTAG_VHYSTSEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_RES_CAL_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_RX_TERM_MODE_CTRL",
+      "type": "integer",
+      "default": "4"
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_251_250",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_PLPBK_TXPCLK_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_253",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_254",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_255",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_256",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RESERVED_257",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_PH_SEL",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "PMA_REG_TX_CFG_PRE",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_CFG_MAIN",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_CFG_POST",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_PD_MAIN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_PD_PRE",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_REG_TX_LS_DATA",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_DCC_BUF_SZ_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_DCC_CAL_CUR_TUNE",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_DCC_CAL_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_DCC_CUR_SS",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_DCC_FA_CTRL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_DCC_RI_CTRL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_ATB_SEL_2_TO_0",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_ATB_SEL_9_TO_3",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_CFG_7_TO_0",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_CFG_15_TO_8",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_CFG_23_TO_16",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_CFG_31_TO_24",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_OOB_EI_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_OOB_EI_EN_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_BEACON_EN_DELAYED",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_BEACON_EN_DELAYED_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_JTAG_DATA",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_TX_RXDET_TIMER_SEL",
+      "type": "integer",
+      "default": "87"
+    },
+    {
+      "name": "PMA_REG_TX_CFG1_7_0",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_CFG1_15_8",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_CFG1_23_16",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_TX_CFG1_31_24",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_REG_CFG_LANE_POWERUP",
+      "type": "string/int",
+      "default": "\"OFF\""
+    },
+    {
+      "name": "PMA_REG_CFG_TX_LANE_POWERUP_CLKPATH",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CFG_TX_LANE_POWERUP_PISO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_REG_CFG_TX_LANE_POWERUP_DRIVER",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "P_TX_SDN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_TX_SDP",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_PCS_RX_MCB_STATUS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_PCS_LSM_SYNCED",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_READY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_RDATA",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "P_CFG_INT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_RDATA",
+      "dir": "output",
+      "width": 47,
+      "range": "[46:0]"
+    },
+    {
+      "name": "P_RCLK2FABRIC",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_TCLK2FABRIC",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_RX_SIGDET_STATUS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_RX_SATA_COMINIT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_RX_SATA_COMWAKE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_RX_LS_DATA",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_RX_READY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_STATUS",
+      "dir": "output",
+      "width": 20,
+      "range": "[19:0]"
+    },
+    {
+      "name": "P_TX_RXDET_STATUS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_CA_ALIGN_RX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_CA_ALIGN_TX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PMA_RCLK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "LANE_COUT_BUS_FORWARD",
+      "dir": "output",
+      "width": 19,
+      "range": "[18:0]"
+    },
+    {
+      "name": "APATTERN_STATUS_COUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TXPCLK_PLL",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_RX_SDN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_RX_SDP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_RX_CLK_FR_CORE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_RCLK2_FR_CORE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TX_CLK_FR_CORE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TCLK2_FR_CORE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PCS_TX_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PCS_RX_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PCS_CB_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_RXGEAR_SLIP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_PSEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_ENABLE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_WRITE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_ADDR",
+      "dir": "input",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "P_CFG_WDATA",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "P_TDATA",
+      "dir": "input",
+      "width": 46,
+      "range": "[45:0]"
+    },
+    {
+      "name": "P_PCS_WORD_ALIGN_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_RX_POLARITY_INVERT",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CEB_ADETECT_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PCS_MCB_EXT_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PCS_NEAREND_LOOP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PCS_FAREND_LOOP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PMA_NEAREND_PLOOP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PMA_NEAREND_SLOOP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PMA_FAREND_PLOOP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_LANE_PD",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_LANE_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_RX_LANE_PD",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_RX_PMA_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CTLE_ADP_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TX_DEEMP",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "P_TX_LS_DATA",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TX_BEACON_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TX_SWING",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TX_RXDET_REQ",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TX_RATE",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "P_TX_BUSWIDTH",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "P_TX_MARGIN",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "P_TX_PMA_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TX_LANE_PD_CLKPATH",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TX_LANE_PD_PISO",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TX_LANE_PD_DRIVER",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_RX_RATE",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "P_RX_BUSWIDTH",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "P_RX_HIGHZ",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CIM_CLK_ALIGNER_RX",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "P_CIM_CLK_ALIGNER_TX",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "P_CIM_DYN_DLY_SEL_RX",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CIM_DYN_DLY_SEL_TX",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CIM_START_ALIGN_RX",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CIM_START_ALIGN_TX",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "MCB_RCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SYNC",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RATE_CHANGE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PLL_LOCK_SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "LANE_CIN_BUS_FORWARD",
+      "dir": "input",
+      "width": 19,
+      "range": "[18:0]"
+    },
+    {
+      "name": "APATTERN_STATUS_CIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK_TXP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK_TXN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK_RX0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK_RX90",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK_RX180",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK_RX270",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PLL_PD_I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PLL_RESET_I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PLL_REFCLK_I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PLL_RES_TRIM_I",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "P_TEST_SO0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_SO1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_SO2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_SO3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_SO4",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_FOR_PMA_TEST_SO",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "P_TEST_SE_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_MODE_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_RSTN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_SI0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_SI1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_SI2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_SI3",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_TEST_SI4",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_FOR_PMA_TEST_MODE_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_FOR_PMA_TEST_SE_N",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "P_FOR_PMA_TEST_CLK",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "P_FOR_PMA_TEST_RSTN",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "P_FOR_PMA_TEST_SI",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    }
+  ],
+  "instTemplate": "GTP_HSSTLP_LANE_DFT\n#(\n    .MUX_BIAS(2),\n    .PD_CLK(0),\n    .REG_SYNC(0),\n    .REG_SYNC_OW(0),\n    .PLL_LOCK_OW(0),\n    .PLL_LOCK_OW_EN(0),\n    .PCS_SLAVE(0),\n    .PCS_BYPASS_WORD_ALIGN(\"FALSE\"),\n    .PCS_BYPASS_DENC(\"FALSE\"),\n    .PCS_BYPASS_BONDING(\"FALSE\"),\n    .PCS_BYPASS_CTC(\"FALSE\"),\n    .PCS_BYPASS_GEAR(\"FALSE\"),\n    .PCS_BYPASS_BRIDGE(\"FALSE\"),\n    .PCS_BYPASS_BRIDGE_FIFO(\"FALSE\"),\n    .PCS_DATA_MODE(\"X8\"),\n    .PCS_RX_POLARITY_INV(\"DELAY\"),\n    .PCS_ALIGN_MODE(\"1GB\"),\n    .PCS_SAMP_16B(\"X20\"),\n    .PCS_FARLP_PWR_REDUCTION(\"FALSE\"),\n    .PCS_COMMA_REG0(0),\n    .PCS_COMMA_MASK(0),\n    .PCS_CEB_MODE(\"10GB\"),\n    .PCS_CTC_MODE(\"1SKIP\"),\n    .PCS_A_REG(0),\n    .PCS_GE_AUTO_EN(\"FALSE\"),\n    .PCS_SKIP_REG0(0),\n    .PCS_SKIP_REG1(0),\n    .PCS_SKIP_REG2(0),\n    .PCS_SKIP_REG3(0),\n    .PCS_DEC_DUAL(\"FALSE\"),\n    .PCS_SPLIT(\"FALSE\"),\n    .PCS_FIFOFLAG_CTC(\"FALSE\"),\n    .PCS_COMMA_DET_MODE(\"COMMA_PATTERN\"),\n    .PCS_ERRDETECT_SILENCE(\"FALSE\"),\n    .PCS_PMA_RCLK_POLINV(\"PMA_RCLK\"),\n    .PCS_PCS_RCLK_SEL(\"PMA_RCLK\"),\n    .PCS_CB_RCLK_SEL(\"PMA_RCLK\"),\n    .PCS_AFTER_CTC_RCLK_SEL(\"PMA_RCLK\"),\n    .PCS_RCLK_POLINV(\"RCLK\"),\n    .PCS_BRIDGE_RCLK_SEL(\"PMA_RCLK\"),\n    .PCS_PCS_RCLK_EN(\"FALSE\"),\n    .PCS_CB_RCLK_EN(\"FALSE\"),\n    .PCS_AFTER_CTC_RCLK_EN(\"FALSE\"),\n    .PCS_AFTER_CTC_RCLK_EN_GB(\"FALSE\"),\n    .PCS_PCS_RX_RSTN(\"FALSE\"),\n    .PCS_PCIE_SLAVE(\"MASTER\"),\n    .PCS_RX_64B66B_67B(\"NORMAL\"),\n    .PCS_RX_BRIDGE_CLK_POLINV(\"RX_BRIDGE_CLK\"),\n    .PCS_PCS_CB_RSTN(\"FALSE\"),\n    .PCS_TX_BRIDGE_GEAR_SEL(\"FALSE\"),\n    .PCS_TX_BYPASS_BRIDGE_UINT(\"FALSE\"),\n    .PCS_TX_BYPASS_BRIDGE_FIFO(\"FALSE\"),\n    .PCS_TX_BYPASS_GEAR(\"FALSE\"),\n    .PCS_TX_BYPASS_ENC(\"FALSE\"),\n    .PCS_TX_BYPASS_BIT_SLIP(\"FALSE\"),\n    .PCS_TX_GEAR_SPLIT(\"FALSE\"),\n    .PCS_TX_DRIVE_REG_MODE(\"NO_CHANGE\"),\n    .PCS_TX_BIT_SLIP_CYCLES(0),\n    .PCS_INT_TX_MASK_0(\"FALSE\"),\n    .PCS_INT_TX_MASK_1(\"FALSE\"),\n    .PCS_INT_TX_MASK_2(\"FALSE\"),\n    .PCS_INT_TX_CLR_0(\"FALSE\"),\n    .PCS_INT_TX_CLR_1(\"FALSE\"),\n    .PCS_INT_TX_CLR_2(\"FALSE\"),\n    .PCS_TX_PMA_TCLK_POLINV(\"PMA_TCLK\"),\n    .PCS_TX_PCS_CLK_EN_SEL(\"FALSE\"),\n    .PCS_TX_BRIDGE_TCLK_SEL(\"TCLK\"),\n    .PCS_TX_TCLK_POLINV(\"TCLK\"),\n    .PCS_PCS_TCLK_SEL(\"PMA_TCLK\"),\n    .PCS_TX_PCS_TX_RSTN(\"FALSE\"),\n    .PCS_TX_SLAVE(\"MASTER\"),\n    .PCS_TX_GEAR_CLK_EN_SEL(\"FALSE\"),\n    .PCS_DATA_WIDTH_MODE(\"X20\"),\n    .PCS_TX_64B66B_67B(\"NORMAL\"),\n    .PCS_GEAR_TCLK_SEL(\"PMA_TCLK\"),\n    .PCS_TX_TCLK2FABRIC_SEL(\"FALSE\"),\n    .PCS_TX_OUTZZ(\"FALSE\"),\n    .PCS_ENC_DUAL(\"FALSE\"),\n    .PCS_TX_BITSLIP_DATA_MODE(\"X10\"),\n    .PCS_TX_BRIDGE_CLK_POLINV(\"TX_BRIDGE_CLK\"),\n    .PCS_COMMA_REG1(0),\n    .PCS_RAPID_IMAX(0),\n    .PCS_RAPID_VMIN_1(0),\n    .PCS_RAPID_VMIN_2(0),\n    .PCS_RX_PRBS_MODE(\"DISABLE\"),\n    .PCS_RX_ERRCNT_CLR(\"FALSE\"),\n    .PCS_PRBS_ERR_LPBK(\"FALSE\"),\n    .PCS_TX_PRBS_MODE(\"DISABLE\"),\n    .PCS_TX_INSERT_ER(\"FALSE\"),\n    .PCS_ENABLE_PRBS_GEN(\"FALSE\"),\n    .PCS_DEFAULT_RADDR(0),\n    .PCS_MASTER_CHECK_OFFSET(0),\n    .PCS_DELAY_SET(0),\n    .PCS_SEACH_OFFSET(\"20BIT\"),\n    .PCS_CEB_RAPIDLS_MMAX(0),\n    .PCS_CTC_AFULL(20),\n    .PCS_CTC_AEMPTY(12),\n    .PCS_CTC_CONTI_SKP_SET(0),\n    .PCS_FAR_LOOP(\"FALSE\"),\n    .PCS_NEAR_LOOP(\"FALSE\"),\n    .PCS_PMA_TX2RX_PLOOP_EN(\"FALSE\"),\n    .PCS_PMA_TX2RX_SLOOP_EN(\"FALSE\"),\n    .PCS_PMA_RX2TX_PLOOP_EN(\"FALSE\"),\n    .PCS_INT_RX_MASK_0(\"FALSE\"),\n    .PCS_INT_RX_MASK_1(\"FALSE\"),\n    .PCS_INT_RX_MASK_2(\"FALSE\"),\n    .PCS_INT_RX_MASK_3(\"FALSE\"),\n    .PCS_INT_RX_MASK_4(\"FALSE\"),\n    .PCS_INT_RX_MASK_5(\"FALSE\"),\n    .PCS_INT_RX_MASK_6(\"FALSE\"),\n    .PCS_INT_RX_MASK_7(\"FALSE\"),\n    .PCS_INT_RX_CLR_0(\"FALSE\"),\n    .PCS_INT_RX_CLR_1(\"FALSE\"),\n    .PCS_INT_RX_CLR_2(\"FALSE\"),\n    .PCS_INT_RX_CLR_3(\"FALSE\"),\n    .PCS_INT_RX_CLR_4(\"FALSE\"),\n    .PCS_INT_RX_CLR_5(\"FALSE\"),\n    .PCS_INT_RX_CLR_6(\"FALSE\"),\n    .PCS_INT_RX_CLR_7(\"FALSE\"),\n    .PCS_CA_RSTN_RX(\"FALSE\"),\n    .PCS_CA_DYN_DLY_EN_RX(\"FALSE\"),\n    .PCS_CA_DYN_DLY_SEL_RX(\"FALSE\"),\n    .PCS_CA_RX(0),\n    .PCS_CA_RSTN_TX(\"FALSE\"),\n    .PCS_CA_DYN_DLY_EN_TX(\"FALSE\"),\n    .PCS_CA_DYN_DLY_SEL_TX(\"FALSE\"),\n    .PCS_CA_TX(0),\n    .PCS_RXPRBS_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_WDALIGN_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_RXDEC_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_RXCB_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_RXCTC_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_RXGEAR_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_RXBRG_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_RXTEST_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_TXBRG_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_TXGEAR_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_TXENC_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_TXBSLP_PWR_REDUCTION(\"NORMAL\"),\n    .PCS_TXPRBS_PWR_REDUCTION(\"NORMAL\"),\n    .PMA_REG_RX_PD(\"ON\"),\n    .PMA_REG_RX_PD_EN(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_2(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_3(\"FALSE\"),\n    .PMA_REG_RX_DATAPATH_PD(\"ON\"),\n    .PMA_REG_RX_DATAPATH_PD_EN(\"FALSE\"),\n    .PMA_REG_RX_SIGDET_PD(\"ON\"),\n    .PMA_REG_RX_SIGDET_PD_EN(\"FALSE\"),\n    .PMA_REG_RX_DCC_RST_N(\"TRUE\"),\n    .PMA_REG_RX_DCC_RST_N_EN(\"FALSE\"),\n    .PMA_REG_RX_CDR_RST_N(\"TRUE\"),\n    .PMA_REG_RX_CDR_RST_N_EN(\"FALSE\"),\n    .PMA_REG_RX_SIGDET_RST_N(\"TRUE\"),\n    .PMA_REG_RX_SIGDET_RST_N_EN(\"FALSE\"),\n    .PMA_REG_RXPCLK_SLIP(\"FALSE\"),\n    .PMA_REG_RXPCLK_SLIP_OW(\"FALSE\"),\n    .PMA_REG_RX_PCLKSWITCH_RST_N(\"TRUE\"),\n    .PMA_REG_RX_PCLKSWITCH_RST_N_EN(\"FALSE\"),\n    .PMA_REG_RX_PCLKSWITCH(\"FALSE\"),\n    .PMA_REG_RX_PCLKSWITCH_EN(\"FALSE\"),\n    .PMA_REG_RX_HIGHZ(\"FALSE\"),\n    .PMA_REG_RX_HIGHZ_EN(\"FALSE\"),\n    .PMA_REG_RX_SIGDET_CLK_WINDOW(\"FALSE\"),\n    .PMA_REG_RX_SIGDET_CLK_WINDOW_OW(\"FALSE\"),\n    .PMA_REG_RX_PD_BIAS_RX(\"FALSE\"),\n    .PMA_REG_RX_PD_BIAS_RX_OW(\"FALSE\"),\n    .PMA_REG_RX_RESET_N(\"FALSE\"),\n    .PMA_REG_RX_RESET_N_OW(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_29_28(0),\n    .PMA_REG_RX_BUSWIDTH(\"20BIT\"),\n    .PMA_REG_RX_BUSWIDTH_EN(\"FALSE\"),\n    .PMA_REG_RX_RATE(\"DIV1\"),\n    .PMA_REG_RX_RESERVED_36(\"FALSE\"),\n    .PMA_REG_RX_RATE_EN(\"FALSE\"),\n    .PMA_REG_RX_RES_TRIM(46),\n    .PMA_REG_RX_RESERVED_44(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_45(\"FALSE\"),\n    .PMA_REG_RX_SIGDET_STATUS_EN(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_48_47(0),\n    .PMA_REG_RX_ICTRL_SIGDET(5),\n    .PMA_REG_CDR_READY_THD(2734),\n    .PMA_REG_RX_RESERVED_65(\"FALSE\"),\n    .PMA_REG_RX_PCLK_EDGE_SEL(\"POS_EDGE\"),\n    .PMA_REG_RX_PIBUF_IC(1),\n    .PMA_REG_RX_RESERVED_69(\"FALSE\"),\n    .PMA_REG_RX_DCC_IC_RX(1),\n    .PMA_REG_CDR_READY_CHECK_CTRL(0),\n    .PMA_REG_RX_ICTRL_TRX(\"100PCT\"),\n    .PMA_REG_RX_RESERVED_77_76(0),\n    .PMA_REG_RX_RESERVED_79_78(1),\n    .PMA_REG_RX_RESERVED_81_80(1),\n    .PMA_REG_RX_ICTRL_PIBUF(\"100PCT\"),\n    .PMA_REG_RX_ICTRL_PI(\"100PCT\"),\n    .PMA_REG_RX_ICTRL_DCC(\"100PCT\"),\n    .PMA_REG_RX_RESERVED_89_88(1),\n    .PMA_REG_TX_RATE(\"DIV1\"),\n    .PMA_REG_RX_RESERVED_92(\"FALSE\"),\n    .PMA_REG_TX_RATE_EN(\"FALSE\"),\n    .PMA_REG_RX_TX2RX_PLPBK_RST_N(\"TRUE\"),\n    .PMA_REG_RX_TX2RX_PLPBK_RST_N_EN(\"FALSE\"),\n    .PMA_REG_RX_TX2RX_PLPBK_EN(\"FALSE\"),\n    .PMA_REG_TXCLK_SEL(\"PLL\"),\n    .PMA_REG_RX_DATA_POLARITY(\"NORMAL\"),\n    .PMA_REG_RX_ERR_INSERT(\"FALSE\"),\n    .PMA_REG_UDP_CHK_EN(\"FALSE\"),\n    .PMA_REG_PRBS_SEL(\"PRBS7\"),\n    .PMA_REG_PRBS_CHK_EN(\"FALSE\"),\n    .PMA_REG_PRBS_CHK_WIDTH_SEL(\"20BIT\"),\n    .PMA_REG_BIST_CHK_PAT_SEL(\"PRBS\"),\n    .PMA_REG_LOAD_ERR_CNT(\"FALSE\"),\n    .PMA_REG_CHK_COUNTER_EN(\"FALSE\"),\n    .PMA_REG_CDR_PROP_GAIN(7),\n    .PMA_REG_CDR_PROP_TURBO_GAIN(5),\n    .PMA_REG_CDR_INT_GAIN(7),\n    .PMA_REG_CDR_INT_TURBO_GAIN(5),\n    .PMA_REG_CDR_INT_SAT_MAX(768),\n    .PMA_REG_CDR_INT_SAT_MIN(255),\n    .PMA_REG_CDR_INT_RST(\"FALSE\"),\n    .PMA_REG_CDR_INT_RST_OW(\"FALSE\"),\n    .PMA_REG_CDR_PROP_RST(\"FALSE\"),\n    .PMA_REG_CDR_PROP_RST_OW(\"FALSE\"),\n    .PMA_REG_CDR_LOCK_RST(\"FALSE\"),\n    .PMA_REG_CDR_LOCK_RST_OW(\"FALSE\"),\n    .PMA_REG_CDR_RX_PI_FORCE_SEL(0),\n    .PMA_REG_CDR_RX_PI_FORCE_D(0),\n    .PMA_REG_CDR_LOCK_TIMER(\"1_2U\"),\n    .PMA_REG_CDR_TURBO_MODE_TIMER(1),\n    .PMA_REG_CDR_LOCK_VAL(\"FALSE\"),\n    .PMA_REG_CDR_LOCK_OW(\"FALSE\"),\n    .PMA_REG_CDR_INT_SAT_DET_EN(\"TRUE\"),\n    .PMA_REG_CDR_SAT_AUTO_DIS(\"TRUE\"),\n    .PMA_REG_CDR_GAIN_AUTO(\"FALSE\"),\n    .PMA_REG_CDR_TURBO_GAIN_AUTO(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_171_167(0),\n    .PMA_REG_RX_RESERVED_175_172(0),\n    .PMA_REG_CDR_SAT_DET_STATUS_EN(\"FALSE\"),\n    .PMA_REG_CDR_SAT_DET_STATUS_RESET_EN(\"FALSE\"),\n    .PMA_REG_CDR_PI_CTRL_RST(\"FALSE\"),\n    .PMA_REG_CDR_PI_CTRL_RST_OW(\"FALSE\"),\n    .PMA_REG_CDR_SAT_DET_RST(\"FALSE\"),\n    .PMA_REG_CDR_SAT_DET_RST_OW(\"FALSE\"),\n    .PMA_REG_CDR_SAT_DET_STICKY_RST(\"FALSE\"),\n    .PMA_REG_CDR_SAT_DET_STICKY_RST_OW(\"FALSE\"),\n    .PMA_REG_CDR_SIGDET_STATUS_DIS(\"FALSE\"),\n    .PMA_REG_CDR_SAT_DET_TIMER(2),\n    .PMA_REG_CDR_SAT_DET_STATUS_VAL(\"FALSE\"),\n    .PMA_REG_CDR_SAT_DET_STATUS_OW(\"FALSE\"),\n    .PMA_REG_CDR_TURBO_MODE_EN(\"TRUE\"),\n    .PMA_REG_RX_RESERVED_190(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_193_191(0),\n    .PMA_REG_CDR_STATUS_FIFO_EN(\"TRUE\"),\n    .PMA_REG_PMA_TEST_SEL(0),\n    .PMA_REG_OOB_COMWAKE_GAP_MIN(3),\n    .PMA_REG_OOB_COMWAKE_GAP_MAX(11),\n    .PMA_REG_OOB_COMINIT_GAP_MIN(15),\n    .PMA_REG_OOB_COMINIT_GAP_MAX(35),\n    .PMA_REG_RX_RESERVED_227_226(1),\n    .PMA_REG_COMWAKE_STATUS_CLEAR(0),\n    .PMA_REG_COMINIT_STATUS_CLEAR(0),\n    .PMA_REG_RX_SYNC_RST_N_EN(\"FALSE\"),\n    .PMA_REG_RX_SYNC_RST_N(\"TRUE\"),\n    .PMA_REG_RX_RESERVED_233_232(0),\n    .PMA_REG_RX_RESERVED_235_234(0),\n    .PMA_REG_RX_SATA_COMINIT_OW(\"FALSE\"),\n    .PMA_REG_RX_SATA_COMINIT(\"FALSE\"),\n    .PMA_REG_RX_SATA_COMWAKE_OW(\"FALSE\"),\n    .PMA_REG_RX_SATA_COMWAKE(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_241_240(0),\n    .PMA_REG_RX_DCC_DISABLE(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_243(\"FALSE\"),\n    .PMA_REG_RX_SLIP_SEL_EN(\"FALSE\"),\n    .PMA_REG_RX_SLIP_SEL(0),\n    .PMA_REG_RX_SLIP_EN(\"FALSE\"),\n    .PMA_REG_RX_SIGDET_STATUS_SEL(5),\n    .PMA_REG_RX_SIGDET_FSM_RST_N(\"TRUE\"),\n    .PMA_REG_RX_RESERVED_254(\"FALSE\"),\n    .PMA_REG_RX_SIGDET_STATUS(\"FALSE\"),\n    .PMA_REG_RX_SIGDET_VTH(\"27MV\"),\n    .PMA_REG_RX_SIGDET_GRM(0),\n    .PMA_REG_RX_SIGDET_PULSE_EXT(\"FALSE\"),\n    .PMA_REG_RX_SIGDET_CH2_SEL(0),\n    .PMA_REG_RX_SIGDET_CH2_CHK_WINDOW(3),\n    .PMA_REG_RX_SIGDET_CHK_WINDOW_EN(\"TRUE\"),\n    .PMA_REG_RX_SIGDET_NOSIG_COUNT_SETTING(4),\n    .PMA_REG_SLIP_FIFO_INV_EN(\"FALSE\"),\n    .PMA_REG_SLIP_FIFO_INV(\"POS_EDGE\"),\n    .PMA_REG_RX_SIGDET_OOB_DET_COUNT_VAL(0),\n    .PMA_REG_RX_SIGDET_4OOB_DET_SEL(7),\n    .PMA_REG_RX_RESERVED_285_283(0),\n    .PMA_REG_RX_RESERVED_286(\"FALSE\"),\n    .PMA_REG_RX_SIGDET_IC_I(10),\n    .PMA_REG_RX_OOB_DETECTOR_RESET_N_OW(\"FALSE\"),\n    .PMA_REG_RX_OOB_DETECTOR_RESET_N(\"FALSE\"),\n    .PMA_REG_RX_OOB_DETECTOR_PD_OW(\"FALSE\"),\n    .PMA_REG_RX_OOB_DETECTOR_PD(\"ON\"),\n    .PMA_REG_RX_LS_MODE_EN(\"FALSE\"),\n    .PMA_REG_ANA_RX_EQ1_R_SET_FB_O_SEL(\"FALSE\"),\n    .PMA_REG_ANA_RX_EQ2_R_SET_FB_O_SEL(\"FALSE\"),\n    .PMA_REG_RX_EQ1_R_SET_TOP(0),\n    .PMA_REG_RX_EQ1_R_SET_FB(0),\n    .PMA_REG_RX_EQ1_C_SET_FB(0),\n    .PMA_REG_RX_EQ1_OFF(\"FALSE\"),\n    .PMA_REG_RX_EQ2_R_SET_TOP(0),\n    .PMA_REG_RX_EQ2_R_SET_FB(0),\n    .PMA_REG_RX_EQ2_C_SET_FB(0),\n    .PMA_REG_RX_EQ2_OFF(\"FALSE\"),\n    .PMA_REG_EQ_DAC(0),\n    .PMA_REG_RX_ICTRL_EQ(2),\n    .PMA_REG_EQ_DC_CALIB_EN(\"FALSE\"),\n    .PMA_REG_EQ_DC_CALIB_SEL(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_337_330(0),\n    .PMA_REG_RX_RESERVED_345_338(0),\n    .PMA_REG_RX_RESERVED_353_346(0),\n    .PMA_REG_RX_RESERVED_361_354(0),\n    .PMA_CTLE_CTRL_REG_I(0),\n    .PMA_CTLE_REG_FORCE_SEL_I(\"FALSE\"),\n    .PMA_CTLE_REG_HOLD_I(\"FALSE\"),\n    .PMA_CTLE_REG_INIT_DAC_I(0),\n    .PMA_CTLE_REG_POLARITY_I(\"FALSE\"),\n    .PMA_CTLE_REG_SHIFTER_GAIN_I(0),\n    .PMA_CTLE_REG_THRESHOLD_I(0),\n    .PMA_REG_RX_RES_TRIM_EN(\"FALSE\"),\n    .PMA_REG_RX_RESERVED_393_389(0),\n    .PMA_CFG_RX_LANE_POWERUP(\"OFF\"),\n    .PMA_CFG_RX_PMA_RSTN(\"FALSE\"),\n    .PMA_INT_PMA_RX_MASK_0(\"FALSE\"),\n    .PMA_INT_PMA_RX_CLR_0(\"FALSE\"),\n    .PMA_CFG_CTLE_ADP_RSTN(\"TRUE\"),\n    .PMA_REG_TX_PD(\"ON\"),\n    .PMA_REG_TX_PD_OW(\"TRUE\"),\n    .PMA_REG_TX_MAIN_PRE_Z(\"FALSE\"),\n    .PMA_REG_TX_MAIN_PRE_Z_OW(\"FALSE\"),\n    .PMA_REG_TX_BEACON_TIMER_SEL(0),\n    .PMA_REG_TX_RXDET_REQ_OW(\"FALSE\"),\n    .PMA_REG_TX_RXDET_REQ(\"FALSE\"),\n    .PMA_REG_TX_BEACON_EN_OW(\"FALSE\"),\n    .PMA_REG_TX_BEACON_EN(\"FALSE\"),\n    .PMA_REG_TX_EI_EN_OW(\"FALSE\"),\n    .PMA_REG_TX_EI_EN(\"FALSE\"),\n    .PMA_REG_TX_BIT_CONV(\"FALSE\"),\n    .PMA_REG_TX_RES_CAL(50),\n    .PMA_REG_TX_RESERVED_19(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_25_20(32),\n    .PMA_REG_TX_RESERVED_33_26(0),\n    .PMA_REG_TX_RESERVED_41_34(0),\n    .PMA_REG_TX_RESERVED_49_42(0),\n    .PMA_REG_TX_RESERVED_57_50(0),\n    .PMA_REG_TX_SYNC_OW(\"FALSE\"),\n    .PMA_REG_TX_SYNC(\"FALSE\"),\n    .PMA_REG_TX_PD_POST(\"OFF\"),\n    .PMA_REG_TX_PD_POST_OW(\"TRUE\"),\n    .PMA_REG_TX_RESET_N_OW(\"FALSE\"),\n    .PMA_REG_TX_RESET_N(\"TRUE\"),\n    .PMA_REG_TX_RESERVED_64(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_65(\"TRUE\"),\n    .PMA_REG_TX_BUSWIDTH_OW(\"FALSE\"),\n    .PMA_REG_TX_BUSWIDTH(\"20BIT\"),\n    .PMA_REG_PLL_READY_OW(\"FALSE\"),\n    .PMA_REG_PLL_READY(\"TRUE\"),\n    .PMA_REG_TX_RESERVED_72(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_73(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_74(\"FALSE\"),\n    .PMA_REG_EI_PCLK_DELAY_SEL(0),\n    .PMA_REG_TX_RESERVED_77(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_83_78(0),\n    .PMA_REG_TX_RESERVED_89_84(0),\n    .PMA_REG_TX_RESERVED_95_90(0),\n    .PMA_REG_TX_RESERVED_101_96(0),\n    .PMA_REG_TX_RESERVED_107_102(0),\n    .PMA_REG_TX_RESERVED_113_108(0),\n    .PMA_REG_TX_AMP_DAC0(25),\n    .PMA_REG_TX_AMP_DAC1(19),\n    .PMA_REG_TX_AMP_DAC2(14),\n    .PMA_REG_TX_AMP_DAC3(9),\n    .PMA_REG_TX_RESERVED_143_138(5),\n    .PMA_REG_TX_MARGIN(0),\n    .PMA_REG_TX_MARGIN_OW(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_149_148(0),\n    .PMA_REG_TX_RESERVED_150(\"FALSE\"),\n    .PMA_REG_TX_SWING(\"FALSE\"),\n    .PMA_REG_TX_SWING_OW(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_153(\"FALSE\"),\n    .PMA_REG_TX_RXDET_THRESHOLD(\"84MV\"),\n    .PMA_REG_TX_RESERVED_157_156(0),\n    .PMA_REG_TX_BEACON_OSC_CTRL(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_160_159(0),\n    .PMA_REG_TX_RESERVED_162_161(0),\n    .PMA_REG_TX_TX2RX_SLPBACK_EN(\"FALSE\"),\n    .PMA_REG_TX_PCLK_EDGE_SEL(\"FALSE\"),\n    .PMA_REG_TX_RXDET_STATUS_OW(\"FALSE\"),\n    .PMA_REG_TX_RXDET_STATUS(\"TRUE\"),\n    .PMA_REG_TX_PRBS_GEN_EN(\"FALSE\"),\n    .PMA_REG_TX_PRBS_GEN_WIDTH_SEL(\"20BIT\"),\n    .PMA_REG_TX_PRBS_SEL(\"PRBS7\"),\n    .PMA_REG_TX_UDP_DATA_7_TO_0(5),\n    .PMA_REG_TX_UDP_DATA_15_TO_8(235),\n    .PMA_REG_TX_UDP_DATA_19_TO_16(3),\n    .PMA_REG_TX_RESERVED_192(\"FALSE\"),\n    .PMA_REG_TX_FIFO_WP_CTRL(4),\n    .PMA_REG_TX_FIFO_EN(\"FALSE\"),\n    .PMA_REG_TX_DATA_MUX_SEL(0),\n    .PMA_REG_TX_ERR_INSERT(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_203_200(0),\n    .PMA_REG_TX_RESERVED_204(\"FALSE\"),\n    .PMA_REG_TX_SATA_EN(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_207_206(0),\n    .PMA_REG_RATE_CHANGE_TXPCLK_ON_OW(\"FALSE\"),\n    .PMA_REG_RATE_CHANGE_TXPCLK_ON(\"TRUE\"),\n    .PMA_REG_TX_CFG_POST1(0),\n    .PMA_REG_TX_CFG_POST2(0),\n    .PMA_REG_TX_DEEMP(0),\n    .PMA_REG_TX_DEEMP_OW(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_224_223(0),\n    .PMA_REG_TX_RESERVED_225(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_229_226(0),\n    .PMA_REG_TX_OOB_DELAY_SEL(0),\n    .PMA_REG_TX_POLARITY(\"NORMAL\"),\n    .PMA_REG_ANA_TX_JTAG_DATA_O_SEL(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_236(\"FALSE\"),\n    .PMA_REG_TX_LS_MODE_EN(\"FALSE\"),\n    .PMA_REG_TX_JTAG_MODE_EN_OW(\"FALSE\"),\n    .PMA_REG_TX_JTAG_MODE_EN(\"FALSE\"),\n    .PMA_REG_RX_JTAG_MODE_EN_OW(\"FALSE\"),\n    .PMA_REG_RX_JTAG_MODE_EN(\"FALSE\"),\n    .PMA_REG_RX_JTAG_OE(\"TRUE\"),\n    .PMA_REG_RX_ACJTAG_VHYSTSEL(0),\n    .PMA_REG_TX_RES_CAL_EN(\"FALSE\"),\n    .PMA_REG_RX_TERM_MODE_CTRL(4),\n    .PMA_REG_TX_RESERVED_251_250(0),\n    .PMA_REG_PLPBK_TXPCLK_EN(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_253(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_254(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_255(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_256(\"FALSE\"),\n    .PMA_REG_TX_RESERVED_257(\"FALSE\"),\n    .PMA_REG_TX_PH_SEL(1),\n    .PMA_REG_TX_CFG_PRE(0),\n    .PMA_REG_TX_CFG_MAIN(0),\n    .PMA_REG_CFG_POST(0),\n    .PMA_REG_PD_MAIN(\"TRUE\"),\n    .PMA_REG_PD_PRE(\"TRUE\"),\n    .PMA_REG_TX_LS_DATA(\"FALSE\"),\n    .PMA_REG_TX_DCC_BUF_SZ_SEL(0),\n    .PMA_REG_TX_DCC_CAL_CUR_TUNE(0),\n    .PMA_REG_TX_DCC_CAL_EN(\"FALSE\"),\n    .PMA_REG_TX_DCC_CUR_SS(0),\n    .PMA_REG_TX_DCC_FA_CTRL(\"FALSE\"),\n    .PMA_REG_TX_DCC_RI_CTRL(\"FALSE\"),\n    .PMA_REG_ATB_SEL_2_TO_0(0),\n    .PMA_REG_ATB_SEL_9_TO_3(0),\n    .PMA_REG_TX_CFG_7_TO_0(0),\n    .PMA_REG_TX_CFG_15_TO_8(0),\n    .PMA_REG_TX_CFG_23_TO_16(0),\n    .PMA_REG_TX_CFG_31_TO_24(0),\n    .PMA_REG_TX_OOB_EI_EN(\"FALSE\"),\n    .PMA_REG_TX_OOB_EI_EN_OW(\"FALSE\"),\n    .PMA_REG_TX_BEACON_EN_DELAYED(\"FALSE\"),\n    .PMA_REG_TX_BEACON_EN_DELAYED_OW(\"FALSE\"),\n    .PMA_REG_TX_JTAG_DATA(\"FALSE\"),\n    .PMA_REG_TX_RXDET_TIMER_SEL(87),\n    .PMA_REG_TX_CFG1_7_0(0),\n    .PMA_REG_TX_CFG1_15_8(0),\n    .PMA_REG_TX_CFG1_23_16(0),\n    .PMA_REG_TX_CFG1_31_24(0),\n    .PMA_REG_CFG_LANE_POWERUP(\"OFF\"),\n    .PMA_REG_CFG_TX_LANE_POWERUP_CLKPATH(\"FALSE\"),\n    .PMA_REG_CFG_TX_LANE_POWERUP_PISO(\"FALSE\"),\n    .PMA_REG_CFG_TX_LANE_POWERUP_DRIVER(\"FALSE\")\n) u_gtp_hsstlp_lane_dft (\n    .P_TX_SDN(P_TX_SDN),\n    .P_TX_SDP(P_TX_SDP),\n    .P_PCS_RX_MCB_STATUS(P_PCS_RX_MCB_STATUS),\n    .P_PCS_LSM_SYNCED(P_PCS_LSM_SYNCED),\n    .P_CFG_READY(P_CFG_READY),\n    .P_CFG_RDATA(P_CFG_RDATA),\n    .P_CFG_INT(P_CFG_INT),\n    .P_RDATA(P_RDATA),\n    .P_RCLK2FABRIC(P_RCLK2FABRIC),\n    .P_TCLK2FABRIC(P_TCLK2FABRIC),\n    .P_RX_SIGDET_STATUS(P_RX_SIGDET_STATUS),\n    .P_RX_SATA_COMINIT(P_RX_SATA_COMINIT),\n    .P_RX_SATA_COMWAKE(P_RX_SATA_COMWAKE),\n    .P_RX_LS_DATA(P_RX_LS_DATA),\n    .P_RX_READY(P_RX_READY),\n    .P_TEST_STATUS(P_TEST_STATUS),\n    .P_TX_RXDET_STATUS(P_TX_RXDET_STATUS),\n    .P_CA_ALIGN_RX(P_CA_ALIGN_RX),\n    .P_CA_ALIGN_TX(P_CA_ALIGN_TX),\n    .PMA_RCLK(PMA_RCLK),\n    .LANE_COUT_BUS_FORWARD(LANE_COUT_BUS_FORWARD),\n    .APATTERN_STATUS_COUT(APATTERN_STATUS_COUT),\n    .TXPCLK_PLL(TXPCLK_PLL),\n    .P_RX_SDN(P_RX_SDN),\n    .P_RX_SDP(P_RX_SDP),\n    .P_RX_CLK_FR_CORE(P_RX_CLK_FR_CORE),\n    .P_RCLK2_FR_CORE(P_RCLK2_FR_CORE),\n    .P_TX_CLK_FR_CORE(P_TX_CLK_FR_CORE),\n    .P_TCLK2_FR_CORE(P_TCLK2_FR_CORE),\n    .P_PCS_TX_RST(P_PCS_TX_RST),\n    .P_PCS_RX_RST(P_PCS_RX_RST),\n    .P_PCS_CB_RST(P_PCS_CB_RST),\n    .P_RXGEAR_SLIP(P_RXGEAR_SLIP),\n    .P_CFG_CLK(P_CFG_CLK),\n    .P_CFG_RST(P_CFG_RST),\n    .P_CFG_PSEL(P_CFG_PSEL),\n    .P_CFG_ENABLE(P_CFG_ENABLE),\n    .P_CFG_WRITE(P_CFG_WRITE),\n    .P_CFG_ADDR(P_CFG_ADDR),\n    .P_CFG_WDATA(P_CFG_WDATA),\n    .P_TDATA(P_TDATA),\n    .P_PCS_WORD_ALIGN_EN(P_PCS_WORD_ALIGN_EN),\n    .P_RX_POLARITY_INVERT(P_RX_POLARITY_INVERT),\n    .P_CEB_ADETECT_EN(P_CEB_ADETECT_EN),\n    .P_PCS_MCB_EXT_EN(P_PCS_MCB_EXT_EN),\n    .P_PCS_NEAREND_LOOP(P_PCS_NEAREND_LOOP),\n    .P_PCS_FAREND_LOOP(P_PCS_FAREND_LOOP),\n    .P_PMA_NEAREND_PLOOP(P_PMA_NEAREND_PLOOP),\n    .P_PMA_NEAREND_SLOOP(P_PMA_NEAREND_SLOOP),\n    .P_PMA_FAREND_PLOOP(P_PMA_FAREND_PLOOP),\n    .P_LANE_PD(P_LANE_PD),\n    .P_LANE_RST(P_LANE_RST),\n    .P_RX_LANE_PD(P_RX_LANE_PD),\n    .P_RX_PMA_RST(P_RX_PMA_RST),\n    .P_CTLE_ADP_RST(P_CTLE_ADP_RST),\n    .P_TX_DEEMP(P_TX_DEEMP),\n    .P_TX_LS_DATA(P_TX_LS_DATA),\n    .P_TX_BEACON_EN(P_TX_BEACON_EN),\n    .P_TX_SWING(P_TX_SWING),\n    .P_TX_RXDET_REQ(P_TX_RXDET_REQ),\n    .P_TX_RATE(P_TX_RATE),\n    .P_TX_BUSWIDTH(P_TX_BUSWIDTH),\n    .P_TX_MARGIN(P_TX_MARGIN),\n    .P_TX_PMA_RST(P_TX_PMA_RST),\n    .P_TX_LANE_PD_CLKPATH(P_TX_LANE_PD_CLKPATH),\n    .P_TX_LANE_PD_PISO(P_TX_LANE_PD_PISO),\n    .P_TX_LANE_PD_DRIVER(P_TX_LANE_PD_DRIVER),\n    .P_RX_RATE(P_RX_RATE),\n    .P_RX_BUSWIDTH(P_RX_BUSWIDTH),\n    .P_RX_HIGHZ(P_RX_HIGHZ),\n    .P_CIM_CLK_ALIGNER_RX(P_CIM_CLK_ALIGNER_RX),\n    .P_CIM_CLK_ALIGNER_TX(P_CIM_CLK_ALIGNER_TX),\n    .P_CIM_DYN_DLY_SEL_RX(P_CIM_DYN_DLY_SEL_RX),\n    .P_CIM_DYN_DLY_SEL_TX(P_CIM_DYN_DLY_SEL_TX),\n    .P_CIM_START_ALIGN_RX(P_CIM_START_ALIGN_RX),\n    .P_CIM_START_ALIGN_TX(P_CIM_START_ALIGN_TX),\n    .MCB_RCLK(MCB_RCLK),\n    .SYNC(SYNC),\n    .RATE_CHANGE(RATE_CHANGE),\n    .PLL_LOCK_SEL(PLL_LOCK_SEL),\n    .LANE_CIN_BUS_FORWARD(LANE_CIN_BUS_FORWARD),\n    .APATTERN_STATUS_CIN(APATTERN_STATUS_CIN),\n    .CLK_TXP(CLK_TXP),\n    .CLK_TXN(CLK_TXN),\n    .CLK_RX0(CLK_RX0),\n    .CLK_RX90(CLK_RX90),\n    .CLK_RX180(CLK_RX180),\n    .CLK_RX270(CLK_RX270),\n    .PLL_PD_I(PLL_PD_I),\n    .PLL_RESET_I(PLL_RESET_I),\n    .PLL_REFCLK_I(PLL_REFCLK_I),\n    .PLL_RES_TRIM_I(PLL_RES_TRIM_I),\n    .P_TEST_SO0(P_TEST_SO0),\n    .P_TEST_SO1(P_TEST_SO1),\n    .P_TEST_SO2(P_TEST_SO2),\n    .P_TEST_SO3(P_TEST_SO3),\n    .P_TEST_SO4(P_TEST_SO4),\n    .P_FOR_PMA_TEST_SO(P_FOR_PMA_TEST_SO),\n    .P_TEST_SE_N(P_TEST_SE_N),\n    .P_TEST_MODE_N(P_TEST_MODE_N),\n    .P_TEST_RSTN(P_TEST_RSTN),\n    .P_TEST_SI0(P_TEST_SI0),\n    .P_TEST_SI1(P_TEST_SI1),\n    .P_TEST_SI2(P_TEST_SI2),\n    .P_TEST_SI3(P_TEST_SI3),\n    .P_TEST_SI4(P_TEST_SI4),\n    .P_FOR_PMA_TEST_MODE_N(P_FOR_PMA_TEST_MODE_N),\n    .P_FOR_PMA_TEST_SE_N(P_FOR_PMA_TEST_SE_N),\n    .P_FOR_PMA_TEST_CLK(P_FOR_PMA_TEST_CLK),\n    .P_FOR_PMA_TEST_RSTN(P_FOR_PMA_TEST_RSTN),\n    .P_FOR_PMA_TEST_SI(P_FOR_PMA_TEST_SI)\n);"
+}

@@ -1,0 +1,14 @@
+(_flow fab_demo "2022.2-rc2"
+    (_comment "net-name discovery fixture project")
+    (_version "1.0.9")
+    (_status "initial")
+    (_project (_option prj_work_dir (_string ".")) (_option prj_impl_dir (_string ".")))
+    (_task tsk_setup
+        (_widget wgt_select_arch (_input (_part (_family Logos2)(_device PG2L100H)(_speedgrade -6)(_package FBG484))))
+        (_widget wgt_my_design_src (_input (_file "rtl/top.v" + "top" (_format verilog)(_timespec "2026-06-22T00:00:00"))))
+        (_widget wgt_import_logic_con_file (_input (_file "constraints/top.fdc" (_format fdc)(_timespec "2026-06-22T00:00:00")))))
+    (_task tsk_compile       (_command cmd_compile       (_gci_state (_integer 0))))
+    (_task tsk_synthesis     (_command cmd_synthesize    (_gci_state (_integer 0))(_option selected_syn_tool_opt (_integer 2))))
+    (_task tsk_devmap        (_command cmd_devmap        (_gci_state (_integer 0))))
+    (_task tsk_pnr           (_command cmd_pnr           (_gci_state (_integer 0))(_option fix_hold_violation (_switch ON))))
+    (_task tsk_gen_bitstream (_command cmd_gen_bitstream (_gci_state (_integer 0)))))

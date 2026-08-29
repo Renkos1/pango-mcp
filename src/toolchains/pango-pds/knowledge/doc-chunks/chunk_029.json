@@ -1,0 +1,6 @@
+{
+  "id": "chunk_029",
+  "source": "pds-project-and-flow.md",
+  "title": "Clocking from a NON-clock-capable IO (Place-0084) — route through a PLL",
+  "text": "## Clocking from a NON-clock-capable IO (Place-0084) — route through a PLL\nIf a clock enters on a regular IO pad (not a dedicated GCLK/MCLK), P&R fails with\n`E: Place-0084: GLOBAL_CLOCK: the driver clk_ibuf ... is unreasonable` and **no bitstream is generated**.\n- `define_attribute {p:clk} {PAP_IO_NONE} {TRUE}` in the `.fdc` is necessary-but-NOT-sufficient.\n- **Fix = launder the clock through a PLL** (`GTP_GPLL`): IO → PLL `CLKIN1` → PLL `CLKOUT0` (a clock-capable\n  internal source) → global clock → fabric. Reuse a generated PLL wrapper (the common pattern:\n  `module pll(output clkout0, input clkin1, output lock)` wrapping `GTP_GPLL` with `CLKIN_FREQ` set to\n  the actual input MHz). Add it to the `.pds` sources and clock the design from `clkout0`. (This is why\n  board designs almost always PLL their incoming board clock rather than using it directly.)"
+}

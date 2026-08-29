@@ -1,0 +1,50 @@
+{
+  "name": "GTP_MRPOSTMUX_TEST_DFT",
+  "category": "other",
+  "params": [],
+  "ports": [
+    {
+      "name": "CLKIN_P0",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "CLKIN_P1",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "CLKIN_P2",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "CLKIN_P3",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "CLK_SRB_MRPOSTMUX",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "CLKOUT_P",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CFG_MUX",
+      "dir": "input",
+      "width": 7,
+      "range": "[6:0]"
+    }
+  ],
+  "instTemplate": "GTP_MRPOSTMUX_TEST_DFT u_gtp_mrpostmux_test_dft (\n    .CLKIN_P0(CLKIN_P0),\n    .CLKIN_P1(CLKIN_P1),\n    .CLKIN_P2(CLKIN_P2),\n    .CLKIN_P3(CLKIN_P3),\n    .CLK_SRB_MRPOSTMUX(CLK_SRB_MRPOSTMUX),\n    .CLKOUT_P(CLKOUT_P),\n    .CFG_MUX(CFG_MUX)\n);"
+}

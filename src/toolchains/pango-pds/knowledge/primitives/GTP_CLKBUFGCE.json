@@ -1,0 +1,34 @@
+{
+  "name": "GTP_CLKBUFGCE",
+  "category": "clock_pll",
+  "params": [
+    {
+      "name": "DEFAULT_VALUE",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "SIM_DEVICE",
+      "type": "string/int",
+      "default": "\"TITAN\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CE",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_CLKBUFGCE\n#(\n    .DEFAULT_VALUE(1'b0),\n    .SIM_DEVICE(\"TITAN\")\n) u_gtp_clkbufgce (\n    .CLKOUT(CLKOUT),\n    .CLKIN(CLKIN),\n    .CE(CE)\n);"
+}

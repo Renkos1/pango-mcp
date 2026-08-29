@@ -1,0 +1,224 @@
+{
+  "slug": "DRM_HRM_Based_FIFO_28",
+  "name": "Titan3 DRM/HRM Based FIFO",
+  "displayName": "DRM/HRM Based FIFO",
+  "topModule": "ipmxf1_fifo_wrapper_v1_14",
+  "version": "1.14",
+  "vendor": "Pango",
+  "category": "Module,Memory,DRM/HRM",
+  "id": "08100205",
+  "dir": "module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_fifo",
+  "datasheet": "ip/module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_fifo/UG081002_DRM_HRM_Based_RAM_IP.pdf",
+  "families": [
+    "Titan3"
+  ],
+  "devices": [
+    "PG3T500",
+    "PG3T1300",
+    "PG3T1500"
+  ],
+  "params": [
+    {
+      "name": "GTP_DRM_TYPE",
+      "type": "enum",
+      "default": "E4",
+      "items": [
+        "E4",
+        "E5",
+        "E6"
+      ]
+    },
+    {
+      "name": "CAS_MODE_SEL",
+      "type": "enum",
+      "default": "AUTO",
+      "items": [
+        "AUTO",
+        "DRM18K",
+        "DRM36K",
+        "HRM288K"
+      ]
+    },
+    {
+      "name": "CAS_MODE",
+      "type": "enum",
+      "default": "18K",
+      "items": [
+        "18K",
+        "36K",
+        "288K"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC"
+      ]
+    },
+    {
+      "name": "FIFO_TYPE",
+      "type": "enum",
+      "default": "SYN_FIFO",
+      "items": [
+        "SYN_FIFO",
+        "ASYN_FIFO"
+      ]
+    },
+    {
+      "name": "ASYN_FIFO_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "SAMEWIDTH_EN",
+      "type": "bool",
+      "default": "true"
+    },
+    {
+      "name": "WR_BYTE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "BYTE_SIZE",
+      "type": "enum",
+      "default": "8",
+      "items": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "name": "WR_DEPTH_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "WR_DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "BE_WIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "RD_DEPTH_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "RD_DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "RD_BE_WIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "FAB_REG",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "FULL_WL_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "EMPTY_WL_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "ALMOST_FULL_NUM",
+      "type": "int",
+      "default": "1020"
+    },
+    {
+      "name": "ALMOST_EMPTY_NUM",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "RST_VAL_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RST_VAL",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "CASCADE_MODE",
+      "type": "enum",
+      "default": "NORMAL",
+      "items": [
+        "NORMAL",
+        "PIPELINED"
+      ]
+    },
+    {
+      "name": "ADDR_LOOP_NUM",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "CASCADE_HEIGHT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COLUMN_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "MATRIX_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RST_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "DATA_VALID_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "PREFETCH_EN",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

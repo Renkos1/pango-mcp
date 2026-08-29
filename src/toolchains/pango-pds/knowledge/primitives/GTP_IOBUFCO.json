@@ -1,0 +1,44 @@
+{
+  "name": "GTP_IOBUFCO",
+  "category": "io_buffer",
+  "params": [
+    {
+      "name": "IOSTANDARD",
+      "type": "string/int",
+      "default": "\"DEFAULT\""
+    },
+    {
+      "name": "TERM_DDR",
+      "type": "string/int",
+      "default": "\"ON\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "IO",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "IOB",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "T",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_IOBUFCO\n#(\n    .IOSTANDARD(\"DEFAULT\"),\n    .TERM_DDR(\"ON\")\n) u_gtp_iobufco (\n    .O(O),\n    .IO(IO),\n    .IOB(IOB),\n    .I(I),\n    .T(T)\n);"
+}

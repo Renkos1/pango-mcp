@@ -1,0 +1,6 @@
+{
+  "id": "chunk_001",
+  "source": "SKILL.md",
+  "title": "Pango Design Suite — headless compile / scan / flash / debug",
+  "text": "# Pango Design Suite — headless compile / scan / flash / debug\n\nEverything PDS does from the GUI can be driven headlessly with a handful of console tools. This skill\nis the reference for the **control tools, the project/constraint/bitstream file formats, and the exact\ncdt_* Tcl** so a fresh session can do the full workflow correctly. Device-specific values below\n(IDCODE, device name, flash part, install path) are EXAMPLES — swap for your part/install.\n\n- Toolchain bin dir: your PDS install, e.g. `<PDS_INSTALL>\\bin` (`pds_shell.exe`, `cdt_js.exe`,\n  `cdt_cfg.exe`, `cdt_ins.exe`, `cdt_dbg.exe` all live there).\n- Tested against **PDS 2022.2-SP4.2**; examples use **Logos2 PG2L100H / FBG484 / -6**.\n\nFor the exhaustive Tcl command list + ready-to-run scripts see **`reference/cdt-tcl-commands.md`**;\nfor the .pds/.fdc/.sbit/.sfc formats and the build-stage internals see\n**`reference/pds-project-and-flow.md`**; for scripted ILA/virtual-IO debug see **`reference/debug-ila.md`**."
+}

@@ -1,0 +1,657 @@
+{
+  "generatedAt": "2026-06-16T01:27:24.268Z",
+  "source": "ip",
+  "count": 65,
+  "cores": [
+    {
+      "slug": "Accumulator_0",
+      "name": "28nm Accumulator",
+      "displayName": "Accumulator",
+      "category": "Module,Multiplier",
+      "version": "1.6",
+      "topModule": "apm_acc",
+      "paramCount": 26,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Accumulator_32",
+      "name": "Titan3 Plus/Kosmo3 Accumulator",
+      "displayName": "Accumulator",
+      "category": "Module,Multiplier",
+      "version": "1.4a",
+      "topModule": "apm_acc",
+      "paramCount": 33,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Adder_Subtractor_1",
+      "name": null,
+      "displayName": "Adder-Subtractor",
+      "category": "Module,Multiplier",
+      "version": "1.0",
+      "topModule": "apm_addsub",
+      "paramCount": 19,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "CombBus_45",
+      "name": "CombBus",
+      "displayName": "CombBus",
+      "category": "Module,CombBus",
+      "version": "1.0",
+      "topModule": "ipm_CombBus_wrap_v1_0",
+      "paramCount": 40,
+      "hasDatasheet": false
+    },
+    {
+      "slug": "DDR3_Interface_60",
+      "name": "Logos HMIC_S",
+      "displayName": "DDR3 Interface",
+      "category": "System,DDR,Soft",
+      "version": "1.5",
+      "topModule": "ipsxb_ddr_top_v1_5_wrapper.v.xml",
+      "paramCount": 260,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DebugCore_61",
+      "name": "DebugCore",
+      "displayName": "DebugCore",
+      "category": "System,Tools,Debug",
+      "version": "1.4",
+      "topModule": "ips_dbc_wrapper_v1_4",
+      "paramCount": 377,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Distributed_FIFO_46",
+      "name": "Distributed FIFO",
+      "displayName": "Distributed FIFO",
+      "category": "Module,Memory,Distributed RAM",
+      "version": "1.6",
+      "topModule": "ipm_distributed_fifo_wrapper_v1_4",
+      "paramCount": 11,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Distributed_ROM_47",
+      "name": "Distributed ROM",
+      "displayName": "Distributed ROM",
+      "category": "Module,Memory,Distributed RAM",
+      "version": "1.4",
+      "topModule": "ipm_distributed_rom_wrapper_v1_4",
+      "paramCount": 7,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Distributed_Shift_Register_49",
+      "name": "Distributed Shift Register",
+      "displayName": "Distributed Shift Register",
+      "category": "Module,Memory,Distributed RAM",
+      "version": "1.4",
+      "topModule": "ipm_distributed_shiftregister_wrapper_v1_4",
+      "paramCount": 7,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Distributed_Simple_Dual_Port_RAM_48",
+      "name": "Distributed Simple Dual Port RAM",
+      "displayName": "Distributed Simple Dual Port RAM",
+      "category": "Module,Memory,Distributed RAM",
+      "version": "1.3",
+      "topModule": "ipm_distributed_sdpram_wrapper_v1_3",
+      "paramCount": 7,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Distributed_Single_Port_RAM_50",
+      "name": "Distributed Single Port RAM",
+      "displayName": "Distributed Single Port RAM",
+      "category": "Module,Memory,Distributed RAM",
+      "version": "1.3",
+      "topModule": "ipm_distributed_spram_wrapper_v1_3",
+      "paramCount": 7,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Dual_Port_RAM_6",
+      "name": "28nm DRM Based Dual Port RAM",
+      "displayName": "DRM Based Dual Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.11",
+      "topModule": "ipm2l_dpram_wrapper_v1_11",
+      "paramCount": 33,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Dual_Port_RAM_12",
+      "name": "Compact DRM Based Dual Port RAM",
+      "displayName": "DRM Based Dual Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.6",
+      "topModule": "ipmc_dpram_wrapper_v1_6",
+      "paramCount": 32,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Dual_Port_RAM_21",
+      "name": "Logos DRM Based Dual Port RAM",
+      "displayName": "DRM Based Dual Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.8",
+      "topModule": "ipml_dpram_wrapper_v1_8",
+      "paramCount": 29,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Dual_Port_RAM_37",
+      "name": "Titan3 Plus/Kosmo3 DRM Based Dual Port RAM",
+      "displayName": "DRM Based Dual Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.5",
+      "topModule": "ipmxf_dpram_wrapper_v1_4",
+      "paramCount": 33,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Dual_Port_RAM_52",
+      "name": "Titan DRM Based Dual Port RAM",
+      "displayName": "DRM Based Dual Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.5",
+      "topModule": "ipm_dpram_wrapper_v1_5",
+      "paramCount": 26,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_FIFO_7",
+      "name": "28nm DRM Based FIFO",
+      "displayName": "DRM Based FIFO",
+      "category": "Module,Memory,DRM",
+      "version": "1.15",
+      "topModule": "ipm2l_fifo_wrapper_v1_15",
+      "paramCount": 32,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_FIFO_13",
+      "name": "Compact DRM Based FIFO",
+      "displayName": "DRM Based FIFO",
+      "category": "Module,Memory,DRM",
+      "version": "1.10",
+      "topModule": "_fifo_wrapper_v1_10",
+      "paramCount": 25,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_FIFO_22",
+      "name": "Logos DRM Based FIFO",
+      "displayName": "DRM Based FIFO",
+      "category": "Module,Memory,DRM",
+      "version": "1.14",
+      "topModule": "ipml_fifo_wrapper_v1_14",
+      "paramCount": 26,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_FIFO_38",
+      "name": "Titan3 Plus/Kosmo3 DRM Based FIFO",
+      "displayName": "DRM Based FIFO",
+      "category": "Module,Memory,DRM",
+      "version": "1.8",
+      "topModule": "ipmxf_fifo_wrapper_v1_8",
+      "paramCount": 25,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_FIFO_53",
+      "name": "Titan DRM Based FIFO",
+      "displayName": "DRM Based FIFO",
+      "category": "Module,Memory,DRM",
+      "version": "1.4",
+      "topModule": "ipm_fifo_wrapper_v1_4",
+      "paramCount": 22,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_ROM_8",
+      "name": "28nm DRM Based ROM",
+      "displayName": "DRM Based ROM",
+      "category": "Module,Memory,DRM",
+      "version": "1.9",
+      "topModule": "ipm2l_rom_wrapper_v1_9",
+      "paramCount": 17,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_ROM_14",
+      "name": "Compact DRM Based ROM",
+      "displayName": "DRM Based ROM",
+      "category": "Module,Memory,DRM",
+      "version": "1.6",
+      "topModule": "ipmc_rom_wrapper_v1_6",
+      "paramCount": 17,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_ROM_23",
+      "name": "Logos DRM Based ROM",
+      "displayName": "DRM Based ROM",
+      "category": "Module,Memory,DRM",
+      "version": "1.7",
+      "topModule": "ipml_rom_wrapper_v1_7",
+      "paramCount": 15,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_ROM_39",
+      "name": "Titan3 Plus/Kosmo3 DRM Based ROM",
+      "displayName": "DRM Based ROM",
+      "category": "Module,Memory,DRM",
+      "version": "1.5",
+      "topModule": "ipmxf_rom_wrapper_v1_4",
+      "paramCount": 17,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_ROM_54",
+      "name": "Titan DRM Based ROM",
+      "displayName": "DRM Based ROM",
+      "category": "Module,Memory,DRM",
+      "version": "1.4",
+      "topModule": "ipm_rom_wrapper_v1_4",
+      "paramCount": 12,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Simple_Dual_Port_RAM_9",
+      "name": "28nm DRM Based Simple Dual Port RAM",
+      "displayName": "DRM Based Simple Dual Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.13",
+      "topModule": "ipm2l_sdpram_wrapper_v1_12",
+      "paramCount": 30,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Simple_Dual_Port_RAM_15",
+      "name": "Compact DRM Based Simple Dual Port RAM",
+      "displayName": "DRM Based Simple Dual Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.7",
+      "topModule": "ipmc_sdpram_wrapper_v1_7",
+      "paramCount": 27,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Simple_Dual_Port_RAM_24",
+      "name": "Logos DRM Based Simple Dual Port RAM",
+      "displayName": "DRM Based Simple Dual Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.10",
+      "topModule": "ipml_sdpram_wrapper_v1_10",
+      "paramCount": 24,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Simple_Dual_Port_RAM_40",
+      "name": "Titan3 Plus/Kosmo3 DRM Based Simple Dual Port RAM",
+      "displayName": "DRM Based Simple Dual Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.6",
+      "topModule": "ipmxf_sdpram_wrapper_v1_6",
+      "paramCount": 26,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Simple_Dual_Port_RAM_55",
+      "name": "Titan DRM Based Simple Dual Port RAM",
+      "displayName": "DRM Based Simple Dual Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.4",
+      "topModule": "ipm_sdpram_wrapper_v1_4",
+      "paramCount": 21,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Single_Port_RAM_10",
+      "name": "28nm DRM Based Single Port RAM",
+      "displayName": "DRM Based Single Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.9",
+      "topModule": "ipm2l_spram_wrapper_v1_9",
+      "paramCount": 21,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Single_Port_RAM_16",
+      "name": "Compact DRM Based Single Port RAM",
+      "displayName": "DRM Based Single Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.6",
+      "topModule": "ipmc_spram_wrapper_v1_6",
+      "paramCount": 21,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Single_Port_RAM_25",
+      "name": "Logos DRM Based Single Port RAM",
+      "displayName": "DRM Based Single Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.7",
+      "topModule": "ipml_spram_wrapper_v1_7",
+      "paramCount": 19,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Single_Port_RAM_41",
+      "name": "Titan3 Plus/Kosmo3 DRM Based Single Port RAM",
+      "displayName": "DRM Based Single Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.5",
+      "topModule": "ipmxf_spram_wrapper_v1_4",
+      "paramCount": 21,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_Based_Single_Port_RAM_56",
+      "name": "Titan DRM Based Single Port RAM",
+      "displayName": "DRM Based Single Port RAM",
+      "category": "Module,Memory,DRM",
+      "version": "1.4",
+      "topModule": "ipm_spram_wrapper_v1_4",
+      "paramCount": 16,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_HRM_Based_Dual_Port_RAM_27",
+      "name": "Titan3 DRM/HRM Based Dual Port RAM",
+      "displayName": "DRM/HRM Based Dual Port RAM",
+      "category": "Module,Memory,DRM/HRM",
+      "version": "1.12",
+      "topModule": "ipmxf1_dpram_wrapper_v1_12",
+      "paramCount": 43,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_HRM_Based_FIFO_28",
+      "name": "Titan3 DRM/HRM Based FIFO",
+      "displayName": "DRM/HRM Based FIFO",
+      "category": "Module,Memory,DRM/HRM",
+      "version": "1.14",
+      "topModule": "ipmxf1_fifo_wrapper_v1_14",
+      "paramCount": 34,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_HRM_Based_ROM_29",
+      "name": "Titan3 DRM/HRM Based ROM",
+      "displayName": "DRM/HRM Based ROM",
+      "category": "Module,Memory,DRM/HRM",
+      "version": "1.10",
+      "topModule": "ipmxf1_rom_wrapper_v1_10",
+      "paramCount": 23,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_HRM_Based_Simple_Dual_Port_RAM_30",
+      "name": "Titan3 DRM/HRM Based Simple Dual Port RAM",
+      "displayName": "DRM/HRM Based Simple Dual Port RAM",
+      "category": "Module,Memory,DRM/HRM",
+      "version": "1.11",
+      "topModule": "ipmxf1_sdpram_wrapper_v1_11",
+      "paramCount": 33,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DRM_HRM_Based_Single_Port_RAM_31",
+      "name": "Titan3 DRM/HRM Based Single Port RAM",
+      "displayName": "DRM/HRM Based Single Port RAM",
+      "category": "Module,Memory,DRM/HRM",
+      "version": "1.11",
+      "topModule": "ipmxf1_spram_wrapper_v1_11",
+      "paramCount": 27,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "DVIO_63",
+      "name": "DVIO",
+      "displayName": "DVIO",
+      "category": "System,Tools,Debug",
+      "version": "1.2",
+      "topModule": "ips_dvio_wrapper_v1_2.v",
+      "paramCount": 1540,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Dvio_Jtag_Hub_64",
+      "name": "Dvio_Jtag_Hub",
+      "displayName": "Dvio_Jtag_Hub",
+      "category": "System,Tools,Debug",
+      "version": "1.2",
+      "topModule": "ips_dvio_jtag_hub_wrapper_v1_0",
+      "paramCount": 6,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Jtag_Hub_62",
+      "name": "Jtag_Hub",
+      "displayName": "Jtag_Hub",
+      "category": "System,Tools,Debug",
+      "version": "1.5",
+      "topModule": "ips_jtag_hub_wrapper_v1_5",
+      "paramCount": 6,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Multiply_Accumulator_3",
+      "name": "28nm Multiply-Accumulator",
+      "displayName": "Multiply-Accumulator",
+      "category": "Module,Multiplier",
+      "version": "1.6",
+      "topModule": "apm_multacc",
+      "paramCount": 27,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Multiply_Accumulator_18",
+      "name": "Logos Multiply-Accumulator",
+      "displayName": "Multiply-Accumulator",
+      "category": "Module,Multiplier",
+      "version": "1.4",
+      "topModule": "apm_multacc",
+      "paramCount": 23,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Multiply_Accumulator_34",
+      "name": "Titan3 Plus/Kosmo3 Multiply-Accumulator",
+      "displayName": "Multiply-Accumulator",
+      "category": "Module,Multiplier",
+      "version": "1.4a",
+      "topModule": "apm_multacc",
+      "paramCount": 37,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Multiply_Accumulator_43",
+      "name": "Titan Multiply-Accumulator",
+      "displayName": "Multiply-Accumulator",
+      "category": "Module,Multiplier",
+      "version": "1.5",
+      "topModule": "apm_multacc",
+      "paramCount": 33,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Multiply_Adder_4",
+      "name": "28nm Multiply-Adder",
+      "displayName": "Multiply-Adder",
+      "category": "Module,Multiplier",
+      "version": "1.6",
+      "topModule": "apm_multadd",
+      "paramCount": 16,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Multiply_Adder_19",
+      "name": "Logos Multiply-Adder",
+      "displayName": "Multiply-Adder",
+      "category": "Module,Multiplier",
+      "version": "1.3",
+      "topModule": "apm_multadd",
+      "paramCount": 16,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Multiply_Adder_35",
+      "name": "Titan3 Plus/Kosmo3 Multiply-Adder",
+      "displayName": "Multiply-Adder",
+      "category": "Module,Multiplier",
+      "version": "1.4a",
+      "topModule": "apm_multadd",
+      "paramCount": 44,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Multiply_Adder_44",
+      "name": "Titan Multiply-Adder",
+      "displayName": "Multiply-Adder",
+      "category": "Module,Multiplier",
+      "version": "1.3",
+      "topModule": "apm_multadd",
+      "paramCount": 14,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "ip_58",
+      "name": null,
+      "displayName": null,
+      "category": null,
+      "version": null,
+      "topModule": null,
+      "paramCount": 0,
+      "hasDatasheet": false
+    },
+    {
+      "slug": "ip_59",
+      "name": null,
+      "displayName": null,
+      "category": null,
+      "version": null,
+      "topModule": null,
+      "paramCount": 0,
+      "hasDatasheet": false
+    },
+    {
+      "slug": "PLL_5",
+      "name": "28nm PLL",
+      "displayName": "PLL",
+      "category": "Module,PLL",
+      "version": "1.8",
+      "topModule": "ipm2l_pll_wrapper_v1_2",
+      "paramCount": 394,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "PLL_11",
+      "name": "Compact PLL",
+      "displayName": "PLL",
+      "category": "Module,PLL",
+      "version": "1.3",
+      "topModule": "ipmc_pll_wrapper_v1_0",
+      "paramCount": 152,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "PLL_20",
+      "name": "Logos PLL",
+      "displayName": "PLL",
+      "category": "Module,PLL",
+      "version": "1.8",
+      "topModule": "ipml_pll_wrapper_v1_5",
+      "paramCount": 236,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "PLL_26",
+      "name": "PLL",
+      "displayName": "PLL",
+      "category": "Module,PLL",
+      "version": "1.7",
+      "topModule": "ipmxf1_pll_wrapper_v1_2",
+      "paramCount": 330,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "PLL_36",
+      "name": "PLL",
+      "displayName": "PLL",
+      "category": "Module,PLL",
+      "version": "1.5",
+      "topModule": "ipmxf_pll_wrapper_v1_3",
+      "paramCount": 303,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "PLL_51",
+      "name": "Titan PLL",
+      "displayName": "PLL",
+      "category": "Module,PLL",
+      "version": "1.4",
+      "topModule": "ipm_pll_wrapper_v1_3",
+      "paramCount": 122,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Simple_Multiplier_2",
+      "name": "28nm Simple Multiplier",
+      "displayName": "Simple Multiplier",
+      "category": "Module,Multiplier",
+      "version": "1.7",
+      "topModule": "apm_mult",
+      "paramCount": 36,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Simple_Multiplier_17",
+      "name": "Logos Simple Multiplier",
+      "displayName": "Simple Multiplier",
+      "category": "Module,Multiplier",
+      "version": "1.4",
+      "topModule": "apm_mult",
+      "paramCount": 14,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Simple_Multiplier_33",
+      "name": "Titan3 Plus/Kosmo3 Simple Multiplier",
+      "displayName": "Simple Multiplier",
+      "category": "Module,Multiplier",
+      "version": "1.4a",
+      "topModule": "apm_mult",
+      "paramCount": 33,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "Simple_Multiplier_42",
+      "name": "Titan Simple Multiplier",
+      "displayName": "Simple Multiplier",
+      "category": "Module,Multiplier",
+      "version": "1.4",
+      "topModule": "apm_mult",
+      "paramCount": 12,
+      "hasDatasheet": true
+    },
+    {
+      "slug": "System_Reset_57",
+      "name": null,
+      "displayName": "System Reset",
+      "category": "Module,Reset,System Reset",
+      "version": "1.0",
+      "topModule": "ipm_sr_top_wrapper_v1_0",
+      "paramCount": 9,
+      "hasDatasheet": true
+    }
+  ]
+}

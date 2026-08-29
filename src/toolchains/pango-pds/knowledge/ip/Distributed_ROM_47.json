@@ -1,0 +1,59 @@
+{
+  "slug": "Distributed_ROM_47",
+  "name": "Distributed ROM",
+  "displayName": "Distributed ROM",
+  "topModule": "ipm_distributed_rom_wrapper_v1_4",
+  "version": "1.4",
+  "vendor": "Pango",
+  "category": "Module,Memory,Distributed RAM",
+  "id": "06100105",
+  "dir": "module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_rom",
+  "datasheet": "ip/module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_rom/UG061001_Distributed_RAM_IP.pdf",
+  "families": [],
+  "devices": [],
+  "params": [
+    {
+      "name": "OUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "INIT_ENABLE",
+      "type": "bool",
+      "default": "true"
+    },
+    {
+      "name": "ADDR_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "RST_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "ASYNC",
+        "SYNC"
+      ]
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "FILE_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "GTP_ZERO",
+  "category": "config_misc",
+  "params": [],
+  "ports": [
+    {
+      "name": "Z",
+      "dir": "output",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_ZERO u_gtp_zero (\n    .Z(Z)\n);"
+}

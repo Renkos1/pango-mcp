@@ -1,0 +1,6 @@
+{
+  "id": "chunk_020",
+  "source": "cdt-tcl-commands.md",
+  "title": "Driving it from PowerShell (start server if needed, then run a script)",
+  "text": "## Driving it from PowerShell (start server if needed, then run a script)\n```powershell\n$BIN = '<PDS_INSTALL>\\bin'          # e.g. D:\\pango\\PDS_2022.2-SP4.2-ads\\bin\nif (-not (Get-Process -Name cdt_js -ErrorAction SilentlyContinue)) {\n  Start-Process \"$BIN\\cdt_js.exe\" -ArgumentList '-port 65420' -WindowStyle Hidden; Start-Sleep 2\n}\n& \"$BIN\\cdt_cfg.exe\" -file scan.tcl\n```\nUse forward slashes in `-file` paths inside Tcl. Paths with backslashes work in PowerShell but\nconvert (`.Replace('\\','/')`) before embedding in a generated `.tcl`."
+}

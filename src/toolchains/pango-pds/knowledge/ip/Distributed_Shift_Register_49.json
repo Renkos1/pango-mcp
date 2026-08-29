@@ -1,0 +1,59 @@
+{
+  "slug": "Distributed_Shift_Register_49",
+  "name": "Distributed Shift Register",
+  "displayName": "Distributed Shift Register",
+  "topModule": "ipm_distributed_shiftregister_wrapper_v1_4",
+  "version": "1.4",
+  "vendor": "Pango",
+  "category": "Module,Memory,Distributed RAM",
+  "id": "06100103",
+  "dir": "module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_shiftregister",
+  "datasheet": "ip/module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_shiftregister/UG061001_Distributed_RAM_IP.pdf",
+  "families": [],
+  "devices": [],
+  "params": [
+    {
+      "name": "OUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "SHIFT_REG_TYPE_BOOL",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "FIXED_DEPTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "VARIABLE_MAX_DEPTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "SHIFT_REG_TYPE",
+      "type": "enum",
+      "default": "fixed_latency",
+      "items": [
+        "fixed_latency",
+        "dynamic_latency"
+      ]
+    },
+    {
+      "name": "RST_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "ASYNC",
+        "SYNC"
+      ]
+    }
+  ]
+}

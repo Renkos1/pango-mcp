@@ -1,0 +1,6 @@
+{
+  "id": "chunk_019",
+  "source": "cdt-tcl-commands.md",
+  "title": "program_flash.tcl (persistent SPI flash via JTAG bridge)",
+  "text": "### program_flash.tcl (persistent SPI flash via JTAG bridge)\n```tcl\ncfg_connect -ip 127.0.0.1 -port 65420\ncfg_scan_chain\ncfg_set_cable_property -index 0 -freq 5Mhz\ncfg_gen_sfc -sbit C:/path/design.sbit -sfc C:/path/design.sfc -device_name W25Q128Q\ncfg_jtag_flash_scan_device -device_index 0\ncfg_jtag_flash_assign_file -file C:/path/design.sfc -device_index 0\ncfg_jtag_flash_erase   -device_index 0\ncfg_jtag_flash_program -device_index 0\ncfg_jtag_flash_verify  -device_index 0\ncfg_disconnect\ncfg_close\n```"
+}

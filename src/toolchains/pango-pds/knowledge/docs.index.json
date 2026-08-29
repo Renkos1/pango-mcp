@@ -1,0 +1,897 @@
+{
+  "generatedAt": "2026-06-21T11:56:38.013Z",
+  "docRoot": "doc",
+  "manualCount": 21,
+  "datasheetCount": 62,
+  "chunkCount": 37,
+  "docs": [
+    {
+      "kind": "manual",
+      "title": "Public Programmable Module User Guide",
+      "ug": "061003",
+      "tool": "public programmable module",
+      "path": "doc/UG061003_Public_Programmable_Module_User_Guide.pdf",
+      "sizeKb": 2017
+    },
+    {
+      "kind": "manual",
+      "title": "Titan3系列产品GTP用户指南 V1.2",
+      "ug": "070010",
+      "tool": "gtp (titan3 serdes)",
+      "path": "doc/UG070010_Titan3系列产品GTP用户指南_V1.2.pdf",
+      "sizeKb": 6005
+    },
+    {
+      "kind": "manual",
+      "title": "Pango Design Suite Quick Start Tutorial",
+      "ug": "990001",
+      "tool": "pds (quick start)",
+      "path": "doc/UG990001_Pango_Design_Suite_Quick_Start_Tutorial.pdf",
+      "sizeKb": 1356
+    },
+    {
+      "kind": "manual",
+      "title": "Pango Design Suite User Guide",
+      "ug": "990002",
+      "tool": "pds",
+      "path": "doc/UG990002_Pango_Design_Suite_User_Guide.pdf",
+      "sizeKb": 19089
+    },
+    {
+      "kind": "manual",
+      "title": "Simulation User Guide",
+      "ug": "990003",
+      "tool": "simulation",
+      "path": "doc/UG990003_Simulation_User_Guide.pdf",
+      "sizeKb": 1842
+    },
+    {
+      "kind": "manual",
+      "title": "Tcl Command User Guide",
+      "ug": "990004",
+      "tool": "tcl (cdt_cfg/cdt_dbg/pds_shell)",
+      "path": "doc/UG990004_Tcl_Command_User_Guide.pdf",
+      "sizeKb": 4130
+    },
+    {
+      "kind": "manual",
+      "title": "ADS Language Support Reference Manual",
+      "ug": "990101",
+      "tool": "ads language",
+      "path": "doc/UG990101_ADS_Language_Support_Reference_Manual.pdf",
+      "sizeKb": 4594
+    },
+    {
+      "kind": "manual",
+      "title": "ADS Synthesis User Guide",
+      "ug": "990102",
+      "tool": "ads synthesis",
+      "path": "doc/UG990102_ADS_Synthesis_User_Guide.pdf",
+      "sizeKb": 8518
+    },
+    {
+      "kind": "manual",
+      "title": "Block Editor User Guide",
+      "ug": "990201",
+      "tool": "block editor",
+      "path": "doc/UG990201_Block_Editor_User_Guide.pdf",
+      "sizeKb": 3164
+    },
+    {
+      "kind": "manual",
+      "title": "Design Workspace User Guide",
+      "ug": "990202",
+      "tool": "design workspace (dw)",
+      "path": "doc/UG990202_Design_Workspace_User_Guide.pdf",
+      "sizeKb": 13031
+    },
+    {
+      "kind": "manual",
+      "title": "IP Compiler User Guide",
+      "ug": "990203",
+      "tool": "ip_compiler / ip_generate",
+      "path": "doc/UG990203_IP_Compiler_User_Guide.pdf",
+      "sizeKb": 1982
+    },
+    {
+      "kind": "manual",
+      "title": "IP-Compiler开发者参考手册",
+      "ug": "990205",
+      "tool": "ip_compiler (developer)",
+      "path": "doc/UG990205_IP-Compiler开发者参考手册.pdf",
+      "sizeKb": 2481
+    },
+    {
+      "kind": "manual",
+      "title": "Pango Power Calculator User Guide",
+      "ug": "990301",
+      "tool": "ppc (power calculator)",
+      "path": "doc/UG990301_Pango_Power_Calculator_User_Guide.pdf",
+      "sizeKb": 2369
+    },
+    {
+      "kind": "manual",
+      "title": "Pango Power Planner User Guide",
+      "ug": "990302",
+      "tool": "ppp (power planner)",
+      "path": "doc/UG990302_Pango_Power_Planner_User_Guide.pdf",
+      "sizeKb": 3285
+    },
+    {
+      "kind": "manual",
+      "title": "Pango SSN Analyzer User Guide",
+      "ug": "990303",
+      "tool": "ssn analyzer",
+      "path": "doc/UG990303_Pango_SSN_Analyzer_User_Guide.pdf",
+      "sizeKb": 1221
+    },
+    {
+      "kind": "manual",
+      "title": "Pango SSN Estimator User Guide",
+      "ug": "990304",
+      "tool": "ssn estimator",
+      "path": "doc/UG990304_Pango_SSN_Estimator_User_Guide.pdf",
+      "sizeKb": 1389
+    },
+    {
+      "kind": "manual",
+      "title": "Fabric Configuration User Guide",
+      "ug": "990401",
+      "tool": "cdt_cfg (fabric configuration)",
+      "path": "doc/UG990401_Fabric_Configuration_User_Guide.pdf",
+      "sizeKb": 9637
+    },
+    {
+      "kind": "manual",
+      "title": "Fabric Debugger User Guide",
+      "ug": "990402",
+      "tool": "cdt_dbg (fabric debugger)",
+      "path": "doc/UG990402_Fabric_Debugger_User_Guide.pdf",
+      "sizeKb": 7291
+    },
+    {
+      "kind": "manual",
+      "title": "Fabric Inserter User Guide",
+      "ug": "990403",
+      "tool": "cdt_ins (fabric inserter)",
+      "path": "doc/UG990403_Fabric_Inserter_User_Guide.pdf",
+      "sizeKb": 4244
+    },
+    {
+      "kind": "manual",
+      "title": "Bitstream Tool User Guide",
+      "ug": "990404",
+      "tool": "cdt_bts (bitstream tool)",
+      "path": "doc/UG990404_Bitstream_Tool_User_Guide.pdf",
+      "sizeKb": 1477
+    },
+    {
+      "kind": "manual",
+      "title": "RF Analyzer User Guide",
+      "ug": "990405",
+      "tool": "rf_analyzer",
+      "path": "doc/UG990405_RF_Analyzer_User_Guide.pdf",
+      "sizeKb": 3650
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Accumulator IP — UG041003_APM_IP.pdf",
+      "ipSlug": "Accumulator_0",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_acc/UG041003_APM_IP.pdf",
+      "sizeKb": 1148
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Accumulator IP — UG071003_APM_IP.pdf",
+      "ipSlug": "Accumulator_32",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf_flex_apm/ipmxf_flex_apm_eval/ipmxf_acc/UG071003_APM_IP.pdf",
+      "sizeKb": 1131
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Adder-Subtractor IP — UG041003_APM_IP.pdf",
+      "ipSlug": "Adder_Subtractor_1",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_addsub/UG041003_APM_IP.pdf",
+      "sizeKb": 1148
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DDR3 Interface IP — UG022003_Logos_HMIC_S_IP.pdf",
+      "ipSlug": "DDR3_Interface_60",
+      "tool": "ip core",
+      "path": "ip/system_ip/ipsxb_hmic_s/ipsxb_hmic_eval/ipsxb_hmic_s/UG022003_Logos_HMIC_S_IP.pdf",
+      "sizeKb": 1894
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DebugCore IP — UG062006_DebugCore_IP.pdf",
+      "ipSlug": "DebugCore_61",
+      "tool": "ip core",
+      "path": "ip/system_ip/ips_debug_core/ips_debug_core_eval/ips_debug_core/UG062006_DebugCore_IP.pdf",
+      "sizeKb": 675
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Distributed FIFO IP — UG061001_Distributed_RAM_IP.pdf",
+      "ipSlug": "Distributed_FIFO_46",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_fifo/UG061001_Distributed_RAM_IP.pdf",
+      "sizeKb": 941
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Distributed ROM IP — UG061001_Distributed_RAM_IP.pdf",
+      "ipSlug": "Distributed_ROM_47",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_rom/UG061001_Distributed_RAM_IP.pdf",
+      "sizeKb": 941
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Distributed Shift Register IP — UG061001_Distributed_RAM_IP.pdf",
+      "ipSlug": "Distributed_Shift_Register_49",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_shiftregister/UG061001_Distributed_RAM_IP.pdf",
+      "sizeKb": 941
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Distributed Simple Dual Port RAM IP — UG061001_Distributed_RAM_IP.pdf",
+      "ipSlug": "Distributed_Simple_Dual_Port_RAM_48",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_sdpram/UG061001_Distributed_RAM_IP.pdf",
+      "sizeKb": 941
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Distributed Single Port RAM IP — UG061001_Distributed_RAM_IP.pdf",
+      "ipSlug": "Distributed_Single_Port_RAM_50",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_distributed_ram/ipm_flex_distributed_ram_eval/ipm_distributed_spram/UG061001_Distributed_RAM_IP.pdf",
+      "sizeKb": 941
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Dual Port RAM IP — UG041002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Dual_Port_RAM_6",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_ram/ipm2l_flex_ram_eval/ipm2l_dpram/UG041002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1355
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Dual Port RAM IP — UG031002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Dual_Port_RAM_12",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_dpram/UG031002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1124
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Dual Port RAM IP — UG021002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Dual_Port_RAM_21",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipml_flex_ram/ipml_flex_ram_eval/ipml_dpram/UG021002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1158
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Dual Port RAM IP — UG071002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Dual_Port_RAM_37",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf_flex_ram/ipmxf_flex_ram_eval/ipmxf_dpram/UG071002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1313
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Dual Port RAM IP — DRM_Based_Dual_Port_RAM_UserGuide_v1.6.pdf",
+      "ipSlug": "DRM_Based_Dual_Port_RAM_52",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_ram/ipm_flex_ram_eval/ipm_dpram/DRM_Based_Dual_Port_RAM_UserGuide_v1.6.pdf",
+      "sizeKb": 495
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based FIFO IP — UG041002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_FIFO_7",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_ram/ipm2l_flex_ram_eval/ipm2l_fifo/UG041002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1355
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based FIFO IP — UG031002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_FIFO_13",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_fifo/UG031002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1124
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based FIFO IP — UG021002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_FIFO_22",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipml_flex_ram/ipml_flex_ram_eval/ipml_fifo/UG021002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1158
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based FIFO IP — UG071002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_FIFO_38",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf_flex_ram/ipmxf_flex_ram_eval/ipmxf_fifo/UG071002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1313
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based FIFO IP — DRM_Based_FIFO_UserGuide_v1.4.pdf",
+      "ipSlug": "DRM_Based_FIFO_53",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_ram/ipm_flex_ram_eval/ipm_fifo/DRM_Based_FIFO_UserGuide_v1.4.pdf",
+      "sizeKb": 412
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based ROM IP — UG041002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_ROM_8",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_ram/ipm2l_flex_ram_eval/ipm2l_rom/UG041002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1355
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based ROM IP — UG031002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_ROM_14",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_rom/UG031002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1124
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based ROM IP — UG021002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_ROM_23",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipml_flex_ram/ipml_flex_ram_eval/ipml_rom/UG021002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1158
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based ROM IP — UG071002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_ROM_39",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf_flex_ram/ipmxf_flex_ram_eval/ipmxf_rom/UG071002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1313
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based ROM IP — DRM_Based_ROM_UserGuide_v1.5.pdf",
+      "ipSlug": "DRM_Based_ROM_54",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_ram/ipm_flex_ram_eval/ipm_rom/DRM_Based_ROM_UserGuide_v1.5.pdf",
+      "sizeKb": 390
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Simple Dual Port RAM IP — UG041002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Simple_Dual_Port_RAM_9",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_ram/ipm2l_flex_ram_eval/ipm2l_sdpram/UG041002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1355
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Simple Dual Port RAM IP — UG031002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Simple_Dual_Port_RAM_15",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_sdpram/UG031002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1124
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Simple Dual Port RAM IP — UG021002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Simple_Dual_Port_RAM_24",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipml_flex_ram/ipml_flex_ram_eval/ipml_sdpram/UG021002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1158
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Simple Dual Port RAM IP — UG071002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Simple_Dual_Port_RAM_40",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf_flex_ram/ipmxf_flex_ram_eval/ipmxf_sdpram/UG071002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1313
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Simple Dual Port RAM IP — DRM_Based_Simple_Dual_Port_RAM_UserGuide_v1.6.pdf",
+      "ipSlug": "DRM_Based_Simple_Dual_Port_RAM_55",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_ram/ipm_flex_ram_eval/ipm_sdpram/DRM_Based_Simple_Dual_Port_RAM_UserGuide_v1.6.pdf",
+      "sizeKb": 420
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Single Port RAM IP — UG041002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Single_Port_RAM_10",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_ram/ipm2l_flex_ram_eval/ipm2l_spram/UG041002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1355
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Single Port RAM IP — UG031002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Single_Port_RAM_16",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_spram/UG031002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1124
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Single Port RAM IP — UG021002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Single_Port_RAM_25",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipml_flex_ram/ipml_flex_ram_eval/ipml_spram/UG021002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1158
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Single Port RAM IP — UG071002_DRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_Based_Single_Port_RAM_41",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf_flex_ram/ipmxf_flex_ram_eval/ipmxf_spram/UG071002_DRM_Based_RAM_IP.pdf",
+      "sizeKb": 1313
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM Based Single Port RAM IP — DRM_Based_Single_Port_RAM_UserGuide_v1.6.pdf",
+      "ipSlug": "DRM_Based_Single_Port_RAM_56",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_ram/ipm_flex_ram_eval/ipm_spram/DRM_Based_Single_Port_RAM_UserGuide_v1.6.pdf",
+      "sizeKb": 430
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM/HRM Based Dual Port RAM IP — UG081002_DRM_HRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_HRM_Based_Dual_Port_RAM_27",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_dpram/UG081002_DRM_HRM_Based_RAM_IP.pdf",
+      "sizeKb": 1563
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM/HRM Based FIFO IP — UG081002_DRM_HRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_HRM_Based_FIFO_28",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_fifo/UG081002_DRM_HRM_Based_RAM_IP.pdf",
+      "sizeKb": 1563
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM/HRM Based ROM IP — UG081002_DRM_HRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_HRM_Based_ROM_29",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_rom/UG081002_DRM_HRM_Based_RAM_IP.pdf",
+      "sizeKb": 1563
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM/HRM Based Simple Dual Port RAM IP — UG081002_DRM_HRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_HRM_Based_Simple_Dual_Port_RAM_30",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_sdpram/UG081002_DRM_HRM_Based_RAM_IP.pdf",
+      "sizeKb": 1563
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DRM/HRM Based Single Port RAM IP — UG081002_DRM_HRM_Based_RAM_IP.pdf",
+      "ipSlug": "DRM_HRM_Based_Single_Port_RAM_31",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_spram/UG081002_DRM_HRM_Based_RAM_IP.pdf",
+      "sizeKb": 1563
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "DVIO IP — UG062007_DVIO_IP.pdf",
+      "ipSlug": "DVIO_63",
+      "tool": "ip core",
+      "path": "ip/system_ip/ips_dvio/ips_dvio_eval/ips_dvio/UG062007_DVIO_IP.pdf",
+      "sizeKb": 898
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Dvio_Jtag_Hub IP — UG062007_DVIO_IP.pdf",
+      "ipSlug": "Dvio_Jtag_Hub_64",
+      "tool": "ip core",
+      "path": "ip/system_ip/ips_dvio/ips_dvio_eval/ips_dvio_jtag_hub/UG062007_DVIO_IP.pdf",
+      "sizeKb": 898
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Jtag_Hub IP — UG062006_DebugCore_IP.pdf",
+      "ipSlug": "Jtag_Hub_62",
+      "tool": "ip core",
+      "path": "ip/system_ip/ips_debug_core/ips_debug_core_eval/ips_jtag_hub/UG062006_DebugCore_IP.pdf",
+      "sizeKb": 675
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Multiply-Accumulator IP — UG041003_APM_IP.pdf",
+      "ipSlug": "Multiply_Accumulator_3",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_multacc/UG041003_APM_IP.pdf",
+      "sizeKb": 1148
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Multiply-Accumulator IP — UG021003_APM_IP.pdf",
+      "ipSlug": "Multiply_Accumulator_18",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipml_flex_apm/ipml_flex_apm_eval/ipml_multacc/UG021003_APM_IP.pdf",
+      "sizeKb": 800
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Multiply-Accumulator IP — UG071003_APM_IP.pdf",
+      "ipSlug": "Multiply_Accumulator_34",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf_flex_apm/ipmxf_flex_apm_eval/ipmxf_multacc/UG071003_APM_IP.pdf",
+      "sizeKb": 1131
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Multiply-Accumulator IP — Titan_Multiply-Accumulator_IP_UserGuide_v1.4.pdf",
+      "ipSlug": "Multiply_Accumulator_43",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_apm/ipm_flex_apm_eval/ipm_multacc/Titan_Multiply-Accumulator_IP_UserGuide_v1.4.pdf",
+      "sizeKb": 462
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Multiply-Adder IP — UG041003_APM_IP.pdf",
+      "ipSlug": "Multiply_Adder_4",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_multadd/UG041003_APM_IP.pdf",
+      "sizeKb": 1148
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Multiply-Adder IP — UG021003_APM_IP.pdf",
+      "ipSlug": "Multiply_Adder_19",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipml_flex_apm/ipml_flex_apm_eval/ipml_multadd/UG021003_APM_IP.pdf",
+      "sizeKb": 800
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Multiply-Adder IP — UG071003_APM_IP.pdf",
+      "ipSlug": "Multiply_Adder_35",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf_flex_apm/ipmxf_flex_apm_eval/ipmxf_multadd/UG071003_APM_IP.pdf",
+      "sizeKb": 1131
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Multiply-Adder IP — Titan_Multiply_Adder_IP_UserGuide_v1.4.pdf",
+      "ipSlug": "Multiply_Adder_44",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_apm/ipm_flex_apm_eval/ipm_multadd/Titan_Multiply_Adder_IP_UserGuide_v1.4.pdf",
+      "sizeKb": 339
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "PLL IP — UG041001_PLL_IP.pdf",
+      "ipSlug": "PLL_5",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_pll/ipm2l_flex_pll_eval/ipm2l_pll/UG041001_PLL_IP.pdf",
+      "sizeKb": 2369
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "PLL IP — UG031001_PLL_IP.pdf",
+      "ipSlug": "PLL_11",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmc_flex_pll/ipmc_flex_pll_eval/ipmc_pll/UG031001_PLL_IP.pdf",
+      "sizeKb": 1237
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "PLL IP — UG021001_PLL_IP.pdf",
+      "ipSlug": "PLL_20",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipml_flex_pll/ipml_flex_pll_eval/ipml_pll/UG021001_PLL_IP.pdf",
+      "sizeKb": 1315
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "PLL IP — UG081001_PLL_IP.pdf",
+      "ipSlug": "PLL_26",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf1_flex_pll/ipmxf1_flex_pll_eval/ipmxf1_pll/UG081001_PLL_IP.pdf",
+      "sizeKb": 2278
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "PLL IP — UG071001_PLL_IP.pdf",
+      "ipSlug": "PLL_36",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf_flex_pll/ipmxf_flex_pll_eval/ipmxf_pll/UG071001_PLL_IP.pdf",
+      "sizeKb": 1642
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "PLL IP — UG011001_PLL_IP.pdf",
+      "ipSlug": "PLL_51",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_pll/ipm_flex_pll_eval/ipm_pll/UG011001_PLL_IP.pdf",
+      "sizeKb": 932
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Simple Multiplier IP — UG041003_APM_IP.pdf",
+      "ipSlug": "Simple_Multiplier_2",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_mult/UG041003_APM_IP.pdf",
+      "sizeKb": 1148
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Simple Multiplier IP — UG021003_APM_IP.pdf",
+      "ipSlug": "Simple_Multiplier_17",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipml_flex_apm/ipml_flex_apm_eval/ipml_mult/UG021003_APM_IP.pdf",
+      "sizeKb": 800
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Simple Multiplier IP — UG071003_APM_IP.pdf",
+      "ipSlug": "Simple_Multiplier_33",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipmxf_flex_apm/ipmxf_flex_apm_eval/ipmxf_mult/UG071003_APM_IP.pdf",
+      "sizeKb": 1131
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "Simple Multiplier IP — Titan_Simple_Multiplier_IP_UserGuide_v1.4.pdf",
+      "ipSlug": "Simple_Multiplier_42",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_apm/ipm_flex_apm_eval/ipm_mult/Titan_Simple_Multiplier_IP_UserGuide_v1.4.pdf",
+      "sizeKb": 411
+    },
+    {
+      "kind": "ip_datasheet",
+      "title": "System Reset IP — UG061005_System_Reset_IP.pdf",
+      "ipSlug": "System_Reset_57",
+      "tool": "ip core",
+      "path": "ip/module_ip/ipm_flex_sr/ipm_flex_sr_eval/ipm_sr/UG061005_System_Reset_IP.pdf",
+      "sizeKb": 683
+    }
+  ],
+  "chunks": [
+    {
+      "id": "chunk_000",
+      "source": "SKILL.md",
+      "title": "SKILL.md",
+      "chars": 512
+    },
+    {
+      "id": "chunk_001",
+      "source": "SKILL.md",
+      "title": "Pango Design Suite — headless compile / scan / flash / debug",
+      "chars": 983
+    },
+    {
+      "id": "chunk_002",
+      "source": "SKILL.md",
+      "title": "The control tools (+ the GUI to avoid)",
+      "chars": 995
+    },
+    {
+      "id": "chunk_003",
+      "source": "SKILL.md",
+      "title": "1) Compile (source → bitstream), headless",
+      "chars": 1586
+    },
+    {
+      "id": "chunk_004",
+      "source": "SKILL.md",
+      "title": "2) Scan the JTAG chain (read-only) — ALWAYS before flashing",
+      "chars": 745
+    },
+    {
+      "id": "chunk_005",
+      "source": "SKILL.md",
+      "title": "3a) Flash FPGA SRAM (volatile, fast — dev default)",
+      "chars": 518
+    },
+    {
+      "id": "chunk_006",
+      "source": "SKILL.md",
+      "title": "3b) Flash on-board SPI flash (persistent)",
+      "chars": 942
+    },
+    {
+      "id": "chunk_007",
+      "source": "SKILL.md",
+      "title": "4) On-chip debug — ILA capture + virtual-IO (scripted, no GUI)",
+      "chars": 1100
+    },
+    {
+      "id": "chunk_008",
+      "source": "SKILL.md",
+      "title": ".pds / .fdc / .sbit / .sfc (the files)",
+      "chars": 1160
+    },
+    {
+      "id": "chunk_009",
+      "source": "SKILL.md",
+      "title": "Gotchas",
+      "chars": 696
+    },
+    {
+      "id": "chunk_010",
+      "source": "cdt-tcl-commands.md",
+      "title": "cdt_cfg Tcl reference (Fabric Configuration)",
+      "chars": 335
+    },
+    {
+      "id": "chunk_011",
+      "source": "cdt-tcl-commands.md",
+      "title": "Server",
+      "chars": 143
+    },
+    {
+      "id": "chunk_012",
+      "source": "cdt-tcl-commands.md",
+      "title": "Session",
+      "chars": 440
+    },
+    {
+      "id": "chunk_013",
+      "source": "cdt-tcl-commands.md",
+      "title": "Read device info",
+      "chars": 192
+    },
+    {
+      "id": "chunk_014",
+      "source": "cdt-tcl-commands.md",
+      "title": "SRAM configuration (volatile)",
+      "chars": 222
+    },
+    {
+      "id": "chunk_015",
+      "source": "cdt-tcl-commands.md",
+      "title": "SPI flash via the FPGA JTAG→SPI bridge (persistent)",
+      "chars": 776
+    },
+    {
+      "id": "chunk_016",
+      "source": "cdt-tcl-commands.md",
+      "title": "Ready-to-run scripts",
+      "chars": 23
+    },
+    {
+      "id": "chunk_017",
+      "source": "cdt-tcl-commands.md",
+      "title": "scan.tcl (read-only chain detect + IDCODE)",
+      "chars": 247
+    },
+    {
+      "id": "chunk_018",
+      "source": "cdt-tcl-commands.md",
+      "title": "program_sram.tcl (volatile SRAM load)",
+      "chars": 245
+    },
+    {
+      "id": "chunk_019",
+      "source": "cdt-tcl-commands.md",
+      "title": "program_flash.tcl (persistent SPI flash via JTAG bridge)",
+      "chars": 504
+    },
+    {
+      "id": "chunk_020",
+      "source": "cdt-tcl-commands.md",
+      "title": "Driving it from PowerShell (start server if needed, then run a script)",
+      "chars": 537
+    },
+    {
+      "id": "chunk_021",
+      "source": "pds-project-and-flow.md",
+      "title": ".pds / .fdc / bitstream + the build flow (internals)",
+      "chars": 54
+    },
+    {
+      "id": "chunk_022",
+      "source": "pds-project-and-flow.md",
+      "title": ".pds project file (S-expression)",
+      "chars": 2018
+    },
+    {
+      "id": "chunk_023",
+      "source": "pds-project-and-flow.md",
+      "title": "Python helper to bulk-add sources (pattern)",
+      "chars": 1011
+    },
+    {
+      "id": "chunk_024",
+      "source": "pds-project-and-flow.md",
+      "title": ".fdc — constraints",
+      "chars": 215
+    },
+    {
+      "id": "chunk_025",
+      "source": "pds-project-and-flow.md",
+      "title": "Build flow stages (what `pds_shell -run gen_bit_stream` does)",
+      "chars": 886
+    },
+    {
+      "id": "chunk_026",
+      "source": "pds-project-and-flow.md",
+      "title": "Reading the reports (resources + timing)",
+      "chars": 630
+    },
+    {
+      "id": "chunk_027",
+      "source": "pds-project-and-flow.md",
+      "title": "Outputs",
+      "chars": 311
+    },
+    {
+      "id": "chunk_028",
+      "source": "pds-project-and-flow.md",
+      "title": "Creating a NEW project from scratch (minimal S-expr `.pds`)",
+      "chars": 1957
+    },
+    {
+      "id": "chunk_029",
+      "source": "pds-project-and-flow.md",
+      "title": "Clocking from a NON-clock-capable IO (Place-0084) — route through a PLL",
+      "chars": 863
+    },
+    {
+      "id": "chunk_030",
+      "source": "debug-ila.md",
+      "title": "Pango on-chip debug (ILA + virtual-IO), fully scriptable — Fabric Inserter + Fabric Debugger",
+      "chars": 896
+    },
+    {
+      "id": "chunk_031",
+      "source": "debug-ila.md",
+      "title": "End-to-end flow (headless, no GUI)",
+      "chars": 917
+    },
+    {
+      "id": "chunk_032",
+      "source": "debug-ila.md",
+      "title": "cdt_ins (Inserter) — invocation + commands",
+      "chars": 1641
+    },
+    {
+      "id": "chunk_033",
+      "source": "debug-ila.md",
+      "title": "The `.fic` format (INI; hand-writable)",
+      "chars": 1964
+    },
+    {
+      "id": "chunk_034",
+      "source": "debug-ila.md",
+      "title": "cdt_dbg (Debugger) — invocation + capture recipe",
+      "chars": 1950
+    },
+    {
+      "id": "chunk_035",
+      "source": "debug-ila.md",
+      "title": "Gotchas (shared by cdt_ins / cdt_dbg)",
+      "chars": 1189
+    },
+    {
+      "id": "chunk_036",
+      "source": "debug-ila.md",
+      "title": "Worked example",
+      "chars": 1117
+    }
+  ]
+}

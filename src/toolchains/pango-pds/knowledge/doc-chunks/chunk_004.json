@@ -1,0 +1,6 @@
+{
+  "id": "chunk_004",
+  "source": "SKILL.md",
+  "title": "2) Scan the JTAG chain (read-only) — ALWAYS before flashing",
+  "text": "## 2) Scan the JTAG chain (read-only) — ALWAYS before flashing\n```tcl\ncfg_set_tcl_break -flag true\ncfg_connect -ip 127.0.0.1 -port 65420\ncfg_scan_chain\ncfg_read_device_property -mode 0 -device_index 0   ;# -> \"The ID value is: 0x........\"\ncfg_disconnect\ncfg_close\n```\nRun via `cdt_cfg.exe -file scan.tcl` (start `cdt_js -port 65420` first). The IDCODE identifies the\npart and which `-device_index` it is. **Confirm the index before programming so you never flash the\nwrong device** (e.g. a 2-FPGA chain: program the right one). Example IDCODEs: PG2L100H=`0x00602899`,\nPG2L200H=`0x00603899` (the IDCODE top nibble is a silicon-revision field — the low 28 bits identify\nthe part, so `0x1060...` vs `0x0060...` are the same part at different revs)."
+}

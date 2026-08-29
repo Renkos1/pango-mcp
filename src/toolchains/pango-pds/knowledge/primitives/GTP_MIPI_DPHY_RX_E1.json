@@ -1,0 +1,645 @@
+{
+  "name": "GTP_MIPI_DPHY_RX_E1",
+  "category": "mipi",
+  "params": [
+    {
+      "name": "LANE_RATE_RX",
+      "type": "real",
+      "default": "1500.0"
+    }
+  ],
+  "ports": [
+    {
+      "name": "PIN_SYS_CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXBYTECLKHS_IN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_SCANCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_TXCLKESC",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXBYTECLKHS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXCLKESC_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXCLKESC_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXCLKESC_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXCLKESC_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PADDR",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PENABLE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PSEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PWDATA",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PRDATA",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PREADY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PWRITE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_TEST_EN_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_TEST_SEL_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_TEST_DONE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_TEST_PASS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ENABLE_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_ENABLE_1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_ENABLE_2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_ENABLE_3",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_ENABLE_CK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRCONTROL_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRCONTROL_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRCONTROL_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRCONTROL_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_FORCERXMODE_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_FORCERXMODE_1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_FORCERXMODE_2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_FORCERXMODE_3",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRESC_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRESC_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRESC_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRESC_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRSYNCESC_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_FORCETXSTOPMODE_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_SCANEN_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_SCANIN",
+      "dir": "input",
+      "width": 49,
+      "range": "[48:0]"
+    },
+    {
+      "name": "PIN_SCANMODE_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_SCANRST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_SCANOUT",
+      "dir": "output",
+      "width": 49,
+      "range": "[48:0]"
+    },
+    {
+      "name": "PIN_TURNDISABLE_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_TURNREQUEST_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_TXDATAESC_0",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PIN_TXLPDTESC_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_TXREQUESTESC_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_TXTRIGGERESC_0",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PIN_TXVALIDESC_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_TXREADYESC_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_TXULPSESC_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_TXULPSEXIT_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PIN_DIRECTION_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRCONTENTIONLP0_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRCONTENTIONLP1_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRSOTHS_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRSOTHS_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRSOTHS_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRSOTHS_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRSOTSYNCHS_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRSOTSYNCHS_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRSOTSYNCHS_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ERRSOTSYNCHS_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXACTIVEHS_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXACTIVEHS_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXACTIVEHS_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXACTIVEHS_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXCLKACTIVEHS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXDATAHS_0",
+      "dir": "output",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "PIN_RXDATAHS_1",
+      "dir": "output",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "PIN_RXDATAHS_2",
+      "dir": "output",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "PIN_RXDATAHS_3",
+      "dir": "output",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "PIN_RXVALIDHS_0",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PIN_RXVALIDHS_1",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PIN_RXVALIDHS_2",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PIN_RXVALIDHS_3",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PIN_RXSKEWCALHS_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXSKEWCALHS_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXSKEWCALHS_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXSKEWCALHS_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXSYNCHS_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXSYNCHS_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXSYNCHS_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXSYNCHS_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXDATAESC_0",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PIN_RXLPDTESC_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXTRIGGERESC_0",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PIN_RXULPSCLKNOT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXULPSESC_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXULPSESC_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXULPSESC_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXULPSESC_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXVALIDESC_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_STOPSTATE_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_STOPSTATE_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_STOPSTATE_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_STOPSTATE_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_STOPSTATE_CK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ULPSACTIVENOT_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ULPSACTIVENOT_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ULPSACTIVENOT_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ULPSACTIVENOT_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_ULPSACTIVENOT_CK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PSLVERR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXPCLK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PIN_RXPDATA_0",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "PIN_RXPDATA_1",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "PIN_RXPDATA_2",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "PIN_RXPDATA_3",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "CLKN",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "CLKP",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "DATAN0",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "DATAN1",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "DATAN2",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "DATAN3",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "DATAP0",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "DATAP1",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "DATAP2",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "DATAP3",
+      "dir": "inout",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_MIPI_DPHY_RX_E1\n#(\n    .LANE_RATE_RX(1500.0)\n) u_gtp_mipi_dphy_rx_e1 (\n    .PIN_SYS_CLK(PIN_SYS_CLK),\n    .PIN_RXBYTECLKHS_IN(PIN_RXBYTECLKHS_IN),\n    .PIN_SCANCLK(PIN_SCANCLK),\n    .PIN_TXCLKESC(PIN_TXCLKESC),\n    .PIN_RXBYTECLKHS(PIN_RXBYTECLKHS),\n    .PIN_RXCLKESC_0(PIN_RXCLKESC_0),\n    .PIN_RXCLKESC_1(PIN_RXCLKESC_1),\n    .PIN_RXCLKESC_2(PIN_RXCLKESC_2),\n    .PIN_RXCLKESC_3(PIN_RXCLKESC_3),\n    .PIN_RST(PIN_RST),\n    .PADDR(PADDR),\n    .PENABLE(PENABLE),\n    .PSEL(PSEL),\n    .PWDATA(PWDATA),\n    .PRDATA(PRDATA),\n    .PREADY(PREADY),\n    .PWRITE(PWRITE),\n    .PIN_TEST_EN_N(PIN_TEST_EN_N),\n    .PIN_TEST_SEL_N(PIN_TEST_SEL_N),\n    .PIN_TEST_DONE(PIN_TEST_DONE),\n    .PIN_TEST_PASS(PIN_TEST_PASS),\n    .PIN_ENABLE_0(PIN_ENABLE_0),\n    .PIN_ENABLE_1(PIN_ENABLE_1),\n    .PIN_ENABLE_2(PIN_ENABLE_2),\n    .PIN_ENABLE_3(PIN_ENABLE_3),\n    .PIN_ENABLE_CK(PIN_ENABLE_CK),\n    .PIN_ERRCONTROL_0(PIN_ERRCONTROL_0),\n    .PIN_ERRCONTROL_1(PIN_ERRCONTROL_1),\n    .PIN_ERRCONTROL_2(PIN_ERRCONTROL_2),\n    .PIN_ERRCONTROL_3(PIN_ERRCONTROL_3),\n    .PIN_FORCERXMODE_0(PIN_FORCERXMODE_0),\n    .PIN_FORCERXMODE_1(PIN_FORCERXMODE_1),\n    .PIN_FORCERXMODE_2(PIN_FORCERXMODE_2),\n    .PIN_FORCERXMODE_3(PIN_FORCERXMODE_3),\n    .PIN_ERRESC_0(PIN_ERRESC_0),\n    .PIN_ERRESC_1(PIN_ERRESC_1),\n    .PIN_ERRESC_2(PIN_ERRESC_2),\n    .PIN_ERRESC_3(PIN_ERRESC_3),\n    .PIN_ERRSYNCESC_0(PIN_ERRSYNCESC_0),\n    .PIN_FORCETXSTOPMODE_0(PIN_FORCETXSTOPMODE_0),\n    .PIN_SCANEN_N(PIN_SCANEN_N),\n    .PIN_SCANIN(PIN_SCANIN),\n    .PIN_SCANMODE_N(PIN_SCANMODE_N),\n    .PIN_SCANRST(PIN_SCANRST),\n    .PIN_SCANOUT(PIN_SCANOUT),\n    .PIN_TURNDISABLE_0(PIN_TURNDISABLE_0),\n    .PIN_TURNREQUEST_0(PIN_TURNREQUEST_0),\n    .PIN_TXDATAESC_0(PIN_TXDATAESC_0),\n    .PIN_TXLPDTESC_0(PIN_TXLPDTESC_0),\n    .PIN_TXREQUESTESC_0(PIN_TXREQUESTESC_0),\n    .PIN_TXTRIGGERESC_0(PIN_TXTRIGGERESC_0),\n    .PIN_TXVALIDESC_0(PIN_TXVALIDESC_0),\n    .PIN_TXREADYESC_0(PIN_TXREADYESC_0),\n    .PIN_TXULPSESC_0(PIN_TXULPSESC_0),\n    .PIN_TXULPSEXIT_0(PIN_TXULPSEXIT_0),\n    .PIN_DIRECTION_0(PIN_DIRECTION_0),\n    .PIN_ERRCONTENTIONLP0_0(PIN_ERRCONTENTIONLP0_0),\n    .PIN_ERRCONTENTIONLP1_0(PIN_ERRCONTENTIONLP1_0),\n    .PIN_ERRSOTHS_0(PIN_ERRSOTHS_0),\n    .PIN_ERRSOTHS_1(PIN_ERRSOTHS_1),\n    .PIN_ERRSOTHS_2(PIN_ERRSOTHS_2),\n    .PIN_ERRSOTHS_3(PIN_ERRSOTHS_3),\n    .PIN_ERRSOTSYNCHS_0(PIN_ERRSOTSYNCHS_0),\n    .PIN_ERRSOTSYNCHS_1(PIN_ERRSOTSYNCHS_1),\n    .PIN_ERRSOTSYNCHS_2(PIN_ERRSOTSYNCHS_2),\n    .PIN_ERRSOTSYNCHS_3(PIN_ERRSOTSYNCHS_3),\n    .PIN_RXACTIVEHS_0(PIN_RXACTIVEHS_0),\n    .PIN_RXACTIVEHS_1(PIN_RXACTIVEHS_1),\n    .PIN_RXACTIVEHS_2(PIN_RXACTIVEHS_2),\n    .PIN_RXACTIVEHS_3(PIN_RXACTIVEHS_3),\n    .PIN_RXCLKACTIVEHS(PIN_RXCLKACTIVEHS),\n    .PIN_RXDATAHS_0(PIN_RXDATAHS_0),\n    .PIN_RXDATAHS_1(PIN_RXDATAHS_1),\n    .PIN_RXDATAHS_2(PIN_RXDATAHS_2),\n    .PIN_RXDATAHS_3(PIN_RXDATAHS_3),\n    .PIN_RXVALIDHS_0(PIN_RXVALIDHS_0),\n    .PIN_RXVALIDHS_1(PIN_RXVALIDHS_1),\n    .PIN_RXVALIDHS_2(PIN_RXVALIDHS_2),\n    .PIN_RXVALIDHS_3(PIN_RXVALIDHS_3),\n    .PIN_RXSKEWCALHS_0(PIN_RXSKEWCALHS_0),\n    .PIN_RXSKEWCALHS_1(PIN_RXSKEWCALHS_1),\n    .PIN_RXSKEWCALHS_2(PIN_RXSKEWCALHS_2),\n    .PIN_RXSKEWCALHS_3(PIN_RXSKEWCALHS_3),\n    .PIN_RXSYNCHS_0(PIN_RXSYNCHS_0),\n    .PIN_RXSYNCHS_1(PIN_RXSYNCHS_1),\n    .PIN_RXSYNCHS_2(PIN_RXSYNCHS_2),\n    .PIN_RXSYNCHS_3(PIN_RXSYNCHS_3),\n    .PIN_RXDATAESC_0(PIN_RXDATAESC_0),\n    .PIN_RXLPDTESC_0(PIN_RXLPDTESC_0),\n    .PIN_RXTRIGGERESC_0(PIN_RXTRIGGERESC_0),\n    .PIN_RXULPSCLKNOT(PIN_RXULPSCLKNOT),\n    .PIN_RXULPSESC_0(PIN_RXULPSESC_0),\n    .PIN_RXULPSESC_1(PIN_RXULPSESC_1),\n    .PIN_RXULPSESC_2(PIN_RXULPSESC_2),\n    .PIN_RXULPSESC_3(PIN_RXULPSESC_3),\n    .PIN_RXVALIDESC_0(PIN_RXVALIDESC_0),\n    .PIN_STOPSTATE_0(PIN_STOPSTATE_0),\n    .PIN_STOPSTATE_1(PIN_STOPSTATE_1),\n    .PIN_STOPSTATE_2(PIN_STOPSTATE_2),\n    .PIN_STOPSTATE_3(PIN_STOPSTATE_3),\n    .PIN_STOPSTATE_CK(PIN_STOPSTATE_CK),\n    .PIN_ULPSACTIVENOT_0(PIN_ULPSACTIVENOT_0),\n    .PIN_ULPSACTIVENOT_1(PIN_ULPSACTIVENOT_1),\n    .PIN_ULPSACTIVENOT_2(PIN_ULPSACTIVENOT_2),\n    .PIN_ULPSACTIVENOT_3(PIN_ULPSACTIVENOT_3),\n    .PIN_ULPSACTIVENOT_CK(PIN_ULPSACTIVENOT_CK),\n    .PSLVERR(PSLVERR),\n    .PIN_RXPCLK(PIN_RXPCLK),\n    .PIN_RXPDATA_0(PIN_RXPDATA_0),\n    .PIN_RXPDATA_1(PIN_RXPDATA_1),\n    .PIN_RXPDATA_2(PIN_RXPDATA_2),\n    .PIN_RXPDATA_3(PIN_RXPDATA_3),\n    .CLKN(CLKN),\n    .CLKP(CLKP),\n    .DATAN0(DATAN0),\n    .DATAN1(DATAN1),\n    .DATAN2(DATAN2),\n    .DATAN3(DATAN3),\n    .DATAP0(DATAP0),\n    .DATAP1(DATAP1),\n    .DATAP2(DATAP2),\n    .DATAP3(DATAP3)\n);"
+}

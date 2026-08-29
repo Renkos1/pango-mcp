@@ -1,0 +1,40 @@
+{
+  "name": "GTP_RAM128X1SP",
+  "category": "mem",
+  "params": [
+    {
+      "name": "INIT",
+      "type": "bitvec[127:0]",
+      "default": "128'h00000000000000000000000000000000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ADDR",
+      "dir": "input",
+      "width": 7,
+      "range": "[6:0]"
+    },
+    {
+      "name": "WCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "WE",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_RAM128X1SP\n#(\n    .INIT(128'h00000000000000000000000000000000)\n) u_gtp_ram128x1sp (\n    .DO(DO),\n    .DI(DI),\n    .ADDR(ADDR),\n    .WCLK(WCLK),\n    .WE(WE)\n);"
+}

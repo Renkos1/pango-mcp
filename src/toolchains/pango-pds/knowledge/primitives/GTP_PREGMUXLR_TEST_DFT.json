@@ -1,0 +1,55 @@
+{
+  "name": "GTP_PREGMUXLR_TEST_DFT",
+  "category": "other",
+  "params": [],
+  "ports": [
+    {
+      "name": "CLKIN0",
+      "dir": "input",
+      "width": 10,
+      "range": "[9:0]"
+    },
+    {
+      "name": "CLKIN1",
+      "dir": "input",
+      "width": 20,
+      "range": "[19:0]"
+    },
+    {
+      "name": "CLKIN2",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "CLKIN3",
+      "dir": "input",
+      "width": 13,
+      "range": "[12:0]"
+    },
+    {
+      "name": "CLKIN4",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKIN5",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 14,
+      "range": "[13:0]"
+    },
+    {
+      "name": "CFG_MUX",
+      "dir": "input",
+      "width": 10,
+      "range": "[9:0]"
+    }
+  ],
+  "instTemplate": "GTP_PREGMUXLR_TEST_DFT u_gtp_pregmuxlr_test_dft (\n    .CLKIN0(CLKIN0),\n    .CLKIN1(CLKIN1),\n    .CLKIN2(CLKIN2),\n    .CLKIN3(CLKIN3),\n    .CLKIN4(CLKIN4),\n    .CLKIN5(CLKIN5),\n    .CLKOUT(CLKOUT),\n    .CFG_MUX(CFG_MUX)\n);"
+}

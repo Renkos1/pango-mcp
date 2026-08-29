@@ -1,0 +1,34 @@
+{
+  "name": "GTP_INBUFDS",
+  "category": "io_buffer",
+  "params": [
+    {
+      "name": "IOSTANDARD",
+      "type": "string/int",
+      "default": "\"DEFAULT\""
+    },
+    {
+      "name": "TERM_DIFF",
+      "type": "string/int",
+      "default": "\"ON\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "IB",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_INBUFDS\n#(\n    .IOSTANDARD(\"DEFAULT\"),\n    .TERM_DIFF(\"ON\")\n) u_gtp_inbufds (\n    .O(O),\n    .I(I),\n    .IB(IB)\n);"
+}

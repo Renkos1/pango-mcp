@@ -1,0 +1,29 @@
+{
+  "name": "GTP_IOCLKBUF",
+  "category": "clock_pll",
+  "params": [
+    {
+      "name": "GATE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_IOCLKBUF\n#(\n    .GATE_EN(\"FALSE\")\n) u_gtp_ioclkbuf (\n    .CLKOUT(CLKOUT),\n    .CLKIN(CLKIN),\n    .DI(DI)\n);"
+}

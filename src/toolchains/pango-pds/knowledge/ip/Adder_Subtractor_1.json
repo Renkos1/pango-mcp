@@ -1,0 +1,148 @@
+{
+  "slug": "Adder_Subtractor_1",
+  "name": null,
+  "displayName": "Adder-Subtractor",
+  "topModule": "apm_addsub",
+  "version": "1.0",
+  "vendor": "Pango",
+  "category": "Module,Multiplier",
+  "id": "04100305",
+  "dir": "module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_addsub",
+  "datasheet": "ip/module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_addsub/UG041003_APM_IP.pdf",
+  "families": [
+    "Logos2",
+    "Titan2",
+    "Kosmo2"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "ASIZE",
+      "type": "int",
+      "default": "15"
+    },
+    {
+      "name": "BSIZE",
+      "type": "int",
+      "default": "15"
+    },
+    {
+      "name": "A_SIGNED",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "B_SIGNED",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "SSIZE",
+      "type": "int",
+      "default": "15"
+    },
+    {
+      "name": "ASYNC_RST",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "DYN_ADDSUB_OP",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ADDSUB_OP",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "ADDSUB_OP_BOOL",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "LATENCY_MODE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "LATENCY",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "C_IN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "BORROW_IN_SENSE",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "FIXEDINPUT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "FIXEDVALUE",
+      "type": "string",
+      "default": "15'h0"
+    },
+    {
+      "name": "ASYNC_RST_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "LATENCY_MODE_BOOL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "C_IN_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "FIXEDINPUT_BOOL",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

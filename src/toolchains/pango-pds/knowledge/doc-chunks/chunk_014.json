@@ -1,0 +1,6 @@
+{
+  "id": "chunk_014",
+  "source": "cdt-tcl-commands.md",
+  "title": "SRAM configuration (volatile)",
+  "text": "## SRAM configuration (volatile)\n- `cfg_assign_file -file <design.sbit> -device_index <n>` — bind the bitstream to a device.\n- `cfg_program -device_index <n>` — load it into config SRAM. Success prints `The done bit is 1`."
+}

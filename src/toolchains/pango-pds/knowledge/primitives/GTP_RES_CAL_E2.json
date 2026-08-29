@@ -1,0 +1,83 @@
+{
+  "name": "GTP_RES_CAL_E2",
+  "category": "analog",
+  "params": [
+    {
+      "name": "CAL_ENABLE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CAL_CASCADE",
+      "type": "string/int",
+      "default": "\"LOCAL\""
+    },
+    {
+      "name": "CASC_V_ENABLE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "BANK_LOC",
+      "type": "string/int",
+      "default": "\"BANKR5\""
+    },
+    {
+      "name": "FAST_CAL_N",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "PCODE_IN",
+      "dir": "input",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "NCODE_IN",
+      "dir": "input",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "SAMPLE_IN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CODE_SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RST_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PCODE_OUT",
+      "dir": "output",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "NCODE_OUT",
+      "dir": "output",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "CAL_DONE",
+      "dir": "output",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_RES_CAL_E2\n#(\n    .CAL_ENABLE(\"FALSE\"),\n    .CAL_CASCADE(\"LOCAL\"),\n    .CASC_V_ENABLE(\"FALSE\"),\n    .BANK_LOC(\"BANKR5\"),\n    .FAST_CAL_N(\"FALSE\")\n) u_gtp_res_cal_e2 (\n    .PCODE_IN(PCODE_IN),\n    .NCODE_IN(NCODE_IN),\n    .SAMPLE_IN(SAMPLE_IN),\n    .EN(EN),\n    .CODE_SEL(CODE_SEL),\n    .RST_N(RST_N),\n    .PCODE_OUT(PCODE_OUT),\n    .NCODE_OUT(NCODE_OUT),\n    .CAL_DONE(CAL_DONE)\n);"
+}

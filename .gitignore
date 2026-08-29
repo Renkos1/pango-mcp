@@ -1,0 +1,52 @@
+# Package-scoped ignore rules.
+#
+# The monorepo root .gitignore does NOT survive subtree extraction — every rule
+# there is prefixed `packages/pango-mcp/`. Without this file a freshly extracted
+# repo has zero ignore rules, so the first `git add -A` after copying in a real
+# pango-mcp.env publishes the Pango/ModelSim license paths, the SSH host and any
+# PANGO_MCP_SSH_*_PASSWORD. Keep this in sync with the root file.
+
+node_modules/
+dist/
+coverage/
+
+# Local machine configuration. The *.example.* files stay tracked.
+pango-mcp.env
+pango-mcp.config.json
+
+# Encrypted delivery artifacts and the separately-held passwords.
+dist-private/
+dist-private-keys/
+
+# Generated workspaces and probe dirs.
+.work/
+test/.work/
+test/.[a-z]*/
+.pango-mcp/
+
+# Semantic vectors: model-specific, regenerable via `pnpm knowledge:embed`.
+src/toolchains/pango-pds/knowledge/embeddings/
+
+# Pango/PDS generated outputs.
+prj_tasks/
+compile/
+synthesize/
+device_map/
+place_route/
+report_timing/
+report_power/
+generate_bitstream/
+constraint_check/
+_pds_build_bak_*/
+
+# Python bytecode.
+__pycache__/
+*.pyc
+
+# Logs, stray stderr captures, temporaries.
+*.log
+*.tmp
+*.bak
+*.bak_*
+*.err
+src/toolchains/modelsim/knowledge/

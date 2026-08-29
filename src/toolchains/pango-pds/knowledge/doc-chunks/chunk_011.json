@@ -1,0 +1,6 @@
+{
+  "id": "chunk_011",
+  "source": "cdt-tcl-commands.md",
+  "title": "Server",
+  "text": "## Server\n- `cdt_js.exe -port 65420` — start the JTAG download server (resident; start once). All `cdt_cfg`\n  scripts then `cfg_connect` to it."
+}

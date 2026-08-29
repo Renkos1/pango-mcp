@@ -1,0 +1,235 @@
+{
+  "name": "GTP_ADC_E2",
+  "category": "analog",
+  "params": [
+    {
+      "name": "CREG_00H",
+      "type": "bitvec[15:0]",
+      "default": "16'h0001"
+    },
+    {
+      "name": "CREG_01H",
+      "type": "bitvec[15:0]",
+      "default": "16'hC83F"
+    },
+    {
+      "name": "CREG_02H",
+      "type": "bitvec[15:0]",
+      "default": "16'h0009"
+    },
+    {
+      "name": "CREG_31H",
+      "type": "bitvec[13:0]",
+      "default": "14'h0000"
+    },
+    {
+      "name": "CREG_03H",
+      "type": "bitvec[15:0]",
+      "default": "16'h0000"
+    },
+    {
+      "name": "CREG_04H",
+      "type": "bitvec[15:0]",
+      "default": "16'h0000"
+    },
+    {
+      "name": "CREG_0AH",
+      "type": "bitvec[15:0]",
+      "default": "16'h0000"
+    },
+    {
+      "name": "CREG_05H",
+      "type": "bitvec[15:0]",
+      "default": "16'h0000"
+    },
+    {
+      "name": "CREG_06H",
+      "type": "bitvec[15:0]",
+      "default": "16'h0000"
+    },
+    {
+      "name": "CREG_0CH",
+      "type": "bitvec[15:0]",
+      "default": "16'h0000"
+    },
+    {
+      "name": "CREG_07H",
+      "type": "bitvec[15:0]",
+      "default": "16'h0000"
+    },
+    {
+      "name": "CREG_08H",
+      "type": "bitvec[15:0]",
+      "default": "16'h0000"
+    },
+    {
+      "name": "CREG_0EH",
+      "type": "bitvec[15:0]",
+      "default": "16'h0000"
+    },
+    {
+      "name": "CREG_20H",
+      "type": "bitvec[11:0]",
+      "default": "12'h000"
+    },
+    {
+      "name": "CREG_21H",
+      "type": "bitvec[11:0]",
+      "default": "12'h000"
+    },
+    {
+      "name": "CREG_22H",
+      "type": "bitvec[11:0]",
+      "default": "12'h000"
+    },
+    {
+      "name": "CREG_23H",
+      "type": "bitvec[11:0]",
+      "default": "12'h000"
+    },
+    {
+      "name": "CREG_24H",
+      "type": "bitvec[11:0]",
+      "default": "12'h000"
+    },
+    {
+      "name": "CREG_25H",
+      "type": "bitvec[11:0]",
+      "default": "12'h000"
+    },
+    {
+      "name": "CREG_26H",
+      "type": "bitvec[11:0]",
+      "default": "12'h000"
+    },
+    {
+      "name": "CREG_27H",
+      "type": "bitvec[11:0]",
+      "default": "12'h000"
+    },
+    {
+      "name": "CREG_28H",
+      "type": "bitvec[11:0]",
+      "default": "12'h000"
+    },
+    {
+      "name": "CREG_29H",
+      "type": "bitvec[11:0]",
+      "default": "12'h000"
+    },
+    {
+      "name": "CREG_2AH",
+      "type": "bitvec[11:0]",
+      "default": "12'hCC2"
+    },
+    {
+      "name": "CREG_2BH",
+      "type": "bitvec[11:0]",
+      "default": "12'hA5B"
+    }
+  ],
+  "ports": [
+    {
+      "name": "VA",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "VAUX",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DADDR",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DEN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SECEN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DWE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "DRDY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CONVST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RST_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "LOADSC_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OVER_TEMP",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "LOGIC_DONE_A",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "LOGIC_DONE_B",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "ADC_CLK_OUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DMODIFIED",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "ALARM",
+      "dir": "output",
+      "width": 5,
+      "range": "[4:0]"
+    }
+  ],
+  "instTemplate": "GTP_ADC_E2\n#(\n    .CREG_00H(16'h0001),\n    .CREG_01H(16'hC83F),\n    .CREG_02H(16'h0009),\n    .CREG_31H(14'h0000),\n    .CREG_03H(16'h0000),\n    .CREG_04H(16'h0000),\n    .CREG_0AH(16'h0000),\n    .CREG_05H(16'h0000),\n    .CREG_06H(16'h0000),\n    .CREG_0CH(16'h0000),\n    .CREG_07H(16'h0000),\n    .CREG_08H(16'h0000),\n    .CREG_0EH(16'h0000),\n    .CREG_20H(12'h000),\n    .CREG_21H(12'h000),\n    .CREG_22H(12'h000),\n    .CREG_23H(12'h000),\n    .CREG_24H(12'h000),\n    .CREG_25H(12'h000),\n    .CREG_26H(12'h000),\n    .CREG_27H(12'h000),\n    .CREG_28H(12'h000),\n    .CREG_29H(12'h000),\n    .CREG_2AH(12'hCC2),\n    .CREG_2BH(12'hA5B)\n) u_gtp_adc_e2 (\n    .VA(VA),\n    .VAUX(VAUX),\n    .DCLK(DCLK),\n    .DADDR(DADDR),\n    .DEN(DEN),\n    .SECEN(SECEN),\n    .DWE(DWE),\n    .DI(DI),\n    .DO(DO),\n    .DRDY(DRDY),\n    .CONVST(CONVST),\n    .RST_N(RST_N),\n    .LOADSC_N(LOADSC_N),\n    .OVER_TEMP(OVER_TEMP),\n    .LOGIC_DONE_A(LOGIC_DONE_A),\n    .LOGIC_DONE_B(LOGIC_DONE_B),\n    .ADC_CLK_OUT(ADC_CLK_OUT),\n    .DMODIFIED(DMODIFIED),\n    .ALARM(ALARM)\n);"
+}

@@ -1,0 +1,111 @@
+{
+  "name": "pango-mcp",
+  "version": "0.3.1",
+  "description": "MCP stdio server for the Pango FPGA toolchain: env probe, Verilog simulation/assertions, PDS compile and reports, JTAG scan, ILA capture, and confirmation-gated device configuration — plus ModelSim/Questa and Icarus Verilog.",
+  "license": "Apache-2.0",
+  "author": "pango-mcp contributors",
+  "homepage": "https://github.com/Renkos1/pango-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Renkos1/pango-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Renkos1/pango-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pango",
+    "pds",
+    "logos",
+    "titan",
+    "fpga",
+    "eda",
+    "verilog",
+    "vhdl",
+    "simulation",
+    "jtag",
+    "modelsim",
+    "questa",
+    "iverilog",
+    "ila",
+    "bitstream"
+  ],
+  "type": "module",
+  "bin": {
+    "pango-mcp": "src/index.mjs"
+  },
+  "exports": {
+    ".": null,
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "NOTICE",
+    "SECURITY.md",
+    "assets/manifest.json",
+    "docs/**/*.md",
+    "pango-mcp.config.example.json",
+    "pango-mcp.env.example",
+    "scripts/check-syntax.mjs",
+    "scripts/run-unit-tests.mjs",
+    "skills/**/*.md",
+    "src/**/*.mjs",
+    "src/**/*.py",
+    "src/toolchains/pango-pds/knowledge/**/*.json",
+    "!src/toolchains/pango-pds/knowledge/embeddings/**"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "start": "node src/index.mjs",
+    "check": "node scripts/check-syntax.mjs",
+    "test:jtag": "node test/jtag-unit.mjs && node test/jtag-cli-unit.mjs && node test/jtag-flash-guard-unit.mjs && node test/ila-write-guard-unit.mjs && python test/jtag-export-unit.py && python test/jtag-d2xx-unit.py && python test/fla-framing-unit.py && python test/fla-trig-degenerate-unit.py",
+    "test:timing": "node test/timing-unit.mjs",
+    "test:power": "node test/power-unit.mjs",
+    "test:diag": "node test/diagnostics-unit.mjs",
+    "test:msim-logparse": "node test/msim-logparse-unit.mjs",
+    "test:pds-error": "node test/pds-error-unit.mjs",
+    "test:pds-license": "node test/pds-license-unit.mjs",
+    "test:pds-batch": "node test/pds-batch-unit.mjs",
+    "test:pds-project-reports": "node test/pds-project-reports-unit.mjs",
+    "test:project-fdc": "node test/project-fdc-unit.mjs",
+    "test:coverage": "node test/coverage-unit.mjs",
+    "test:ila-capture": "node test/ila-capture-unit.mjs",
+    "test:trace": "node test/trace-unit.mjs",
+    "test:lifecycle": "node test/server-lifecycle-unit.mjs",
+    "test:vault": "node test/vault-unit.mjs",
+    "test:integration-loop": "node test/integration-loop.mjs",
+    "test:ila-fic": "node test/ila-fic-unit.mjs",
+    "test:netlist": "node test/netlist-unit.mjs",
+    "test:netlist-live": "node test/netlist-live.mjs",
+    "test:msim-unit": "node test/msim-unit.mjs",
+    "test:wave": "node test/waveform-unit.mjs",
+    "test:msim": "node test/msim.mjs",
+    "test:msim-remote": "node test/msim-remote.mjs",
+    "smoke": "node test/smoke.mjs",
+    "actual": "node test/actual-tools.mjs",
+    "test:n1": "node test/n1-compile.mjs",
+    "test:n2": "node test/n2-control.mjs",
+    "test:semantic": "node test/n4-semantic.mjs",
+    "knowledge:build": "node src/toolchains/pango-pds/build-knowledge/build-primitives.mjs && node src/toolchains/pango-pds/build-knowledge/build-ip.mjs && node src/toolchains/pango-pds/build-knowledge/build-docs.mjs",
+    "knowledge:embed": "node src/toolchains/pango-pds/build-knowledge/build-embeddings.mjs",
+    "knowledge:build:msim": "node src/toolchains/modelsim/build-knowledge/build-commands.mjs",
+    "test:embed": "node test/embed-unit.mjs",
+    "test:static": "node test/static-gate.mjs",
+    "test:unit": "node scripts/run-unit-tests.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "ssh2": "^1.17.0",
+    "zod": "^3.23.8"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "packageManager": "pnpm@11.15.1"
+}

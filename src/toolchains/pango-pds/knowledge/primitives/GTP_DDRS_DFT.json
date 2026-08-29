@@ -1,0 +1,930 @@
+{
+  "name": "GTP_DDRS_DFT",
+  "category": "serdes_ddr",
+  "params": [],
+  "ports": [
+    {
+      "name": "PL_ARREADY_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PL_AWREADY_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PL_BID_0",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PL_BRESP_0",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PL_BVALID_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PL_WREADY_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PL_RDATA_0",
+      "dir": "output",
+      "width": 256,
+      "range": "[255:0]"
+    },
+    {
+      "name": "PL_RID_0",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PL_RLAST_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PL_RRESP_0",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PL_RVALID_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PRDATA",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "PREADY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PSLVERR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DDRC_INT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "FP_DDRC_DFI_RDDATA",
+      "dir": "output",
+      "width": 256,
+      "range": "[255:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_RDDATA_VALID",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "FP_DDRC_DFI_PHYUPD_REQ",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "FP_DDRC_DFI_INIT_COMPLETE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "FP_PHY_DFI_CS_N",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_ADDRESS",
+      "dir": "output",
+      "width": 68,
+      "range": "[67:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_BANK",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_BG",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_ACT_N",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_CKE",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_ODT",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_RESET_N",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "FP_PHY_DFI_WRDATA_EN",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_WRDATA",
+      "dir": "output",
+      "width": 256,
+      "range": "[255:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_WRDATA_MASK",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_PHYUPD_ACK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DFI_GEAR_RST_N",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DLL_UPDATE_CODE_DONE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DDRPHY_SOFT_RSTN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DDRPHY_RST_REQ",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "UPD_RST_REQ",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "ADJ_CKE",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "ADJ_CS_N",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "ADJ_ACT_N",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "ADJ_ADDR",
+      "dir": "output",
+      "width": 136,
+      "range": "[135:0]"
+    },
+    {
+      "name": "ADJ_BA",
+      "dir": "output",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "ADJ_BG",
+      "dir": "output",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "ADJ_ODT",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "ADJ_CK",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "ADJ_RST",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DBI_WRDQ_EN",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DBI_WRDQ",
+      "dir": "output",
+      "width": 256,
+      "range": "[255:0]"
+    },
+    {
+      "name": "DBI_WRDQS_EN",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DBI_WRDQS",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DBI_WRDQSN",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DBI_WRDATA_MASK",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "CK_DLY_SET_GRAY",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DQ_DLY_BIN_GROUP",
+      "dir": "output",
+      "width": 64,
+      "range": "[63:0]"
+    },
+    {
+      "name": "DQ_DLY_SEL",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "DQ_IDLY_BIN_GROUP",
+      "dir": "output",
+      "width": 64,
+      "range": "[63:0]"
+    },
+    {
+      "name": "DQ_IDLY_SEL",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "DM_DLY_BIN_GROUP",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DM_DLY_SEL",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "DBI_IDLY_BIN_GROUP",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DBI_IDLY_SEL",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "DDRPHY_GATEI",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "WRLVL_STEP_GRAY",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DQS_GATE_CTRL",
+      "dir": "output",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "READ_CLK_CTRL",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "WL_P_DLL_GRAY",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DQS_EVEN_GRAY",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DQS_ODD_GRAY",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DLL_UPDATE_N_SYN_TO_DLL",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "RDVREF_SET",
+      "dir": "output",
+      "width": 24,
+      "range": "[23:0]"
+    },
+    {
+      "name": "RDVREF_RANGE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RESCAL_RST_N",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PCODE_OUT_T",
+      "dir": "output",
+      "width": 10,
+      "range": "[9:0]"
+    },
+    {
+      "name": "NCODE_OUT_T",
+      "dir": "output",
+      "width": 10,
+      "range": "[9:0]"
+    },
+    {
+      "name": "CAL_DONE",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "OCC_SO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TEST_SO_0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TEST_SO_1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TEST_SO_2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TEST_SO_3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PL_ARADDR_0",
+      "dir": "input",
+      "width": 34,
+      "range": "[33:0]"
+    },
+    {
+      "name": "PL_ARBURST_0",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PL_ARID_0",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PL_ARLEN_0",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PL_ARQOS_0",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PL_ARSIZE_0",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "PL_ARVALID_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PL_ARCACHE_0",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PL_ARLOCK_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PL_ARPROT_0",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "PL_ARREGION_0",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PL_AWADDR_0",
+      "dir": "input",
+      "width": 34,
+      "range": "[33:0]"
+    },
+    {
+      "name": "PL_AWBURST_0",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PL_AWID_0",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PL_AWLEN_0",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "PL_AWQOS_0",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PL_AWSIZE_0",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "PL_AWVALID_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PL_AWCACHE_0",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PL_AWLOCK_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PL_AWPROT_0",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "PL_AWREGION_0",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PL_BREADY_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PL_WDATA_0",
+      "dir": "input",
+      "width": 256,
+      "range": "[255:0]"
+    },
+    {
+      "name": "PL_WLAST_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PL_WSTRB_0",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "PL_WVALID_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PL_RREADY_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PADDR",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "PENABLE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PSEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PWDATA",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "PWRITE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DDRC_SYSCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DDRPHY_SYSCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "AXI_CLK_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SYS_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "FP_MODE_SEL",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_CS_N",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_ADDRESS",
+      "dir": "input",
+      "width": 68,
+      "range": "[67:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_BANK",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_BG",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_ACT_N",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_CKE",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_ODT",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_RESET_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "FP_DDRC_DFI_WRDATA",
+      "dir": "input",
+      "width": 256,
+      "range": "[255:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_WRDATA_MASK",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_WRDATA_EN",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "FP_DDRC_DFI_PHYUPD_ACK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "FP_PHY_DFI_RDDATA",
+      "dir": "input",
+      "width": 256,
+      "range": "[255:0]"
+    },
+    {
+      "name": "FP_PHY_DFI_RDDATA_VALID",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "FP_PHY_DFI_PHYUPD_REQ",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "FP_PHY_DFI_INIT_COMPLETE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DDRPHY_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DLL_UPDATE_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DLL_TRAN_UPDATE_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DDRPHY_RST_ACK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "UPD_RST_ACK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RES_MEAN_RDY_EXT",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DDRPHY_READ_VALID",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "DDRPHY_RDATA",
+      "dir": "input",
+      "width": 256,
+      "range": "[255:0]"
+    },
+    {
+      "name": "DDRPHY_RDBI",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "WRLVL_DQ",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "DDRPHY_DGTS",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "DQS_GATE_SAMPLE",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "DDRPHY_DLL_RST_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DLL_90_GRAY",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "CAL_DONE_TO_SOFT",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PCODE_OUT_TO_SOFT",
+      "dir": "input",
+      "width": 10,
+      "range": "[9:0]"
+    },
+    {
+      "name": "NCODE_OUT_TO_SOFT",
+      "dir": "input",
+      "width": 10,
+      "range": "[9:0]"
+    },
+    {
+      "name": "TEST_MODE_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_RSTN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_SE_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCC_BYPASS",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCC_RESET",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCC_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCC_SI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_SI_0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_SI_1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_SI_2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_SI_3",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "COMP_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SYN_GT_SE_N",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_DDRS_DFT u_gtp_ddrs_dft (\n    .PL_ARREADY_0(PL_ARREADY_0),\n    .PL_AWREADY_0(PL_AWREADY_0),\n    .PL_BID_0(PL_BID_0),\n    .PL_BRESP_0(PL_BRESP_0),\n    .PL_BVALID_0(PL_BVALID_0),\n    .PL_WREADY_0(PL_WREADY_0),\n    .PL_RDATA_0(PL_RDATA_0),\n    .PL_RID_0(PL_RID_0),\n    .PL_RLAST_0(PL_RLAST_0),\n    .PL_RRESP_0(PL_RRESP_0),\n    .PL_RVALID_0(PL_RVALID_0),\n    .PRDATA(PRDATA),\n    .PREADY(PREADY),\n    .PSLVERR(PSLVERR),\n    .DDRC_INT(DDRC_INT),\n    .FP_DDRC_DFI_RDDATA(FP_DDRC_DFI_RDDATA),\n    .FP_DDRC_DFI_RDDATA_VALID(FP_DDRC_DFI_RDDATA_VALID),\n    .FP_DDRC_DFI_PHYUPD_REQ(FP_DDRC_DFI_PHYUPD_REQ),\n    .FP_DDRC_DFI_INIT_COMPLETE(FP_DDRC_DFI_INIT_COMPLETE),\n    .FP_PHY_DFI_CS_N(FP_PHY_DFI_CS_N),\n    .FP_PHY_DFI_ADDRESS(FP_PHY_DFI_ADDRESS),\n    .FP_PHY_DFI_BANK(FP_PHY_DFI_BANK),\n    .FP_PHY_DFI_BG(FP_PHY_DFI_BG),\n    .FP_PHY_DFI_ACT_N(FP_PHY_DFI_ACT_N),\n    .FP_PHY_DFI_CKE(FP_PHY_DFI_CKE),\n    .FP_PHY_DFI_ODT(FP_PHY_DFI_ODT),\n    .FP_PHY_DFI_RESET_N(FP_PHY_DFI_RESET_N),\n    .FP_PHY_DFI_WRDATA_EN(FP_PHY_DFI_WRDATA_EN),\n    .FP_PHY_DFI_WRDATA(FP_PHY_DFI_WRDATA),\n    .FP_PHY_DFI_WRDATA_MASK(FP_PHY_DFI_WRDATA_MASK),\n    .FP_PHY_DFI_PHYUPD_ACK(FP_PHY_DFI_PHYUPD_ACK),\n    .DFI_GEAR_RST_N(DFI_GEAR_RST_N),\n    .DLL_UPDATE_CODE_DONE(DLL_UPDATE_CODE_DONE),\n    .DDRPHY_SOFT_RSTN(DDRPHY_SOFT_RSTN),\n    .DDRPHY_RST_REQ(DDRPHY_RST_REQ),\n    .UPD_RST_REQ(UPD_RST_REQ),\n    .ADJ_CKE(ADJ_CKE),\n    .ADJ_CS_N(ADJ_CS_N),\n    .ADJ_ACT_N(ADJ_ACT_N),\n    .ADJ_ADDR(ADJ_ADDR),\n    .ADJ_BA(ADJ_BA),\n    .ADJ_BG(ADJ_BG),\n    .ADJ_ODT(ADJ_ODT),\n    .ADJ_CK(ADJ_CK),\n    .ADJ_RST(ADJ_RST),\n    .DBI_WRDQ_EN(DBI_WRDQ_EN),\n    .DBI_WRDQ(DBI_WRDQ),\n    .DBI_WRDQS_EN(DBI_WRDQS_EN),\n    .DBI_WRDQS(DBI_WRDQS),\n    .DBI_WRDQSN(DBI_WRDQSN),\n    .DBI_WRDATA_MASK(DBI_WRDATA_MASK),\n    .CK_DLY_SET_GRAY(CK_DLY_SET_GRAY),\n    .DQ_DLY_BIN_GROUP(DQ_DLY_BIN_GROUP),\n    .DQ_DLY_SEL(DQ_DLY_SEL),\n    .DQ_IDLY_BIN_GROUP(DQ_IDLY_BIN_GROUP),\n    .DQ_IDLY_SEL(DQ_IDLY_SEL),\n    .DM_DLY_BIN_GROUP(DM_DLY_BIN_GROUP),\n    .DM_DLY_SEL(DM_DLY_SEL),\n    .DBI_IDLY_BIN_GROUP(DBI_IDLY_BIN_GROUP),\n    .DBI_IDLY_SEL(DBI_IDLY_SEL),\n    .DDRPHY_GATEI(DDRPHY_GATEI),\n    .WRLVL_STEP_GRAY(WRLVL_STEP_GRAY),\n    .DQS_GATE_CTRL(DQS_GATE_CTRL),\n    .READ_CLK_CTRL(READ_CLK_CTRL),\n    .WL_P_DLL_GRAY(WL_P_DLL_GRAY),\n    .DQS_EVEN_GRAY(DQS_EVEN_GRAY),\n    .DQS_ODD_GRAY(DQS_ODD_GRAY),\n    .DLL_UPDATE_N_SYN_TO_DLL(DLL_UPDATE_N_SYN_TO_DLL),\n    .RDVREF_SET(RDVREF_SET),\n    .RDVREF_RANGE(RDVREF_RANGE),\n    .RESCAL_RST_N(RESCAL_RST_N),\n    .PCODE_OUT_T(PCODE_OUT_T),\n    .NCODE_OUT_T(NCODE_OUT_T),\n    .CAL_DONE(CAL_DONE),\n    .OCC_SO(OCC_SO),\n    .TEST_SO_0(TEST_SO_0),\n    .TEST_SO_1(TEST_SO_1),\n    .TEST_SO_2(TEST_SO_2),\n    .TEST_SO_3(TEST_SO_3),\n    .PL_ARADDR_0(PL_ARADDR_0),\n    .PL_ARBURST_0(PL_ARBURST_0),\n    .PL_ARID_0(PL_ARID_0),\n    .PL_ARLEN_0(PL_ARLEN_0),\n    .PL_ARQOS_0(PL_ARQOS_0),\n    .PL_ARSIZE_0(PL_ARSIZE_0),\n    .PL_ARVALID_0(PL_ARVALID_0),\n    .PL_ARCACHE_0(PL_ARCACHE_0),\n    .PL_ARLOCK_0(PL_ARLOCK_0),\n    .PL_ARPROT_0(PL_ARPROT_0),\n    .PL_ARREGION_0(PL_ARREGION_0),\n    .PL_AWADDR_0(PL_AWADDR_0),\n    .PL_AWBURST_0(PL_AWBURST_0),\n    .PL_AWID_0(PL_AWID_0),\n    .PL_AWLEN_0(PL_AWLEN_0),\n    .PL_AWQOS_0(PL_AWQOS_0),\n    .PL_AWSIZE_0(PL_AWSIZE_0),\n    .PL_AWVALID_0(PL_AWVALID_0),\n    .PL_AWCACHE_0(PL_AWCACHE_0),\n    .PL_AWLOCK_0(PL_AWLOCK_0),\n    .PL_AWPROT_0(PL_AWPROT_0),\n    .PL_AWREGION_0(PL_AWREGION_0),\n    .PL_BREADY_0(PL_BREADY_0),\n    .PL_WDATA_0(PL_WDATA_0),\n    .PL_WLAST_0(PL_WLAST_0),\n    .PL_WSTRB_0(PL_WSTRB_0),\n    .PL_WVALID_0(PL_WVALID_0),\n    .PL_RREADY_0(PL_RREADY_0),\n    .PCLK(PCLK),\n    .PADDR(PADDR),\n    .PENABLE(PENABLE),\n    .PSEL(PSEL),\n    .PWDATA(PWDATA),\n    .PWRITE(PWRITE),\n    .DDRC_SYSCLK(DDRC_SYSCLK),\n    .DDRPHY_SYSCLK(DDRPHY_SYSCLK),\n    .AXI_CLK_0(AXI_CLK_0),\n    .SYS_RST(SYS_RST),\n    .FP_MODE_SEL(FP_MODE_SEL),\n    .FP_DDRC_DFI_CS_N(FP_DDRC_DFI_CS_N),\n    .FP_DDRC_DFI_ADDRESS(FP_DDRC_DFI_ADDRESS),\n    .FP_DDRC_DFI_BANK(FP_DDRC_DFI_BANK),\n    .FP_DDRC_DFI_BG(FP_DDRC_DFI_BG),\n    .FP_DDRC_DFI_ACT_N(FP_DDRC_DFI_ACT_N),\n    .FP_DDRC_DFI_CKE(FP_DDRC_DFI_CKE),\n    .FP_DDRC_DFI_ODT(FP_DDRC_DFI_ODT),\n    .FP_DDRC_DFI_RESET_N(FP_DDRC_DFI_RESET_N),\n    .FP_DDRC_DFI_WRDATA(FP_DDRC_DFI_WRDATA),\n    .FP_DDRC_DFI_WRDATA_MASK(FP_DDRC_DFI_WRDATA_MASK),\n    .FP_DDRC_DFI_WRDATA_EN(FP_DDRC_DFI_WRDATA_EN),\n    .FP_DDRC_DFI_PHYUPD_ACK(FP_DDRC_DFI_PHYUPD_ACK),\n    .FP_PHY_DFI_RDDATA(FP_PHY_DFI_RDDATA),\n    .FP_PHY_DFI_RDDATA_VALID(FP_PHY_DFI_RDDATA_VALID),\n    .FP_PHY_DFI_PHYUPD_REQ(FP_PHY_DFI_PHYUPD_REQ),\n    .FP_PHY_DFI_INIT_COMPLETE(FP_PHY_DFI_INIT_COMPLETE),\n    .DDRPHY_RST(DDRPHY_RST),\n    .DLL_UPDATE_N(DLL_UPDATE_N),\n    .DLL_TRAN_UPDATE_EN(DLL_TRAN_UPDATE_EN),\n    .DDRPHY_RST_ACK(DDRPHY_RST_ACK),\n    .UPD_RST_ACK(UPD_RST_ACK),\n    .RES_MEAN_RDY_EXT(RES_MEAN_RDY_EXT),\n    .DDRPHY_READ_VALID(DDRPHY_READ_VALID),\n    .DDRPHY_RDATA(DDRPHY_RDATA),\n    .DDRPHY_RDBI(DDRPHY_RDBI),\n    .WRLVL_DQ(WRLVL_DQ),\n    .DDRPHY_DGTS(DDRPHY_DGTS),\n    .DQS_GATE_SAMPLE(DQS_GATE_SAMPLE),\n    .DDRPHY_DLL_RST_N(DDRPHY_DLL_RST_N),\n    .DLL_90_GRAY(DLL_90_GRAY),\n    .CAL_DONE_TO_SOFT(CAL_DONE_TO_SOFT),\n    .PCODE_OUT_TO_SOFT(PCODE_OUT_TO_SOFT),\n    .NCODE_OUT_TO_SOFT(NCODE_OUT_TO_SOFT),\n    .TEST_MODE_N(TEST_MODE_N),\n    .TEST_RSTN(TEST_RSTN),\n    .TEST_CLK(TEST_CLK),\n    .TEST_SE_N(TEST_SE_N),\n    .OCC_BYPASS(OCC_BYPASS),\n    .OCC_RESET(OCC_RESET),\n    .OCC_EN(OCC_EN),\n    .OCC_SI(OCC_SI),\n    .TEST_SI_0(TEST_SI_0),\n    .TEST_SI_1(TEST_SI_1),\n    .TEST_SI_2(TEST_SI_2),\n    .TEST_SI_3(TEST_SI_3),\n    .COMP_EN(COMP_EN),\n    .SYN_GT_SE_N(SYN_GT_SE_N)\n);"
+}

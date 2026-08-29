@@ -1,0 +1,32 @@
+{
+  "name": "GTP_USCMMUX_TEST_DFT",
+  "category": "other",
+  "params": [],
+  "ports": [
+    {
+      "name": "CLKIN",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "CFG_MUX0",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "CFG_MUX1",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    }
+  ],
+  "instTemplate": "GTP_USCMMUX_TEST_DFT u_gtp_uscmmux_test_dft (\n    .CLKIN(CLKIN),\n    .CLKOUT(CLKOUT),\n    .CFG_MUX0(CFG_MUX0),\n    .CFG_MUX1(CFG_MUX1)\n);"
+}

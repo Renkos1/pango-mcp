@@ -1,0 +1,54 @@
+{
+  "name": "GTP_LUT7",
+  "category": "lut",
+  "params": [
+    {
+      "name": "INIT",
+      "type": "bitvec[127:0]",
+      "default": "128'h00000000000000000000000000000000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "Z",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "I0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I3",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I4",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I5",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I6",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_LUT7\n#(\n    .INIT(128'h00000000000000000000000000000000)\n) u_gtp_lut7 (\n    .Z(Z),\n    .I0(I0),\n    .I1(I1),\n    .I2(I2),\n    .I3(I3),\n    .I4(I4),\n    .I5(I5),\n    .I6(I6)\n);"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "GTP_ZEROHOLDDELAY",
+  "category": "config_misc",
+  "params": [
+    {
+      "name": "ZHOLD_SET",
+      "type": "string/int",
+      "default": "\"NODELAY\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_ZEROHOLDDELAY\n#(\n    .ZHOLD_SET(\"NODELAY\")\n) u_gtp_zeroholddelay (\n    .DO(DO),\n    .DI(DI)\n);"
+}

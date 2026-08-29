@@ -1,0 +1,54 @@
+{
+  "slug": "Dvio_Jtag_Hub_64",
+  "name": "Dvio_Jtag_Hub",
+  "displayName": "Dvio_Jtag_Hub",
+  "topModule": "ips_dvio_jtag_hub_wrapper_v1_0",
+  "version": "1.2",
+  "vendor": "Pango",
+  "category": "System,Tools,Debug",
+  "id": "06200702",
+  "dir": "system_ip/ips_dvio/ips_dvio_eval/ips_dvio_jtag_hub",
+  "datasheet": "ip/system_ip/ips_dvio/ips_dvio_eval/ips_dvio_jtag_hub/UG062007_DVIO_IP.pdf",
+  "families": [],
+  "devices": [],
+  "params": [
+    {
+      "name": "CTRL_PORT_NUM",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "UJTAG_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "UJTAG_SEL_TEXT",
+      "type": "enum",
+      "default": "Default JTAG",
+      "items": [
+        "Default JTAG",
+        "USER JTAG"
+      ]
+    },
+    {
+      "name": "PGT_DEVICE_30G",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "PGT_DEVICE",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "PGL_DEVICE",
+      "type": "bool",
+      "default": "1"
+    }
+  ]
+}

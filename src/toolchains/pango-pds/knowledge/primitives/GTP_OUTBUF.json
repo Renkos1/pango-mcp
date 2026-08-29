@@ -1,0 +1,34 @@
+{
+  "name": "GTP_OUTBUF",
+  "category": "io_buffer",
+  "params": [
+    {
+      "name": "IOSTANDARD",
+      "type": "string/int",
+      "default": "\"DEFAULT\""
+    },
+    {
+      "name": "SLEW_RATE",
+      "type": "string/int",
+      "default": "\"SLOW\""
+    },
+    {
+      "name": "DRIVE_STRENGTH",
+      "type": "string/int",
+      "default": "\"8\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "I",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_OUTBUF\n#(\n    .IOSTANDARD(\"DEFAULT\"),\n    .SLEW_RATE(\"SLOW\"),\n    .DRIVE_STRENGTH(\"8\")\n) u_gtp_outbuf (\n    .O(O),\n    .I(I)\n);"
+}

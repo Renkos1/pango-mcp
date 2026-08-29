@@ -1,0 +1,6 @@
+# Python bytecode cache (regenerated on import).
+__pycache__/
+*.pyc
+
+# Runtime logs from cdt_cfg_shell / flash / capture runs.
+log/

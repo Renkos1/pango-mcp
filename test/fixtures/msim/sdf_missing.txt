@@ -1,0 +1,7 @@
+Reading pref.tcl
+
+# 2020.4
+
+# ** Error (suppressible): (vsim-SDF-3196) Failed to find SDF file "gate_sim.sdf".
+# Use the -help option for complete vsim usage.
+Errors: 1, Warnings: 0

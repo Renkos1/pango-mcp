@@ -1,0 +1,23 @@
+{
+  "name": "GTP_CLKBUFCE",
+  "category": "clock_pll",
+  "params": [],
+  "ports": [
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKIN",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_CLKBUFCE u_gtp_clkbufce (\n    .CLKOUT(CLKOUT),\n    .CE(CE),\n    .CLKIN(CLKIN)\n);"
+}

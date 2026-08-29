@@ -1,0 +1,2870 @@
+{
+  "slug": "DebugCore_61",
+  "name": "DebugCore",
+  "displayName": "DebugCore",
+  "topModule": "ips_dbc_wrapper_v1_4",
+  "version": "1.4",
+  "vendor": "Pango",
+  "category": "System,Tools,Debug",
+  "id": "06200601",
+  "dir": "system_ip/ips_debug_core/ips_debug_core_eval/ips_debug_core",
+  "datasheet": "ip/system_ip/ips_debug_core/ips_debug_core_eval/ips_debug_core/UG062006_DebugCore_IP.pdf",
+  "families": [],
+  "devices": [],
+  "params": [
+    {
+      "name": "DATA_SAME_AS_TRIG",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "c_Port1_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port2_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port3_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port4_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port5_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port6_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port7_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port8_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port9_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port10_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port11_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port12_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port13_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port14_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port15_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "EN_TRIG_OUT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "EN_WINDOWS",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "AREA_SPEED",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_PORT_NUM",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "MAX_SEQ_LEVEL",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "CLK_EDGE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "MEM_STYLE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "DATA_DEPTH",
+      "type": "enum",
+      "default": "9",
+      "items": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ]
+    },
+    {
+      "name": "EN_STOR_QUAL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG0_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG0_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG0_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG0_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG0_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG1_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG1_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG1_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG1_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG1_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG2_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG2_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG2_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG2_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG2_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG3_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG3_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG3_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG3_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG3_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG4_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG4_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG4_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG4_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG4_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG5_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG5_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG5_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG5_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG5_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG6_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG6_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG6_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG6_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG6_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG7_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG7_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG7_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG7_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG7_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG8_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG8_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG8_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG8_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG8_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG9_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG9_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG9_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG9_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG9_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG10_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG10_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG10_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG10_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG10_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG11_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG11_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG11_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG11_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG11_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG12_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG12_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG12_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG12_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG12_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG13_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG13_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG13_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG13_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG13_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG14_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG14_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG14_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG14_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG14_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG15_PORT_WIDTH",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "TRIG15_MATCH_UNIT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG15_CNT_WIDTH",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "TRIG15_MATCH_TYPE",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "TRIG15_EXCLUDE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_ENABLE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_TRIG_COND",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M0_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M1_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M2_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M3_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M4_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M5_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M6_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M7_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M8_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M9_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M10_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M11_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M12_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M13_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M14_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_M15_CONFIG",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "TU0_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU1_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU2_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU3_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU4_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU5_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU6_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU7_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU8_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU9_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU10_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU11_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU12_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU13_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU14_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU15_FUNCTION",
+      "type": "enum",
+      "default": "000",
+      "items": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "110",
+        "111"
+      ]
+    },
+    {
+      "name": "TU0_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU1_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU2_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU3_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU4_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU5_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU6_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU7_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU8_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU9_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU10_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU11_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU12_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU13_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU14_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU15_CNT_MODE",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "TU0_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU1_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU2_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU3_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU4_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU5_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU6_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU7_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU8_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU9_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU10_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU11_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU12_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU13_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU14_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "TU15_CNT_VALUE",
+      "type": "string",
+      "default": "1"
+    },
+    {
+      "name": "VALUE0",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE0_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE0_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE1_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE1_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE2_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE2_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE3",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE3_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE3_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE4",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE4_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE4_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE5",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE5_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE5_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE6",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE6_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE6_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE7",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE7_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE7_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE8",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE8_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE8_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE9",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE9_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE9_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE10",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE10_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE10_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE11",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE11_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE11_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE12",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE12_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE12_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE13",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE13_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE13_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE14",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE14_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE14_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE15",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE15_1",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "VALUE15_2",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "V0_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V0_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V0_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V1_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V1_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V1_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V2_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V2_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V2_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V3_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V3_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V3_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V4_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V4_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V4_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V5_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V5_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V5_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V6_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V6_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V6_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V7_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V7_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V7_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V8_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V8_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V8_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V9_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V9_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V9_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V10_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V10_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V10_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V11_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V11_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V11_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V12_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V12_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V12_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V13_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V13_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V13_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V14_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V14_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V14_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V15_RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V15_1RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "V15_2RADIX",
+      "type": "enum",
+      "default": "Bin",
+      "items": [
+        "Bin",
+        "Oct",
+        "Dec",
+        "Hex"
+      ]
+    },
+    {
+      "name": "TRIG_MODE",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "TRIG_NEG_WHOLE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_LEVEL",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "TRIG_CONTIGUOUS",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN0",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "TRIG_MU_EN1",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN2",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN3",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN4",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN5",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN6",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN7",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN8",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN9",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN10",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN11",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN12",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN13",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN14",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_EN15",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG0",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG1",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG2",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG3",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG4",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG5",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG6",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG7",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG8",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG9",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG10",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG11",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG12",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG13",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG14",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_MU_NEG15",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_SEL0",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL1",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL2",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL3",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL4",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL5",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL6",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL7",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL8",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL9",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL10",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL11",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL12",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL13",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL14",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_SEL15",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "TRIG_SEQ_NEG0",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG1",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG2",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG3",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG4",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG5",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG6",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG7",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG8",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG9",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG10",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG11",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG12",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG13",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG14",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "TRIG_SEQ_NEG15",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_STOR_TYPE",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_TRIG_OUT",
+      "type": "enum",
+      "default": "3'b000",
+      "items": [
+        "3'b000",
+        "3'b001",
+        "3'b010",
+        "3'b011",
+        "3'b100"
+      ]
+    },
+    {
+      "name": "STORE_TYPE",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "STORE_TYPE_DIV",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STORE_POSITION",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "INIT_STOR_QUAL",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "ALL_DATA",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "name": "STOR_NEG_WHOLE",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN0",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN1",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN2",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN3",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN4",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN5",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN6",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN7",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN8",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN9",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN10",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN11",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN12",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN13",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN14",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_EN15",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG0",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG1",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG2",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG3",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG4",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG5",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG6",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG7",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG8",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG9",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG10",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG11",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG12",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG13",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG14",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "STOR_MU_NEG15",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "c_Port0_EN",
+      "type": "bool",
+      "default": "1"
+    }
+  ]
+}

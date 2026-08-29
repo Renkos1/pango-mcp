@@ -1,0 +1,210 @@
+{
+  "slug": "Multiply_Accumulator_3",
+  "name": "28nm Multiply-Accumulator",
+  "displayName": "Multiply-Accumulator",
+  "topModule": "apm_multacc",
+  "version": "1.6",
+  "vendor": "Pango",
+  "category": "Module,Multiplier",
+  "id": "04100301",
+  "dir": "module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_multacc",
+  "datasheet": "ip/module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_multacc/UG041003_APM_IP.pdf",
+  "families": [
+    "Logos2",
+    "Titan2",
+    "Kosmo2"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "DYN_ACC_INIT",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "DYN_ACC_ADDSUB_OP",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "ASIZE",
+      "type": "int",
+      "default": "11"
+    },
+    {
+      "name": "BSIZE",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "PSIZE",
+      "type": "enum",
+      "default": "24",
+      "items": [
+        "24",
+        "48",
+        "65",
+        "82",
+        "96",
+        "99"
+      ]
+    },
+    {
+      "name": "A_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "B_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "ASYNC_RST",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "INREG_EN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "ACC_ADDSUB_OP",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ACC_INIT_VALUE",
+      "type": "string",
+      "default": "24'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_24",
+      "type": "string",
+      "default": "24'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_48",
+      "type": "string",
+      "default": "48'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_65",
+      "type": "string",
+      "default": "65'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_82",
+      "type": "string",
+      "default": "82'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_96",
+      "type": "string",
+      "default": "96'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_99",
+      "type": "string",
+      "default": "99'h0"
+    },
+    {
+      "name": "PPWidth_12",
+      "type": "enum",
+      "default": "24",
+      "items": [
+        "24",
+        "48"
+      ]
+    },
+    {
+      "name": "PPWidth_18",
+      "type": "enum",
+      "default": "48",
+      "items": [
+        "48",
+        "65",
+        "96"
+      ]
+    },
+    {
+      "name": "PPWidth_65",
+      "type": "enum",
+      "default": "65",
+      "items": [
+        "65"
+      ]
+    },
+    {
+      "name": "PPWidth_82",
+      "type": "enum",
+      "default": "82",
+      "items": [
+        "82"
+      ]
+    },
+    {
+      "name": "PPWidth_99",
+      "type": "enum",
+      "default": "99",
+      "items": [
+        "99"
+      ]
+    },
+    {
+      "name": "OPTIMAL_TIMING",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPE_STATUS",
+      "type": "enum",
+      "default": "2",
+      "items": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "ASYNC_RST_BOOL",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "OPTIMAL_TIMING_BOOL",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

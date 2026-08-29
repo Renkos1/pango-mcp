@@ -1,0 +1,165 @@
+{
+  "slug": "DRM_HRM_Based_ROM_29",
+  "name": "Titan3 DRM/HRM Based ROM",
+  "displayName": "DRM/HRM Based ROM",
+  "topModule": "ipmxf1_rom_wrapper_v1_10",
+  "version": "1.10",
+  "vendor": "Pango",
+  "category": "Module,Memory,DRM/HRM",
+  "id": "08100204",
+  "dir": "module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_rom",
+  "datasheet": "ip/module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_rom/UG081002_DRM_HRM_Based_RAM_IP.pdf",
+  "families": [
+    "Titan3"
+  ],
+  "devices": [
+    "PG3T500",
+    "PG3T1300",
+    "PG3T1500"
+  ],
+  "params": [
+    {
+      "name": "GTP_DRM_TYPE",
+      "type": "enum",
+      "default": "E4",
+      "items": [
+        "E4",
+        "E5",
+        "E6"
+      ]
+    },
+    {
+      "name": "CAS_MODE_SEL",
+      "type": "enum",
+      "default": "AUTO",
+      "items": [
+        "AUTO",
+        "DRM18K",
+        "DRM36K",
+        "HRM288K"
+      ]
+    },
+    {
+      "name": "CAS_MODE",
+      "type": "enum",
+      "default": "18K",
+      "items": [
+        "18K",
+        "36K",
+        "288K"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ADDR_WIDTH",
+      "type": "int",
+      "default": "9"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "CLK_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "FAB_REG",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC"
+      ]
+    },
+    {
+      "name": "INIT_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "INIT_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    },
+    {
+      "name": "RST_VAL_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RST_VAL",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "CASCADE_MODE",
+      "type": "enum",
+      "default": "NORMAL",
+      "items": [
+        "NORMAL",
+        "PIPELINED"
+      ]
+    },
+    {
+      "name": "ADDR_LOOP_NUM",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "CASCADE_HEIGHT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COLUMN_REG",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "MATRIX_EN",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

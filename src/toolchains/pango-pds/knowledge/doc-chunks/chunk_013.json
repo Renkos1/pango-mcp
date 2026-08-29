@@ -1,0 +1,6 @@
+{
+  "id": "chunk_013",
+  "source": "cdt-tcl-commands.md",
+  "title": "Read device info",
+  "text": "## Read device info\n- `cfg_read_device_property -mode 0 -device_index <n>` → prints `The ID value is: 0x........`\n  (the IDCODE). Use to identify each device and its index. `-mode 0` = IDCODE."
+}

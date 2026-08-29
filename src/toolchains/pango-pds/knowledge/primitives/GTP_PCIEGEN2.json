@@ -1,0 +1,1115 @@
+{
+  "name": "GTP_PCIEGEN2",
+  "category": "pcie",
+  "params": [
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PIN_MUX_INT_FORCE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PIN_MUX_INT_DISABLE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DIAG_CTRL_BUS_B2",
+      "type": "string/int",
+      "default": "\"NORMAL\""
+    },
+    {
+      "name": "DYN_DEBUG_SEL_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DEBUG_INFO_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "BAR_RESIZABLE",
+      "type": "integer",
+      "default": "21"
+    },
+    {
+      "name": "NUM_OF_RBARS",
+      "type": "integer",
+      "default": "3"
+    },
+    {
+      "name": "BAR_INDEX_0",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "BAR_INDEX_1",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "BAR_INDEX_2",
+      "type": "integer",
+      "default": "4"
+    },
+    {
+      "name": "TPH_DISABLE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "MSIX_CAP_DISABLE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "MSI_CAP_DISABLE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "MSI_PVM_DISABLE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "BAR_MASK_WRITABLE",
+      "type": "integer",
+      "default": "32"
+    },
+    {
+      "name": "APP_DEV_NUM",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "APP_BUS_NUM",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "RAM_MUX_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ATOMIC_DISABLE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "CORE_RST_N",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TRAINING_RST_N",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PHY_RST_N",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "SMLH_LINK_UP",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RDLH_LINK_UP",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "SMLH_LTSSM_STATE",
+      "dir": "output",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "AXIS_MASTER_TVALID",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "AXIS_MASTER_TDATA",
+      "dir": "output",
+      "width": 128,
+      "range": "[127:0]"
+    },
+    {
+      "name": "AXIS_MASTER_TKEEP",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "AXIS_MASTER_TLAST",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "AXIS_MASTER_TUSER",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "RADM_GRANT_TLP_TYPE",
+      "dir": "output",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "AXIS_SLAVE0_TREADY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "AXIS_SLAVE1_TREADY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "AXIS_SLAVE2_TREADY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PM_XTLH_BLOCK_TLP",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "LBC_DBI_ACK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "LBC_DBI_DOUT",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "SEDO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "SEDO_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_INT_DISABLE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "INTA_GRT_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "INTB_GRT_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "INTC_GRT_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "INTD_GRT_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "VEN_MSI_GRANT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_MSI_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_MSIX_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_MSIX_FUNC_MASK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RADM_PM_TURNOFF",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RADM_MSG_UNLOCK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PM_STATUS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PM_DSTATE",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "AUX_PM_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PM_PME_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PM_LINKST_IN_L0S",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PM_LINKST_IN_L1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PM_LINKST_IN_L2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PM_LINKST_L2_EXIT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "WAKE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RADM_PM_PME",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RADM_PM_TO_ACK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PM_MASTER_STATE",
+      "dir": "output",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "PM_SLAVE_STATE",
+      "dir": "output",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "CFG_SEND_COR_ERR_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_SEND_NF_ERR_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_SEND_F_ERR_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_SYS_ERR_RC",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_AER_RC_ERR_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RADM_CPL_TIMEOUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RADM_TIMEOUT_CPL_TC",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "RADM_TIMEOUT_CPL_TAG",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "RADM_TIMEOUT_CPL_ATTR",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "RADM_TIMEOUT_CPL_LEN",
+      "dir": "output",
+      "width": 11,
+      "range": "[10:0]"
+    },
+    {
+      "name": "CFG_MAX_RD_REQ_SIZE",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "CFG_BUS_MASTER_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_MAX_PAYLOAD_SIZE",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "CFG_RCB",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_MEM_SPACE_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_PM_NO_SOFT_RST",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_CRS_SW_VIS_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_NO_SNOOP_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_RELAX_ORDER_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_TPH_REQ_EN",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "CFG_PF_TPH_ST_MODE",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "CFG_PBUS_NUM",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "CFG_PBUS_DEV_NUM",
+      "dir": "output",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "RBAR_CTRL_UPDATE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_ATOMIC_REQ_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_ATOMIC_EGRESS_BLOCK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_EXT_TAG_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RADM_IDLE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RADM_Q_NOT_EMPTY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RADM_QOVERFLOW",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_LINK_AUTO_BW_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_BW_MGT_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_PME_MUX",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DEBUG_INFO_MUX",
+      "dir": "output",
+      "width": 133,
+      "range": "[132:0]"
+    },
+    {
+      "name": "CFG_IDO_REQ_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_IDO_CPL_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "XADM_PH_CDTS",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "XADM_PD_CDTS",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "XADM_NPH_CDTS",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "XADM_NPD_CDTS",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "XADM_CPLH_CDTS",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "XADM_CPLD_CDTS",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "MAC_PHY_POWERDOWN",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "MAC_PHY_TXDATA",
+      "dir": "output",
+      "width": 128,
+      "range": "[127:0]"
+    },
+    {
+      "name": "MAC_PHY_TXDATAK",
+      "dir": "output",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "MAC_PHY_TXDETECTRX_LOOPBACK",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "MAC_PHY_TXELECIDLE_L",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "MAC_PHY_TXELECIDLE_H",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "MAC_PHY_TXCOMPLIANCE",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "MAC_PHY_RXPOLARITY",
+      "dir": "output",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "MAC_PHY_RATE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "MAC_PHY_TXDEEMPH",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "MAC_PHY_TXMARGIN",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "MAC_PHY_TXSWING",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CFG_HW_AUTO_SP_DIS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_DATAQ_ADDRA",
+      "dir": "output",
+      "width": 10,
+      "range": "[9:0]"
+    },
+    {
+      "name": "P_DATAQ_ADDRB",
+      "dir": "output",
+      "width": 10,
+      "range": "[9:0]"
+    },
+    {
+      "name": "P_DATAQ_DATAIN",
+      "dir": "output",
+      "width": 66,
+      "range": "[65:0]"
+    },
+    {
+      "name": "P_DATAQ_ENA",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_DATAQ_ENB",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_DATAQ_WEA",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "XDLH_RETRYRAM_ADDR",
+      "dir": "output",
+      "width": 11,
+      "range": "[10:0]"
+    },
+    {
+      "name": "XDLH_RETRYRAM_DATA",
+      "dir": "output",
+      "width": 68,
+      "range": "[67:0]"
+    },
+    {
+      "name": "XDLH_RETRYRAM_WE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "XDLH_RETRYRAM_EN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_HDRQ_ADDRA",
+      "dir": "output",
+      "width": 9,
+      "range": "[8:0]"
+    },
+    {
+      "name": "P_HDRQ_ADDRB",
+      "dir": "output",
+      "width": 9,
+      "range": "[8:0]"
+    },
+    {
+      "name": "P_HDRQ_DATAIN",
+      "dir": "output",
+      "width": 138,
+      "range": "[137:0]"
+    },
+    {
+      "name": "P_HDRQ_ENA",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_HDRQ_ENB",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_HDRQ_WEA",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "MEM_CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PCLK_DIV2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "BUTTON_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "POWER_UP_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PERST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_INIT_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DEVICE_TYPE",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "RX_LANE_FLIP_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TX_LANE_FLIP_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_LTSSM_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_REQ_RETRY_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "AXIS_MASTER_TREADY",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TRGT1_RADM_PKT_HALT",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "AXIS_SLAVE0_TVALID",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "AXIS_SLAVE0_TDATA",
+      "dir": "input",
+      "width": 128,
+      "range": "[127:0]"
+    },
+    {
+      "name": "AXIS_SLAVE0_TLAST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "AXIS_SLAVE0_TUSER",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "AXIS_SLAVE1_TVALID",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "AXIS_SLAVE1_TDATA",
+      "dir": "input",
+      "width": 128,
+      "range": "[127:0]"
+    },
+    {
+      "name": "AXIS_SLAVE1_TLAST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "AXIS_SLAVE1_TUSER",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "AXIS_SLAVE2_TVALID",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "AXIS_SLAVE2_TDATA",
+      "dir": "input",
+      "width": 128,
+      "range": "[127:0]"
+    },
+    {
+      "name": "AXIS_SLAVE2_TLAST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "AXIS_SLAVE2_TUSER",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DBI_ADDR",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DBI_DIN",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "DBI_CS",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DBI_CS2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DBI_WR",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "APP_DBI_RO_WR_DISABLE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SEDI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SEDI_ACK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SYS_INT",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "VEN_MSI_REQ",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "VEN_MSI_TC",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "VEN_MSI_VECTOR",
+      "dir": "input",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "CFG_MSI_PENDING",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "MSIX_ADDR",
+      "dir": "input",
+      "width": 64,
+      "range": "[63:0]"
+    },
+    {
+      "name": "MSIX_DATA",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "OUTBAND_PWRUP_CMD",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_REQ_ENTR_L1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_READY_ENTR_L23",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_REQ_EXIT_L1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_XFER_PENDING",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APPS_PM_XMT_TURNOFF",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_UNLOCK_MSG",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APPS_PM_XMT_PME",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_CLK_PM_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SYS_AUX_PWR_DET",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_HDR_VALID",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_HDR_LOG",
+      "dir": "input",
+      "width": 128,
+      "range": "[127:0]"
+    },
+    {
+      "name": "APP_ERR_BUS",
+      "dir": "input",
+      "width": 13,
+      "range": "[12:0]"
+    },
+    {
+      "name": "APP_ERR_ADVISORY",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DIAG_CTRL_BUS",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "DYN_DEBUG_INFO_SEL",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "APP_RAS_DES_SD_HOLD_LTSSM",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APP_RAS_DES_TBA_CTRL",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "PHY_MAC_RXELECIDLE",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PHY_MAC_PHYSTATUS",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PHY_MAC_RXDATA",
+      "dir": "input",
+      "width": 128,
+      "range": "[127:0]"
+    },
+    {
+      "name": "PHY_MAC_RXDATAK",
+      "dir": "input",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "PHY_MAC_RXVALID",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "PHY_MAC_RXSTATUS",
+      "dir": "input",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "P_DATAQ_DATAOUT",
+      "dir": "input",
+      "width": 66,
+      "range": "[65:0]"
+    },
+    {
+      "name": "RETRYRAM_XDLH_DATA",
+      "dir": "input",
+      "width": 68,
+      "range": "[67:0]"
+    },
+    {
+      "name": "P_HDRQ_DATAOUT",
+      "dir": "input",
+      "width": 138,
+      "range": "[137:0]"
+    },
+    {
+      "name": "RAM_TEST_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RAM_TEST_ADDRH",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RETRY_TEST_DATA_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RAM_TEST_MODE_N",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_PCIEGEN2\n#(\n    .GRS_EN(\"TRUE\"),\n    .PIN_MUX_INT_FORCE_EN(\"FALSE\"),\n    .PIN_MUX_INT_DISABLE(\"FALSE\"),\n    .DIAG_CTRL_BUS_B2(\"NORMAL\"),\n    .DYN_DEBUG_SEL_EN(\"FALSE\"),\n    .DEBUG_INFO_SEL(0),\n    .BAR_RESIZABLE(21),\n    .NUM_OF_RBARS(3),\n    .BAR_INDEX_0(0),\n    .BAR_INDEX_1(2),\n    .BAR_INDEX_2(4),\n    .TPH_DISABLE(\"FALSE\"),\n    .MSIX_CAP_DISABLE(\"FALSE\"),\n    .MSI_CAP_DISABLE(\"FALSE\"),\n    .MSI_PVM_DISABLE(\"FALSE\"),\n    .BAR_MASK_WRITABLE(32),\n    .APP_DEV_NUM(0),\n    .APP_BUS_NUM(0),\n    .RAM_MUX_EN(\"FALSE\"),\n    .ATOMIC_DISABLE(\"FALSE\")\n) u_gtp_pciegen2 (\n    .CORE_RST_N(CORE_RST_N),\n    .TRAINING_RST_N(TRAINING_RST_N),\n    .PHY_RST_N(PHY_RST_N),\n    .SMLH_LINK_UP(SMLH_LINK_UP),\n    .RDLH_LINK_UP(RDLH_LINK_UP),\n    .SMLH_LTSSM_STATE(SMLH_LTSSM_STATE),\n    .AXIS_MASTER_TVALID(AXIS_MASTER_TVALID),\n    .AXIS_MASTER_TDATA(AXIS_MASTER_TDATA),\n    .AXIS_MASTER_TKEEP(AXIS_MASTER_TKEEP),\n    .AXIS_MASTER_TLAST(AXIS_MASTER_TLAST),\n    .AXIS_MASTER_TUSER(AXIS_MASTER_TUSER),\n    .RADM_GRANT_TLP_TYPE(RADM_GRANT_TLP_TYPE),\n    .AXIS_SLAVE0_TREADY(AXIS_SLAVE0_TREADY),\n    .AXIS_SLAVE1_TREADY(AXIS_SLAVE1_TREADY),\n    .AXIS_SLAVE2_TREADY(AXIS_SLAVE2_TREADY),\n    .PM_XTLH_BLOCK_TLP(PM_XTLH_BLOCK_TLP),\n    .LBC_DBI_ACK(LBC_DBI_ACK),\n    .LBC_DBI_DOUT(LBC_DBI_DOUT),\n    .SEDO(SEDO),\n    .SEDO_EN(SEDO_EN),\n    .CFG_INT_DISABLE(CFG_INT_DISABLE),\n    .INTA_GRT_MUX(INTA_GRT_MUX),\n    .INTB_GRT_MUX(INTB_GRT_MUX),\n    .INTC_GRT_MUX(INTC_GRT_MUX),\n    .INTD_GRT_MUX(INTD_GRT_MUX),\n    .VEN_MSI_GRANT(VEN_MSI_GRANT),\n    .CFG_MSI_EN(CFG_MSI_EN),\n    .CFG_MSIX_EN(CFG_MSIX_EN),\n    .CFG_MSIX_FUNC_MASK(CFG_MSIX_FUNC_MASK),\n    .RADM_PM_TURNOFF(RADM_PM_TURNOFF),\n    .RADM_MSG_UNLOCK(RADM_MSG_UNLOCK),\n    .PM_STATUS(PM_STATUS),\n    .PM_DSTATE(PM_DSTATE),\n    .AUX_PM_EN(AUX_PM_EN),\n    .PM_PME_EN(PM_PME_EN),\n    .PM_LINKST_IN_L0S(PM_LINKST_IN_L0S),\n    .PM_LINKST_IN_L1(PM_LINKST_IN_L1),\n    .PM_LINKST_IN_L2(PM_LINKST_IN_L2),\n    .PM_LINKST_L2_EXIT(PM_LINKST_L2_EXIT),\n    .WAKE(WAKE),\n    .RADM_PM_PME(RADM_PM_PME),\n    .RADM_PM_TO_ACK(RADM_PM_TO_ACK),\n    .PM_MASTER_STATE(PM_MASTER_STATE),\n    .PM_SLAVE_STATE(PM_SLAVE_STATE),\n    .CFG_SEND_COR_ERR_MUX(CFG_SEND_COR_ERR_MUX),\n    .CFG_SEND_NF_ERR_MUX(CFG_SEND_NF_ERR_MUX),\n    .CFG_SEND_F_ERR_MUX(CFG_SEND_F_ERR_MUX),\n    .CFG_SYS_ERR_RC(CFG_SYS_ERR_RC),\n    .CFG_AER_RC_ERR_MUX(CFG_AER_RC_ERR_MUX),\n    .RADM_CPL_TIMEOUT(RADM_CPL_TIMEOUT),\n    .RADM_TIMEOUT_CPL_TC(RADM_TIMEOUT_CPL_TC),\n    .RADM_TIMEOUT_CPL_TAG(RADM_TIMEOUT_CPL_TAG),\n    .RADM_TIMEOUT_CPL_ATTR(RADM_TIMEOUT_CPL_ATTR),\n    .RADM_TIMEOUT_CPL_LEN(RADM_TIMEOUT_CPL_LEN),\n    .CFG_MAX_RD_REQ_SIZE(CFG_MAX_RD_REQ_SIZE),\n    .CFG_BUS_MASTER_EN(CFG_BUS_MASTER_EN),\n    .CFG_MAX_PAYLOAD_SIZE(CFG_MAX_PAYLOAD_SIZE),\n    .CFG_RCB(CFG_RCB),\n    .CFG_MEM_SPACE_EN(CFG_MEM_SPACE_EN),\n    .CFG_PM_NO_SOFT_RST(CFG_PM_NO_SOFT_RST),\n    .CFG_CRS_SW_VIS_EN(CFG_CRS_SW_VIS_EN),\n    .CFG_NO_SNOOP_EN(CFG_NO_SNOOP_EN),\n    .CFG_RELAX_ORDER_EN(CFG_RELAX_ORDER_EN),\n    .CFG_TPH_REQ_EN(CFG_TPH_REQ_EN),\n    .CFG_PF_TPH_ST_MODE(CFG_PF_TPH_ST_MODE),\n    .CFG_PBUS_NUM(CFG_PBUS_NUM),\n    .CFG_PBUS_DEV_NUM(CFG_PBUS_DEV_NUM),\n    .RBAR_CTRL_UPDATE(RBAR_CTRL_UPDATE),\n    .CFG_ATOMIC_REQ_EN(CFG_ATOMIC_REQ_EN),\n    .CFG_ATOMIC_EGRESS_BLOCK(CFG_ATOMIC_EGRESS_BLOCK),\n    .CFG_EXT_TAG_EN(CFG_EXT_TAG_EN),\n    .RADM_IDLE(RADM_IDLE),\n    .RADM_Q_NOT_EMPTY(RADM_Q_NOT_EMPTY),\n    .RADM_QOVERFLOW(RADM_QOVERFLOW),\n    .CFG_LINK_AUTO_BW_MUX(CFG_LINK_AUTO_BW_MUX),\n    .CFG_BW_MGT_MUX(CFG_BW_MGT_MUX),\n    .CFG_PME_MUX(CFG_PME_MUX),\n    .DEBUG_INFO_MUX(DEBUG_INFO_MUX),\n    .CFG_IDO_REQ_EN(CFG_IDO_REQ_EN),\n    .CFG_IDO_CPL_EN(CFG_IDO_CPL_EN),\n    .XADM_PH_CDTS(XADM_PH_CDTS),\n    .XADM_PD_CDTS(XADM_PD_CDTS),\n    .XADM_NPH_CDTS(XADM_NPH_CDTS),\n    .XADM_NPD_CDTS(XADM_NPD_CDTS),\n    .XADM_CPLH_CDTS(XADM_CPLH_CDTS),\n    .XADM_CPLD_CDTS(XADM_CPLD_CDTS),\n    .MAC_PHY_POWERDOWN(MAC_PHY_POWERDOWN),\n    .MAC_PHY_TXDATA(MAC_PHY_TXDATA),\n    .MAC_PHY_TXDATAK(MAC_PHY_TXDATAK),\n    .MAC_PHY_TXDETECTRX_LOOPBACK(MAC_PHY_TXDETECTRX_LOOPBACK),\n    .MAC_PHY_TXELECIDLE_L(MAC_PHY_TXELECIDLE_L),\n    .MAC_PHY_TXELECIDLE_H(MAC_PHY_TXELECIDLE_H),\n    .MAC_PHY_TXCOMPLIANCE(MAC_PHY_TXCOMPLIANCE),\n    .MAC_PHY_RXPOLARITY(MAC_PHY_RXPOLARITY),\n    .MAC_PHY_RATE(MAC_PHY_RATE),\n    .MAC_PHY_TXDEEMPH(MAC_PHY_TXDEEMPH),\n    .MAC_PHY_TXMARGIN(MAC_PHY_TXMARGIN),\n    .MAC_PHY_TXSWING(MAC_PHY_TXSWING),\n    .CFG_HW_AUTO_SP_DIS(CFG_HW_AUTO_SP_DIS),\n    .P_DATAQ_ADDRA(P_DATAQ_ADDRA),\n    .P_DATAQ_ADDRB(P_DATAQ_ADDRB),\n    .P_DATAQ_DATAIN(P_DATAQ_DATAIN),\n    .P_DATAQ_ENA(P_DATAQ_ENA),\n    .P_DATAQ_ENB(P_DATAQ_ENB),\n    .P_DATAQ_WEA(P_DATAQ_WEA),\n    .XDLH_RETRYRAM_ADDR(XDLH_RETRYRAM_ADDR),\n    .XDLH_RETRYRAM_DATA(XDLH_RETRYRAM_DATA),\n    .XDLH_RETRYRAM_WE(XDLH_RETRYRAM_WE),\n    .XDLH_RETRYRAM_EN(XDLH_RETRYRAM_EN),\n    .P_HDRQ_ADDRA(P_HDRQ_ADDRA),\n    .P_HDRQ_ADDRB(P_HDRQ_ADDRB),\n    .P_HDRQ_DATAIN(P_HDRQ_DATAIN),\n    .P_HDRQ_ENA(P_HDRQ_ENA),\n    .P_HDRQ_ENB(P_HDRQ_ENB),\n    .P_HDRQ_WEA(P_HDRQ_WEA),\n    .MEM_CLK(MEM_CLK),\n    .PCLK(PCLK),\n    .PCLK_DIV2(PCLK_DIV2),\n    .BUTTON_RST(BUTTON_RST),\n    .POWER_UP_RST(POWER_UP_RST),\n    .PERST(PERST),\n    .APP_INIT_RST(APP_INIT_RST),\n    .DEVICE_TYPE(DEVICE_TYPE),\n    .RX_LANE_FLIP_EN(RX_LANE_FLIP_EN),\n    .TX_LANE_FLIP_EN(TX_LANE_FLIP_EN),\n    .APP_LTSSM_EN(APP_LTSSM_EN),\n    .APP_REQ_RETRY_EN(APP_REQ_RETRY_EN),\n    .AXIS_MASTER_TREADY(AXIS_MASTER_TREADY),\n    .TRGT1_RADM_PKT_HALT(TRGT1_RADM_PKT_HALT),\n    .AXIS_SLAVE0_TVALID(AXIS_SLAVE0_TVALID),\n    .AXIS_SLAVE0_TDATA(AXIS_SLAVE0_TDATA),\n    .AXIS_SLAVE0_TLAST(AXIS_SLAVE0_TLAST),\n    .AXIS_SLAVE0_TUSER(AXIS_SLAVE0_TUSER),\n    .AXIS_SLAVE1_TVALID(AXIS_SLAVE1_TVALID),\n    .AXIS_SLAVE1_TDATA(AXIS_SLAVE1_TDATA),\n    .AXIS_SLAVE1_TLAST(AXIS_SLAVE1_TLAST),\n    .AXIS_SLAVE1_TUSER(AXIS_SLAVE1_TUSER),\n    .AXIS_SLAVE2_TVALID(AXIS_SLAVE2_TVALID),\n    .AXIS_SLAVE2_TDATA(AXIS_SLAVE2_TDATA),\n    .AXIS_SLAVE2_TLAST(AXIS_SLAVE2_TLAST),\n    .AXIS_SLAVE2_TUSER(AXIS_SLAVE2_TUSER),\n    .DBI_ADDR(DBI_ADDR),\n    .DBI_DIN(DBI_DIN),\n    .DBI_CS(DBI_CS),\n    .DBI_CS2(DBI_CS2),\n    .DBI_WR(DBI_WR),\n    .APP_DBI_RO_WR_DISABLE(APP_DBI_RO_WR_DISABLE),\n    .SEDI(SEDI),\n    .SEDI_ACK(SEDI_ACK),\n    .SYS_INT(SYS_INT),\n    .VEN_MSI_REQ(VEN_MSI_REQ),\n    .VEN_MSI_TC(VEN_MSI_TC),\n    .VEN_MSI_VECTOR(VEN_MSI_VECTOR),\n    .CFG_MSI_PENDING(CFG_MSI_PENDING),\n    .MSIX_ADDR(MSIX_ADDR),\n    .MSIX_DATA(MSIX_DATA),\n    .OUTBAND_PWRUP_CMD(OUTBAND_PWRUP_CMD),\n    .APP_REQ_ENTR_L1(APP_REQ_ENTR_L1),\n    .APP_READY_ENTR_L23(APP_READY_ENTR_L23),\n    .APP_REQ_EXIT_L1(APP_REQ_EXIT_L1),\n    .APP_XFER_PENDING(APP_XFER_PENDING),\n    .APPS_PM_XMT_TURNOFF(APPS_PM_XMT_TURNOFF),\n    .APP_UNLOCK_MSG(APP_UNLOCK_MSG),\n    .APPS_PM_XMT_PME(APPS_PM_XMT_PME),\n    .APP_CLK_PM_EN(APP_CLK_PM_EN),\n    .SYS_AUX_PWR_DET(SYS_AUX_PWR_DET),\n    .APP_HDR_VALID(APP_HDR_VALID),\n    .APP_HDR_LOG(APP_HDR_LOG),\n    .APP_ERR_BUS(APP_ERR_BUS),\n    .APP_ERR_ADVISORY(APP_ERR_ADVISORY),\n    .DIAG_CTRL_BUS(DIAG_CTRL_BUS),\n    .DYN_DEBUG_INFO_SEL(DYN_DEBUG_INFO_SEL),\n    .APP_RAS_DES_SD_HOLD_LTSSM(APP_RAS_DES_SD_HOLD_LTSSM),\n    .APP_RAS_DES_TBA_CTRL(APP_RAS_DES_TBA_CTRL),\n    .PHY_MAC_RXELECIDLE(PHY_MAC_RXELECIDLE),\n    .PHY_MAC_PHYSTATUS(PHY_MAC_PHYSTATUS),\n    .PHY_MAC_RXDATA(PHY_MAC_RXDATA),\n    .PHY_MAC_RXDATAK(PHY_MAC_RXDATAK),\n    .PHY_MAC_RXVALID(PHY_MAC_RXVALID),\n    .PHY_MAC_RXSTATUS(PHY_MAC_RXSTATUS),\n    .P_DATAQ_DATAOUT(P_DATAQ_DATAOUT),\n    .RETRYRAM_XDLH_DATA(RETRYRAM_XDLH_DATA),\n    .P_HDRQ_DATAOUT(P_HDRQ_DATAOUT),\n    .RAM_TEST_EN(RAM_TEST_EN),\n    .RAM_TEST_ADDRH(RAM_TEST_ADDRH),\n    .RETRY_TEST_DATA_EN(RETRY_TEST_DATA_EN),\n    .RAM_TEST_MODE_N(RAM_TEST_MODE_N)\n);"
+}

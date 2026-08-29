@@ -1,0 +1,20 @@
+{
+  "name": "GTP_EFUSECODE",
+  "category": "config_misc",
+  "params": [
+    {
+      "name": "SIM_EFUSE_VALUE",
+      "type": "bitvec[31:0]",
+      "default": "32'h12345678"
+    }
+  ],
+  "ports": [
+    {
+      "name": "EFUSE_CODE",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    }
+  ],
+  "instTemplate": "GTP_EFUSECODE\n#(\n    .SIM_EFUSE_VALUE(32'h12345678)\n) u_gtp_efusecode (\n    .EFUSE_CODE(EFUSE_CODE)\n);"
+}

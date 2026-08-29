@@ -1,0 +1,39 @@
+{
+  "name": "GTP_DFF_C",
+  "category": "ff_latch",
+  "params": [
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "INIT",
+      "type": "string/int",
+      "default": "1'b0"
+    }
+  ],
+  "ports": [
+    {
+      "name": "Q",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "D",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "C",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_DFF_C\n#(\n    .GRS_EN(\"TRUE\"),\n    .INIT(1'b0)\n) u_gtp_dff_c (\n    .Q(Q),\n    .D(D),\n    .CLK(CLK),\n    .C(C)\n);"
+}

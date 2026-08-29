@@ -1,0 +1,6 @@
+{
+  "id": "chunk_018",
+  "source": "cdt-tcl-commands.md",
+  "title": "program_sram.tcl (volatile SRAM load)",
+  "text": "### program_sram.tcl (volatile SRAM load)\n```tcl\ncfg_set_tcl_break -flag true\ncfg_connect -ip 127.0.0.1 -port 65420\ncfg_scan_chain\ncfg_assign_file -file C:/path/design.sbit -device_index 0\ncfg_program -device_index 0\ncfg_disconnect\ncfg_close\n```"
+}

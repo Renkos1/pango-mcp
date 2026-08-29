@@ -1,0 +1,40 @@
+{
+  "name": "GTP_RAM32X1SP",
+  "category": "mem",
+  "params": [
+    {
+      "name": "INIT",
+      "type": "bitvec[31:0]",
+      "default": "32'h00000000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ADDR",
+      "dir": "input",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "WCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "WE",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_RAM32X1SP\n#(\n    .INIT(32'h00000000)\n) u_gtp_ram32x1sp (\n    .DO(DO),\n    .DI(DI),\n    .ADDR(ADDR),\n    .WCLK(WCLK),\n    .WE(WE)\n);"
+}

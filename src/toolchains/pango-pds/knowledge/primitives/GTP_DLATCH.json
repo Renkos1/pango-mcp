@@ -1,0 +1,34 @@
+{
+  "name": "GTP_DLATCH",
+  "category": "ff_latch",
+  "params": [
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "INIT",
+      "type": "string/int",
+      "default": "1'b0"
+    }
+  ],
+  "ports": [
+    {
+      "name": "Q",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "D",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "G",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_DLATCH\n#(\n    .GRS_EN(\"TRUE\"),\n    .INIT(1'b0)\n) u_gtp_dlatch (\n    .Q(Q),\n    .D(D),\n    .G(G)\n);"
+}

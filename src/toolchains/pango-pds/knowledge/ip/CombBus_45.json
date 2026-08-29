@@ -1,0 +1,220 @@
+{
+  "slug": "CombBus_45",
+  "name": "CombBus",
+  "displayName": "CombBus",
+  "topModule": "ipm_CombBus_wrap_v1_0",
+  "version": "1.0",
+  "vendor": "Pango",
+  "category": "Module,CombBus",
+  "id": "061004",
+  "dir": "module_ip/ipm_flex_combbus/ipm_flex_combbus_eval/ipm_combbus",
+  "datasheet": "",
+  "families": [],
+  "devices": [],
+  "params": [
+    {
+      "name": "COMBBUS_PORTS",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "COMBBUS_NUM_PORTS",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH0",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH1",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH2",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH3",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH4",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH5",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH6",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH7",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH8",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH9",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH10",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH11",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH12",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH13",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH14",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH15",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH16",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH17",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH18",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH19",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH20",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH21",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH22",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH23",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH24",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH25",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH26",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH27",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH28",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH29",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH30",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_DWIDTH31",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_CWIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "COMBBUS_MODE",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "DINWIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "DINMSB",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DINLSB",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DOUTWIDTH",
+      "type": "int",
+      "default": "1"
+    }
+  ]
+}

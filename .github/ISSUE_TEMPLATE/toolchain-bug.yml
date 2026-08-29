@@ -1,0 +1,87 @@
+name: Bug report
+description: A tool returns the wrong answer, fails, or hangs
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Five things decide whether a report is reproducible here: PDS version,
+        ModelSim version, device, which JTAG path you used, and the tool's own
+        diagnostics. All five are asked below — please do not skip them.
+
+        **Security issues (gate bypass, injection) go to
+        [private reporting](https://github.com/Renkos1/pango-mcp/security/advisories/new),
+        not here.**
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The tool you called, the arguments, and what came back versus what you expected.
+      placeholder: |
+        Called fpga_pds_scan with {"maxDevices": 1}.
+        Expected an IDCODE; got ok:false with cdt_no_cable.
+    validations: { required: true }
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: diagnostics.knownIssues
+      description: Paste the array from the failing tool result. If it is empty, say so.
+      render: json
+    validations: { required: true }
+
+  - type: textarea
+    id: env
+    attributes:
+      label: fpga_env output
+      description: Ask your agent to call `fpga_env` and paste the result. This is the single most useful thing in the report.
+      render: json
+    validations: { required: true }
+
+  - type: dropdown
+    id: pds
+    attributes:
+      label: Pango PDS version
+      options:
+        - "2025.2-SP1"
+        - "2025.2"
+        - "2022.2-SP4.2"
+        - "2022.2"
+        - other (say which below)
+        - not installed / not relevant
+    validations: { required: true }
+
+  - type: input
+    id: modelsim
+    attributes:
+      label: ModelSim / Questa version
+      placeholder: "2020.4, or: not installed"
+    validations: { required: true }
+
+  - type: input
+    id: device
+    attributes:
+      label: Device, package, speedgrade
+      description: Exactly as your project declares it.
+      placeholder: "PG2L200H, FBB676, speedgrade 6 — or: no board involved"
+    validations: { required: true }
+
+  - type: dropdown
+    id: jtagpath
+    attributes:
+      label: Which JTAG path
+      description: The two paths are mutually exclusive on the cable, and they fail differently.
+      options:
+        - "PDS cdt_js (fpga_pds_scan / fpga_flash_* / fpga_cdt)"
+        - "Bare-metal FT2232 MPSSE (fpga_jtag_*)"
+        - "Both / not sure"
+        - "No JTAG involved"
+    validations: { required: true }
+
+  - type: input
+    id: platform
+    attributes:
+      label: OS and Node version
+      placeholder: "Windows 11 26200, Node 22.11.0"
+    validations: { required: true }

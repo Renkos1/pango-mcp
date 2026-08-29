@@ -1,0 +1,462 @@
+{
+  "name": "GTP_PPLL_DFT",
+  "category": "clock_pll",
+  "params": [
+    {
+      "name": "CLKIN_FREQ",
+      "type": "real",
+      "default": "50.0"
+    },
+    {
+      "name": "LOCK_MODE",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "STATIC_RATIOI",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIOM",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO0",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO1",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO2",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO3",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO4",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIOPHY",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIOF",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_DUTY0",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "STATIC_DUTY1",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "STATIC_DUTY2",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "STATIC_DUTY3",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "STATIC_DUTY4",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "STATIC_DUTYPHY",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "STATIC_DUTYF",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "STATIC_PHASE0",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASE1",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASE2",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASE3",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASE4",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASEPHY",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_PHASEF",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASE0",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASE1",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASE2",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASE3",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASE4",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASEPHY",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_CPHASEF",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "CLKOUT0_SYN_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLKOUT1_SYN_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLKOUT2_SYN_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLKOUT3_SYN_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLKOUT4_SYN_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLKOUTPHY_SYN_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "CLKOUTF_SYN_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "INTERNAL_FB",
+      "type": "string/int",
+      "default": "\"CLKOUTF\""
+    },
+    {
+      "name": "EXTERNAL_FB",
+      "type": "string/int",
+      "default": "\"DISABLE\""
+    },
+    {
+      "name": "BANDWIDTH",
+      "type": "string/int",
+      "default": "\"OPTIMIZED\""
+    },
+    {
+      "name": "PFDTOP_CLKTEST_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PFDTOP_CLKTEST_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DCTEST_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "CP_CUR_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "VCTRL_TEST_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "TEST_SO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PFDTOP_CLK_TEST",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT0N",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT1N",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT2N",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT3N",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT4",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUTPHY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUTPHYN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUTF",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUTFN",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "LOCK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "APB_RDATA",
+      "dir": "output",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "APB_READY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKIN1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKIN2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKFB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKIN_SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT0_SYN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT1_SYN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT2_SYN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT3_SYN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT4_SYN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKOUTPHY_SYN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKOUTF_SYN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PLL_PWD",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_RST_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_ADDR",
+      "dir": "input",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "APB_SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_WRITE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_WDATA",
+      "dir": "input",
+      "width": 16,
+      "range": "[15:0]"
+    },
+    {
+      "name": "TEST_MODE_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_SE_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_RST_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TEST_SI",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_PPLL_DFT\n#(\n    .CLKIN_FREQ(50.0),\n    .LOCK_MODE(1'b0),\n    .STATIC_RATIOI(1),\n    .STATIC_RATIOM(1),\n    .STATIC_RATIO0(1),\n    .STATIC_RATIO1(1),\n    .STATIC_RATIO2(1),\n    .STATIC_RATIO3(1),\n    .STATIC_RATIO4(1),\n    .STATIC_RATIOPHY(1),\n    .STATIC_RATIOF(1),\n    .STATIC_DUTY0(2),\n    .STATIC_DUTY1(2),\n    .STATIC_DUTY2(2),\n    .STATIC_DUTY3(2),\n    .STATIC_DUTY4(2),\n    .STATIC_DUTYPHY(2),\n    .STATIC_DUTYF(2),\n    .STATIC_PHASE0(0),\n    .STATIC_PHASE1(0),\n    .STATIC_PHASE2(0),\n    .STATIC_PHASE3(0),\n    .STATIC_PHASE4(0),\n    .STATIC_PHASEPHY(0),\n    .STATIC_PHASEF(0),\n    .STATIC_CPHASE0(0),\n    .STATIC_CPHASE1(0),\n    .STATIC_CPHASE2(0),\n    .STATIC_CPHASE3(0),\n    .STATIC_CPHASE4(0),\n    .STATIC_CPHASEPHY(0),\n    .STATIC_CPHASEF(0),\n    .CLKOUT0_SYN_EN(\"FALSE\"),\n    .CLKOUT1_SYN_EN(\"FALSE\"),\n    .CLKOUT2_SYN_EN(\"FALSE\"),\n    .CLKOUT3_SYN_EN(\"FALSE\"),\n    .CLKOUT4_SYN_EN(\"FALSE\"),\n    .CLKOUTPHY_SYN_EN(\"FALSE\"),\n    .CLKOUTF_SYN_EN(\"FALSE\"),\n    .INTERNAL_FB(\"CLKOUTF\"),\n    .EXTERNAL_FB(\"DISABLE\"),\n    .BANDWIDTH(\"OPTIMIZED\"),\n    .PFDTOP_CLKTEST_SEL(0),\n    .PFDTOP_CLKTEST_EN(\"FALSE\"),\n    .DCTEST_SEL(0),\n    .CP_CUR_SEL(0),\n    .VCTRL_TEST_EN(\"FALSE\")\n) u_gtp_ppll_dft (\n    .TEST_SO(TEST_SO),\n    .PFDTOP_CLK_TEST(PFDTOP_CLK_TEST),\n    .CLKOUT0(CLKOUT0),\n    .CLKOUT0N(CLKOUT0N),\n    .CLKOUT1(CLKOUT1),\n    .CLKOUT1N(CLKOUT1N),\n    .CLKOUT2(CLKOUT2),\n    .CLKOUT2N(CLKOUT2N),\n    .CLKOUT3(CLKOUT3),\n    .CLKOUT3N(CLKOUT3N),\n    .CLKOUT4(CLKOUT4),\n    .CLKOUTPHY(CLKOUTPHY),\n    .CLKOUTPHYN(CLKOUTPHYN),\n    .CLKOUTF(CLKOUTF),\n    .CLKOUTFN(CLKOUTFN),\n    .LOCK(LOCK),\n    .APB_RDATA(APB_RDATA),\n    .APB_READY(APB_READY),\n    .CLKIN1(CLKIN1),\n    .CLKIN2(CLKIN2),\n    .CLKFB(CLKFB),\n    .CLKIN_SEL(CLKIN_SEL),\n    .CLKOUT0_SYN(CLKOUT0_SYN),\n    .CLKOUT1_SYN(CLKOUT1_SYN),\n    .CLKOUT2_SYN(CLKOUT2_SYN),\n    .CLKOUT3_SYN(CLKOUT3_SYN),\n    .CLKOUT4_SYN(CLKOUT4_SYN),\n    .CLKOUTPHY_SYN(CLKOUTPHY_SYN),\n    .CLKOUTF_SYN(CLKOUTF_SYN),\n    .PLL_PWD(PLL_PWD),\n    .RST(RST),\n    .APB_CLK(APB_CLK),\n    .APB_RST_N(APB_RST_N),\n    .APB_ADDR(APB_ADDR),\n    .APB_SEL(APB_SEL),\n    .APB_EN(APB_EN),\n    .APB_WRITE(APB_WRITE),\n    .APB_WDATA(APB_WDATA),\n    .TEST_MODE_N(TEST_MODE_N),\n    .TEST_CLK(TEST_CLK),\n    .TEST_SE_N(TEST_SE_N),\n    .TEST_RST_N(TEST_RST_N),\n    .TEST_SI(TEST_SI)\n);"
+}

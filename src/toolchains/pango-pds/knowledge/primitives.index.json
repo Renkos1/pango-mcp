@@ -1,0 +1,1103 @@
+{
+  "generatedAt": "2026-06-15T12:20:00.360Z",
+  "source": "arch/vendor/pango/logos2/common/lib/gtp_lib.v",
+  "device": "Logos2",
+  "count": 153,
+  "categories": {
+    "analog": [
+      "GTP_ADC_E2",
+      "GTP_APM_E2",
+      "GTP_APM_E2_DFT",
+      "GTP_DDC_E2",
+      "GTP_DDC_E3",
+      "GTP_RES_CAL_E2",
+      "GTP_SENSOR_E2",
+      "GTP_SENSOR_E3"
+    ],
+    "io_buffer": [
+      "GTP_BUF",
+      "GTP_HPIO_VREF",
+      "GTP_INBUF",
+      "GTP_INBUFDS",
+      "GTP_INBUFDS_E1",
+      "GTP_INBUFE",
+      "GTP_INBUFEDS",
+      "GTP_INBUFEDS_E1",
+      "GTP_INBUFG",
+      "GTP_INBUFGDS",
+      "GTP_IOBUF",
+      "GTP_IOBUFCO",
+      "GTP_IOBUFCO_E1",
+      "GTP_IOBUFDS",
+      "GTP_IOBUFE",
+      "GTP_IOBUFECO",
+      "GTP_IOBUFEDS",
+      "GTP_OUTBUF",
+      "GTP_OUTBUFCO",
+      "GTP_OUTBUFCO_E1",
+      "GTP_OUTBUFDS",
+      "GTP_OUTBUFT",
+      "GTP_OUTBUFTCO",
+      "GTP_OUTBUFTCO_E1",
+      "GTP_OUTBUFTDS"
+    ],
+    "clock_pll": [
+      "GTP_CFGCLK",
+      "GTP_CLKBUFCE",
+      "GTP_CLKBUFG",
+      "GTP_CLKBUFGCE",
+      "GTP_CLKBUFGMUX",
+      "GTP_CLKBUFGMUX_E1",
+      "GTP_CLKBUFGMUX_E2",
+      "GTP_CLKBUFM",
+      "GTP_CLKBUFMCE",
+      "GTP_CLKBUFR",
+      "GTP_CLKBUFX",
+      "GTP_CLKBUFXCE",
+      "GTP_CLKPD",
+      "GTP_DLL_E2",
+      "GTP_FPLL_E1",
+      "GTP_GPLL",
+      "GTP_GPLL_E0_DFT",
+      "GTP_IOCLKBUF",
+      "GTP_IOCLKDIV_E2",
+      "GTP_IOCLKDIV_E3",
+      "GTP_OSC_E4",
+      "GTP_PPLL",
+      "GTP_PPLL_DFT"
+    ],
+    "other": [
+      "GTP_CKEBMUX_TEST_DFT",
+      "GTP_HCKMUX_TEST_DFT",
+      "GTP_IOCKMUX_TEST_DFT",
+      "GTP_IOLHR_DFT",
+      "GTP_IPAL_E2",
+      "GTP_IPAL_E5",
+      "GTP_MRCKMUX_TEST_DFT",
+      "GTP_MRPOSTMUX_TEST_DFT",
+      "GTP_PCKMUX_TEST_DFT",
+      "GTP_PLLMRMUX_TEST_DFT",
+      "GTP_PLLREFMUX_TEST_DFT",
+      "GTP_PREGMUXC_TEST_DFT",
+      "GTP_PREGMUXLR_TEST_DFT",
+      "GTP_RCKMUX_TEST_DFT",
+      "GTP_SCKMUX_TEST_DFT",
+      "GTP_USCMMUX_TEST_DFT"
+    ],
+    "serdes_ddr": [
+      "GTP_DDRS",
+      "GTP_DDRS_DFT",
+      "GTP_HSSTLP_LANE",
+      "GTP_HSSTLP_LANE_DFT",
+      "GTP_HSSTLP_PLL",
+      "GTP_HSSTLP_PLL_DFT",
+      "GTP_IDDR_E1",
+      "GTP_IDELAY_E2",
+      "GTP_IODELAY_E2",
+      "GTP_ISERDES_E2",
+      "GTP_ODDR_E1",
+      "GTP_OSERDES_E2"
+    ],
+    "ff_latch": [
+      "GTP_DFF",
+      "GTP_DFF_C",
+      "GTP_DFF_CE",
+      "GTP_DFF_E",
+      "GTP_DFF_P",
+      "GTP_DFF_PE",
+      "GTP_DFF_R",
+      "GTP_DFF_RE",
+      "GTP_DFF_S",
+      "GTP_DFF_SE",
+      "GTP_DLATCH",
+      "GTP_DLATCH_C",
+      "GTP_DLATCH_CE",
+      "GTP_DLATCH_E",
+      "GTP_DLATCH_P",
+      "GTP_DLATCH_PE"
+    ],
+    "mem": [
+      "GTP_DRM18K_E1",
+      "GTP_DRM36K_E1",
+      "GTP_FIFO18K_E1",
+      "GTP_FIFO18K_E1_DFT",
+      "GTP_FIFO36K_E1",
+      "GTP_ISERDES_FIFO",
+      "GTP_KEYRAM",
+      "GTP_OSERDES_FIFO",
+      "GTP_RAM128X1DP",
+      "GTP_RAM128X1SP",
+      "GTP_RAM256X1SP",
+      "GTP_RAM32X1DP",
+      "GTP_RAM32X1SP",
+      "GTP_RAM32X2DP",
+      "GTP_RAM32X2SP",
+      "GTP_RAM32X2X4",
+      "GTP_RAM64X1DP",
+      "GTP_RAM64X1SP",
+      "GTP_RAM64X1X4",
+      "GTP_ROM128X1",
+      "GTP_ROM256X1",
+      "GTP_ROM32X1",
+      "GTP_ROM32X2",
+      "GTP_ROM64X1"
+    ],
+    "config_misc": [
+      "GTP_EFUSECODE",
+      "GTP_GRS",
+      "GTP_INV",
+      "GTP_JTAGIF",
+      "GTP_ONE",
+      "GTP_SCANCHAIN_E1",
+      "GTP_START_E1",
+      "GTP_UDID",
+      "GTP_ZERO",
+      "GTP_ZEROHOLDDELAY",
+      "GTP_ZEROHOLDDELAY_E2"
+    ],
+    "mipi": [
+      "GTP_IOBUF_RX_MIPI",
+      "GTP_IOBUF_TX_MIPI",
+      "GTP_MIPI_DPHY_RX_E1",
+      "GTP_MIPI_DPHY_TX_E1"
+    ],
+    "lut": [
+      "GTP_LUT1",
+      "GTP_LUT2",
+      "GTP_LUT3",
+      "GTP_LUT4",
+      "GTP_LUT5",
+      "GTP_LUT6",
+      "GTP_LUT6CARRY",
+      "GTP_LUT6D",
+      "GTP_LUT7",
+      "GTP_LUT8",
+      "GTP_MUX2LUT7",
+      "GTP_MUX2LUT8"
+    ],
+    "pcie": [
+      "GTP_PCIEGEN2",
+      "GTP_PCIEGEN2_DFT"
+    ]
+  },
+  "primitives": [
+    {
+      "name": "GTP_ADC_E2",
+      "category": "analog",
+      "portCount": 19,
+      "paramCount": 25
+    },
+    {
+      "name": "GTP_APM_E2",
+      "category": "analog",
+      "portCount": 40,
+      "paramCount": 25
+    },
+    {
+      "name": "GTP_APM_E2_DFT",
+      "category": "analog",
+      "portCount": 50,
+      "paramCount": 25
+    },
+    {
+      "name": "GTP_BUF",
+      "category": "io_buffer",
+      "portCount": 2,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_CFGCLK",
+      "category": "clock_pll",
+      "portCount": 2,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_CKEBMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 3,
+      "paramCount": 12
+    },
+    {
+      "name": "GTP_CLKBUFCE",
+      "category": "clock_pll",
+      "portCount": 3,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_CLKBUFG",
+      "category": "clock_pll",
+      "portCount": 2,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_CLKBUFGCE",
+      "category": "clock_pll",
+      "portCount": 3,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_CLKBUFGMUX",
+      "category": "clock_pll",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_CLKBUFGMUX_E1",
+      "category": "clock_pll",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_CLKBUFGMUX_E2",
+      "category": "clock_pll",
+      "portCount": 6,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_CLKBUFM",
+      "category": "clock_pll",
+      "portCount": 2,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_CLKBUFMCE",
+      "category": "clock_pll",
+      "portCount": 3,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_CLKBUFR",
+      "category": "clock_pll",
+      "portCount": 2,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_CLKBUFX",
+      "category": "clock_pll",
+      "portCount": 2,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_CLKBUFXCE",
+      "category": "clock_pll",
+      "portCount": 3,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_CLKPD",
+      "category": "clock_pll",
+      "portCount": 7,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DDC_E2",
+      "category": "analog",
+      "portCount": 27,
+      "paramCount": 9
+    },
+    {
+      "name": "GTP_DDC_E3",
+      "category": "analog",
+      "portCount": 27,
+      "paramCount": 10
+    },
+    {
+      "name": "GTP_DDRS",
+      "category": "serdes_ddr",
+      "portCount": 138,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_DDRS_DFT",
+      "category": "serdes_ddr",
+      "portCount": 165,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_DFF",
+      "category": "ff_latch",
+      "portCount": 3,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DFF_C",
+      "category": "ff_latch",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DFF_CE",
+      "category": "ff_latch",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DFF_E",
+      "category": "ff_latch",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DFF_P",
+      "category": "ff_latch",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DFF_PE",
+      "category": "ff_latch",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DFF_R",
+      "category": "ff_latch",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DFF_RE",
+      "category": "ff_latch",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DFF_S",
+      "category": "ff_latch",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DFF_SE",
+      "category": "ff_latch",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DLATCH",
+      "category": "ff_latch",
+      "portCount": 3,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DLATCH_C",
+      "category": "ff_latch",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DLATCH_CE",
+      "category": "ff_latch",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DLATCH_E",
+      "category": "ff_latch",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DLATCH_P",
+      "category": "ff_latch",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DLATCH_PE",
+      "category": "ff_latch",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_DLL_E2",
+      "category": "clock_pll",
+      "portCount": 8,
+      "paramCount": 9
+    },
+    {
+      "name": "GTP_DRM18K_E1",
+      "category": "mem",
+      "portCount": 20,
+      "paramCount": 83
+    },
+    {
+      "name": "GTP_DRM36K_E1",
+      "category": "mem",
+      "portCount": 32,
+      "paramCount": 152
+    },
+    {
+      "name": "GTP_EFUSECODE",
+      "category": "config_misc",
+      "portCount": 1,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_FIFO18K_E1",
+      "category": "mem",
+      "portCount": 12,
+      "paramCount": 9
+    },
+    {
+      "name": "GTP_FIFO18K_E1_DFT",
+      "category": "mem",
+      "portCount": 12,
+      "paramCount": 9
+    },
+    {
+      "name": "GTP_FIFO36K_E1",
+      "category": "mem",
+      "portCount": 16,
+      "paramCount": 11
+    },
+    {
+      "name": "GTP_FPLL_E1",
+      "category": "clock_pll",
+      "portCount": 26,
+      "paramCount": 8
+    },
+    {
+      "name": "GTP_GPLL",
+      "category": "clock_pll",
+      "portCount": 41,
+      "paramCount": 59
+    },
+    {
+      "name": "GTP_GPLL_E0_DFT",
+      "category": "clock_pll",
+      "portCount": 48,
+      "paramCount": 61
+    },
+    {
+      "name": "GTP_GRS",
+      "category": "config_misc",
+      "portCount": 1,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_HCKMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 17,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_HPIO_VREF",
+      "category": "io_buffer",
+      "portCount": 4,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_HSSTLP_LANE",
+      "category": "serdes_ddr",
+      "portCount": 92,
+      "paramCount": 468
+    },
+    {
+      "name": "GTP_HSSTLP_LANE_DFT",
+      "category": "serdes_ddr",
+      "portCount": 111,
+      "paramCount": 468
+    },
+    {
+      "name": "GTP_HSSTLP_PLL",
+      "category": "serdes_ddr",
+      "portCount": 34,
+      "paramCount": 67
+    },
+    {
+      "name": "GTP_HSSTLP_PLL_DFT",
+      "category": "serdes_ddr",
+      "portCount": 45,
+      "paramCount": 67
+    },
+    {
+      "name": "GTP_IDDR_E1",
+      "category": "serdes_ddr",
+      "portCount": 6,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_IDELAY_E2",
+      "category": "serdes_ddr",
+      "portCount": 5,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_INBUF",
+      "category": "io_buffer",
+      "portCount": 2,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_INBUFDS",
+      "category": "io_buffer",
+      "portCount": 3,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_INBUFDS_E1",
+      "category": "io_buffer",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_INBUFE",
+      "category": "io_buffer",
+      "portCount": 3,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_INBUFEDS",
+      "category": "io_buffer",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_INBUFEDS_E1",
+      "category": "io_buffer",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_INBUFG",
+      "category": "io_buffer",
+      "portCount": 2,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_INBUFGDS",
+      "category": "io_buffer",
+      "portCount": 3,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_INV",
+      "category": "config_misc",
+      "portCount": 2,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_IOBUF",
+      "category": "io_buffer",
+      "portCount": 4,
+      "paramCount": 4
+    },
+    {
+      "name": "GTP_IOBUF_RX_MIPI",
+      "category": "mipi",
+      "portCount": 10,
+      "paramCount": 5
+    },
+    {
+      "name": "GTP_IOBUF_TX_MIPI",
+      "category": "mipi",
+      "portCount": 10,
+      "paramCount": 4
+    },
+    {
+      "name": "GTP_IOBUFCO",
+      "category": "io_buffer",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_IOBUFCO_E1",
+      "category": "io_buffer",
+      "portCount": 7,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_IOBUFDS",
+      "category": "io_buffer",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_IOBUFE",
+      "category": "io_buffer",
+      "portCount": 5,
+      "paramCount": 4
+    },
+    {
+      "name": "GTP_IOBUFECO",
+      "category": "io_buffer",
+      "portCount": 6,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_IOBUFEDS",
+      "category": "io_buffer",
+      "portCount": 6,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_IOCKMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 3,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_IOCLKBUF",
+      "category": "clock_pll",
+      "portCount": 3,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_IOCLKDIV_E2",
+      "category": "clock_pll",
+      "portCount": 4,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_IOCLKDIV_E3",
+      "category": "clock_pll",
+      "portCount": 3,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_IODELAY_E2",
+      "category": "serdes_ddr",
+      "portCount": 5,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_IOLHR_DFT",
+      "category": "other",
+      "portCount": 59,
+      "paramCount": 93
+    },
+    {
+      "name": "GTP_IPAL_E2",
+      "category": "other",
+      "portCount": 22,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_IPAL_E5",
+      "category": "other",
+      "portCount": 24,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_ISERDES_E2",
+      "category": "serdes_ddr",
+      "portCount": 17,
+      "paramCount": 14
+    },
+    {
+      "name": "GTP_ISERDES_FIFO",
+      "category": "mem",
+      "portCount": 10,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_JTAGIF",
+      "category": "config_misc",
+      "portCount": 4,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_KEYRAM",
+      "category": "mem",
+      "portCount": 1,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_LUT1",
+      "category": "lut",
+      "portCount": 2,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_LUT2",
+      "category": "lut",
+      "portCount": 3,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_LUT3",
+      "category": "lut",
+      "portCount": 4,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_LUT4",
+      "category": "lut",
+      "portCount": 5,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_LUT5",
+      "category": "lut",
+      "portCount": 6,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_LUT6",
+      "category": "lut",
+      "portCount": 7,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_LUT6CARRY",
+      "category": "lut",
+      "portCount": 9,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_LUT6D",
+      "category": "lut",
+      "portCount": 8,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_LUT7",
+      "category": "lut",
+      "portCount": 8,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_LUT8",
+      "category": "lut",
+      "portCount": 9,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_MIPI_DPHY_RX_E1",
+      "category": "mipi",
+      "portCount": 122,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_MIPI_DPHY_TX_E1",
+      "category": "mipi",
+      "portCount": 125,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_MRCKMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 6,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_MRPOSTMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 7,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_MUX2LUT7",
+      "category": "lut",
+      "portCount": 4,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_MUX2LUT8",
+      "category": "lut",
+      "portCount": 4,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_ODDR_E1",
+      "category": "serdes_ddr",
+      "portCount": 6,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_ONE",
+      "category": "config_misc",
+      "portCount": 1,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_OSC_E4",
+      "category": "clock_pll",
+      "portCount": 2,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_OSERDES_E2",
+      "category": "serdes_ddr",
+      "portCount": 20,
+      "paramCount": 31
+    },
+    {
+      "name": "GTP_OSERDES_FIFO",
+      "category": "mem",
+      "portCount": 10,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_OUTBUF",
+      "category": "io_buffer",
+      "portCount": 2,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_OUTBUFCO",
+      "category": "io_buffer",
+      "portCount": 3,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_OUTBUFCO_E1",
+      "category": "io_buffer",
+      "portCount": 4,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_OUTBUFDS",
+      "category": "io_buffer",
+      "portCount": 3,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_OUTBUFT",
+      "category": "io_buffer",
+      "portCount": 3,
+      "paramCount": 3
+    },
+    {
+      "name": "GTP_OUTBUFTCO",
+      "category": "io_buffer",
+      "portCount": 4,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_OUTBUFTCO_E1",
+      "category": "io_buffer",
+      "portCount": 6,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_OUTBUFTDS",
+      "category": "io_buffer",
+      "portCount": 4,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_PCIEGEN2",
+      "category": "pcie",
+      "portCount": 187,
+      "paramCount": 20
+    },
+    {
+      "name": "GTP_PCIEGEN2_DFT",
+      "category": "pcie",
+      "portCount": 190,
+      "paramCount": 20
+    },
+    {
+      "name": "GTP_PCKMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 4,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_PLLMRMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 6,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_PLLREFMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 10,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_PPLL",
+      "category": "clock_pll",
+      "portCount": 36,
+      "paramCount": 42
+    },
+    {
+      "name": "GTP_PPLL_DFT",
+      "category": "clock_pll",
+      "portCount": 43,
+      "paramCount": 47
+    },
+    {
+      "name": "GTP_PREGMUXC_TEST_DFT",
+      "category": "other",
+      "portCount": 42,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_PREGMUXLR_TEST_DFT",
+      "category": "other",
+      "portCount": 8,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_RAM128X1DP",
+      "category": "mem",
+      "portCount": 6,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_RAM128X1SP",
+      "category": "mem",
+      "portCount": 5,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_RAM256X1SP",
+      "category": "mem",
+      "portCount": 5,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_RAM32X1DP",
+      "category": "mem",
+      "portCount": 6,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_RAM32X1SP",
+      "category": "mem",
+      "portCount": 5,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_RAM32X2DP",
+      "category": "mem",
+      "portCount": 6,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_RAM32X2SP",
+      "category": "mem",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_RAM32X2X4",
+      "category": "mem",
+      "portCount": 14,
+      "paramCount": 4
+    },
+    {
+      "name": "GTP_RAM64X1DP",
+      "category": "mem",
+      "portCount": 6,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_RAM64X1SP",
+      "category": "mem",
+      "portCount": 5,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_RAM64X1X4",
+      "category": "mem",
+      "portCount": 14,
+      "paramCount": 4
+    },
+    {
+      "name": "GTP_RCKMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 3,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_RES_CAL_E2",
+      "category": "analog",
+      "portCount": 9,
+      "paramCount": 5
+    },
+    {
+      "name": "GTP_ROM128X1",
+      "category": "mem",
+      "portCount": 8,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_ROM256X1",
+      "category": "mem",
+      "portCount": 9,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_ROM32X1",
+      "category": "mem",
+      "portCount": 6,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_ROM32X2",
+      "category": "mem",
+      "portCount": 6,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_ROM64X1",
+      "category": "mem",
+      "portCount": 7,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_SCANCHAIN_E1",
+      "category": "config_misc",
+      "portCount": 15,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_SCKMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 3,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_SENSOR_E2",
+      "category": "analog",
+      "portCount": 27,
+      "paramCount": 11
+    },
+    {
+      "name": "GTP_SENSOR_E3",
+      "category": "analog",
+      "portCount": 28,
+      "paramCount": 11
+    },
+    {
+      "name": "GTP_START_E1",
+      "category": "config_misc",
+      "portCount": 5,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_UDID",
+      "category": "config_misc",
+      "portCount": 5,
+      "paramCount": 2
+    },
+    {
+      "name": "GTP_USCMMUX_TEST_DFT",
+      "category": "other",
+      "portCount": 4,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_ZERO",
+      "category": "config_misc",
+      "portCount": 1,
+      "paramCount": 0
+    },
+    {
+      "name": "GTP_ZEROHOLDDELAY",
+      "category": "config_misc",
+      "portCount": 2,
+      "paramCount": 1
+    },
+    {
+      "name": "GTP_ZEROHOLDDELAY_E2",
+      "category": "config_misc",
+      "portCount": 2,
+      "paramCount": 1
+    }
+  ]
+}

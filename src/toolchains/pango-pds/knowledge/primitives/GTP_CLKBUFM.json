@@ -1,0 +1,18 @@
+{
+  "name": "GTP_CLKBUFM",
+  "category": "clock_pll",
+  "params": [],
+  "ports": [
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKIN",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_CLKBUFM u_gtp_clkbufm (\n    .CLKOUT(CLKOUT),\n    .CLKIN(CLKIN)\n);"
+}

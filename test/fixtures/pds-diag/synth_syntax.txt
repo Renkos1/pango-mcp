@@ -1,0 +1,9 @@
+Start rtl-analyze.
+I: Include path: C:/work/pango-mcp/test/.actual/diag002/synth
+I: Verilog-0001: Analyzing file C:/work/pango-mcp/test/.actual/diag002/synth/rtl/top.v.
+I: Verilog-0002: [C:/work/pango-mcp/test/.actual/diag002/synth/rtl/top.v(line number: 1)] Analyzing module top (library work).
+E: Verilog-4005: [C:/work/pango-mcp/test/.actual/diag002/synth/rtl/top.v(line number: 3)] Syntax error near always.
+E: Parsing ERROR.
+I: Module "top" is set as top module
+Program Error Out.
+Action compile: Real time elapsed is 0h:0m:8s

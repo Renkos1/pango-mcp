@@ -1,0 +1,13 @@
+{
+  "name": "GTP_ONE",
+  "category": "config_misc",
+  "params": [],
+  "ports": [
+    {
+      "name": "Z",
+      "dir": "output",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_ONE u_gtp_one (\n    .Z(Z)\n);"
+}

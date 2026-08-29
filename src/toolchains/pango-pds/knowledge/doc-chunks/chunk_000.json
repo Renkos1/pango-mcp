@@ -1,0 +1,6 @@
+{
+  "id": "chunk_000",
+  "source": "SKILL.md",
+  "title": "SKILL.md",
+  "text": "---\nname: pds-flow\ndescription: Compile, scan, and flash a Pango Design Suite (PDS) FPGA design fully headlessly (no GUI) — build a bitstream from source, scan the JTAG chain, identify IDCODEs, and program FPGA SRAM or on-board SPI flash, plus scripted on-chip debug (ILA/virtual-IO). Use for any Pango/Logos FPGA build or programming task, or when reading/editing .pds project files, .fdc constraints, or cdt_cfg/cdt_ins/cdt_dbg .tcl scripts. General-purpose / device-agnostic; examples use Logos2 PG2L100H.\n---"
+}

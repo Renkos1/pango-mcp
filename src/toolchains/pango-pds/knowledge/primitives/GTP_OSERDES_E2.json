@@ -1,0 +1,266 @@
+{
+  "name": "GTP_OSERDES_E2",
+  "category": "serdes_ddr",
+  "params": [
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "OSERDES_MODE",
+      "type": "string/int",
+      "default": "\"SDR4TO1\""
+    },
+    {
+      "name": "TSERDES_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "UPD0_SHIFT_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "UPD1_SHIFT_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "INIT_SET",
+      "type": "bitvec[1:0]",
+      "default": "2'b00"
+    },
+    {
+      "name": "GRS_TYPE_DQ",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "LRS_TYPE_DQ0",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "LRS_TYPE_DQ1",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "LRS_TYPE_DQ2",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "LRS_TYPE_DQ3",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "GRS_TYPE_TQ",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "LRS_TYPE_TQ0",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "LRS_TYPE_TQ1",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "LRS_TYPE_TQ2",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "LRS_TYPE_TQ3",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "TRI_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TBYTE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "MIPI_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "OCASCADE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "HPIO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ODELAY_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TDELAY_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TSERDES_MODE",
+      "type": "string/int",
+      "default": "\"SDR4TO1\""
+    },
+    {
+      "name": "TUPD0_SHIFT_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TUPD1_SHIFT_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TINIT_SET",
+      "type": "bitvec[1:0]",
+      "default": "2'b00"
+    },
+    {
+      "name": "TERMBYTE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TERM_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TERM_OFF_SET",
+      "type": "bitvec[1:0]",
+      "default": "2'b00"
+    },
+    {
+      "name": "TERM_ON_SET",
+      "type": "bitvec[1:0]",
+      "default": "2'b00"
+    }
+  ],
+  "ports": [
+    {
+      "name": "RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TCE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCLKDIV",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SERCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "MIPI_CTRL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "UPD0_SHIFT",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "UPD1_SHIFT",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OSHIFTIN0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OSHIFTIN1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "TI",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "TBYTE_IN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OSHIFTOUT0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "OSHIFTOUT1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TQ",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TFB",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TERM_FB",
+      "dir": "output",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_OSERDES_E2\n#(\n    .GRS_EN(\"TRUE\"),\n    .OSERDES_MODE(\"SDR4TO1\"),\n    .TSERDES_EN(\"FALSE\"),\n    .UPD0_SHIFT_EN(\"FALSE\"),\n    .UPD1_SHIFT_EN(\"FALSE\"),\n    .INIT_SET(2'b00),\n    .GRS_TYPE_DQ(\"RESET\"),\n    .LRS_TYPE_DQ0(\"ASYNC_RESET\"),\n    .LRS_TYPE_DQ1(\"ASYNC_RESET\"),\n    .LRS_TYPE_DQ2(\"ASYNC_RESET\"),\n    .LRS_TYPE_DQ3(\"ASYNC_RESET\"),\n    .GRS_TYPE_TQ(\"RESET\"),\n    .LRS_TYPE_TQ0(\"ASYNC_RESET\"),\n    .LRS_TYPE_TQ1(\"ASYNC_RESET\"),\n    .LRS_TYPE_TQ2(\"ASYNC_RESET\"),\n    .LRS_TYPE_TQ3(\"ASYNC_RESET\"),\n    .TRI_EN(\"FALSE\"),\n    .TBYTE_EN(\"FALSE\"),\n    .MIPI_EN(\"FALSE\"),\n    .OCASCADE_EN(\"FALSE\"),\n    .HPIO(\"FALSE\"),\n    .ODELAY_EN(\"FALSE\"),\n    .TDELAY_EN(\"FALSE\"),\n    .TSERDES_MODE(\"SDR4TO1\"),\n    .TUPD0_SHIFT_EN(\"FALSE\"),\n    .TUPD1_SHIFT_EN(\"FALSE\"),\n    .TINIT_SET(2'b00),\n    .TERMBYTE_EN(\"FALSE\"),\n    .TERM_EN(\"FALSE\"),\n    .TERM_OFF_SET(2'b00),\n    .TERM_ON_SET(2'b00)\n) u_gtp_oserdes_e2 (\n    .RST(RST),\n    .OCE(OCE),\n    .TCE(TCE),\n    .OCLKDIV(OCLKDIV),\n    .SERCLK(SERCLK),\n    .OCLK(OCLK),\n    .MIPI_CTRL(MIPI_CTRL),\n    .UPD0_SHIFT(UPD0_SHIFT),\n    .UPD1_SHIFT(UPD1_SHIFT),\n    .OSHIFTIN0(OSHIFTIN0),\n    .OSHIFTIN1(OSHIFTIN1),\n    .DI(DI),\n    .TI(TI),\n    .TBYTE_IN(TBYTE_IN),\n    .OSHIFTOUT0(OSHIFTOUT0),\n    .OSHIFTOUT1(OSHIFTOUT1),\n    .TQ(TQ),\n    .DO(DO),\n    .TFB(TFB),\n    .TERM_FB(TERM_FB)\n);"
+}

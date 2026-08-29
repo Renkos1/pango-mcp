@@ -1,0 +1,2418 @@
+{
+  "slug": "DDR3_Interface_60",
+  "name": "Logos HMIC_S",
+  "displayName": "DDR3 Interface",
+  "topModule": "ipsxb_ddr_top_v1_5_wrapper.v.xml",
+  "version": "1.5",
+  "vendor": "Pango",
+  "category": "System,DDR,Soft",
+  "id": "022003",
+  "dir": "system_ip/ipsxb_hmic_s/ipsxb_hmic_eval/ipsxb_hmic_s",
+  "datasheet": "ip/system_ip/ipsxb_hmic_s/ipsxb_hmic_eval/ipsxb_hmic_s/UG022003_Logos_HMIC_S_IP.pdf",
+  "families": [
+    "Logos"
+  ],
+  "devices": [
+    "PGL25G",
+    "PGL50H",
+    "PGL50G",
+    "PGL100H"
+  ],
+  "params": [
+    {
+      "name": "MEM_TYPE",
+      "type": "enum",
+      "default": "DDR3",
+      "items": [
+        "DDR3"
+      ]
+    },
+    {
+      "name": "OPERATING_MODE",
+      "type": "enum",
+      "default": "Controller + PHY",
+      "items": [
+        "Controller + PHY"
+      ]
+    },
+    {
+      "name": "MEM_DQ_WIDTH",
+      "type": "enum",
+      "default": "16",
+      "items": [
+        "32",
+        "24",
+        "16",
+        "8"
+      ]
+    },
+    {
+      "name": "MEM_DM_WIDTH",
+      "type": "enum",
+      "default": "2",
+      "items": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "name": "MEM_DQS_WIDTH",
+      "type": "enum",
+      "default": "2",
+      "items": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "name": "CLKIN_FREQ",
+      "type": "float",
+      "default": "50.0"
+    },
+    {
+      "name": "Debug_Signals_En",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "DEBUG_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "CS_n_En",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "CS_n_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "DEVICE_100H",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "DDR_CHIP_DQ_WIDTH",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "DM_GROUP_EN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "DESIRED_DDR3_RATE",
+      "type": "float",
+      "default": "800"
+    },
+    {
+      "name": "DESIRED_RATE",
+      "type": "float",
+      "default": "800"
+    },
+    {
+      "name": "ACTUAL_RATE",
+      "type": "float",
+      "default": "800"
+    },
+    {
+      "name": "DFI_CLK_PERIOD",
+      "type": "int",
+      "default": "10000"
+    },
+    {
+      "name": "DDR3_DFT_MEM_PART",
+      "type": "enum",
+      "default": "MT41K256M16xx-15E",
+      "items": [
+        "MT41J128M8xx-15E",
+        "MT41J128M16xx-15E",
+        "MT41J64M16xx-15E",
+        "MT41J256M8xx-15E",
+        "MT41K256M16xx-15E"
+      ]
+    },
+    {
+      "name": "DDR_MEM_PART",
+      "type": "enum",
+      "default": "MT41K256M16xx-15E",
+      "items": [
+        "MT41J128M8xx-15E",
+        "MT41J128M16xx-15E",
+        "MT41J64M16xx-15E",
+        "MT41J256M8xx-15E",
+        "MT41K256M16xx-15E"
+      ]
+    },
+    {
+      "name": "CUSTOMIZE_MEM",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "DDR3_BASE_MEM_PART",
+      "type": "enum",
+      "default": "MT41K256M16xx-15E",
+      "items": [
+        "MT41J128M8xx-15E",
+        "MT41J128M16xx-15E",
+        "MT41J64M16xx-15E",
+        "MT41J256M8xx-15E",
+        "MT41K256M16xx-15E"
+      ]
+    },
+    {
+      "name": "CUSTOMIZE_CA",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "BANK_CA",
+      "type": "enum",
+      "default": "B3",
+      "items": [
+        "B1",
+        "B3"
+      ]
+    },
+    {
+      "name": "PAD_RESET",
+      "type": "enum",
+      "default": "W4",
+      "items": [
+        "W4"
+      ]
+    },
+    {
+      "name": "GROUP_CKE",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_CKE",
+      "type": "enum",
+      "default": "F5",
+      "items": [
+        "C1",
+        "B1",
+        "F5",
+        "G6",
+        "J7",
+        "H8",
+        "H6",
+        "G7"
+      ]
+    },
+    {
+      "name": "GROUP_CK",
+      "type": "enum",
+      "default": "G1",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_CK",
+      "type": "enum",
+      "default": "F3",
+      "items": [
+        "F3",
+        "E4",
+        "D2",
+        "D1"
+      ]
+    },
+    {
+      "name": "GROUP_CKN",
+      "type": "enum",
+      "default": "G1",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_CKN",
+      "type": "enum",
+      "default": "E4",
+      "items": [
+        "F3",
+        "E4",
+        "D2",
+        "D1"
+      ]
+    },
+    {
+      "name": "GROUP_CS",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_CS",
+      "type": "enum",
+      "default": "C1",
+      "items": [
+        "C1",
+        "B1",
+        "F5",
+        "G6",
+        "J7",
+        "H8",
+        "H6",
+        "G7"
+      ]
+    },
+    {
+      "name": "GROUP_RAS",
+      "type": "enum",
+      "default": "G6",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_RAS",
+      "type": "enum",
+      "default": "T3",
+      "items": [
+        "T3",
+        "R4",
+        "P6",
+        "P7",
+        "U4",
+        "T4",
+        "N6",
+        "N7"
+      ]
+    },
+    {
+      "name": "GROUP_CAS",
+      "type": "enum",
+      "default": "G6",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_CAS",
+      "type": "enum",
+      "default": "U4",
+      "items": [
+        "T3",
+        "R4",
+        "P6",
+        "P7",
+        "U4",
+        "T4",
+        "N6",
+        "N7"
+      ]
+    },
+    {
+      "name": "GROUP_WE",
+      "type": "enum",
+      "default": "G1",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_WE",
+      "type": "enum",
+      "default": "D1",
+      "items": [
+        "F3",
+        "E4",
+        "D2",
+        "D1"
+      ]
+    },
+    {
+      "name": "GROUP_ODT",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_ODT",
+      "type": "enum",
+      "default": "B1",
+      "items": [
+        "C1",
+        "B1",
+        "F5",
+        "G6",
+        "J7",
+        "H8",
+        "H6",
+        "G7"
+      ]
+    },
+    {
+      "name": "GROUP_BA0",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_BA0",
+      "type": "enum",
+      "default": "G6",
+      "items": [
+        "C1",
+        "B1",
+        "F5",
+        "G6",
+        "J7",
+        "H8",
+        "H6",
+        "G7"
+      ]
+    },
+    {
+      "name": "GROUP_BA1",
+      "type": "enum",
+      "default": "G8",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_BA1",
+      "type": "enum",
+      "default": "V5",
+      "items": [
+        "P5",
+        "P4",
+        "V5",
+        "V3",
+        "T6",
+        "T5",
+        "W4",
+        "Y3",
+        "R7",
+        "P8"
+      ]
+    },
+    {
+      "name": "GROUP_BA2",
+      "type": "enum",
+      "default": "G1",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_BA2",
+      "type": "enum",
+      "default": "D2",
+      "items": [
+        "F3",
+        "E4",
+        "D2",
+        "D1"
+      ]
+    },
+    {
+      "name": "GROUP_A0",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A0",
+      "type": "enum",
+      "default": "J7",
+      "items": [
+        "C1",
+        "B1",
+        "F5",
+        "G6",
+        "J7",
+        "H8",
+        "H6",
+        "G7"
+      ]
+    },
+    {
+      "name": "GROUP_A1",
+      "type": "enum",
+      "default": "G6",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A1",
+      "type": "enum",
+      "default": "N7",
+      "items": [
+        "T3",
+        "R4",
+        "P6",
+        "P7",
+        "U4",
+        "T4",
+        "N6",
+        "N7"
+      ]
+    },
+    {
+      "name": "GROUP_A2",
+      "type": "enum",
+      "default": "G6",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A2",
+      "type": "enum",
+      "default": "R4",
+      "items": [
+        "T3",
+        "R4",
+        "P6",
+        "P7",
+        "U4",
+        "T4",
+        "N6",
+        "N7"
+      ]
+    },
+    {
+      "name": "GROUP_A3",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A3",
+      "type": "enum",
+      "default": "G7",
+      "items": [
+        "C1",
+        "B1",
+        "F5",
+        "G6",
+        "J7",
+        "H8",
+        "H6",
+        "G7"
+      ]
+    },
+    {
+      "name": "GROUP_A4",
+      "type": "enum",
+      "default": "G8",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A4",
+      "type": "enum",
+      "default": "T6",
+      "items": [
+        "P5",
+        "P4",
+        "V5",
+        "V3",
+        "T6",
+        "T5",
+        "W4",
+        "Y3",
+        "R7",
+        "P8"
+      ]
+    },
+    {
+      "name": "GROUP_A5",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A5",
+      "type": "enum",
+      "default": "H8",
+      "items": [
+        "C1",
+        "B1",
+        "F5",
+        "G6",
+        "J7",
+        "H8",
+        "H6",
+        "G7"
+      ]
+    },
+    {
+      "name": "GROUP_A6",
+      "type": "enum",
+      "default": "G6",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A6",
+      "type": "enum",
+      "default": "P6",
+      "items": [
+        "T3",
+        "R4",
+        "P6",
+        "P7",
+        "U4",
+        "T4",
+        "N6",
+        "N7"
+      ]
+    },
+    {
+      "name": "GROUP_A7",
+      "type": "enum",
+      "default": "G8",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A7",
+      "type": "enum",
+      "default": "V3",
+      "items": [
+        "P5",
+        "P4",
+        "V5",
+        "V3",
+        "T6",
+        "T5",
+        "W4",
+        "Y3",
+        "R7",
+        "P8"
+      ]
+    },
+    {
+      "name": "GROUP_A8",
+      "type": "enum",
+      "default": "G6",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A8",
+      "type": "enum",
+      "default": "P7",
+      "items": [
+        "T3",
+        "R4",
+        "P6",
+        "P7",
+        "U4",
+        "T4",
+        "N6",
+        "N7"
+      ]
+    },
+    {
+      "name": "GROUP_A9",
+      "type": "enum",
+      "default": "G6",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A9",
+      "type": "enum",
+      "default": "N6",
+      "items": [
+        "T3",
+        "R4",
+        "P6",
+        "P7",
+        "U4",
+        "T4",
+        "N6",
+        "N7"
+      ]
+    },
+    {
+      "name": "GROUP_A10",
+      "type": "enum",
+      "default": "G8",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A10",
+      "type": "enum",
+      "default": "P5",
+      "items": [
+        "P5",
+        "P4",
+        "V5",
+        "V3",
+        "T6",
+        "T5",
+        "W4",
+        "Y3",
+        "R7",
+        "P8"
+      ]
+    },
+    {
+      "name": "GROUP_A11",
+      "type": "enum",
+      "default": "G8",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A11",
+      "type": "enum",
+      "default": "P4",
+      "items": [
+        "P5",
+        "P4",
+        "V5",
+        "V3",
+        "T6",
+        "T5",
+        "W4",
+        "Y3",
+        "R7",
+        "P8"
+      ]
+    },
+    {
+      "name": "GROUP_A12",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A12",
+      "type": "enum",
+      "default": "H6",
+      "items": [
+        "C1",
+        "B1",
+        "F5",
+        "G6",
+        "J7",
+        "H8",
+        "H6",
+        "G7"
+      ]
+    },
+    {
+      "name": "GROUP_A13",
+      "type": "enum",
+      "default": "G8",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A13",
+      "type": "enum",
+      "default": "Y3",
+      "items": [
+        "P5",
+        "P4",
+        "V5",
+        "V3",
+        "T6",
+        "T5",
+        "W4",
+        "Y3",
+        "R7",
+        "P8"
+      ]
+    },
+    {
+      "name": "GROUP_A14",
+      "type": "enum",
+      "default": "G6",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A14",
+      "type": "enum",
+      "default": "T4",
+      "items": [
+        "T3",
+        "R4",
+        "P6",
+        "P7",
+        "U4",
+        "T4",
+        "N6",
+        "N7"
+      ]
+    },
+    {
+      "name": "GROUP_A15",
+      "type": "enum",
+      "default": "G2",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "PAD_A15",
+      "type": "enum",
+      "default": "P8",
+      "items": [
+        "P5",
+        "P4",
+        "V5",
+        "V3",
+        "T6",
+        "T5",
+        "W4",
+        "Y3",
+        "R7",
+        "P8"
+      ]
+    },
+    {
+      "name": "BANK_DQG_0",
+      "type": "enum",
+      "default": "B3",
+      "items": [
+        "B1",
+        "B3"
+      ]
+    },
+    {
+      "name": "BANK_DQG_1",
+      "type": "enum",
+      "default": "B3",
+      "items": [
+        "B1",
+        "B3"
+      ]
+    },
+    {
+      "name": "BANK_DQG_2",
+      "type": "enum",
+      "default": "B3",
+      "items": [
+        "B1",
+        "B3"
+      ]
+    },
+    {
+      "name": "BANK_DQG_3",
+      "type": "enum",
+      "default": "B3",
+      "items": [
+        "B1",
+        "B3"
+      ]
+    },
+    {
+      "name": "GROUP_DQG_0",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "GROUP_DQG_1",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "GROUP_DQG_2",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "GROUP_DQG_3",
+      "type": "enum",
+      "default": "G0",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "name": "GROUP_DQG_0_NUM",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "GROUP_DQG_1_NUM",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "GROUP_DQG_2_NUM",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "GROUP_DQG_3_NUM",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "REGION_NUM",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "CA_GROUP0",
+      "type": "enum",
+      "default": "G9",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9"
+      ]
+    },
+    {
+      "name": "CA_GROUP1",
+      "type": "enum",
+      "default": "G9",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9"
+      ]
+    },
+    {
+      "name": "CA_GROUP2",
+      "type": "enum",
+      "default": "G9",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9"
+      ]
+    },
+    {
+      "name": "CA_GROUP3",
+      "type": "enum",
+      "default": "G9",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9"
+      ]
+    },
+    {
+      "name": "CA_GROUP4",
+      "type": "enum",
+      "default": "G9",
+      "items": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9"
+      ]
+    },
+    {
+      "name": "CA_GROUP0_REG",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP1_REG",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP2_REG",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP3_REG",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP4_REG",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A0",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "CA_GROUP_A1",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A2",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A3",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A4",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A5",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A6",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A7",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A8",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A9",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A10",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A11",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A12",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A13",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A14",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_A15",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_CKE",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_CK",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_CS",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_RAS",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_CAS",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_WE",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_ODT",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_BA0",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_BA1",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "CA_GROUP_BA2",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "PAD_DQ0",
+      "type": "string",
+      "default": "M1"
+    },
+    {
+      "name": "PAD_DQ1",
+      "type": "string",
+      "default": "P2"
+    },
+    {
+      "name": "PAD_DQ2",
+      "type": "string",
+      "default": "M2"
+    },
+    {
+      "name": "PAD_DQ3",
+      "type": "string",
+      "default": "R1"
+    },
+    {
+      "name": "PAD_DQS0",
+      "type": "string",
+      "default": "N3"
+    },
+    {
+      "name": "PAD_DQSN0",
+      "type": "string",
+      "default": "N1"
+    },
+    {
+      "name": "PAD_DQ4",
+      "type": "string",
+      "default": "L1"
+    },
+    {
+      "name": "PAD_DQ5",
+      "type": "string",
+      "default": "R3"
+    },
+    {
+      "name": "PAD_DQ6",
+      "type": "string",
+      "default": "L3"
+    },
+    {
+      "name": "PAD_DQ7",
+      "type": "string",
+      "default": "N4"
+    },
+    {
+      "name": "PAD_DM0",
+      "type": "string",
+      "default": "P1"
+    },
+    {
+      "name": "PAD_DQ8",
+      "type": "string",
+      "default": "U3"
+    },
+    {
+      "name": "PAD_DQ9",
+      "type": "string",
+      "default": "U1"
+    },
+    {
+      "name": "PAD_DQ10",
+      "type": "string",
+      "default": "Y2"
+    },
+    {
+      "name": "PAD_DQ11",
+      "type": "string",
+      "default": "M7"
+    },
+    {
+      "name": "PAD_DQS1",
+      "type": "string",
+      "default": "V2"
+    },
+    {
+      "name": "PAD_DQSN1",
+      "type": "string",
+      "default": "V1"
+    },
+    {
+      "name": "PAD_DQ12",
+      "type": "string",
+      "default": "W3"
+    },
+    {
+      "name": "PAD_DQ13",
+      "type": "string",
+      "default": "T1"
+    },
+    {
+      "name": "PAD_DQ14",
+      "type": "string",
+      "default": "W1"
+    },
+    {
+      "name": "PAD_DQ15",
+      "type": "string",
+      "default": "T2"
+    },
+    {
+      "name": "PAD_DM1",
+      "type": "string",
+      "default": "Y1"
+    },
+    {
+      "name": "PAD_DQ16",
+      "type": "string",
+      "default": "K1"
+    },
+    {
+      "name": "PAD_DQ17",
+      "type": "string",
+      "default": "M3"
+    },
+    {
+      "name": "PAD_DQ18",
+      "type": "string",
+      "default": "K2"
+    },
+    {
+      "name": "PAD_DQ19",
+      "type": "string",
+      "default": "M5"
+    },
+    {
+      "name": "PAD_DQS2",
+      "type": "string",
+      "default": "M6"
+    },
+    {
+      "name": "PAD_DQSN2",
+      "type": "string",
+      "default": "L6"
+    },
+    {
+      "name": "PAD_DQ20",
+      "type": "string",
+      "default": "K4"
+    },
+    {
+      "name": "PAD_DQ21",
+      "type": "string",
+      "default": "K6"
+    },
+    {
+      "name": "PAD_DQ22",
+      "type": "string",
+      "default": "K3"
+    },
+    {
+      "name": "PAD_DQ23",
+      "type": "string",
+      "default": "K5"
+    },
+    {
+      "name": "PAD_DM2",
+      "type": "string",
+      "default": "M4"
+    },
+    {
+      "name": "PAD_DQ24",
+      "type": "string",
+      "default": "G3"
+    },
+    {
+      "name": "PAD_DQ25",
+      "type": "string",
+      "default": "H5"
+    },
+    {
+      "name": "PAD_DQ26",
+      "type": "string",
+      "default": "G1"
+    },
+    {
+      "name": "PAD_DQS3",
+      "type": "string",
+      "default": "E3"
+    },
+    {
+      "name": "PAD_DQSN3",
+      "type": "string",
+      "default": "E1"
+    },
+    {
+      "name": "PAD_DQ27",
+      "type": "string",
+      "default": "K8"
+    },
+    {
+      "name": "PAD_DQ28",
+      "type": "string",
+      "default": "F2"
+    },
+    {
+      "name": "PAD_DQ29",
+      "type": "string",
+      "default": "J6"
+    },
+    {
+      "name": "PAD_DQ30",
+      "type": "string",
+      "default": "F1"
+    },
+    {
+      "name": "PAD_DQ31",
+      "type": "string",
+      "default": "J4"
+    },
+    {
+      "name": "PAD_DM3",
+      "type": "string",
+      "default": "K7"
+    },
+    {
+      "name": "CA_GROUP_NUM",
+      "type": "int",
+      "default": "3"
+    },
+    {
+      "name": "CKE_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "CK_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "CS_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "RAS_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "CAS_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "WE_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "ODT_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "BA0_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "BA1_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "BA2_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A0_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A1_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A2_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A3_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A4_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A5_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A6_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A7_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A8_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A9_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A10_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A11_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A12_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A13_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A14_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "A15_GROUP_NUM",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "name": "DQ0_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "DQ1_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "DQ2_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "DQ3_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "BA2_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "CS_N_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "A12_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "A13_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "A14_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "A15_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "DDR3_AL",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "DDR3_CL",
+      "type": "int",
+      "default": "6"
+    },
+    {
+      "name": "DDR3_CWL",
+      "type": "int",
+      "default": "5"
+    },
+    {
+      "name": "GUI_DDR3_TRFC",
+      "type": "float",
+      "default": "160.0"
+    },
+    {
+      "name": "GUI_DDR3_TRAS",
+      "type": "float",
+      "default": "37.5"
+    },
+    {
+      "name": "GUI_DDR3_TRP",
+      "type": "float",
+      "default": "13.5"
+    },
+    {
+      "name": "GUI_DDR3_TRCD",
+      "type": "float",
+      "default": "13.5"
+    },
+    {
+      "name": "GUI_DDR3_TWR",
+      "type": "float",
+      "default": "15.0"
+    },
+    {
+      "name": "GUI_DDR3_TREFI",
+      "type": "float",
+      "default": "7.8"
+    },
+    {
+      "name": "GUI_DDR3_TRTP",
+      "type": "float",
+      "default": "7.5"
+    },
+    {
+      "name": "GUI_DDR3_TWTR",
+      "type": "float",
+      "default": "7.5"
+    },
+    {
+      "name": "GUI_DDR3_AL",
+      "type": "enum",
+      "default": "CL-2",
+      "items": [
+        "0",
+        "CL-2"
+      ]
+    },
+    {
+      "name": "GUI_DDR3_CWL_800",
+      "type": "enum",
+      "default": "5",
+      "items": [
+        "5"
+      ]
+    },
+    {
+      "name": "GUI_DDR3_CL_800",
+      "type": "enum",
+      "default": "6",
+      "items": [
+        "5",
+        "6"
+      ]
+    },
+    {
+      "name": "DDR3_INIT_WR",
+      "type": "int",
+      "default": "6"
+    },
+    {
+      "name": "tREFI",
+      "type": "int",
+      "default": "7800"
+    },
+    {
+      "name": "tRFC_MIN",
+      "type": "float",
+      "default": "110000"
+    },
+    {
+      "name": "DDR3_WR",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "DDR3_CL_VALUE",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "PHY_TMRD",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "PHY_TMOD",
+      "type": "int",
+      "default": "24"
+    },
+    {
+      "name": "PHY_TXPR",
+      "type": "int",
+      "default": "200"
+    },
+    {
+      "name": "PHY_TRP",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "PHY_TRFC",
+      "type": "int",
+      "default": "208"
+    },
+    {
+      "name": "PHY_TRCD",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_TRFC",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_TREFI",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_T_FAW",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_T_RAS",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_T_XP",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_T_RC",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_T_RRD",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_T_RP",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_T_RCD",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_T_RTP",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_T_WR",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "DDRC_T_WTR",
+      "type": "int",
+      "default": "0"
+    },
+    {
+      "name": "MEM_COLUMN_WIDTH",
+      "type": "enum",
+      "default": "10",
+      "items": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "MEM_BANK_WIDTH",
+      "type": "enum",
+      "default": "3",
+      "items": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "DDR3_MEM_ROW_WIDTH",
+      "type": "enum",
+      "default": "15",
+      "items": [
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "DDR3_MEM_COLUMN_WIDTH",
+      "type": "enum",
+      "default": "10",
+      "items": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "DDR3_MEM_BANK_WIDTH",
+      "type": "enum",
+      "default": "3",
+      "items": [
+        "3"
+      ]
+    },
+    {
+      "name": "MEM_ROW_WIDTH",
+      "type": "enum",
+      "default": "15",
+      "items": [
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "MEM_ADDR_WIDTH",
+      "type": "enum",
+      "default": "15",
+      "items": [
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "name": "CTRL_ADDR_WIDTH",
+      "type": "enum",
+      "default": "28",
+      "items": [
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29"
+      ]
+    },
+    {
+      "name": "DDR3_OUTPUT_DRIVER",
+      "type": "enum",
+      "default": "00",
+      "items": [
+        "00",
+        "01"
+      ]
+    },
+    {
+      "name": "DDR3_ODT_VALUE",
+      "type": "enum",
+      "default": "001",
+      "items": [
+        "001",
+        "010",
+        "011"
+      ]
+    },
+    {
+      "name": "USER_PINS_CON_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "USER_FDC_PATH",
+      "type": "string",
+      "default": "Please select a fdc file"
+    },
+    {
+      "name": "STATIC_RATIOI",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIOF",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "STATIC_RATIO0",
+      "type": "int",
+      "default": "2"
+    }
+  ]
+}

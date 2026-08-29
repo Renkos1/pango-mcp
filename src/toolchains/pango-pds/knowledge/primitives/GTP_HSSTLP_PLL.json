@@ -1,0 +1,519 @@
+{
+  "name": "GTP_HSSTLP_PLL",
+  "category": "serdes_ddr",
+  "params": [
+    {
+      "name": "TX_SYNCK_PD",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_PLL_REG_REFCLK_TERM_IMP_CTRL",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_PLL_REG_BG_TRIM",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "PMA_PLL_REG_IBUP_A1",
+      "type": "integer",
+      "default": "262143"
+    },
+    {
+      "name": "PMA_PLL_REG_IBUP_A2",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_PLL_REG_IBUP_PD",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_PLL_REG_V2I_BIAS_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_V2I_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_PLL_REG_V2I_TB_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_PLL_REG_V2I_RCALTEST_PD",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_RES_CAL_TEST",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_RES_CAL_DIV",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_RES_CAL_CLK_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_PFDDELAY_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PFDDELAYSEL",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_VCTRL_SET",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_PLL_REG_READY_OR_LOCK",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_CP",
+      "type": "integer",
+      "default": "31"
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_REFDIV",
+      "type": "integer",
+      "default": "16"
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKDET_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_READY",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_READY_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_FBDIV",
+      "type": "integer",
+      "default": "36"
+    },
+    {
+      "name": "PMA_PLL_REG_LPF_RES",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "PMA_PLL_REG_JTAG_OE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_JTAG_VHYSTSEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKDET_EN_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKDET_FBCT",
+      "type": "integer",
+      "default": "7"
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKDET_ITER",
+      "type": "integer",
+      "default": "3"
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKDET_MODE",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKDET_LOCKCT",
+      "type": "integer",
+      "default": "4"
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKDET_REFCT",
+      "type": "integer",
+      "default": "7"
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKDET_RESET_N",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKDET_RESET_N_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKED",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKED_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_LOCKED_STICKY_CLEAR",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_UNLOCKED",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_UNLOCKDET_ITER",
+      "type": "integer",
+      "default": "2"
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_UNLOCKED_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_PLL_UNLOCKED_STICKY_CLEAR",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_I_CTRL_MAX",
+      "type": "integer",
+      "default": "63"
+    },
+    {
+      "name": "PMA_PLL_REG_REFCLK_TEST_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_I_CTRL_MIN",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_DONE_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_DONE_VAL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_I_CODE",
+      "type": "integer",
+      "default": "46"
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_I_CODE_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_I_CODE_PMA",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_I_CODE_VAL",
+      "type": "integer",
+      "default": "46"
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_INT_R_SMALL_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_INT_R_SMALL_VAL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_ITER_VALID_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_RESET_N_OW",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_RST_N_VAL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_RESCAL_WAIT_SEL",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "PMA_PLL_REFCLK2LANE_PD_L",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REFCLK2LANE_PD_R",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_LOCKDET_REPEAT",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_NOFBCLK_STICKY_CLEAR",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_NOREFCLK_STICKY_CLEAR",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_TEST_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PMA_PLL_REG_TEST_V_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_TEST_SIG_HALF_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PMA_PLL_REG_REFCLK_PAD_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "PARM_PLL_POWERUP",
+      "type": "string/int",
+      "default": "\"OFF\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "P_CFG_READY_PLL",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_RDATA_PLL",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "P_CFG_INT_PLL",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_RESCAL_I_CODE_O",
+      "dir": "output",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "P_REFCK2CORE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_PLL_READY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PLL_CLK0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PLL_CLK90",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PLL_CLK180",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PLL_CLK270",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "SYNC_PLL",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RATE_CHANGE_PLL",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PLL_PD_O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PLL_RST_O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PMA_PLL_READY_O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PLL_REFCLK_LANE_L",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_RST_PLL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_CLK_PLL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_PSEL_PLL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_ENABLE_PLL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_WRITE_PLL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_CFG_ADDR_PLL",
+      "dir": "input",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "P_CFG_WDATA_PLL",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "P_RESCAL_RST_I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_RESCAL_I_CODE_I",
+      "dir": "input",
+      "width": 6,
+      "range": "[5:0]"
+    },
+    {
+      "name": "P_PLL_LOCKDET_RST_I",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PLL_REF_CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PLL_RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_PLLPOWERDOWN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_LANE_SYNC",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "P_RATE_CHANGE_TCLK_ON",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "REFCLK_CML_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "REFCLK_CML_P",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TXPCLK_PLL_SELECTED",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_HSSTLP_PLL\n#(\n    .TX_SYNCK_PD(0),\n    .PMA_PLL_REG_REFCLK_TERM_IMP_CTRL(\"TRUE\"),\n    .PMA_PLL_REG_BG_TRIM(2),\n    .PMA_PLL_REG_IBUP_A1(262143),\n    .PMA_PLL_REG_IBUP_A2(0),\n    .PMA_PLL_REG_IBUP_PD(0),\n    .PMA_PLL_REG_V2I_BIAS_SEL(\"FALSE\"),\n    .PMA_PLL_REG_V2I_EN(\"TRUE\"),\n    .PMA_PLL_REG_V2I_TB_SEL(0),\n    .PMA_PLL_REG_V2I_RCALTEST_PD(\"FALSE\"),\n    .PMA_PLL_REG_RES_CAL_TEST(0),\n    .PMA_RES_CAL_DIV(0),\n    .PMA_RES_CAL_CLK_SEL(\"FALSE\"),\n    .PMA_PLL_REG_PLL_PFDDELAY_EN(\"TRUE\"),\n    .PMA_PLL_REG_PFDDELAYSEL(1),\n    .PMA_PLL_REG_PLL_VCTRL_SET(0),\n    .PMA_PLL_REG_READY_OR_LOCK(\"FALSE\"),\n    .PMA_PLL_REG_PLL_CP(31),\n    .PMA_PLL_REG_PLL_REFDIV(16),\n    .PMA_PLL_REG_PLL_LOCKDET_EN(\"FALSE\"),\n    .PMA_PLL_REG_PLL_READY(\"FALSE\"),\n    .PMA_PLL_REG_PLL_READY_OW(\"FALSE\"),\n    .PMA_PLL_REG_PLL_FBDIV(36),\n    .PMA_PLL_REG_LPF_RES(1),\n    .PMA_PLL_REG_JTAG_OE(\"FALSE\"),\n    .PMA_PLL_REG_JTAG_VHYSTSEL(0),\n    .PMA_PLL_REG_PLL_LOCKDET_EN_OW(\"FALSE\"),\n    .PMA_PLL_REG_PLL_LOCKDET_FBCT(7),\n    .PMA_PLL_REG_PLL_LOCKDET_ITER(3),\n    .PMA_PLL_REG_PLL_LOCKDET_MODE(\"FALSE\"),\n    .PMA_PLL_REG_PLL_LOCKDET_LOCKCT(4),\n    .PMA_PLL_REG_PLL_LOCKDET_REFCT(7),\n    .PMA_PLL_REG_PLL_LOCKDET_RESET_N(\"TRUE\"),\n    .PMA_PLL_REG_PLL_LOCKDET_RESET_N_OW(\"FALSE\"),\n    .PMA_PLL_REG_PLL_LOCKED(\"FALSE\"),\n    .PMA_PLL_REG_PLL_LOCKED_OW(\"FALSE\"),\n    .PMA_PLL_REG_PLL_LOCKED_STICKY_CLEAR(\"FALSE\"),\n    .PMA_PLL_REG_PLL_UNLOCKED(\"FALSE\"),\n    .PMA_PLL_REG_PLL_UNLOCKDET_ITER(2),\n    .PMA_PLL_REG_PLL_UNLOCKED_OW(\"FALSE\"),\n    .PMA_PLL_REG_PLL_UNLOCKED_STICKY_CLEAR(\"FALSE\"),\n    .PMA_PLL_REG_I_CTRL_MAX(63),\n    .PMA_PLL_REG_REFCLK_TEST_EN(\"FALSE\"),\n    .PMA_PLL_REG_RESCAL_EN(\"FALSE\"),\n    .PMA_PLL_REG_I_CTRL_MIN(0),\n    .PMA_PLL_REG_RESCAL_DONE_OW(\"FALSE\"),\n    .PMA_PLL_REG_RESCAL_DONE_VAL(\"FALSE\"),\n    .PMA_PLL_REG_RESCAL_I_CODE(46),\n    .PMA_PLL_REG_RESCAL_I_CODE_OW(\"FALSE\"),\n    .PMA_PLL_REG_RESCAL_I_CODE_PMA(\"FALSE\"),\n    .PMA_PLL_REG_RESCAL_I_CODE_VAL(46),\n    .PMA_PLL_REG_RESCAL_INT_R_SMALL_OW(\"FALSE\"),\n    .PMA_PLL_REG_RESCAL_INT_R_SMALL_VAL(\"FALSE\"),\n    .PMA_PLL_REG_RESCAL_ITER_VALID_SEL(0),\n    .PMA_PLL_REG_RESCAL_RESET_N_OW(\"FALSE\"),\n    .PMA_PLL_REG_RESCAL_RST_N_VAL(\"FALSE\"),\n    .PMA_PLL_REG_RESCAL_WAIT_SEL(\"TRUE\"),\n    .PMA_PLL_REFCLK2LANE_PD_L(\"FALSE\"),\n    .PMA_PLL_REFCLK2LANE_PD_R(\"FALSE\"),\n    .PMA_PLL_REG_LOCKDET_REPEAT(\"FALSE\"),\n    .PMA_PLL_REG_NOFBCLK_STICKY_CLEAR(\"FALSE\"),\n    .PMA_PLL_REG_NOREFCLK_STICKY_CLEAR(\"FALSE\"),\n    .PMA_PLL_REG_TEST_SEL(0),\n    .PMA_PLL_REG_TEST_V_EN(\"FALSE\"),\n    .PMA_PLL_REG_TEST_SIG_HALF_EN(\"FALSE\"),\n    .PMA_PLL_REG_REFCLK_PAD_SEL(\"FALSE\"),\n    .PARM_PLL_POWERUP(\"OFF\")\n) u_gtp_hsstlp_pll (\n    .P_CFG_READY_PLL(P_CFG_READY_PLL),\n    .P_CFG_RDATA_PLL(P_CFG_RDATA_PLL),\n    .P_CFG_INT_PLL(P_CFG_INT_PLL),\n    .P_RESCAL_I_CODE_O(P_RESCAL_I_CODE_O),\n    .P_REFCK2CORE(P_REFCK2CORE),\n    .P_PLL_READY(P_PLL_READY),\n    .PLL_CLK0(PLL_CLK0),\n    .PLL_CLK90(PLL_CLK90),\n    .PLL_CLK180(PLL_CLK180),\n    .PLL_CLK270(PLL_CLK270),\n    .SYNC_PLL(SYNC_PLL),\n    .RATE_CHANGE_PLL(RATE_CHANGE_PLL),\n    .PLL_PD_O(PLL_PD_O),\n    .PLL_RST_O(PLL_RST_O),\n    .PMA_PLL_READY_O(PMA_PLL_READY_O),\n    .PLL_REFCLK_LANE_L(PLL_REFCLK_LANE_L),\n    .P_CFG_RST_PLL(P_CFG_RST_PLL),\n    .P_CFG_CLK_PLL(P_CFG_CLK_PLL),\n    .P_CFG_PSEL_PLL(P_CFG_PSEL_PLL),\n    .P_CFG_ENABLE_PLL(P_CFG_ENABLE_PLL),\n    .P_CFG_WRITE_PLL(P_CFG_WRITE_PLL),\n    .P_CFG_ADDR_PLL(P_CFG_ADDR_PLL),\n    .P_CFG_WDATA_PLL(P_CFG_WDATA_PLL),\n    .P_RESCAL_RST_I(P_RESCAL_RST_I),\n    .P_RESCAL_I_CODE_I(P_RESCAL_I_CODE_I),\n    .P_PLL_LOCKDET_RST_I(P_PLL_LOCKDET_RST_I),\n    .P_PLL_REF_CLK(P_PLL_REF_CLK),\n    .P_PLL_RST(P_PLL_RST),\n    .P_PLLPOWERDOWN(P_PLLPOWERDOWN),\n    .P_LANE_SYNC(P_LANE_SYNC),\n    .P_RATE_CHANGE_TCLK_ON(P_RATE_CHANGE_TCLK_ON),\n    .REFCLK_CML_N(REFCLK_CML_N),\n    .REFCLK_CML_P(REFCLK_CML_P),\n    .TXPCLK_PLL_SELECTED(TXPCLK_PLL_SELECTED)\n);"
+}

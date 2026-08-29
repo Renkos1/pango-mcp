@@ -1,0 +1,153 @@
+{
+  "name": "GTP_IPAL_E5",
+  "category": "other",
+  "params": [
+    {
+      "name": "IDCODE",
+      "type": "bitvec[31:0]",
+      "default": "32'hAAAA5555"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "string/int",
+      "default": "\"X8\""
+    },
+    {
+      "name": "NUM_COLUMN",
+      "type": "bitvec[69:0]",
+      "default": "70'b0000000_0000000_0000000_0000000_0000000_0111011_0010111_0110001_0010111_0100010"
+    }
+  ],
+  "ports": [
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "RBCRC_ERR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RBCRC_VALID",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "ECC_VALID",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "ECC_INDEX",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "SERROR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DERROR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "SEU_FRAME_ADDR",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "SEU_COLUMN_ADDR",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "SEU_REGION_ADDR",
+      "dir": "output",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "SEU_FRAME_NADDR",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "SEU_COLUMN_NADDR",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "SEU_REGION_NADDR",
+      "dir": "output",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "PRCFG_OVER",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "PRCFG_ERR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DRCFG_OVER",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DRCFG_ERR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "IPAL_AVAIL",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RST_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CS_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RW_SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 32,
+      "range": "[31:0]"
+    },
+    {
+      "name": "PPAL_PR_N",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_IPAL_E5\n#(\n    .IDCODE(32'hAAAA5555),\n    .DATA_WIDTH(\"X8\"),\n    .NUM_COLUMN(70'b0000000_0000000_0000000_0000000_0000000_0111011_0010111_0110001_0010111_0100010)\n) u_gtp_ipal_e5 (\n    .DO(DO),\n    .RBCRC_ERR(RBCRC_ERR),\n    .RBCRC_VALID(RBCRC_VALID),\n    .ECC_VALID(ECC_VALID),\n    .ECC_INDEX(ECC_INDEX),\n    .SERROR(SERROR),\n    .DERROR(DERROR),\n    .SEU_FRAME_ADDR(SEU_FRAME_ADDR),\n    .SEU_COLUMN_ADDR(SEU_COLUMN_ADDR),\n    .SEU_REGION_ADDR(SEU_REGION_ADDR),\n    .SEU_FRAME_NADDR(SEU_FRAME_NADDR),\n    .SEU_COLUMN_NADDR(SEU_COLUMN_NADDR),\n    .SEU_REGION_NADDR(SEU_REGION_NADDR),\n    .PRCFG_OVER(PRCFG_OVER),\n    .PRCFG_ERR(PRCFG_ERR),\n    .DRCFG_OVER(DRCFG_OVER),\n    .DRCFG_ERR(DRCFG_ERR),\n    .IPAL_AVAIL(IPAL_AVAIL),\n    .RST_N(RST_N),\n    .CLK(CLK),\n    .CS_N(CS_N),\n    .RW_SEL(RW_SEL),\n    .DI(DI),\n    .PPAL_PR_N(PPAL_PR_N)\n);"
+}

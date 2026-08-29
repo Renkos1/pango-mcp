@@ -1,0 +1,61 @@
+{
+  "slug": "System_Reset_57",
+  "name": null,
+  "displayName": "System Reset",
+  "topModule": "ipm_sr_top_wrapper_v1_0",
+  "version": "1.0",
+  "vendor": "Pango",
+  "category": "Module,Reset,System Reset",
+  "id": "061005",
+  "dir": "module_ip/ipm_flex_sr/ipm_flex_sr_eval/ipm_sr",
+  "datasheet": "ip/module_ip/ipm_flex_sr/ipm_flex_sr_eval/ipm_sr/UG061005_System_Reset_IP.pdf",
+  "families": [],
+  "devices": [],
+  "params": [
+    {
+      "name": "SYNC_STAGES",
+      "type": "int",
+      "default": "2"
+    },
+    {
+      "name": "VALID_RST_CYC",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "ACTIVE_RST_CYC",
+      "type": "int",
+      "default": "16"
+    },
+    {
+      "name": "ASYNC_CNCTR_NUM",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "SYNC_CNCTR_NUM",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "ASYNC_PERI_NUM",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "SYNC_PERI_NUM",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "ACNCTR_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "CNCTR_EN",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

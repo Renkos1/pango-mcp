@@ -1,0 +1,6 @@
+{
+  "id": "chunk_024",
+  "source": "pds-project-and-flow.md",
+  "title": ".fdc — constraints",
+  "text": "## .fdc — constraints\nFabric Design Constraints: pin LOC, IO standard/drive, clock/timing. Referenced by the project (the\n`.pds` points at `constraints/top.fdc`). Editing pins/timing happens here, not in the `.pds`."
+}

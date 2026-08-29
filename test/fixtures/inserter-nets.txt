@@ -1,0 +1,15 @@
+License checkout: fabric_inserter from <license>
+Executing : ins_list_nets
+Net name list:
+Index                                   Net Name                                Source Component
+0 :                                     clk_root                                GTP_INBUF
+1 :                                     u_left/state                            GTP_DFF
+2 :                                     u_right/state                           GTP_DFF
+3 :                                     u_left/u_inner/ready                    GTP_DFF
+4 :                                     u_left/data[0]                          GTP_DFF
+5 :                                     u_left/data[1]                          GTP_DFF
+6 :                                     u_right/data[0]                         GTP_DFF
+7 :                                     u_right/data[1]                         GTP_DFF
+8 :                                     u_legacy/count [0]                      GTP_DFF
+9 :                                     u_legacy/count [1]                      GTP_DFF
+Executing : ins_list_nets successfully.

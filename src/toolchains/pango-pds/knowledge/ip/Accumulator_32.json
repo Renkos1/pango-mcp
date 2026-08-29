@@ -1,0 +1,233 @@
+{
+  "slug": "Accumulator_32",
+  "name": "Titan3 Plus/Kosmo3 Accumulator",
+  "displayName": "Accumulator",
+  "topModule": "apm_acc",
+  "version": "1.4a",
+  "vendor": "Pango",
+  "category": "Module,Multiplier",
+  "id": "07100304",
+  "dir": "module_ip/ipmxf_flex_apm/ipmxf_flex_apm_eval/ipmxf_acc",
+  "datasheet": "ip/module_ip/ipmxf_flex_apm/ipmxf_flex_apm_eval/ipmxf_acc/UG071003_APM_IP.pdf",
+  "families": [
+    "Titan3",
+    "Kosmo3"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "DYN_ACC_INIT",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "DYN_ACC_ADDSUB_OP",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "ZSIZE",
+      "type": "int",
+      "default": "24"
+    },
+    {
+      "name": "PSIZE",
+      "type": "enum",
+      "default": "24",
+      "items": [
+        "24",
+        "48",
+        "96",
+        "144",
+        "192",
+        "240",
+        "288"
+      ]
+    },
+    {
+      "name": "Z_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "INREG_EN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "ACC_ADDSUB_OP",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ACC_INIT_VALUE",
+      "type": "string",
+      "default": "24'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_24",
+      "type": "string",
+      "default": "24'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_48",
+      "type": "string",
+      "default": "48'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_96",
+      "type": "string",
+      "default": "96'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_144",
+      "type": "string",
+      "default": "144'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_192",
+      "type": "string",
+      "default": "192'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_240",
+      "type": "string",
+      "default": "240'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_288",
+      "type": "string",
+      "default": "288'h0"
+    },
+    {
+      "name": "PPWidth_24",
+      "type": "enum",
+      "default": "24",
+      "items": [
+        "24",
+        "48"
+      ]
+    },
+    {
+      "name": "PPWidth_48",
+      "type": "enum",
+      "default": "48",
+      "items": [
+        "48",
+        "96"
+      ]
+    },
+    {
+      "name": "PPWidth_96",
+      "type": "enum",
+      "default": "96",
+      "items": [
+        "96",
+        "144"
+      ]
+    },
+    {
+      "name": "PPWidth_144",
+      "type": "enum",
+      "default": "144",
+      "items": [
+        "144",
+        "192"
+      ]
+    },
+    {
+      "name": "PPWidth_192",
+      "type": "enum",
+      "default": "192",
+      "items": [
+        "192",
+        "240"
+      ]
+    },
+    {
+      "name": "PPWidth_240",
+      "type": "enum",
+      "default": "240",
+      "items": [
+        "240",
+        "288"
+      ]
+    },
+    {
+      "name": "PIPE_STATUS",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "ASYNC",
+        "SYNC"
+      ]
+    },
+    {
+      "name": "OPTIMAL_TIMING_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ADVANCED_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ZREG_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "PREG_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM1_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM2_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM3_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM4_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM5_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "CPO_REG",
+      "type": "string",
+      "default": "5'b00000"
+    }
+  ]
+}

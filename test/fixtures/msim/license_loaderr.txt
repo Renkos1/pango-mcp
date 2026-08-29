@@ -1,0 +1,15 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -do "run -all; quit -f" work.tb
+# Start time: 12:20:00 on Jun 21,2026
+# ** Error: Invalid host.
+# Unable to checkout a license. Make sure your license file environment variable (e.g., LM_LICENSE_FILE)
+# is set correctly and then run 'lmutil lmdiag' to diagnose the problem.
+# Unable to checkout a license.  Vsim is closing.
+# ** Error: Invalid license environment. Application closing.
+# Error loading design
+Error loading design
+# End time: 12:20:01 on Jun 21,2026, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0

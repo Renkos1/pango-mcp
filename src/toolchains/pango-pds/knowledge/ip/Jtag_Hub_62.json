@@ -1,0 +1,54 @@
+{
+  "slug": "Jtag_Hub_62",
+  "name": "Jtag_Hub",
+  "displayName": "Jtag_Hub",
+  "topModule": "ips_jtag_hub_wrapper_v1_5",
+  "version": "1.5",
+  "vendor": "Pango",
+  "category": "System,Tools,Debug",
+  "id": "06200602",
+  "dir": "system_ip/ips_debug_core/ips_debug_core_eval/ips_jtag_hub",
+  "datasheet": "ip/system_ip/ips_debug_core/ips_debug_core_eval/ips_jtag_hub/UG062006_DebugCore_IP.pdf",
+  "families": [],
+  "devices": [],
+  "params": [
+    {
+      "name": "CTRL_PORT_NUM",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "UJTAG_SEL",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "UJTAG_SEL_TEXT",
+      "type": "enum",
+      "default": "Default JTAG",
+      "items": [
+        "Default JTAG",
+        "USER JTAG"
+      ]
+    },
+    {
+      "name": "PGT_DEVICE_30G",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "PGT_DEVICE",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "PGL_DEVICE",
+      "type": "bool",
+      "default": "1"
+    }
+  ]
+}

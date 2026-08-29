@@ -1,0 +1,54 @@
+{
+  "name": "GTP_IDDR_E1",
+  "category": "serdes_ddr",
+  "params": [
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "IDDR_MODE",
+      "type": "string/int",
+      "default": "\"OPPOSITE_EDGE\""
+    },
+    {
+      "name": "RS_TYPE",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "Q0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "Q1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "D",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RS",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_IDDR_E1\n#(\n    .GRS_EN(\"TRUE\"),\n    .IDDR_MODE(\"OPPOSITE_EDGE\"),\n    .RS_TYPE(\"ASYNC_RESET\")\n) u_gtp_iddr_e1 (\n    .Q0(Q0),\n    .Q1(Q1),\n    .D(D),\n    .CLK(CLK),\n    .CE(CE),\n    .RS(RS)\n);"
+}

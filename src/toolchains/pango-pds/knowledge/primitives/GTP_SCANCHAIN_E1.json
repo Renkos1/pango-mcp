@@ -1,0 +1,94 @@
+{
+  "name": "GTP_SCANCHAIN_E1",
+  "category": "config_misc",
+  "params": [
+    {
+      "name": "IDCODE",
+      "type": "bitvec[31:0]",
+      "default": "32'hAAAA5555"
+    },
+    {
+      "name": "CHAIN_NUM",
+      "type": "integer",
+      "default": "1"
+    }
+  ],
+  "ports": [
+    {
+      "name": "TDO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TCK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TDI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TMS",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CAPDR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "SHFTDR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "UPDR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "JCLK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RST",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "JRTI",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "FLG_USER",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TCK_USER",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TDI_USER",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TMS_USER",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "TDO_USER",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_SCANCHAIN_E1\n#(\n    .IDCODE(32'hAAAA5555),\n    .CHAIN_NUM(1)\n) u_gtp_scanchain_e1 (\n    .TDO(TDO),\n    .TCK(TCK),\n    .TDI(TDI),\n    .TMS(TMS),\n    .CAPDR(CAPDR),\n    .SHFTDR(SHFTDR),\n    .UPDR(UPDR),\n    .JCLK(JCLK),\n    .RST(RST),\n    .JRTI(JRTI),\n    .FLG_USER(FLG_USER),\n    .TCK_USER(TCK_USER),\n    .TDI_USER(TDI_USER),\n    .TMS_USER(TMS_USER),\n    .TDO_USER(TDO_USER)\n);"
+}

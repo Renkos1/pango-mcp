@@ -1,0 +1,115 @@
+{
+  "slug": "DRM_Based_ROM_14",
+  "name": "Compact DRM Based ROM",
+  "displayName": "DRM Based ROM",
+  "topModule": "ipmc_rom_wrapper_v1_6",
+  "version": "1.6",
+  "vendor": "Pango",
+  "category": "Module,Memory,DRM",
+  "id": "03100204",
+  "dir": "module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_rom",
+  "datasheet": "ip/module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_rom/UG031002_DRM_Based_RAM_IP.pdf",
+  "families": [
+    "Compact"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "GTP_DRM_TYPE",
+      "type": "enum",
+      "default": "E1",
+      "items": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "name": "OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "ADDR_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "INIT_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "INIT_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    },
+    {
+      "name": "RST_VAL",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "CLK_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "CAS_ENABLE",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "CAS_STATUS",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RST_VAL_EN",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

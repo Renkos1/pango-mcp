@@ -1,0 +1,118 @@
+{
+  "slug": "Simple_Multiplier_42",
+  "name": "Titan Simple Multiplier",
+  "displayName": "Simple Multiplier",
+  "topModule": "apm_mult",
+  "version": "1.4",
+  "vendor": null,
+  "category": "Module,Multiplier",
+  "id": "01100303",
+  "dir": "module_ip/ipm_flex_apm/ipm_flex_apm_eval/ipm_mult",
+  "datasheet": "ip/module_ip/ipm_flex_apm/ipm_flex_apm_eval/ipm_mult/Titan_Simple_Multiplier_IP_UserGuide_v1.4.pdf",
+  "families": [
+    "Titan"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "ASIZE",
+      "type": "int",
+      "default": "9"
+    },
+    {
+      "name": "BSIZE",
+      "type": "int",
+      "default": "9"
+    },
+    {
+      "name": "A_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "B_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "SYNC_RST",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "INREG_EN",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN_1",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN_2",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN_3",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "OUTREG_EN",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "PIPE_STATUS",
+      "type": "enum",
+      "default": "3",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "SYNC_RST_BOOL",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

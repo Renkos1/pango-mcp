@@ -1,0 +1,3 @@
+W: Timing-4086: Port 'async_in' is not constrained, it is treated as combinational input.
+W: Timing-4087: Port 'status_out' is not constrained, it is treated as combinational output.
+C: Constraint inventory contains create_clock and create_generated_clock entries.

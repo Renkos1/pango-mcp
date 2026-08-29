@@ -1,0 +1,38 @@
+{
+  "name": "GTP_HPIO_VREF",
+  "category": "io_buffer",
+  "params": [
+    {
+      "name": "BANK_LOC",
+      "type": "string/int",
+      "default": "\"BANKR5\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "CODE_VREF0",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "CODE_VREF1",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "CODE_VREF2",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "CODE_VREF3",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    }
+  ],
+  "instTemplate": "GTP_HPIO_VREF\n#(\n    .BANK_LOC(\"BANKR5\")\n) u_gtp_hpio_vref (\n    .CODE_VREF0(CODE_VREF0),\n    .CODE_VREF1(CODE_VREF1),\n    .CODE_VREF2(CODE_VREF2),\n    .CODE_VREF3(CODE_VREF3)\n);"
+}

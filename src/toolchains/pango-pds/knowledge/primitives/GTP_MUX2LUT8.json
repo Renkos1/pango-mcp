@@ -1,0 +1,28 @@
+{
+  "name": "GTP_MUX2LUT8",
+  "category": "lut",
+  "params": [],
+  "ports": [
+    {
+      "name": "Z",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "I0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "I1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "S",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_MUX2LUT8 u_gtp_mux2lut8 (\n    .Z(Z),\n    .I0(I0),\n    .I1(I1),\n    .S(S)\n);"
+}

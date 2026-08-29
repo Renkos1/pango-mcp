@@ -1,0 +1,39 @@
+{
+  "name": "GTP_CLKBUFXCE",
+  "category": "clock_pll",
+  "params": [
+    {
+      "name": "CE_TYPE",
+      "type": "string/int",
+      "default": "\"SYNC\""
+    },
+    {
+      "name": "CE_INV",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "TRIGGER_MODE",
+      "type": "string/int",
+      "default": "\"POSEDGE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CE",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_CLKBUFXCE\n#(\n    .CE_TYPE(\"SYNC\"),\n    .CE_INV(\"FALSE\"),\n    .TRIGGER_MODE(\"POSEDGE\")\n) u_gtp_clkbufxce (\n    .CLKOUT(CLKOUT),\n    .CLKIN(CLKIN),\n    .CE(CE)\n);"
+}

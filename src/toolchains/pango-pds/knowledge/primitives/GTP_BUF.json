@@ -1,0 +1,18 @@
+{
+  "name": "GTP_BUF",
+  "category": "io_buffer",
+  "params": [],
+  "ports": [
+    {
+      "name": "Z",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "I",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_BUF u_gtp_buf (\n    .Z(Z),\n    .I(I)\n);"
+}

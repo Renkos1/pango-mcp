@@ -1,0 +1,224 @@
+{
+  "slug": "Simple_Multiplier_33",
+  "name": "Titan3 Plus/Kosmo3 Simple Multiplier",
+  "displayName": "Simple Multiplier",
+  "topModule": "apm_mult",
+  "version": "1.4a",
+  "vendor": "Pango",
+  "category": "Module,Multiplier",
+  "id": "07100303",
+  "dir": "module_ip/ipmxf_flex_apm/ipmxf_flex_apm_eval/ipmxf_mult",
+  "datasheet": "ip/module_ip/ipmxf_flex_apm/ipmxf_flex_apm_eval/ipmxf_mult/UG071003_APM_IP.pdf",
+  "families": [
+    "Titan3",
+    "Kosmo3"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "ASIZE",
+      "type": "int",
+      "default": "12"
+    },
+    {
+      "name": "BSIZE",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "A_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "B_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "INREG_EN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN_1",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN_2",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN_3",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "OUTREG_EN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPE_STATUS",
+      "type": "enum",
+      "default": "3",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "ASYNC",
+        "SYNC"
+      ]
+    },
+    {
+      "name": "OPTIMAL_TIMING_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ADVANCED_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "XYREG_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "MREG_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "PREG_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INREG_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "OUTREG_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM1_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM2_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM3_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM4_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM5_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM6_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM7_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM8_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM9_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM10_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM11_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM12_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM13_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM14_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "CPO_REG",
+      "type": "string",
+      "default": "14'b00000000000000"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ip_inst>
+  <header>
+    <instance>core</instance>
+  </header>
+  <file_list>
+    <output>
+      <file pathname="generated.log" format="log"/>
+    </output>
+    <source>
+      <file pathname="core.v"/>
+    </source>
+  </file_list>
+</ip_inst>

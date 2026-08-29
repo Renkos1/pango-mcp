@@ -1,0 +1,31 @@
+# Normalize to LF in the repo AND in the working tree.
+#
+# core.autocrlf=true checks files out as CRLF, and `npm pack` packs from the
+# WORKING TREE — so a Windows-authored release ships src/index.mjs with a
+# `#!/usr/bin/env node\r\n` shebang. On Linux/macOS execve passes the literal
+# interpreter string, so `npx pango-mcp` dies with `env: 'node\r': No such file`.
+# Windows never reproduces it (npm generates .cmd shims), so it only ever
+# surfaces as someone else's bug report.
+* text=auto eol=lf
+
+*.mjs   text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.v     text eol=lf
+*.sv    text eol=lf
+*.fdc   text eol=lf
+*.tcl   text eol=lf
+*.do    text eol=lf
+
+# PowerShell is Windows-side tooling; CRLF is the native expectation there.
+*.ps1   text eol=crlf
+
+# Never touch binary fixtures.
+*.png   binary
+*.pdf   binary
+*.bin   binary
+*.vcd   text eol=lf

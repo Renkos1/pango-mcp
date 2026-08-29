@@ -1,0 +1,121 @@
+Model Technology ModelSim SE-64 vcover 2020.4 Coverage Utility 2020.10 Oct 13 2020
+Start time: 21:55:28 on Jun 20,2026
+vcover report -details test\.probe-r01\cov\._fpga_msim\coverage.ucdb 
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /cov_tb/dut
+=== Design Unit: work.cov_dut
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         3         2    60.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /cov_tb/dut
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File C:/work/pango-mcp/test/.probe-r01/cov/cov_dut.v
+------------------------------------CASE Branch------------------------------------
+    3                                          8     Count coming in to CASE
+    4               1                          3     
+    5               1                          3     
+    6               1                          2     
+    7               1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 3 hits of 5 branches = 60.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       5         4         1    80.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /cov_tb/dut --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File C:/work/pango-mcp/test/.probe-r01/cov/cov_dut.v
+    2               1                          8     
+    4               1                          3     
+    5               1                          3     
+    6               1                          2     
+    7               1                    ***0***     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         16         8         8    50.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /cov_tb/dut --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                            y[7-6]           0           0        0.00 
+                                            y[3-2]           0           0        0.00 
+
+Total Node Count     =          8 
+Toggled Node Count   =          4 
+Untoggled Node Count =          4 
+
+Toggle Coverage      =      50.00% (8 of 16 bins)
+
+=================================================================================
+=== Instance: /cov_tb
+=== Design Unit: work.cov_tb
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      10        10         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /cov_tb --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File C:/work/pango-mcp/test/.probe-r01/cov/cov_tb.v
+    2               1                          1     
+    3               1                          1     
+    6               1                         18     
+    6               2                         17     
+    9               1                          1     
+    9               2                          9     
+    10              1                          9     
+    11              1                          9     
+    13              1                          1     
+    14              1                          1     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         86        21        65    24.41%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /cov_tb --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                           i[31-4]           0           0        0.00 
+                                              i[3]           0           1       50.00 
+                                            y[7-6]           0           0        0.00 
+                                            y[3-2]           0           0        0.00 
+
+Total Node Count     =         43 
+Toggled Node Count   =         10 
+Untoggled Node Count =         33 
+
+Toggle Coverage      =      24.41% (21 of 86 bins)
+
+
+Total Coverage By Instance (filtered view): 60.58%
+
+End time: 21:55:28 on Jun 20,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

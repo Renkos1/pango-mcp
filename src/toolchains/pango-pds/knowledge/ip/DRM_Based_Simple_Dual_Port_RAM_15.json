@@ -1,0 +1,174 @@
+{
+  "slug": "DRM_Based_Simple_Dual_Port_RAM_15",
+  "name": "Compact DRM Based Simple Dual Port RAM",
+  "displayName": "DRM Based Simple Dual Port RAM",
+  "topModule": "ipmc_sdpram_wrapper_v1_7",
+  "version": "1.7",
+  "vendor": "Pango",
+  "category": "Module,Memory,DRM",
+  "id": "03100202",
+  "dir": "module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_sdpram",
+  "datasheet": "ip/module_ip/ipmc_flex_ram/ipmc_flex_ram_eval/ipmc_sdpram/UG031002_DRM_Based_RAM_IP.pdf",
+  "families": [
+    "Compact"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "GTP_DRM_TYPE",
+      "type": "enum",
+      "default": "E1",
+      "items": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "name": "WRITE_MODE",
+      "type": "enum",
+      "default": "NORMAL_WRITE",
+      "items": [
+        "NORMAL_WRITE",
+        "TRANSPARENT_WRITE",
+        "READ_BEFORE_WRITE"
+      ]
+    },
+    {
+      "name": "WR_CLK_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "WR_BYTE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "WR_ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_CLK_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "WR_ADDR_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "WR_DATA_WIDTH",
+      "type": "int",
+      "default": "32"
+    },
+    {
+      "name": "RD_ADDR_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "RD_DATA_WIDTH",
+      "type": "int",
+      "default": "32"
+    },
+    {
+      "name": "RD_CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "INIT_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    },
+    {
+      "name": "BE_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "RD_BE_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "BYTE_SIZE",
+      "type": "enum",
+      "default": "8",
+      "items": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "name": "RST_VAL",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "INIT_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "SAMEWIDTH_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "CAS_ENABLE",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "CAS_STATUS",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RST_VAL_EN",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

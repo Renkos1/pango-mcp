@@ -1,0 +1,279 @@
+{
+  "slug": "DRM_HRM_Based_Dual_Port_RAM_27",
+  "name": "Titan3 DRM/HRM Based Dual Port RAM",
+  "displayName": "DRM/HRM Based Dual Port RAM",
+  "topModule": "ipmxf1_dpram_wrapper_v1_12",
+  "version": "1.12",
+  "vendor": "Pango",
+  "category": "Module,Memory,DRM/HRM",
+  "id": "08100201",
+  "dir": "module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_dpram",
+  "datasheet": "ip/module_ip/ipmxf1_flex_ram/ipmxf1_flex_ram_eval/ipmxf1_dpram/UG081002_DRM_HRM_Based_RAM_IP.pdf",
+  "families": [
+    "Titan3"
+  ],
+  "devices": [
+    "PG3T500",
+    "PG3T1300",
+    "PG3T1500"
+  ],
+  "params": [
+    {
+      "name": "GTP_DRM_TYPE",
+      "type": "enum",
+      "default": "E4",
+      "items": [
+        "E4",
+        "E5",
+        "E6"
+      ]
+    },
+    {
+      "name": "CAS_MODE_SEL",
+      "type": "enum",
+      "default": "AUTO",
+      "items": [
+        "AUTO",
+        "DRM18K",
+        "DRM36K",
+        "HRM288K"
+      ]
+    },
+    {
+      "name": "CAS_MODE",
+      "type": "enum",
+      "default": "18K",
+      "items": [
+        "18K",
+        "36K",
+        "288K"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "SLEEP_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "AUTO_SLEEP_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "AUTO_SLEEP_CYCLE",
+      "type": "int",
+      "default": "3"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC"
+      ]
+    },
+    {
+      "name": "SAMEWIDTH_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "WR_BYTE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "BYTE_SIZE",
+      "type": "enum",
+      "default": "8",
+      "items": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "name": "A_ADDR_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "A_DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "A_BE_WIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "A_WRITE_MODE",
+      "type": "enum",
+      "default": "NORMAL_WRITE",
+      "items": [
+        "NORMAL_WRITE",
+        "TRANSPARENT_WRITE",
+        "READ_BEFORE_WRITE"
+      ]
+    },
+    {
+      "name": "A_CLK_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "A_ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "A_OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "A_RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "A_CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "A_FAB_REG",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "B_ADDR_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "B_DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "B_BE_WIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "B_WRITE_MODE",
+      "type": "enum",
+      "default": "NORMAL_WRITE",
+      "items": [
+        "NORMAL_WRITE",
+        "TRANSPARENT_WRITE",
+        "READ_BEFORE_WRITE"
+      ]
+    },
+    {
+      "name": "B_CLK_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "B_ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "B_OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "B_RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "B_CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "B_FAB_REG",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "INIT_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    },
+    {
+      "name": "RST_VAL_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RSTA_VAL",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "RSTB_VAL",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "CASCADE_MODE",
+      "type": "enum",
+      "default": "NORMAL",
+      "items": [
+        "NORMAL",
+        "PIPELINED"
+      ]
+    },
+    {
+      "name": "ADDR_LOOP_NUM",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "A_COLUMN_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "B_COLUMN_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "CASCADE_HEIGHT",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "MATRIX_EN",
+      "type": "bool",
+      "default": "false"
+    }
+  ]
+}

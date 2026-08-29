@@ -1,0 +1,16 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -do "quit -f" work.no_such_top
+# Start time: 12:15:32 on Jun 21,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: (vopt-13130) Failed to find design unit no_such_top.
+#         Searched libraries:
+#             work
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+Error loading design
+# End time: 12:15:33 on Jun 21,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

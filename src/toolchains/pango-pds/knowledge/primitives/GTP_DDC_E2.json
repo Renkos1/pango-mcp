@@ -1,0 +1,199 @@
+{
+  "name": "GTP_DDC_E2",
+  "category": "analog",
+  "params": [
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "CLKA_GATE_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "WCLK_DELAY_SEL",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DDC_MODE",
+      "type": "string/int",
+      "default": "\"QUAD_RATE\""
+    },
+    {
+      "name": "R_EXTEND",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DELAY_SEL",
+      "type": "string/int",
+      "default": "1'b0"
+    },
+    {
+      "name": "IFIFO_GENERIC",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "RADDR_INIT",
+      "type": "bitvec[2:0]",
+      "default": "3'b000"
+    },
+    {
+      "name": "DATA_RATE",
+      "type": "bitvec[1:0]",
+      "default": "2'b00"
+    }
+  ],
+  "ports": [
+    {
+      "name": "WCLK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "WCLK_DELAY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DQSI_DELAY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DQSIB_DELAY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DGTS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "IFIFO_WADDR",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "IFIFO_RADDR",
+      "dir": "output",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "READ_VALID",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DQS_DRIFT",
+      "dir": "output",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "DRIFT_DETECT_ERR",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DQS_DRIFT_STATUS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DQS_SAMPLE",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RST_TRAINING_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKA",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DQSI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DQSIB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DELAY_STEP0",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DELAY_STEP1",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DELAY_STEP2",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DELAY_STEP3",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DELAY_STEP4",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "DQS_GATE_CTRL",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "GATE_SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK_GATE_CTRL",
+      "dir": "input",
+      "width": 2,
+      "range": "[1:0]"
+    },
+    {
+      "name": "CLKA_GATE",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_DDC_E2\n#(\n    .GRS_EN(\"TRUE\"),\n    .CLKA_GATE_EN(\"FALSE\"),\n    .WCLK_DELAY_SEL(\"FALSE\"),\n    .DDC_MODE(\"QUAD_RATE\"),\n    .R_EXTEND(\"FALSE\"),\n    .DELAY_SEL(1'b0),\n    .IFIFO_GENERIC(\"FALSE\"),\n    .RADDR_INIT(3'b000),\n    .DATA_RATE(2'b00)\n) u_gtp_ddc_e2 (\n    .WCLK(WCLK),\n    .WCLK_DELAY(WCLK_DELAY),\n    .DQSI_DELAY(DQSI_DELAY),\n    .DQSIB_DELAY(DQSIB_DELAY),\n    .DGTS(DGTS),\n    .IFIFO_WADDR(IFIFO_WADDR),\n    .IFIFO_RADDR(IFIFO_RADDR),\n    .READ_VALID(READ_VALID),\n    .DQS_DRIFT(DQS_DRIFT),\n    .DRIFT_DETECT_ERR(DRIFT_DETECT_ERR),\n    .DQS_DRIFT_STATUS(DQS_DRIFT_STATUS),\n    .DQS_SAMPLE(DQS_SAMPLE),\n    .RST(RST),\n    .RST_TRAINING_N(RST_TRAINING_N),\n    .CLKA(CLKA),\n    .CLKB(CLKB),\n    .DQSI(DQSI),\n    .DQSIB(DQSIB),\n    .DELAY_STEP0(DELAY_STEP0),\n    .DELAY_STEP1(DELAY_STEP1),\n    .DELAY_STEP2(DELAY_STEP2),\n    .DELAY_STEP3(DELAY_STEP3),\n    .DELAY_STEP4(DELAY_STEP4),\n    .DQS_GATE_CTRL(DQS_GATE_CTRL),\n    .GATE_SEL(GATE_SEL),\n    .CLK_GATE_CTRL(CLK_GATE_CTRL),\n    .CLKA_GATE(CLKA_GATE)\n);"
+}

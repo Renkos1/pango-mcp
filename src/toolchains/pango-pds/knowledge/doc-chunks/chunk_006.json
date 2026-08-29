@@ -1,0 +1,6 @@
+{
+  "id": "chunk_006",
+  "source": "SKILL.md",
+  "title": "3b) Flash on-board SPI flash (persistent)",
+  "text": "## 3b) Flash on-board SPI flash (persistent)\nProgram through the FPGA's **JTAG→SPI bridge** (`cfg_jtag_flash_*`), NOT the cable's direct-SPI path\n(`cfg_flash_*`, which often reads `0xffffff` on boards where the flash hangs off the FPGA). Needs a\ngenerated `.sfc` (not the raw `.sbit`):\n```tcl\ncfg_connect -ip 127.0.0.1 -port 65420\ncfg_scan_chain\ncfg_set_cable_property -index 0 -freq 5Mhz\ncfg_gen_sfc -sbit <design.sbit> -sfc <design.sfc> -device_name <FLASH_PART>\ncfg_jtag_flash_scan_device  -device_index 0\ncfg_jtag_flash_assign_file  -file <design.sfc> -device_index 0\ncfg_jtag_flash_erase        -device_index 0\ncfg_jtag_flash_program      -device_index 0\ncfg_jtag_flash_verify       -device_index 0     ;# must report success\ncfg_disconnect\ncfg_close\n```\n`-device_name` = the on-board flash part (e.g. Winbond `W25Q128Q`, JEDEC 0xEF4018). Persistent\n(survives power-cycle). Lower the cable freq (5 MHz) for reliable flash detect/program."
+}

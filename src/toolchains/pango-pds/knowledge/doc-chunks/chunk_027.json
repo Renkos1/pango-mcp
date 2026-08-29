@@ -1,0 +1,6 @@
+{
+  "id": "chunk_027",
+  "source": "pds-project-and-flow.md",
+  "title": "Outputs",
+  "text": "## Outputs\n- **`generate_bitstream/<top>.sbit`** — bitstream for SRAM (`cfg_program`) or JTAG (`cfg_assign_file`).\n- **`<top>.sfc`** — SPI-flash image, produced on demand by `cfg_gen_sfc -sbit ... -sfc ...`.\n- A plaintext `.sbit` must not contain a transparent-encryptor's ASCII marker in its head (self-check)."
+}

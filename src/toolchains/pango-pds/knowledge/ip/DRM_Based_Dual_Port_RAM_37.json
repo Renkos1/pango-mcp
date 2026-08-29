@@ -1,0 +1,217 @@
+{
+  "slug": "DRM_Based_Dual_Port_RAM_37",
+  "name": "Titan3 Plus/Kosmo3 DRM Based Dual Port RAM",
+  "displayName": "DRM Based Dual Port RAM",
+  "topModule": "ipmxf_dpram_wrapper_v1_4",
+  "version": "1.5",
+  "vendor": "Pango",
+  "category": "Module,Memory,DRM",
+  "id": "07100201",
+  "dir": "module_ip/ipmxf_flex_ram/ipmxf_flex_ram_eval/ipmxf_dpram",
+  "datasheet": "ip/module_ip/ipmxf_flex_ram/ipmxf_flex_ram_eval/ipmxf_dpram/UG071002_DRM_Based_RAM_IP.pdf",
+  "families": [
+    "Titan3",
+    "Kosmo3"
+  ],
+  "devices": [
+    "PG3T600P"
+  ],
+  "params": [
+    {
+      "name": "CAS_MODE_SEL",
+      "type": "enum",
+      "default": "AUTO",
+      "items": [
+        "AUTO",
+        "DRM18K",
+        "DRM36K"
+      ]
+    },
+    {
+      "name": "CAS_MODE",
+      "type": "enum",
+      "default": "18K",
+      "items": [
+        "18K",
+        "36K"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC"
+      ]
+    },
+    {
+      "name": "SAMEWIDTH_EN",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "WR_BYTE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "BYTE_SIZE",
+      "type": "enum",
+      "default": "8",
+      "items": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "name": "A_ADDR_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "A_DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "A_BE_WIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "A_WRITE_MODE",
+      "type": "enum",
+      "default": "NORMAL_WRITE",
+      "items": [
+        "NORMAL_WRITE",
+        "TRANSPARENT_WRITE",
+        "READ_BEFORE_WRITE"
+      ]
+    },
+    {
+      "name": "A_CLK_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "A_ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "A_OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "A_RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "A_CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "A_FAB_REG",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "B_ADDR_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "B_DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "B_BE_WIDTH",
+      "type": "int",
+      "default": "1"
+    },
+    {
+      "name": "B_WRITE_MODE",
+      "type": "enum",
+      "default": "NORMAL_WRITE",
+      "items": [
+        "NORMAL_WRITE",
+        "TRANSPARENT_WRITE",
+        "READ_BEFORE_WRITE"
+      ]
+    },
+    {
+      "name": "B_CLK_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "B_ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "B_OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "B_RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "B_CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "B_FAB_REG",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "INIT_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    },
+    {
+      "name": "RST_VAL_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RSTA_VAL",
+      "type": "string",
+      "default": "0"
+    },
+    {
+      "name": "RSTB_VAL",
+      "type": "string",
+      "default": "0"
+    }
+  ]
+}

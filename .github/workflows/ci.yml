@@ -1,0 +1,76 @@
+name: ci
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  unit:
+    # The tier-1 set: 33 deterministic tests, no EDA toolchain, no board.
+    # Ubuntu is in the matrix on purpose — it is the only thing that catches new
+    # Windows-only assumptions creeping into otherwise portable code, and the
+    # only place the CRLF-shebang class of bug is visible.
+    name: unit (${{ matrix.os }} · node ${{ matrix.node }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: ['20', '22']
+        include:
+          - os: ubuntu-latest
+            node: '18'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm test:unit
+
+  package:
+    # Guards the two things that only show up at pack time.
+    name: package integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: bin shebang must be LF
+        # npm packs from the working tree; a CRLF shebang makes `npx` fail on
+        # any POSIX host with `env: 'node\r': No such file or directory`.
+        run: |
+          if head -c 200 src/index.mjs | grep -q $'\r'; then
+            echo "::error file=src/index.mjs::CRLF in the bin entry — check .gitattributes"
+            exit 1
+          fi
+
+      - name: tarball must not carry local or vendor-licensed content
+        run: |
+          npm pack --dry-run --json > /tmp/pack.json
+          node -e '
+            const files = require("/tmp/pack.json")[0].files.map(f => f.path);
+            const forbidden = [
+              [/^pango-mcp\.env$/,                        "local env"],
+              [/^pango-mcp\.config\.json$/,               "local config"],
+              [/^src\/toolchains\/modelsim\/knowledge\//, "Siemens EULA corpus"],
+              [/^dist-private/,                          "private delivery artifact"],
+              [/\.(lic|pem|sbit|svf|log)$/,              "credential or build artifact"],
+            ];
+            const hits = files.flatMap(p => forbidden.filter(([re]) => re.test(p)).map(([, why]) => `${p} (${why})`));
+            if (hits.length) { console.error("forbidden in tarball:\n  " + hits.join("\n  ")); process.exit(1); }
+            for (const required of ["LICENSE", "NOTICE", "package.json", "README.md", "src/index.mjs"])
+              if (!files.includes(required)) { console.error("missing from tarball: " + required); process.exit(1); }
+            console.log(`tarball ok — ${files.length} files`);
+          '

@@ -1,0 +1,184 @@
+{
+  "name": "GTP_FPLL_E1",
+  "category": "clock_pll",
+  "params": [
+    {
+      "name": "STATIC_RATIOF",
+      "type": "integer",
+      "default": "20"
+    },
+    {
+      "name": "FRACN_DIV",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "STATIC_RATIOI",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO1",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "STATIC_RATIO2",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "BYPASS_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DAC_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "DSM_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "CLKOUT0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT1",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT1_PH90",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT1_PH180",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT1_PH270",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT2",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT3",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKOUT4",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKSSCG",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "LOCK",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "APB_RDATA",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "APB_READY",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "PLL_PD",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKOUTPD",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK4PHASEPD",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SSC_EN_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "FBDIV",
+      "dir": "input",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "FRAC",
+      "dir": "input",
+      "width": 24,
+      "range": "[23:0]"
+    },
+    {
+      "name": "APB_CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_RST_N",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_ADDR",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "APB_SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_EN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_WRITE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "APB_WDATA",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    }
+  ],
+  "instTemplate": "GTP_FPLL_E1\n#(\n    .STATIC_RATIOF(20),\n    .FRACN_DIV(0),\n    .STATIC_RATIOI(1),\n    .STATIC_RATIO1(1),\n    .STATIC_RATIO2(1),\n    .BYPASS_EN(\"FALSE\"),\n    .DAC_EN(\"FALSE\"),\n    .DSM_EN(\"FALSE\")\n) u_gtp_fpll_e1 (\n    .CLKOUT0(CLKOUT0),\n    .CLKOUT1(CLKOUT1),\n    .CLKOUT1_PH90(CLKOUT1_PH90),\n    .CLKOUT1_PH180(CLKOUT1_PH180),\n    .CLKOUT1_PH270(CLKOUT1_PH270),\n    .CLKOUT2(CLKOUT2),\n    .CLKOUT3(CLKOUT3),\n    .CLKOUT4(CLKOUT4),\n    .CLKSSCG(CLKSSCG),\n    .LOCK(LOCK),\n    .APB_RDATA(APB_RDATA),\n    .APB_READY(APB_READY),\n    .CLKIN(CLKIN),\n    .PLL_PD(PLL_PD),\n    .CLKOUTPD(CLKOUTPD),\n    .CLK4PHASEPD(CLK4PHASEPD),\n    .SSC_EN_N(SSC_EN_N),\n    .FBDIV(FBDIV),\n    .FRAC(FRAC),\n    .APB_CLK(APB_CLK),\n    .APB_RST_N(APB_RST_N),\n    .APB_ADDR(APB_ADDR),\n    .APB_SEL(APB_SEL),\n    .APB_EN(APB_EN),\n    .APB_WRITE(APB_WRITE),\n    .APB_WDATA(APB_WDATA)\n);"
+}

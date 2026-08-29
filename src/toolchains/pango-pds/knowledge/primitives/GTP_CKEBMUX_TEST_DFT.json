@@ -1,0 +1,87 @@
+{
+  "name": "GTP_CKEBMUX_TEST_DFT",
+  "category": "other",
+  "params": [
+    {
+      "name": "CP_MUX0",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX1",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX2",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX3",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX4",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX5",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX6",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX7",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX8",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX9",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX10",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    },
+    {
+      "name": "CP_MUX11",
+      "type": "bitvec[4:0]",
+      "default": "5'h00"
+    }
+  ],
+  "ports": [
+    {
+      "name": "CLKIN0",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CLKIN1",
+      "dir": "input",
+      "width": 12,
+      "range": "[11:0]"
+    },
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 12,
+      "range": "[11:0]"
+    }
+  ],
+  "instTemplate": "GTP_CKEBMUX_TEST_DFT\n#(\n    .CP_MUX0(5'h00),\n    .CP_MUX1(5'h00),\n    .CP_MUX2(5'h00),\n    .CP_MUX3(5'h00),\n    .CP_MUX4(5'h00),\n    .CP_MUX5(5'h00),\n    .CP_MUX6(5'h00),\n    .CP_MUX7(5'h00),\n    .CP_MUX8(5'h00),\n    .CP_MUX9(5'h00),\n    .CP_MUX10(5'h00),\n    .CP_MUX11(5'h00)\n) u_gtp_ckebmux_test_dft (\n    .CLKIN0(CLKIN0),\n    .CLKIN1(CLKIN1),\n    .CLKOUT(CLKOUT)\n);"
+}

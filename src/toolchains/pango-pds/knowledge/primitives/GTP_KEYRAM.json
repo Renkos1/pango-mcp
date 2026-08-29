@@ -1,0 +1,13 @@
+{
+  "name": "GTP_KEYRAM",
+  "category": "mem",
+  "params": [],
+  "ports": [
+    {
+      "name": "ERASE_KEY_N",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_KEYRAM u_gtp_keyram (\n    .ERASE_KEY_N(ERASE_KEY_N)\n);"
+}

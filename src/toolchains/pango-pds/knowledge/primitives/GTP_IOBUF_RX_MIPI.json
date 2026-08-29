@@ -1,0 +1,84 @@
+{
+  "name": "GTP_IOBUF_RX_MIPI",
+  "category": "mipi",
+  "params": [
+    {
+      "name": "HPIO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "IOSTANDARD",
+      "type": "string/int",
+      "default": "\"DEFAULT\""
+    },
+    {
+      "name": "SLEW_RATE",
+      "type": "string/int",
+      "default": "\"SLOW\""
+    },
+    {
+      "name": "DRIVE_STRENGTH",
+      "type": "string/int",
+      "default": "\"6\""
+    },
+    {
+      "name": "TERM_DIFF",
+      "type": "string/int",
+      "default": "\"ON\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "O_LP",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "OB_LP",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "O_HS",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "IO",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "IOB",
+      "dir": "inout",
+      "width": 1
+    },
+    {
+      "name": "I_LP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "IB_LP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "T",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "TB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "M",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_IOBUF_RX_MIPI\n#(\n    .HPIO(\"FALSE\"),\n    .IOSTANDARD(\"DEFAULT\"),\n    .SLEW_RATE(\"SLOW\"),\n    .DRIVE_STRENGTH(\"6\"),\n    .TERM_DIFF(\"ON\")\n) u_gtp_iobuf_rx_mipi (\n    .O_LP(O_LP),\n    .OB_LP(OB_LP),\n    .O_HS(O_HS),\n    .IO(IO),\n    .IOB(IOB),\n    .I_LP(I_LP),\n    .IB_LP(IB_LP),\n    .T(T),\n    .TB(TB),\n    .M(M)\n);"
+}

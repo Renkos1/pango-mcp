@@ -1,0 +1,136 @@
+{
+  "slug": "DRM_Based_Simple_Dual_Port_RAM_55",
+  "name": "Titan DRM Based Simple Dual Port RAM",
+  "displayName": "DRM Based Simple Dual Port RAM",
+  "topModule": "ipm_sdpram_wrapper_v1_4",
+  "version": "1.4",
+  "vendor": null,
+  "category": "Module,Memory,DRM",
+  "id": "01100202",
+  "dir": "module_ip/ipm_flex_ram/ipm_flex_ram_eval/ipm_sdpram",
+  "datasheet": "ip/module_ip/ipm_flex_ram/ipm_flex_ram_eval/ipm_sdpram/DRM_Based_Simple_Dual_Port_RAM_UserGuide_v1.6.pdf",
+  "families": [
+    "Titan"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "WR_CLK_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "WR_BYTE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "WR_ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_CLK_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "WR_ADDR_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "WR_DATA_WIDTH",
+      "type": "int",
+      "default": "32"
+    },
+    {
+      "name": "RD_ADDR_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "RD_DATA_WIDTH",
+      "type": "int",
+      "default": "32"
+    },
+    {
+      "name": "RD_CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "SYNC",
+        "ASYNC",
+        "INTERNAL_SYNC"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "INIT_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    },
+    {
+      "name": "BE_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "RD_BE_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "BYTE_SIZE",
+      "type": "enum",
+      "default": "8",
+      "items": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "name": "INIT_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "SAMEWIDTH_EN",
+      "type": "bool",
+      "default": "1"
+    }
+  ]
+}

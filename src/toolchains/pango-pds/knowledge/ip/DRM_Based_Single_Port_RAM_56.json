@@ -1,0 +1,116 @@
+{
+  "slug": "DRM_Based_Single_Port_RAM_56",
+  "name": "Titan DRM Based Single Port RAM",
+  "displayName": "DRM Based Single Port RAM",
+  "topModule": "ipm_spram_wrapper_v1_4",
+  "version": "1.4",
+  "vendor": null,
+  "category": "Module,Memory,DRM",
+  "id": "01100203",
+  "dir": "module_ip/ipm_flex_ram/ipm_flex_ram_eval/ipm_spram",
+  "datasheet": "ip/module_ip/ipm_flex_ram/ipm_flex_ram_eval/ipm_spram/DRM_Based_Single_Port_RAM_UserGuide_v1.6.pdf",
+  "families": [
+    "Titan"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "WR_BYTE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "OUTPUT_REG",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "RD_OCE_EN",
+      "type": "bool",
+      "default": "false"
+    },
+    {
+      "name": "ADDR_WIDTH",
+      "type": "int",
+      "default": "10"
+    },
+    {
+      "name": "DATA_WIDTH",
+      "type": "int",
+      "default": "18"
+    },
+    {
+      "name": "WRITE_MODE",
+      "type": "enum",
+      "default": "NORMAL_WRITE",
+      "items": [
+        "NORMAL_WRITE",
+        "TRANSPARENT_WRITE",
+        "READ_BEFORE_WRITE"
+      ]
+    },
+    {
+      "name": "CLK_OR_POL_INV",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "CLK_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ADDR_STROBE_EN",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "ASYNC",
+        "SYNC",
+        "INTERNAL_SYNC"
+      ]
+    },
+    {
+      "name": "POWER_OPT",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "INIT_FILE",
+      "type": "string",
+      "default": "NONE"
+    },
+    {
+      "name": "INIT_FORMAT",
+      "type": "enum",
+      "default": "BIN",
+      "items": [
+        "BIN",
+        "HEX"
+      ]
+    },
+    {
+      "name": "BE_WIDTH",
+      "type": "int",
+      "default": "4"
+    },
+    {
+      "name": "BYTE_SIZE",
+      "type": "enum",
+      "default": "8",
+      "items": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "name": "INIT_EN",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

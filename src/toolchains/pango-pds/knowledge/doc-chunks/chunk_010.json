@@ -1,0 +1,6 @@
+{
+  "id": "chunk_010",
+  "source": "cdt-tcl-commands.md",
+  "title": "cdt_cfg Tcl reference (Fabric Configuration)",
+  "text": "# cdt_cfg Tcl reference (Fabric Configuration)\n\n`cdt_cfg.exe -file <script.tcl>` runs a Tcl script of `cfg_*` commands against a resident\n`cdt_js.exe -port <N>` JTAG server. Below: every command used in the headless flow, plus three\ncomplete, ready-to-run scripts. (Concrete values are PG2L100H/W25Q128Q examples — swap for your part.)"
+}

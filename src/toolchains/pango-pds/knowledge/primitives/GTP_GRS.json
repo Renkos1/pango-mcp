@@ -1,0 +1,13 @@
+{
+  "name": "GTP_GRS",
+  "category": "config_misc",
+  "params": [],
+  "ports": [
+    {
+      "name": "GRS_N",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_GRS u_gtp_grs (\n    .GRS_N(GRS_N)\n);"
+}

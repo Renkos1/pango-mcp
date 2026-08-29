@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tables>
+  <table id="check_timing_summary" title="Check Timing Summary" column_number="2">
+    <row>
+      <data>no_clock</data>
+      <data>0</data>
+      <table_container><table id="no_clock_detailed_report"><row><data>There are 0 clock pins with no clock driven</data></row></table></table_container>
+    </row>
+    <row>
+      <data>no_input_delay</data>
+      <data>1</data>
+      <table_container><table id="no_input_delay_detailed_report"><row><data>There are 1 input ports with no input delay specified.</data></row></table></table_container>
+    </row>
+    <row>
+      <data>no_output_delay</data>
+      <data>1</data>
+      <table_container><table id="no_output_delay_detailed_report"><row><data>There are 1 output ports with no output delay specified.</data></row></table></table_container>
+    </row>
+  </table>
+</tables>

@@ -1,0 +1,54 @@
+{
+  "name": "GTP_ODDR_E1",
+  "category": "serdes_ddr",
+  "params": [
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "ODDR_MODE",
+      "type": "string/int",
+      "default": "\"SAME_EDGE\""
+    },
+    {
+      "name": "RS_TYPE",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "Q",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "D0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "D1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RS",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_ODDR_E1\n#(\n    .GRS_EN(\"TRUE\"),\n    .ODDR_MODE(\"SAME_EDGE\"),\n    .RS_TYPE(\"ASYNC_RESET\")\n) u_gtp_oddr_e1 (\n    .Q(Q),\n    .D0(D0),\n    .D1(D1),\n    .CLK(CLK),\n    .CE(CE),\n    .RS(RS)\n);"
+}

@@ -1,0 +1,167 @@
+{
+  "name": "GTP_ISERDES_E2",
+  "category": "serdes_ddr",
+  "params": [
+    {
+      "name": "HPIO",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "ISERDES_MODE",
+      "type": "string/int",
+      "default": "\"SDR1TO4\""
+    },
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "CASCADE_MODE",
+      "type": "string/int",
+      "default": "\"MASTER\""
+    },
+    {
+      "name": "BITSLIP_EN",
+      "type": "string/int",
+      "default": "\"FALSE\""
+    },
+    {
+      "name": "NUM_ICE",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "GRS_TYPE_Q0",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "GRS_TYPE_Q1",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "GRS_TYPE_Q2",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "GRS_TYPE_Q3",
+      "type": "string/int",
+      "default": "\"RESET\""
+    },
+    {
+      "name": "LRS_TYPE_Q0",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "LRS_TYPE_Q1",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "LRS_TYPE_Q2",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    },
+    {
+      "name": "LRS_TYPE_Q3",
+      "type": "string/int",
+      "default": "\"ASYNC_RESET\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "RST",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ICE0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ICE1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DESCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ICLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ICLKB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "OCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ICLKDIV",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "BITSLIP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ISHIFTIN0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ISHIFTIN1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "IFIFO_WADDR",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "IFIFO_RADDR",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "ISHIFTOUT0",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "ISHIFTOUT1",
+      "dir": "output",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_ISERDES_E2\n#(\n    .HPIO(\"FALSE\"),\n    .ISERDES_MODE(\"SDR1TO4\"),\n    .GRS_EN(\"TRUE\"),\n    .CASCADE_MODE(\"MASTER\"),\n    .BITSLIP_EN(\"FALSE\"),\n    .NUM_ICE(0),\n    .GRS_TYPE_Q0(\"RESET\"),\n    .GRS_TYPE_Q1(\"RESET\"),\n    .GRS_TYPE_Q2(\"RESET\"),\n    .GRS_TYPE_Q3(\"RESET\"),\n    .LRS_TYPE_Q0(\"ASYNC_RESET\"),\n    .LRS_TYPE_Q1(\"ASYNC_RESET\"),\n    .LRS_TYPE_Q2(\"ASYNC_RESET\"),\n    .LRS_TYPE_Q3(\"ASYNC_RESET\")\n) u_gtp_iserdes_e2 (\n    .RST(RST),\n    .ICE0(ICE0),\n    .ICE1(ICE1),\n    .DESCLK(DESCLK),\n    .ICLK(ICLK),\n    .ICLKB(ICLKB),\n    .OCLK(OCLK),\n    .ICLKDIV(ICLKDIV),\n    .DI(DI),\n    .BITSLIP(BITSLIP),\n    .ISHIFTIN0(ISHIFTIN0),\n    .ISHIFTIN1(ISHIFTIN1),\n    .IFIFO_WADDR(IFIFO_WADDR),\n    .IFIFO_RADDR(IFIFO_RADDR),\n    .DO(DO),\n    .ISHIFTOUT0(ISHIFTOUT0),\n    .ISHIFTOUT1(ISHIFTOUT1)\n);"
+}

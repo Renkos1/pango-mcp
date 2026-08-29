@@ -1,0 +1,251 @@
+{
+  "slug": "Multiply_Accumulator_34",
+  "name": "Titan3 Plus/Kosmo3 Multiply-Accumulator",
+  "displayName": "Multiply-Accumulator",
+  "topModule": "apm_multacc",
+  "version": "1.4a",
+  "vendor": "Pango",
+  "category": "Module,Multiplier",
+  "id": "07100301",
+  "dir": "module_ip/ipmxf_flex_apm/ipmxf_flex_apm_eval/ipmxf_multacc",
+  "datasheet": "ip/module_ip/ipmxf_flex_apm/ipmxf_flex_apm_eval/ipmxf_multacc/UG071003_APM_IP.pdf",
+  "families": [
+    "Titan3",
+    "Kosmo3"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "DYN_ACC_INIT",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "DYN_ACC_ADDSUB_OP",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "ASIZE",
+      "type": "int",
+      "default": "12"
+    },
+    {
+      "name": "BSIZE",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "PSIZE",
+      "type": "enum",
+      "default": "24",
+      "items": [
+        "24",
+        "48",
+        "65",
+        "82",
+        "96",
+        "99"
+      ]
+    },
+    {
+      "name": "A_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "B_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "INREG_EN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "ACC_ADDSUB_OP",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ACC_INIT_VALUE",
+      "type": "string",
+      "default": "24'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_24",
+      "type": "string",
+      "default": "24'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_48",
+      "type": "string",
+      "default": "48'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_65",
+      "type": "string",
+      "default": "65'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_82",
+      "type": "string",
+      "default": "82'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_96",
+      "type": "string",
+      "default": "96'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_99",
+      "type": "string",
+      "default": "99'h0"
+    },
+    {
+      "name": "PPWidth_18",
+      "type": "enum",
+      "default": "48",
+      "items": [
+        "48",
+        "65",
+        "96"
+      ]
+    },
+    {
+      "name": "PPWidth_65",
+      "type": "enum",
+      "default": "65",
+      "items": [
+        "65"
+      ]
+    },
+    {
+      "name": "PPWidth_82",
+      "type": "enum",
+      "default": "82",
+      "items": [
+        "82"
+      ]
+    },
+    {
+      "name": "PPWidth_99",
+      "type": "enum",
+      "default": "99",
+      "items": [
+        "99"
+      ]
+    },
+    {
+      "name": "PIPE_STATUS",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "RESET_TYPE",
+      "type": "enum",
+      "default": "ASYNC",
+      "items": [
+        "ASYNC",
+        "SYNC"
+      ]
+    },
+    {
+      "name": "OPTIMAL_TIMING_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "ADVANCED_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "XYREG_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "MREG_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "PREG_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM1_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM2_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM3_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM4_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM5_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM6_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM7_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "APM8_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "CPO_REG",
+      "type": "string",
+      "default": "8'b00000000"
+    }
+  ]
+}

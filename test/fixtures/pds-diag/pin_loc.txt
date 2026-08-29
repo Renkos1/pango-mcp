@@ -1,0 +1,9 @@
+Constraint check start.
+W: ConstraintEditor-4042: Port 'p:clk' lacks attribute 'BUS_KEEPER', it's better to set the attribute for port.
+W: ConstraintEditor-4042: Port 'p:led' lacks attribute 'PAP_IO_DRIVE', it's better to set the attribute for port.
+W: ConstraintEditor-4042: Port 'p:led' lacks attribute 'PAP_IO_SLEW', it's better to set the attribute for port.
+W: ConstraintEditor-4042: Port 'p:led' lacks attribute 'BUS_KEEPER', it's better to set the attribute for port.
+E: ConstraintEditor-0086: [C:/work/pango-mcp/test/.actual/diag002/loc/constraints/top.fdc(line number: 3)] Package pin 'D18' is invalid to be placed at.
+E: ConstraintEditor-0086: [C:/work/pango-mcp/test/.actual/diag002/loc/constraints/top.fdc(line number: 7)] Package pin 'ZZ999' is invalid to be placed at.
+Found 2 error(s), 0 critical warning(s), 4 warning(s), out of 9 constraint(s), you can contact with constraint_check.ccr for more detail information.
+Constraint check end.

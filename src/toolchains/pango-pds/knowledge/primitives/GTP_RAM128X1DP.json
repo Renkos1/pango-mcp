@@ -1,0 +1,46 @@
+{
+  "name": "GTP_RAM128X1DP",
+  "category": "mem",
+  "params": [
+    {
+      "name": "INIT",
+      "type": "bitvec[127:0]",
+      "default": "128'h00000000000000000000000000000000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RADDR",
+      "dir": "input",
+      "width": 7,
+      "range": "[6:0]"
+    },
+    {
+      "name": "WADDR",
+      "dir": "input",
+      "width": 7,
+      "range": "[6:0]"
+    },
+    {
+      "name": "WCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "WE",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_RAM128X1DP\n#(\n    .INIT(128'h00000000000000000000000000000000)\n) u_gtp_ram128x1dp (\n    .DO(DO),\n    .DI(DI),\n    .RADDR(RADDR),\n    .WADDR(WADDR),\n    .WCLK(WCLK),\n    .WE(WE)\n);"
+}

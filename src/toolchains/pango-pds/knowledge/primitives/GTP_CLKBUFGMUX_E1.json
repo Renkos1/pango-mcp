@@ -1,0 +1,44 @@
+{
+  "name": "GTP_CLKBUFGMUX_E1",
+  "category": "clock_pll",
+  "params": [
+    {
+      "name": "TRIGGER_MODE",
+      "type": "string/int",
+      "default": "\"NEGEDGE\""
+    },
+    {
+      "name": "INIT_SEL",
+      "type": "string/int",
+      "default": "\"CLK0\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "CLKOUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CLKIN0",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLKIN1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SEL",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "EN",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_CLKBUFGMUX_E1\n#(\n    .TRIGGER_MODE(\"NEGEDGE\"),\n    .INIT_SEL(\"CLK0\")\n) u_gtp_clkbufgmux_e1 (\n    .CLKOUT(CLKOUT),\n    .CLKIN0(CLKIN0),\n    .CLKIN1(CLKIN1),\n    .SEL(SEL),\n    .EN(EN)\n);"
+}

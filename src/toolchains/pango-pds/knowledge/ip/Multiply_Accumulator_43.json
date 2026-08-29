@@ -1,0 +1,212 @@
+{
+  "slug": "Multiply_Accumulator_43",
+  "name": "Titan Multiply-Accumulator",
+  "displayName": "Multiply-Accumulator",
+  "topModule": "apm_multacc",
+  "version": "1.5",
+  "vendor": null,
+  "category": "Module,Multiplier",
+  "id": "01100301",
+  "dir": "module_ip/ipm_flex_apm/ipm_flex_apm_eval/ipm_multacc",
+  "datasheet": "ip/module_ip/ipm_flex_apm/ipm_flex_apm_eval/ipm_multacc/Titan_Multiply-Accumulator_IP_UserGuide_v1.4.pdf",
+  "families": [
+    "Titan"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "DYN_ACC_INIT",
+      "type": "bool",
+      "default": "True"
+    },
+    {
+      "name": "DYN_ACC_ADDSUB_OP",
+      "type": "bool",
+      "default": "True"
+    },
+    {
+      "name": "OV_OUTPUT_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "UN_OUTPUT_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "EQZ_OUTPUT_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "EQZM_OUTPUT_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "EQOM_OUTPUT_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "EQPAT_OUTPUT_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "EQPATN_OUTPUT_EN",
+      "type": "bool",
+      "default": "FALSE"
+    },
+    {
+      "name": "ASIZE",
+      "type": "int",
+      "default": "9"
+    },
+    {
+      "name": "BSIZE",
+      "type": "int",
+      "default": "9"
+    },
+    {
+      "name": "PSIZE",
+      "type": "enum",
+      "default": "32",
+      "items": [
+        "32",
+        "64"
+      ]
+    },
+    {
+      "name": "A_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "B_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "SYNC_RST",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "INREG_EN",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN",
+      "type": "enum",
+      "default": "FALSE",
+      "items": [
+        "FALSE",
+        "TRUE"
+      ]
+    },
+    {
+      "name": "ACC_ADDSUB_OP",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "OVERFLOW_MASK",
+      "type": "string",
+      "default": "31'h0"
+    },
+    {
+      "name": "OVERFLOW_MASK_32",
+      "type": "string",
+      "default": "31'h0"
+    },
+    {
+      "name": "OVERFLOW_MASK_64",
+      "type": "string",
+      "default": "63'h0"
+    },
+    {
+      "name": "PATTERN",
+      "type": "string",
+      "default": "32'h0"
+    },
+    {
+      "name": "PATTERN_32",
+      "type": "string",
+      "default": "32'h0"
+    },
+    {
+      "name": "PATTERN_64",
+      "type": "string",
+      "default": "64'h0"
+    },
+    {
+      "name": "MASKPAT",
+      "type": "string",
+      "default": "32'h0"
+    },
+    {
+      "name": "MASKPAT_32",
+      "type": "string",
+      "default": "32'h0"
+    },
+    {
+      "name": "MASKPAT_64",
+      "type": "string",
+      "default": "64'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE",
+      "type": "string",
+      "default": "32'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_32",
+      "type": "string",
+      "default": "32'h0"
+    },
+    {
+      "name": "ACC_INIT_VALUE_64",
+      "type": "string",
+      "default": "64'h0"
+    },
+    {
+      "name": "PIPE_STATUS",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "SYNC_RST_BOOL",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "EQ01_MASK",
+      "type": "string",
+      "default": "64'h0"
+    }
+  ]
+}

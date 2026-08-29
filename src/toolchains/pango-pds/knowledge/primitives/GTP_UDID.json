@@ -1,0 +1,44 @@
+{
+  "name": "GTP_UDID",
+  "category": "config_misc",
+  "params": [
+    {
+      "name": "UDID_WIDTH",
+      "type": "integer",
+      "default": "64"
+    },
+    {
+      "name": "UDID_CODE",
+      "type": "bitvec[95:0]",
+      "default": "96'h000000000000000000000000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "LOAD",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "SE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CLK",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_UDID\n#(\n    .UDID_WIDTH(64),\n    .UDID_CODE(96'h000000000000000000000000)\n) u_gtp_udid (\n    .DI(DI),\n    .DO(DO),\n    .LOAD(LOAD),\n    .SE(SE),\n    .CLK(CLK)\n);"
+}

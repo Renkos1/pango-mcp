@@ -1,0 +1,7 @@
+{
+  "id": "chunk_031",
+  "source": "debug-ila.md",
+  "title": "End-to-end flow (headless, no GUI)",
+  "text": "[MCP-DEPRECATED] MCP 内 ILA 流程使用 fpga_ila_generate_fic + fpga_pds_register_fic 两件套(纯代码生成 .fic + 注册到 .pds),不通过 cdt_ins 驱动。以下 cdt_ins 内容仅作排查/教学参考。\n\n## End-to-end flow (headless, no GUI)\n1. **Synthesize** (pds_shell) → `synthesize/<top>_syn.adf` (the inserter's input netlist).\n2. **Author a `.fic`** naming nets to capture + a sample clock + depth + trigger (format below; hand-write it).\n3. **Register the `.fic` in the project** — fill the `wgt_my_fic_src` widget inside the **`tsk_synthesis`**\n   task of the `.pds`:\n   ```\n   (_widget wgt_my_fic_src\n       (_input (_file \"debug/<name>.fic\" (_format text) (_timespec \"<ISO>\"))))\n   ```\n   Then a normal `pds_shell -run gen_bit_stream` inserts the core during the flow → instrumented bitstream.\n   (If the design's nets change later, update the `.fic`'s net names or the inserter errors\n   `E: Inserter-0005: Net '...' cannot be found` and halts dev_map — pds_shell still exits 0.)\n4. **Flash** the instrumented `.sbit` (`cfg_program`).\n5. **Capture** with `cdt_dbg` (program → import_fic → trigger → run → VCD).",
+  "deprecated": true
+}

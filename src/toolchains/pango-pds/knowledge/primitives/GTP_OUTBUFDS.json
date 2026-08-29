@@ -1,0 +1,29 @@
+{
+  "name": "GTP_OUTBUFDS",
+  "category": "io_buffer",
+  "params": [
+    {
+      "name": "IOSTANDARD",
+      "type": "string/int",
+      "default": "\"DEFAULT\""
+    }
+  ],
+  "ports": [
+    {
+      "name": "O",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "OB",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "I",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_OUTBUFDS\n#(\n    .IOSTANDARD(\"DEFAULT\")\n) u_gtp_outbufds (\n    .O(O),\n    .OB(OB),\n    .I(I)\n);"
+}

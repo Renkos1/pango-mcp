@@ -1,0 +1,144 @@
+{
+  "slug": "Multiply_Adder_4",
+  "name": "28nm Multiply-Adder",
+  "displayName": "Multiply-Adder",
+  "topModule": "apm_multadd",
+  "version": "1.6",
+  "vendor": "Pango",
+  "category": "Module,Multiplier",
+  "id": "04100302",
+  "dir": "module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_multadd",
+  "datasheet": "ip/module_ip/ipm2l_flex_apm/ipm2l_flex_apm_eval/ipm2l_multadd/UG041003_APM_IP.pdf",
+  "families": [
+    "Logos2",
+    "Titan2",
+    "Kosmo2"
+  ],
+  "devices": [],
+  "params": [
+    {
+      "name": "ASIZE",
+      "type": "int",
+      "default": "11"
+    },
+    {
+      "name": "BSIZE",
+      "type": "int",
+      "default": "8"
+    },
+    {
+      "name": "A_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "B_SIGNED",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "ASYNC_RST",
+      "type": "enum",
+      "default": "1",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "OPTIMAL_TIMING",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "INREG_EN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN_1",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN_2",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPEREG_EN_3",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "OUTREG_EN",
+      "type": "enum",
+      "default": "0",
+      "items": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "PIPE_STATUS",
+      "type": "enum",
+      "default": "3",
+      "items": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "ASYNC_RST_BOOL",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "DYN_ADDSUB_OP",
+      "type": "bool",
+      "default": "1"
+    },
+    {
+      "name": "ADDSUB_OP",
+      "type": "bool",
+      "default": "0"
+    },
+    {
+      "name": "OPTIMAL_TIMING_BOOL",
+      "type": "bool",
+      "default": "0"
+    }
+  ]
+}

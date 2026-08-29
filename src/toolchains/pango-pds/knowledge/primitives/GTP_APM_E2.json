@@ -1,0 +1,348 @@
+{
+  "name": "GTP_APM_E2",
+  "category": "analog",
+  "params": [
+    {
+      "name": "GRS_EN",
+      "type": "string/int",
+      "default": "\"TRUE\""
+    },
+    {
+      "name": "ASYNC_RST",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "X_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "XB_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "Y_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "Z_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "P_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "CXO_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "CPO_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "MULT_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "PREADD_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "MODEIN_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "MODEY_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "MODEZ_REG",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "X_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "XB_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "CIN_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "ROUNDMODE_SEL",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "USE_SIMD",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "USE_ACCLOW",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "USE_PREADD",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "USE_POSTADD",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "name": "USE_MULT",
+      "type": "integer",
+      "default": "1"
+    },
+    {
+      "name": "P_INIT0",
+      "type": "bitvec[47:0]",
+      "default": "48'h000000000000"
+    },
+    {
+      "name": "P_INIT1",
+      "type": "bitvec[47:0]",
+      "default": "48'h000000000000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "COUT",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "CPO",
+      "dir": "output",
+      "width": 48,
+      "range": "[47:0]"
+    },
+    {
+      "name": "CXO",
+      "dir": "output",
+      "width": 30,
+      "range": "[29:0]"
+    },
+    {
+      "name": "CXBO",
+      "dir": "output",
+      "width": 25,
+      "range": "[24:0]"
+    },
+    {
+      "name": "P",
+      "dir": "output",
+      "width": 48,
+      "range": "[47:0]"
+    },
+    {
+      "name": "CIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CPI",
+      "dir": "input",
+      "width": 48,
+      "range": "[47:0]"
+    },
+    {
+      "name": "CXI",
+      "dir": "input",
+      "width": 30,
+      "range": "[29:0]"
+    },
+    {
+      "name": "CXBI",
+      "dir": "input",
+      "width": 25,
+      "range": "[24:0]"
+    },
+    {
+      "name": "X",
+      "dir": "input",
+      "width": 30,
+      "range": "[29:0]"
+    },
+    {
+      "name": "XB",
+      "dir": "input",
+      "width": 25,
+      "range": "[24:0]"
+    },
+    {
+      "name": "Y",
+      "dir": "input",
+      "width": 18,
+      "range": "[17:0]"
+    },
+    {
+      "name": "Z",
+      "dir": "input",
+      "width": 48,
+      "range": "[47:0]"
+    },
+    {
+      "name": "MODEIN",
+      "dir": "input",
+      "width": 5,
+      "range": "[4:0]"
+    },
+    {
+      "name": "MODEY",
+      "dir": "input",
+      "width": 3,
+      "range": "[2:0]"
+    },
+    {
+      "name": "MODEZ",
+      "dir": "input",
+      "width": 4,
+      "range": "[3:0]"
+    },
+    {
+      "name": "CLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEX1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEX2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEX3",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEXB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEY1",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEY2",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEZ",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEM",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEPRE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEMODEIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEMODEY",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "CEMODEZ",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RSTX",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RSTXB",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RSTY",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RSTZ",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RSTM",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RSTP",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RSTPRE",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RSTMODEIN",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RSTMODEY",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "RSTMODEZ",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_APM_E2\n#(\n    .GRS_EN(\"TRUE\"),\n    .ASYNC_RST(0),\n    .X_REG(0),\n    .XB_REG(0),\n    .Y_REG(0),\n    .Z_REG(0),\n    .P_REG(0),\n    .CXO_REG(0),\n    .CPO_REG(0),\n    .MULT_REG(0),\n    .PREADD_REG(0),\n    .MODEIN_REG(0),\n    .MODEY_REG(0),\n    .MODEZ_REG(0),\n    .X_SEL(0),\n    .XB_SEL(0),\n    .CIN_SEL(0),\n    .ROUNDMODE_SEL(0),\n    .USE_SIMD(0),\n    .USE_ACCLOW(0),\n    .USE_PREADD(0),\n    .USE_POSTADD(0),\n    .USE_MULT(1),\n    .P_INIT0(48'h000000000000),\n    .P_INIT1(48'h000000000000)\n) u_gtp_apm_e2 (\n    .COUT(COUT),\n    .CPO(CPO),\n    .CXO(CXO),\n    .CXBO(CXBO),\n    .P(P),\n    .CIN(CIN),\n    .CPI(CPI),\n    .CXI(CXI),\n    .CXBI(CXBI),\n    .X(X),\n    .XB(XB),\n    .Y(Y),\n    .Z(Z),\n    .MODEIN(MODEIN),\n    .MODEY(MODEY),\n    .MODEZ(MODEZ),\n    .CLK(CLK),\n    .CEX1(CEX1),\n    .CEX2(CEX2),\n    .CEX3(CEX3),\n    .CEXB(CEXB),\n    .CEY1(CEY1),\n    .CEY2(CEY2),\n    .CEZ(CEZ),\n    .CEM(CEM),\n    .CEP(CEP),\n    .CEPRE(CEPRE),\n    .CEMODEIN(CEMODEIN),\n    .CEMODEY(CEMODEY),\n    .CEMODEZ(CEMODEZ),\n    .RSTX(RSTX),\n    .RSTXB(RSTXB),\n    .RSTY(RSTY),\n    .RSTZ(RSTZ),\n    .RSTM(RSTM),\n    .RSTP(RSTP),\n    .RSTPRE(RSTPRE),\n    .RSTMODEIN(RSTMODEIN),\n    .RSTMODEY(RSTMODEY),\n    .RSTMODEZ(RSTMODEZ)\n);"
+}

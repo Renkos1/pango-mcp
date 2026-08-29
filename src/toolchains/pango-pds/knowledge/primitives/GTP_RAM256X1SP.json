@@ -1,0 +1,40 @@
+{
+  "name": "GTP_RAM256X1SP",
+  "category": "mem",
+  "params": [
+    {
+      "name": "INIT",
+      "type": "bitvec[255:0]",
+      "default": "256'h0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "ports": [
+    {
+      "name": "DO",
+      "dir": "output",
+      "width": 1
+    },
+    {
+      "name": "DI",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "ADDR",
+      "dir": "input",
+      "width": 8,
+      "range": "[7:0]"
+    },
+    {
+      "name": "WCLK",
+      "dir": "input",
+      "width": 1
+    },
+    {
+      "name": "WE",
+      "dir": "input",
+      "width": 1
+    }
+  ],
+  "instTemplate": "GTP_RAM256X1SP\n#(\n    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)\n) u_gtp_ram256x1sp (\n    .DO(DO),\n    .DI(DI),\n    .ADDR(ADDR),\n    .WCLK(WCLK),\n    .WE(WE)\n);"
+}
