@@ -56,6 +56,14 @@ Prepared for the first public release.
   source is public.
 
 ### Fixed
+- **Project inputs did not resolve off Windows.** `parsePdsProject` rewrote every
+  declared relative path's `/` to `\` before resolving it. On Windows that is a
+  no-op worth nothing — `resolve()` accepts forward slashes there — and on
+  Linux/macOS a backslash is an ordinary filename character, so `rtl/top.v`
+  became a single file named `rtl\top.v` and `fpga_pds_compile` failed with
+  "project input missing" on any project that declares its sources. Paths are now
+  normalized the other way, to forward slashes, which also means a `.pds` written
+  on Windows resolves correctly on a POSIX host.
 - **`npx` was broken on Linux/macOS.** npm packs from the working tree, and
   `core.autocrlf` checked out `src/index.mjs` with a `#!/usr/bin/env node\r\n`
   shebang, so `env` looked for an interpreter named `node\r`. `.gitattributes`

@@ -5,9 +5,16 @@ import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:
 import { basename, dirname, join, resolve } from "node:path";
 import { cleanToken, readText, xmlAttr } from "../../core/exec.mjs";
 
+// A .pds records input paths in whichever separator the authoring host used, so
+// a Windows-written project carries `rtl\top.v`. Normalize to forward slashes and
+// let resolve() do the rest: it accepts them on Windows too. Converting the other
+// way — to backslashes — is what this used to do, and off Windows it produced a
+// single filename with a backslash in it rather than a path.
+const projectRelative = (path) => String(path || "").replace(/\\/g, "/");
+
 const inputRef = (projectDir, path, extra = {}) => ({
   path,
-  absPath: resolve(projectDir, path.replace(/\//g, "\\")),
+  absPath: resolve(projectDir, projectRelative(path)),
   ...extra,
 });
 
@@ -118,7 +125,7 @@ export function parsePdsProject(pdsPath) {
     const topMarker = /\+\s+"([^"]+)"/i.exec(block)?.[1] || null;
     files.push({
       path: cur.path,
-      absPath: resolve(projectDir, cur.path.replace(/\//g, "\\")),
+      absPath: resolve(projectDir, projectRelative(cur.path)),
       format: fmt ? cleanToken(fmt[1]) : null,
       topModule: topMarker,
       isTop: !!topMarker,
