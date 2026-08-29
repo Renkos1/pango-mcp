@@ -64,6 +64,30 @@ comments here explain *why* a non-obvious guard exists, not what the line does.
 Runtime strings and tool descriptions are currently Chinese. Keeping that
 consistent is fine; an i18n pass is welcome as its own PR.
 
+## Releasing (maintainer)
+
+Publishing is the only irreversible action here — npm's unpublish window is
+narrow, so a bad `0.3.x` is public for good. It therefore goes through
+[`.github/workflows/release.yml`](.github/workflows/release.yml) rather than a
+laptop, which is also what makes the npm provenance attestation possible
+(`publishConfig.provenance` needs `id-token: write`, and only Actions has it).
+
+One-time: store an npm **automation** token as the `NPM_TOKEN` repository secret.
+
+```bash
+npm version patch      # bumps package.json and creates the vX.Y.Z tag
+git push --follow-tags # the tag is what triggers the release workflow
+```
+
+The workflow re-runs `pnpm check` and `pnpm test:unit` on Node 22 and 24 against
+the tagged commit, refuses to continue if the tag and `package.json` disagree on
+the version, re-asserts the tarball contents and the LF shebang, then installs
+the packed tarball into a scratch project and starts the server from it — the
+`npx pango-mcp` path a user actually gets. Only then `npm publish`.
+
+To exercise all of that without publishing, run the workflow manually from the
+Actions tab with `dry_run` left checked.
+
 ## Reporting
 
 Bugs: use the issue templates — PDS/ModelSim version, device, and the failing

@@ -1,0 +1,158 @@
+name: release
+
+# Publishing is the one irreversible action in this repo — npm's unpublish window
+# is narrow and a bad 0.3.x is public forever. So the pipeline is: tag, re-run
+# the full gate, prove the tarball, and only then publish.
+#
+# Setup, once:
+#   1. npm token: an *automation* token (npmjs.com -> Access Tokens -> Granular,
+#      read+write on the pango-mcp package). Store as the NPM_TOKEN repository
+#      secret. A classic "publish" token also works; automation tokens are the
+#      ones that bypass 2FA in CI.
+#   2. Nothing else. `id-token: write` below plus publishConfig.provenance in
+#      package.json is what attaches the provenance attestation — that is the
+#      whole reason this file exists rather than publishing from a laptop.
+#
+# Optional, if you want a human in front of the irreversible step: create a
+# GitHub Environment (Settings -> Environments) with yourself as a required
+# reviewer, then add `environment: <name>` to the publish job. Left out here so
+# the workflow runs correctly with no repository configuration beyond the token.
+#
+# To release:
+#   npm version patch          # bumps package.json AND creates the vX.Y.Z tag
+#   git push --follow-tags
+# or run the workflow manually with dry_run to exercise everything but the push.
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run every check and pack the tarball, but do not publish'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    # Deliberately not `needs`-free reuse of ci.yml: a release must re-run the
+    # gate against the exact commit being published, not trust that a green run
+    # exists somewhere in the tag's ancestry.
+    name: verify (node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        node: ['22', '24']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm test:unit
+
+  publish:
+    name: publish to npm
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write        # required for provenance; without it publish fails
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+          registry-url: 'https://registry.npmjs.org'   # writes the .npmrc NODE_AUTH_TOKEN needs
+
+      - name: tag must match package.json version
+        # Publishing v0.3.2 from a tree that still says 0.3.1 produces a release
+        # whose tag and contents disagree, and npm takes the package.json. Catch
+        # it here rather than in a bug report six months later.
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          pkg=$(node -p "require('./package.json').version")
+          tag="${GITHUB_REF_NAME#v}"
+          if [ "$pkg" != "$tag" ]; then
+            echo "::error::tag $GITHUB_REF_NAME says $tag, package.json says $pkg"
+            exit 1
+          fi
+          echo "version $pkg"
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: tarball must not carry local or vendor-licensed content
+        # Same assertion ci.yml makes on every push. Repeated here because this
+        # is the copy that actually leaves the building.
+        run: |
+          npm pack --dry-run --json > /tmp/pack.json
+          node -e '
+            const files = require("/tmp/pack.json")[0].files.map(f => f.path);
+            const forbidden = [
+              [/^pango-mcp\.env$/,                        "local env"],
+              [/^pango-mcp\.config\.json$/,               "local config"],
+              [/^src\/toolchains\/modelsim\/knowledge\//, "Siemens EULA corpus"],
+              [/^dist-private/,                           "private delivery artifact"],
+              [/\.(lic|pem|sbit|svf|log)$/,               "credential or build artifact"],
+            ];
+            const hits = files.flatMap(p => forbidden.filter(([re]) => re.test(p)).map(([, why]) => `${p} (${why})`));
+            if (hits.length) { console.error("forbidden in tarball:\n  " + hits.join("\n  ")); process.exit(1); }
+            for (const required of ["LICENSE", "NOTICE", "package.json", "README.md", "src/index.mjs"])
+              if (!files.includes(required)) { console.error("missing from tarball: " + required); process.exit(1); }
+            console.log(`tarball ok — ${files.length} files`);
+          '
+
+      - name: bin shebang must be LF
+        # npm packs from the working tree; a CRLF shebang makes `npx pango-mcp`
+        # fail on every POSIX host with `env: 'node\r': No such file`.
+        run: |
+          if head -c 200 src/index.mjs | grep -q $'\r'; then
+            echo "::error file=src/index.mjs::CRLF in the bin entry — check .gitattributes"
+            exit 1
+          fi
+
+      - name: npx smoke — the install story a user actually runs
+        # Publishing a package whose bin does not start is the failure this
+        # catches. Pack, install the tarball into a scratch project, and run the
+        # server the way `npx pango-mcp` would.
+        #
+        # The scratch package.json is written by hand on purpose: `npm init -y`
+        # IGNORES --prefix and writes to the current directory, which here is the
+        # checkout being published. It adds `main: index.js` (a file that does
+        # not exist, and contrary to the deliberately closed `exports`) and an
+        # empty devDependencies — and the very next step is npm publish.
+        run: |
+          set -euo pipefail
+          tarball=$(npm pack --silent)
+          work=$(mktemp -d)
+          printf '{"name":"scratch","version":"0.0.0","private":true}' > "$work/package.json"
+          npm install --prefix "$work" --no-audit --no-fund "$PWD/$tarball" >/dev/null
+          timeout 30s node "$work/node_modules/pango-mcp/src/index.mjs" </dev/null >"$work/out.txt" 2>&1 || true
+          if ! grep -q "MCP server ready" "$work/out.txt"; then
+            echo "::error::the published bin did not start"; cat "$work/out.txt"; exit 1
+          fi
+          echo "npx path ok"
+
+      - name: publish
+        if: ${{ github.event_name == 'push' || !inputs.dry_run }}
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: dry run — everything above passed, nothing was published
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: echo "dry_run - skipped npm publish"
