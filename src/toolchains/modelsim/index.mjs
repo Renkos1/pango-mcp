@@ -44,7 +44,30 @@ const SUSPICIOUS_DO = [
   { re: /\bexec\b/i, label: (m) => m[0].toLowerCase() },
   { re: /\bfile\s+(delete|rename|copy|mkdir)\b/i, label: (m) => m[0].toLowerCase().replace(/\s+/g, " ") },
   { re: /\bopen\b[^\n]*?\s([waWA]\+?|[rR]\+)(\s|$|\])/, label: () => "open(write)" },
+  // Everything above matches a literal. Tcl does not have to write one: `eval`,
+  // `subst`, `source` and `uplevel` run text assembled at run time, so a script
+  // using them can reach `exec` or `file delete` without those words appearing.
+  // Unlike fpga_cdt's commands[], a .do file is free-form by design, so this
+  // flags rather than rejects and the operator decides.
+  { re: /\b(eval|subst|source|uplevel)\b/i, label: (m) => m[0].toLowerCase() },
 ];
+
+// Substitution only rewrites what runs when it lands in COMMAND position:
+// `[format ex%s ec] ...` and `$cmd ...` become a different command, while the
+// `[open ...]` in `set fh [open "in.txt" r]` is an argument and cannot rename
+// `set`. Flagging every `[` would make the gate fire on ordinary Tcl and train
+// the operator to pass confirm:true reflexively, which is worse than not asking.
+function substitutedCommandName(text) {
+  for (const raw of String(text || "").split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line || line.startsWith("#")) continue;
+    for (const segment of line.split(";")) {
+      const first = segment.trim().split(/\s+/)[0] || "";
+      if (first.startsWith("[") || first.includes("$")) return first.startsWith("[") ? "[]-command" : "$-command";
+    }
+  }
+  return null;
+}
 
 // Return the distinct suspicious tokens found in a do/Tcl body (empty => safe).
 export function detectSuspiciousDo(text) {
@@ -54,6 +77,8 @@ export function detectSuspiciousDo(text) {
     const m = re.exec(s);
     if (m) found.add(label(m));
   }
+  const substituted = substitutedCommandName(s);
+  if (substituted) found.add(substituted);
   return [...found];
 }
 

@@ -55,7 +55,47 @@ Prepared for the first public release.
   `scripts/secure-*.mjs`, `pack:audit`, `pack:secure`) — obsolete once the
   source is public.
 
+### Security
+- **The device-write gate could be walked around.** It matched command names in
+  the script text, and Tcl does not need to spell one out: `set a cfg_; set b
+  program; $a$b` never contains `cfg_program`, so the confirm + `expectIdcode`
+  check saw nothing to gate and the write went through. `commands[]` now takes
+  one literal `cfg_`/`dbg_`/`ins_` command per entry, with no substitution or
+  `;` chaining outside braces — so the first token IS the command. Free-form
+  `tcl`, which cannot be analysed at all, needs `PANGO_MCP_ALLOW_RAW_TCL=1`.
+  Braced arguments are unaffected: `-net {u/q[3]}` still works.
+- **`fpga_msim_do` had the same hole.** A do script is free-form by design, so
+  the gate asks for `confirm:true` rather than refusing — but `eval`, `subst`,
+  `source`, `uplevel` and substitution in *command position* now trip it, since
+  any of them can reach `exec` or `file delete` without those words appearing.
+  Substitution in argument position (`set fh [open x r]`) still does not.
+- **SSH connected without verifying the host key.** ssh2 has no default
+  `hostVerifier`, so anything answering on the network could take the password
+  and the bitstream this transport exists to send. Hosts now need
+  `hostKeyFingerprint` and fail closed without it; `PANGO_MCP_SSH_INSECURE=1` is
+  the explicit, per-run opt-out.
+- **`fpga_exe` could escape the PDS bin directory.** `-help`-only arguments skip
+  the executable allowlist, and the name was joined onto `binDir` unchecked, so
+  `../../../Windows/System32/...` ran. The name must now be a bare filename, and
+  the resolved path is asserted to stay under `binDir`.
+- **Values interpolated into Tcl and PowerShell are validated.** `deviceName`
+  and `flashPart` (unquoted in generated Tcl, on both the local and remote flash
+  paths), ILA `trigger.value` / `condName` / `unit` / `func`, `userAddressList`
+  entries, the `schtasks /ru <user>` account name, and the `projectDir` /
+  `binDir` that land inside PowerShell double-quoted strings — where escaping
+  backslashes was never enough, because `"` closes the string and `$(...)` runs
+  a command. `opcode` and `sbitStartAddress` on the same tool were validated
+  from the start; these were the omission, not the design.
+
 ### Fixed
+- **`pnpm check`, `pnpm test:unit` and the tools now say what is missing.**
+  A tool needing PDS used to die on `The "path" argument must be of type string.
+  Received null` when none was configured. It now names the knob to set, which
+  is what the README always promised.
+- **`pnpm smoke` crashed on a machine with no Icarus Verilog** — it assumed
+  every tool result was JSON and hit a `SyntaxError` on the first failure's
+  plain-text message. It tolerates non-JSON and skips the simulation legs with
+  an actionable message. This is the second command the README hands a new user.
 - **Project inputs did not resolve off Windows.** `parsePdsProject` rewrote every
   declared relative path's `/` to `\` before resolving it. On Windows that is a
   no-op worth nothing — `resolve()` accepts forward slashes there — and on

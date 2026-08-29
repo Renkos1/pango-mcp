@@ -13,6 +13,7 @@ import { fileURLToPath } from "node:url";
 const PACKAGE_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 const NODE_TESTS = [
+  "cdt-command-guard-unit.mjs",
   "cdt-ok-unit.mjs",
   "coverage-unit.mjs",
   "diagnostics-unit.mjs",

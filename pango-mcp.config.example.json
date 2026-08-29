@@ -36,6 +36,8 @@
       "os": "windows",
       "privateKeyPath": "C:\\Users\\<YOUR_USER>\\.ssh\\id_ed25519",
       "_authNote": "用密钥则填 privateKeyPath；用密码则留空并在 pango-mcp.env 设 PANGO_MCP_SSH_fpga_lab_PASSWORD=...",
+      "_hostKeyNote": "必填。没有它 ssh2 接受任何主机密钥，中间人能拿到密码和比特流。在该主机上跑 `ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub`(Windows: $env:ProgramData\\ssh\\ssh_host_ed25519_key.pub)，把 SHA256: 那段填进来。确实无法验证时用 PANGO_MCP_SSH_INSECURE=1 显式放行。",
+      "hostKeyFingerprint": "SHA256:<paste from ssh-keygen -lf on that host>",
       "pds": {
         "2025.2": "D:\\pango\\PDS_2025.2-SP1-ads\\bin\\pds_shell.exe",
         "2022.2": "D:\\pango\\PDS_2022.2-SP4.2-ads\\bin\\pds_shell.exe"

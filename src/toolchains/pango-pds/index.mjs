@@ -5,7 +5,7 @@
 
 import { existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
-import { basename, dirname, extname, isAbsolute, join, resolve } from "node:path";
+import { basename, dirname, extname, isAbsolute, join, resolve, sep } from "node:path";
 import { z } from "zod";
 import { toolEnv } from "../../core/config.mjs";
 import { run, safeReadText, sleep, toTclPath, toolError, toolResult, which } from "../../core/exec.mjs";
@@ -21,6 +21,7 @@ import {
   aliasForIdcode,
   cdtTool,
   choosePdsInstall,
+  requirePdsInstall,
   defaultPortForInstall,
   resolveTargetPart,
 } from "./install.mjs";
@@ -49,6 +50,7 @@ import { discoverNets, expandBuses, resolveSignal, usableResolution, validateIns
 import { preflightPdsLicense } from "./license.mjs";
 import { executePdsBatch, MAX_PDS_BATCH_PARALLEL, MAX_PDS_BATCH_VARIANTS, validatePdsBatchVariants } from "./batch.mjs";
 import { consoleAdcRead, driveConsole } from "./console.mjs";
+import { detectMutatingCdt } from "./device-gate.mjs";
 import { ilaCapture, ilaOpen } from "./ila_capture.mjs";
 import { renderBuildReportHtml } from "./build_report.mjs";
 import { homedir } from "node:os";
@@ -131,24 +133,86 @@ function localPdsLicenseGate(phase) {
   });
 }
 
-// CDT commands that mutate the device (config/flash/efuse). Generic CDT and GUI
-// Console entry points both require confirm + a prior IDCODE read and match.
-const MUTATING_CDT = [
-  /\bcfg_program\b/i,
-  /\bcfg_jtag_flash_(erase|program)\b/i,
-  /\bcfg_flash_(erase|program)\b/i,
-  /\bcfg_efuse_program\b/i,
-  /\bdbg_program\b/i,
-];
+// Matching MUTATING_CDT against free text only works if the text cannot build a
+// command name at run time. Tcl can: `set a cfg_; set b program; $a$b` never
+// contains the literal `cfg_program`, so the confirm + IDCODE gate above sees
+// nothing to gate and the device gets written anyway. Same for `[format ...]`,
+// `eval`, and `;` chaining a second command onto a line that looked clean.
+//
+// So commands[] is restricted to what can be read literally: one vendor CDT
+// command per line, no substitution and no chaining. The first token must be in
+// the cfg_/dbg_/ins_ namespace, which excludes every Tcl builtin that could
+// introduce indirection (set/eval/exec/subst/open/source/...). After that the
+// first token IS the command, and MUTATING_CDT decides on a value the caller
+// cannot disguise.
+const CDT_COMMAND_NAME = /^(?:cfg|dbg|ins)_[a-z0-9_]+$/i;
 
-function detectMutatingCdt(text) {
-  const found = [];
-  for (const re of MUTATING_CDT) {
-    const m = re.exec(String(text || ""));
-    if (m) found.push(m[0].toLowerCase());
+// Braces suppress substitution in Tcl, and real arguments rely on that: a tapped
+// net is written `-net {u_top/rx_data[0]}`, where the brackets are part of the
+// bus index, not a command substitution. So the scan is brace-aware and only
+// rejects the dangerous characters where they would actually be interpreted.
+// Double quotes are NOT a safe harbour — Tcl substitutes inside them — so they
+// get no special treatment here.
+function substitutionOutsideBraces(line) {
+  let depth = 0;
+  for (let i = 0; i < line.length; i += 1) {
+    const ch = line[i];
+    if (ch === "\\") { i += 1; continue; }
+    if (ch === "{") { depth += 1; continue; }
+    if (ch === "}") { depth = Math.max(0, depth - 1); continue; }
+    if (depth === 0 && (ch === "$" || ch === "[" || ch === "`" || ch === ";")) return ch;
   }
-  return [...new Set(found)];
+  return depth !== 0 ? "{" : null;
 }
+
+export function validateCdtCommands(commands) {
+  const problems = [];
+  const names = [];
+  for (const [i, entry] of (commands || []).entries()) {
+    const line = String(entry ?? "");
+    const where = `commands[${i}]`;
+    if (!line.trim()) continue;
+    if (/[\r\n]/.test(line)) {
+      problems.push(`${where}: 一个数组元素只能是一条命令，不能含换行`);
+      continue;
+    }
+    const bad = substitutionOutsideBraces(line);
+    if (bad === "{") {
+      problems.push(`${where}: 花括号不配对，剩余部分的解析不可判定`);
+      continue;
+    }
+    if (bad) {
+      problems.push(`${where}: 花括号外含 '${bad}'（Tcl 替换/串接），命令名将无法静态判定`);
+      continue;
+    }
+    const first = line.trim().split(/\s+/)[0];
+    if (!CDT_COMMAND_NAME.test(first)) {
+      problems.push(`${where}: 首 token '${first}' 不是 cfg_/dbg_/ins_ 命令`);
+      continue;
+    }
+    names.push(first.toLowerCase());
+  }
+  return { problems, names };
+}
+
+// Values that get interpolated into a Tcl command line unquoted. The part name
+// is vendor-defined and version-dependent, so this checks the SHAPE rather than
+// keeping a catalogue: anything outside it could only be an attempt to end the
+// argument and start another command. Compare `opcode` and `sbitStartAddress`
+// on the same tool, which were validated from the start — these two were the
+// omission, not the design.
+const FLASH_PART_NAME = /^[A-Za-z0-9_-]{1,32}$/;
+const HEX_ADDRESS = /^0x[0-9a-f]{1,16}$/i;
+
+export function checkTclWord(value, { label, pattern = FLASH_PART_NAME }) {
+  const v = String(value ?? "");
+  return pattern.test(v) ? null : `${label} 非法: ${JSON.stringify(v)}；只接受 ${pattern}`;
+}
+
+// Free-form tcl is by construction not statically analyzable, so the gate cannot
+// be enforced on it. It stays available for the recipes that need {{PORT}} and
+// multi-statement scripts, but only when the operator opts in.
+export const rawTclAllowed = () => toolEnv().PANGO_MCP_ALLOW_RAW_TCL === "1";
 
 export function extractDebuggerIdcode(text) {
   return /\b0x[0-9a-f]{8}\b/i.exec(String(text || ""))?.[0]?.toLowerCase() || null;
@@ -338,6 +402,7 @@ function buildCompileResult({
 const JTAG_CTX = {
   cdtTool,
   choosePdsInstall,
+  requirePdsInstall,
   defaultPortForInstall,
   defaultScanMaxDevices: DEFAULT_SCAN_MAX_DEVICES,
   cdtStartupTimeoutMs: DEFAULT_CDT_STARTUP_TIMEOUT_MS,
@@ -388,7 +453,7 @@ function tclPathList(items) {
 // no cable), and judges success by exit code + absence of an E: line + every
 // expected output file present. `outputs` are existence-checked when known.
 async function runGen(cmd, args, { pdsVersion, timeoutSec = 120, outputs = [] } = {}) {
-  const install = choosePdsInstall({ pdsVersion });
+  const install = requirePdsInstall({ pdsVersion });
   if (!existsSync(install.shell)) throw new Error(`PDS 安装不可用: ${install.shell}`);
   const script = `${cmd} ${args.join(" ")}`;
   const res = await runCdtGen(JTAG_CTX, install, script, { timeoutSec });
@@ -542,7 +607,7 @@ async function pdsRun({ pdsPath, pdsVersion, runTarget, host, backupOldBuildDirs
     return toolError(`pdsPath 不存在、非绝对路径或不是 .pds: ${pdsPath}`);
   }
   const projectInfo = parsePdsProject(pdsPath);
-  const baseInstall = choosePdsInstall({ pdsVersion, projectInfo });
+  const baseInstall = requirePdsInstall({ pdsVersion });
   const exec = getExecutor(host);
   let install = baseInstall;
   if (exec.isRemote) {
@@ -1044,7 +1109,7 @@ export function register(server) {
           return toolResult({ ok: false, phase: "safety", hint: `IDCODE 不匹配，拒绝烧录: actual=${device.idcode}, expected=${expectIdcode}`, scan, scanAttempts: attempts });
         }
         const flashPort = scan.port;
-        const install = choosePdsInstall({ pdsVersion });
+        const install = requirePdsInstall({ pdsVersion });
         const script = `
 cfg_set_tcl_break -flag true
 cfg_connect -ip 127.0.0.1 -port ${Number(flashPort)}
@@ -1097,6 +1162,11 @@ cfg_close`;
         return toolError(`sbit 不存在、非绝对路径或不是 .sbit: ${sbit}`);
       }
       if (!normalizeIdcode(expectIdcode, IDCODE_ALIASES)) return toolError(`expectIdcode 无法识别: ${expectIdcode}`);
+      // flashPart lands unquoted in the generated Tcl on both the local and the
+      // remote path, and this tool writes persistent flash — check it before the
+      // confirm gate so a malformed part name never reaches either branch.
+      const flashPartBad = checkTclWord(flashPart, { label: "flashPart" });
+      if (flashPartBad) return toolError(flashPartBad);
       const sfc = sfcPath ? (isAbsolute(sfcPath) ? sfcPath : resolve(dirname(sbit), sfcPath)) : sbit.replace(/\.sbit$/i, ".sfc");
       if (!confirm) {
         return toolResult({
@@ -1140,7 +1210,7 @@ cfg_close`;
           return toolResult({ ok: false, phase: "safety", hint: `IDCODE 不匹配，拒绝烧录: actual=${device.idcode}, expected=${expectIdcode}`, scan, scanAttempts: attempts });
         }
         const flashPort = scan.port;
-        const install = choosePdsInstall({ pdsVersion });
+        const install = requirePdsInstall({ pdsVersion });
         const script = `
 cfg_set_tcl_break -flag true
 cfg_connect -ip 127.0.0.1 -port ${Number(flashPort)}
@@ -1210,6 +1280,12 @@ cfg_close`;
       }
       if (sbitStartAddress != null && !/^0x[0-9a-f]+$/i.test(sbitStartAddress)) {
         return toolError(`sbitStartAddress 须为十六进制(如 0x00000000): ${sbitStartAddress}`);
+      }
+      const deviceNameBad = deviceName == null ? null : checkTclWord(deviceName, { label: "deviceName" });
+      if (deviceNameBad) return toolError(deviceNameBad);
+      for (const addr of userAddressList || []) {
+        const bad = checkTclWord(addr, { label: "userAddressList 项", pattern: HEX_ADDRESS });
+        if (bad) return toolError(bad);
       }
       if ((userAddressList?.length || 0) !== (fileList?.length || 0)) {
         return toolError("userAddressList 与 fileList 长度必须一致");
@@ -1502,6 +1578,32 @@ cfg_close`;
       const exeName = interpreter === "cdt_dbg" ? "cdt_dbg.exe" : "cdt_cfg.exe";
       const pfx = interpreter === "cdt_dbg" ? "dbg" : "cfg";
 
+      // Shape first: the confirm + IDCODE gate below reads command names out of
+      // the script, which is only sound while those names are literal.
+      if (tcl && !rawTclAllowed()) {
+        return toolResult({
+          ok: false,
+          phase: "policy",
+          interpreter,
+          host: host || "local",
+          hint: "raw tcl 关闭：Tcl 可以在运行时拼出命令名(`set a cfg_; set b program; $a$b`)，写器件门就判不出来。把每条命令拆进 commands[] 走静态校验；确实需要自由脚本(如 {{PORT}} 占位)时设 PANGO_MCP_ALLOW_RAW_TCL=1。",
+        });
+      }
+      if (!tcl) {
+        const { problems, names } = validateCdtCommands(commands);
+        if (problems.length) {
+          return toolResult({
+            ok: false,
+            phase: "policy",
+            interpreter,
+            host: host || "local",
+            problems,
+            hint: "commands[] 每个元素必须是一条字面 cfg_/dbg_/ins_ 命令，不含 $ [ ] ` ; 和换行——否则命令名不可静态判定，写器件门会被绕过。",
+          });
+        }
+        if (!names.length) return toolError("commands[] 里没有可执行的命令");
+      }
+
       // Policy gates first (install-independent): never run a device-mutating
       // script without confirm + a recognizable expectIdcode.
       const mutating = detectMutatingCdt(bodyRaw);
@@ -1555,7 +1657,7 @@ cfg_close`;
         }
       }
 
-      const install = choosePdsInstall({ pdsVersion });
+      const install = requirePdsInstall({ pdsVersion });
       if (!existsSync(cdtTool(install, exeName))) return toolError(`未找到 ${exeName}: ${cdtTool(install, exeName)}`, { pds: install });
       let usePort = port ?? defaultPortForInstall(install);
 
@@ -1618,6 +1720,13 @@ cfg_close`;
     async ({ exe, args = [], host, pdsVersion, cwd, detail = "summary", timeoutSec = 120 }) => {
       const base = String(exe).replace(/\.exe$/i, "");
       const helpOnly = isHelpOnlyArgs(args);
+      // `exe` names a file INSIDE the PDS bin directory, so it is a bare name.
+      // Without this, `-help` args skip the allowlist below and the name is
+      // joined onto binDir unchecked — `../../../Windows/System32/whatever`
+      // then runs whatever it likes, read-only probe or not.
+      if (!/^[A-Za-z0-9_][A-Za-z0-9_.-]{0,63}$/.test(base) || base.includes("..")) {
+        return toolError(`exe 名非法: ${JSON.stringify(exe)}；只接受 bin 目录下的裸文件名(不含路径分隔符或 ..)`);
+      }
       // Policy first (install-independent): non-allowlisted exes may only be
       // probed read-only with -help/-version.
       if (!EXE_ALLOWLIST.has(base) && !helpOnly) {
@@ -1645,8 +1754,15 @@ cfg_close`;
           await exec.close();
         }
       }
-      const install = choosePdsInstall({ pdsVersion });
+      const install = requirePdsInstall({ pdsVersion });
       const exePath = join(install.binDir, `${base}.exe`);
+      // Belt and braces behind the name rule: whatever join() produced must still
+      // sit under binDir. Asserting on the resolved path is what actually holds,
+      // since it survives any future change to how the name is built.
+      const binRoot = resolve(install.binDir);
+      if (!resolve(exePath).startsWith(binRoot + sep)) {
+        return toolError(`exe 解析到 bin 目录之外，拒绝: ${exePath}`, { binDir: install.binDir });
+      }
       if (!existsSync(exePath)) return toolError(`未找到 exe: ${exePath}`, { pds: install });
       if (cwd && (!isAbsolute(cwd) || !existsSync(cwd))) return toolError(`cwd 不存在或非绝对路径: ${cwd}`);
       try {
@@ -1685,7 +1801,7 @@ cfg_close`;
     async ({ pdsPath, signals, pdsVersion, timeoutSec }) => {
       if (!isAbsolute(pdsPath) || !existsSync(pdsPath) || extname(pdsPath).toLowerCase() !== ".pds") return toolError(`pdsPath 不存在/非绝对/非 .pds: ${pdsPath}`);
       const projectInfo = parsePdsProject(pdsPath);
-      const install = choosePdsInstall({ pdsVersion, projectInfo });
+      const install = requirePdsInstall({ pdsVersion });
       if (!existsSync(install.shell)) return toolError(`未找到 pds_shell.exe: ${install.shell}`, { pds: install });
       const licenseError = localPdsLicenseGate("ila_list_nets");
       if (licenseError) return licenseError;
@@ -1879,7 +1995,7 @@ cfg_close`;
       } catch (err) {
         return toolError(err.message);
       }
-      const binDir = exec.isRemote ? resolveRemoteBinDir(host, pdsVersion) : choosePdsInstall({ pdsVersion }).binDir;
+      const binDir = exec.isRemote ? resolveRemoteBinDir(host, pdsVersion) : requirePdsInstall({ pdsVersion }).binDir;
       if (!binDir) return toolError(exec.isRemote ? `无法解析 host '${host}' 的 PDS bin 目录(检查 hosts.${host}.pds 配置)` : "无法解析本机 PDS bin 目录(检查本地 PDS 安装)");
       try {
         const u = user || getHost(host)?.user || "Administrator";
@@ -1986,7 +2102,7 @@ cfg_close`;
 
       // Discover real post-synth net names first (board-independent local synth), so
       // we never instrument with a guessed/renamed/pruned name (the alog.txt disaster).
-      const install = choosePdsInstall({ pdsVersion, projectInfo: project });
+      const install = requirePdsInstall({ pdsVersion });
       if (!existsSync(install.shell)) return toolError(`未找到 pds_shell.exe: ${install.shell}`, { pds: install });
       const licenseError = localPdsLicenseGate("ila_build");
       if (licenseError) return licenseError;
@@ -2143,7 +2259,7 @@ cfg_close`;
       // standalone local tools use (choosePdsInstall + scanForFlash + cdt_cfg
       // flash script), so scan/flash logic never diverges from fpga_flash_sram.
       const isRemote = exec.isRemote;
-      const binDir = isRemote ? resolveRemoteBinDir(host, pdsVersion) : choosePdsInstall({ pdsVersion }).binDir;
+      const binDir = isRemote ? resolveRemoteBinDir(host, pdsVersion) : requirePdsInstall({ pdsVersion }).binDir;
       if (!binDir) return toolError(isRemote ? `无法解析 host '${host}' 的 PDS bin 目录` : "无法解析本机 PDS bin 目录(检查本地 PDS 安装)");
       const u = user || getHost(host)?.user || "Administrator";
       const stages = [];
@@ -2189,7 +2305,7 @@ cfg_close`;
           const flash = await flashSramRemote(exec, { binDir }, { sbit, deviceIndex, port: flashPort, timeoutSec: 180 });
           flashOk = flash.ok; flashHint = flash.hint; flashLog = flash.log || "";
         } else {
-          const install = choosePdsInstall({ pdsVersion });
+          const install = requirePdsInstall({ pdsVersion });
           const script = `cfg_set_tcl_break -flag true\ncfg_connect -ip 127.0.0.1 -port ${Number(flashPort)}\ncfg_scan_chain\ncfg_assign_file -file ${toTclPath(sbit)} -device_index ${Number(deviceIndex)}\ncfg_program -device_index ${Number(deviceIndex)}\ncfg_disconnect\ncfg_close`;
           const res = await runCdtCfg(JTAG_CTX, install, script, { port: flashPort, timeoutSec: 180 });
           flashLog = (res.stdout + res.stderr).trim();

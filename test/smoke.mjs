@@ -92,13 +92,30 @@ Hold Summary(Slow Corner):
 const client = new Client({ name: "smoke", version: "0.0.0" });
 await client.connect(new StdioClientTransport({ command: "node", args: [serverPath] }));
 
-const jsonTool = async (name, args = {}) => JSON.parse((await client.callTool({ name, arguments: args })).content[0].text);
+// A tool that fails returns PLAIN TEXT, not JSON — JSON.parse then dies on the
+// first character of a Chinese error message, which reads as "the smoke test is
+// broken" rather than "you have no iverilog". This is the second command the
+// README tells a new user to run, so it has to say which one it is.
+const jsonTool = async (name, args = {}) => {
+  const text = (await client.callTool({ name, arguments: args })).content[0].text;
+  try { return JSON.parse(text); } catch { return { ok: false, error: text }; }
+};
 
 const tools = await client.listTools();
 console.log("tools:", tools.tools.map((t) => t.name).join(", "));
 
 const env = await jsonTool("fpga_env");
 console.log("fpga_env ->", JSON.stringify(env).replace(/\s+/g, " ").slice(0, 160));
+
+// Everything from here to the PDS-log section needs a simulator on PATH. Say so
+// and stop, rather than reporting a cascade of failures that all mean this.
+if (!env.tools?.iverilog) {
+  console.log("\nSKIP: no iverilog on PATH — the simulation legs need one.");
+  console.log("      Install Icarus Verilog and re-run, or use `pnpm test:unit`,");
+  console.log("      which covers the parsers and guards with no toolchain at all.");
+  await client.close();
+  process.exit(0);
+}
 
 const g = await jsonTool("fpga_sim", { workdir: good, top: "tb_counter", vcd: true });
 console.log("good  -> ok=", g.ok, "phase=", g.phase, "exit=", g.exitCode, "vcd=", existsSync(g.artifacts.vcd));

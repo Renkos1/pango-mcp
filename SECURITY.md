@@ -22,12 +22,18 @@ untrusted callers, and do not expose it over a network.**
 
 Three specific things an operator should know:
 
-1. **Some tools are RCE-equivalent by design.** `fpga_cdt` runs arbitrary
-   vendor Tcl; `fpga_msim_do` with `confirm:true` runs arbitrary do-file Tcl
-   (including `exec`); `fpga_exe` / `fpga_msim_exe` dispatch allowlisted vendor
+1. **Some tools are RCE-equivalent by design.** `fpga_cdt` runs vendor Tcl;
+   `fpga_msim_do` with `confirm:true` runs arbitrary do-file Tcl (including
+   `exec`); `fpga_exe` / `fpga_msim_exe` dispatch allowlisted vendor
    executables. These exist because covering the vendor tool surface with one
    tool per action would be worse. They are not a bug, but they are the reason
    the trust boundary above matters.
+
+   `fpga_cdt` is the narrow one: `commands[]` takes one literal
+   `cfg_`/`dbg_`/`ins_` command per entry, so the device-write gate reads a
+   command name the caller cannot disguise. Free-form `tcl` is unanalysable and
+   needs `PANGO_MCP_ALLOW_RAW_TCL=1` — with it set, the gate is best-effort and
+   you are back to trusting the caller.
 
 2. **Device writes can be irreversible.** `fpga_flash_spi` erases and programs
    on-board SPI flash — a bad image can leave the board unable to boot from
@@ -43,7 +49,10 @@ Three specific things an operator should know:
 - Reaching any device-write path without `confirm:true` + a matching
   `expectIdcode` + a real prior scan
 - Escaping the mutating-command detection that arms those gates
-  (`MUTATING_CDT` in `pango-pds/index.mjs`, `SUSPICIOUS_DO` in `modelsim/index.mjs`)
+  (`detectMutatingCdt` in `pango-pds/device-gate.mjs`, `validateCdtCommands` in
+  `pango-pds/index.mjs`, `detectSuspiciousDo` in `modelsim/index.mjs`) — a
+  `commands[]` entry that reaches a device write while the gate reports none is
+  exactly the bug class this is about
 - Escaping the `fpga_exe` / `fpga_msim_exe` executable allowlists, including
   path traversal out of the vendor `bin/` directory
 - Injection through a tool argument into a generated Tcl script, PowerShell
@@ -67,9 +76,11 @@ Three specific things an operator should know:
   Point `PANGO_MCP_ENV_FILE` / `PANGO_MCP_CONFIG` at files under your own
   permissions; `pango-mcp.env` and `pango-mcp.config.json` are gitignored so a
   local copy is never committed, but they are plaintext on disk.
-- Prefer `privateKeyPath` over `password` for remote hosts. **Note:** SSH host
-  keys are currently not verified — treat remote execution as trusted-network
-  only until that lands.
+- Prefer `privateKeyPath` over `password` for remote hosts. Every host needs a
+  `hostKeyFingerprint`; without one the connection is refused rather than made
+  unverified. Get it on the host with
+  `ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub`. `PANGO_MCP_SSH_INSECURE=1`
+  skips the check for a network where you accept impersonation risk.
 - `PANGO_MCP_TRACE=1` writes tool arguments to `~/.pango-mcp/`. Vendor transcripts
   land in `~/.pango-mcp/logs/` regardless. Neither is redacted; exclude them from
   backups if that matters to you.

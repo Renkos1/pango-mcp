@@ -17,6 +17,7 @@
 //   close()       -> release any connection (no-op for local)
 
 import pkg from "ssh2";
+import { createHash } from "node:crypto";
 import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
@@ -48,6 +49,37 @@ function walkLocal(root) {
     }
   })(root, "");
   return out;
+}
+
+// `user` is interpolated into PowerShell source as a bare `schtasks /ru <user>`
+// argument on both the local and the remote path. A Windows account name cannot
+// contain a space or any of " / \\ [ ] : ; | = , + * ? < >, so accepting only
+// this shape rejects everything that could end the argument and start another
+// command, while still allowing DOMAIN\\user and user@domain.
+const WINDOWS_ACCOUNT = /^[A-Za-z0-9._-]{1,64}(?:@[A-Za-z0-9.-]{1,255})?$|^[A-Za-z0-9._-]{1,64}\\[A-Za-z0-9._-]{1,64}$/;
+
+export function assertWindowsAccount(user) {
+  const v = String(user ?? "");
+  if (!WINDOWS_ACCOUNT.test(v)) {
+    throw new Error(`user 非法: ${JSON.stringify(v)}；只接受 Windows 账户名(可带 DOMAIN\\ 前缀或 @domain 后缀)`);
+  }
+  return v;
+}
+
+// ssh2 accepts whatever host key the far end presents unless you give it a
+// hostVerifier. Without one, anything that can answer on the lab network gets
+// the SSH password and the bitstream — and this transport exists precisely to
+// push bitstreams to a build host. So the fingerprint is required, and a host
+// without one fails to connect rather than connecting unverified.
+//
+// Get it on the host itself:
+//   ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub      (OpenSSH)
+//   Get-Content $env:ProgramData\\ssh\\ssh_host_ed25519_key.pub | ssh-keygen -lf -
+// and put the `SHA256:...` field in the host's `hostKeyFingerprint`.
+export function verifyHostKey(key, expected) {
+  const digest = createHash("sha256").update(key).digest("base64").replace(/=+$/, "");
+  const want = String(expected || "").trim().replace(/^SHA256:/i, "").replace(/=+$/, "");
+  return { ok: want.length > 0 && digest === want, actual: `SHA256:${digest}` };
 }
 
 export const LocalExecutor = {
@@ -89,6 +121,7 @@ export const LocalExecutor = {
   // other setups. `build(work, sep)` returns the helper + any input files once the
   // work dir (and the absolute paths the helper must bake in) is known.
   async runGuiHelper(build, { timeoutSec = 60, taskName, user = "Administrator" } = {}) {
+    assertWindowsAccount(user);
     const work = mkdtempSync(join(tmpdir(), "fpga-gui-"));
     const { helperPs, files = [], outName = "out.txt" } = build(work, "\\");
     for (const f of files) writeFileSync(join(work, f.name), f.content, "utf8");
@@ -166,10 +199,36 @@ class SshExecutor {
     } else {
       throw new Error(`host '${this.id}' 缺少认证：配置 privateKeyPath 或 password（密码可走 PANGO_MCP_SSH_${this.id}_PASSWORD）`);
     }
+    if (c.hostKeyFingerprint) {
+      let seen = null;
+      connectCfg.hostVerifier = (key) => {
+        const v = verifyHostKey(key, c.hostKeyFingerprint);
+        seen = v.actual;
+        return v.ok;
+      };
+      this._lastSeenHostKey = () => seen;
+    } else if (toolEnv().PANGO_MCP_SSH_INSECURE === "1") {
+      // Explicit, loud, and per-run. Not a config key, so it cannot be set once
+      // and forgotten in a file that outlives the reason for it.
+      connectCfg.hostVerifier = () => true;
+    } else {
+      throw new Error(
+        `host '${this.id}' 缺少 hostKeyFingerprint：没有它 ssh2 会接受任何主机密钥，` +
+        `中间人可以拿到密码和比特流。在该主机上跑 \`ssh-keygen -lf <ssh_host_ed25519_key.pub>\` ` +
+        `把 SHA256:... 填进 pango-mcp.config.json 的 hosts.${this.id}.hostKeyFingerprint；` +
+        `确实无法验证时用 PANGO_MCP_SSH_INSECURE=1 显式放行。`
+      );
+    }
     this._connecting = new Promise((resolve, reject) => {
       const conn = new Client();
       conn.on("ready", () => resolve(conn));
-      conn.on("error", (err) => reject(new Error(`SSH 连接 ${this.label} 失败: ${err.message}`)));
+      conn.on("error", (err) => {
+        const seen = this._lastSeenHostKey?.();
+        const hint = seen && /handshake|verification|host key/i.test(err.message || "")
+          ? `；对端主机密钥是 ${seen}，与配置的 hostKeyFingerprint 不符`
+          : "";
+        reject(new Error(`SSH 连接 ${this.label} 失败: ${err.message}${hint}`));
+      });
       conn.connect(connectCfg);
     }).then((conn) => {
       this._conn = conn;
@@ -344,6 +403,7 @@ class SshExecutor {
   // scheduled task (`schtasks /ru <user> /it`) that executes in session 1, then
   // read its out file back. `build(work, sep)` bakes the remote work-dir paths.
   async runGuiHelper(build, { timeoutSec = 60, taskName, user = this.cfg.user || "Administrator" } = {}) {
+    assertWindowsAccount(user);
     const work = await this.mkdtemp("fpga-gui-");
     const { helperPs, files = [], outName = "out.txt" } = build(work, "\\");
     const localTmp = mkdtempSync(join(tmpdir(), "fpga-gui-"));

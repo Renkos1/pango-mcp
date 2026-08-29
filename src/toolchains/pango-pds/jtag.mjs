@@ -237,7 +237,7 @@ cfg_close`;
 }
 
 async function scanJtagOnce(ctx, { pdsVersion, port, timeoutSec = 30, maxDevices = ctx.defaultScanMaxDevices || 1 } = {}) {
-  const install = ctx.choosePdsInstall({ pdsVersion });
+  const install = ctx.requirePdsInstall({ pdsVersion });
   const scanPort = port ?? ctx.defaultPortForInstall(install);
   const scanLimit = clampPositiveInt(maxDevices, ctx.defaultScanMaxDevices || 1, { min: 1, max: 32 });
   if (!existsSync(install.shell)) throw new Error(`PDS 安装不可用: ${install.shell}`);

@@ -7,6 +7,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { driveConsole } from "./console.mjs";
+import { detectMutatingCdt } from "./device-gate.mjs";
 import { launchDebugger, searchJtagAndOpenCable, dumpDbgTree } from "./gui.mjs";
 import { parseVcd, groupSignals, summarizeCapture } from "./vcd.mjs";
 import { renderViewerHtml } from "./waveform_viewer.mjs";
@@ -54,6 +55,20 @@ export async function ilaOpen(executor, { binDir, projectDir, user = "Administra
 
 // Build the trigger-setup tcl. Default = immediate (the core's all-don't-care
 // trigger fires on `run -async`). value = match the data port against a value.
+// trigger.value and trigger.condName are interpolated into the console Tcl
+// unquoted, so their shape is the only thing standing between a caller and an
+// extra command on that line. The numeric fields go through Number() already;
+// these two were the strings left bare. A trigger value is digits in the chosen
+// radix plus X for don't-care, and a condition name is a Tcl identifier.
+const TRIGGER_VALUE = /^[0-9A-Fa-fXx]{1,64}$/;
+const TRIGGER_COND = /^[A-Za-z_][A-Za-z0-9_]{0,63}$/;
+
+function requireShape(value, pattern, label) {
+  const v = String(value ?? "");
+  if (!pattern.test(v)) throw new Error(`${label} 非法: ${JSON.stringify(v)}；只接受 ${pattern}`);
+  return v;
+}
+
 function triggerTcl(fla, trigger) {
   if (!trigger || trigger.mode === "immediate" || !trigger.mode) return [];
   if (trigger.mode === "value") {
@@ -63,8 +78,14 @@ function triggerTcl(fla, trigger) {
     // -func 0~7 = ==,<>,>,>=,<,<=,InRange,OutOfRange. MUST set it or the unit
     // stays 'disabled' and run captures immediately (no value gating).
     const func = trigger.func ?? 0;
-    const cond = trigger.condName || "TriggerCondition1";
-    const v = typeof trigger.value === "number" ? trigger.value.toString(radix === 2 ? 16 : radix === 0 ? 2 : 10) : String(trigger.value);
+    const cond = requireShape(trigger.condName || "TriggerCondition1", TRIGGER_COND, "trigger.condName");
+    const v = typeof trigger.value === "number"
+      ? trigger.value.toString(radix === 2 ? 16 : radix === 0 ? 2 : 10)
+      : requireShape(trigger.value, TRIGGER_VALUE, "trigger.value");
+    const unitN = Number(unit);
+    const funcN = Number(func);
+    if (!Number.isInteger(unitN) || unitN < 0 || unitN > 15) throw new Error(`trigger.unit 非法: ${unit}`);
+    if (!Number.isInteger(funcN) || funcN < 0 || funcN > 7) throw new Error(`trigger.func 非法: ${func}`);
     // unit defines the match; the condition must reference the unit AND be
     // ACTIVATED (-active) or run ignores it and captures immediately.
     // The condition must be -add'ed FIRST (that also activates it); -select/-set
@@ -74,8 +95,8 @@ function triggerTcl(fla, trigger) {
     // abort the sourced script.
     return [
       `catch {dbg_fla_set_trig_cond -device 0 -fla ${fla} -add ${cond}}`,
-      `dbg_fla_set_trig_unit -device 0 -fla ${fla} -unit ${unit} -func ${func} -radix ${radix} -value ${v}`,
-      `dbg_fla_set_trig_cond -device 0 -fla ${fla} -select ${cond} -set {TU${unit}}`,
+      `dbg_fla_set_trig_unit -device 0 -fla ${fla} -unit ${unitN} -func ${funcN} -radix ${radix} -value ${v}`,
+      `dbg_fla_set_trig_cond -device 0 -fla ${fla} -select ${cond} -set {TU${unitN}}`,
       `dbg_fla_set_trig_cond -device 0 -fla ${fla} -active ${cond}`,
     ];
   }
@@ -136,7 +157,14 @@ export async function ilaCapture(
     `dbg_fla_export_wf_data -device 0 -fla ${fla} -format vcd -file ${remoteVcd}`,
   ];
   const timeoutSec = Math.max(60, Math.ceil(waitMs / 1000) + 50);
-  const console = await driveConsole(executor, { tcl: lines.join("\n"), user, timeoutSec });
+  const script = lines.join("\n");
+  // Belt and braces. Every value above is shape-checked, so nothing should be
+  // able to grow a device write here — but this path drives the same console
+  // that fpga_ila_console gates, and capture is supposed to be read-only. If a
+  // write ever does appear, refuse rather than run it unconfirmed.
+  const mutating = detectMutatingCdt(script);
+  if (mutating.length) throw new Error(`capture 脚本不应包含写器件命令: ${mutating.join(", ")}`);
+  const console = await driveConsole(executor, { tcl: script, user, timeoutSec });
 
   mkdirSync(outDir, { recursive: true });
   const localVcd = join(outDir, `cap_${id}.vcd`);

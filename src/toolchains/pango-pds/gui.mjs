@@ -51,10 +51,26 @@ function Find-DbgWindow {
 }
 `;
 
+// These land inside PowerShell DOUBLE-quoted strings, where escaping backslashes
+// is not enough: `"` closes the string and `$` interpolates — `$(...)` runs a
+// command. None of them can appear in a Windows path anyway, so reject rather
+// than try to escape, which is the failure mode escaping keeps having.
+const PS_PATH_FORBIDDEN = /["`$;\r\n|&<>]/;
+
+export function assertPsPathArg(value, label) {
+  const v = String(value ?? "");
+  if (!v) throw new Error(`${label} 不能为空`);
+  const m = PS_PATH_FORBIDDEN.exec(v);
+  if (m) throw new Error(`${label} 含 PowerShell 元字符 ${JSON.stringify(m[0])}，拒绝: ${JSON.stringify(v)}`);
+  return v;
+}
+
 // Launch the Fabric Debugger GUI on a project directory, in session 1, and wait
 // until its top-level window appears. cdt_dbg in GUI mode (no -file) opens the
 // cable; headless -file cannot (see docs/ILA-FINDINGS.md).
 export async function launchDebugger(executor, { binDir, projectDir, user = "Administrator", waitSec = 25 } = {}) {
+  assertPsPathArg(binDir, "binDir");
+  assertPsPathArg(projectDir, "projectDir");
   const exe = `${binDir}\\cdt_dbg.exe`;
   const ps = `${UIA_PRELUDE}
 $existing = Find-DbgWindow

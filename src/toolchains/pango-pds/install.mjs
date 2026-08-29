@@ -179,6 +179,22 @@ export function choosePdsInstall({ pdsVersion } = {}) {
   return PDS_INSTALLS.find((p) => p.id === DEFAULT_PDS_ID) || PDS_INSTALLS[0];
 }
 
+// choosePdsInstall always returns an entry, but with shell/binDir null when
+// nothing is configured — so every caller that goes straight to `.binDir` used
+// to hand `join()` a null and die with `The "path" argument must be of type
+// string`. The README promises the opposite: an unset path fails naming the knob
+// it needs. This is that failure.
+export function requirePdsInstall({ pdsVersion } = {}) {
+  const install = choosePdsInstall({ pdsVersion });
+  if (install?.binDir) return install;
+  const known = PDS_INSTALLS.map((p) => p.id).join(" / ");
+  throw new Error(
+    `未配置 PDS 安装${pdsVersion ? `（请求版本 ${pdsVersion}）` : ""}：设 PANGO_MCP_PDS_2025 指向 <PDS>\\bin\\pds_shell.exe` +
+    `（或 PANGO_MCP_PDS_2022 / PANGO_MCP_PDS_2025_BIN），或在 pango-mcp.config.json 里配 pdsInstalls。` +
+    `已知版本 id: ${known}。用 fpga_env 看本机识别到什么。`
+  );
+}
+
 export function defaultPortForInstall(install) {
   if (String(install?.id || "").includes("2025")) return DEFAULT_CDT_PORT_2025;
   return DEFAULT_CDT_PORT;
